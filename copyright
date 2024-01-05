@@ -5,11 +5,6 @@ Copyright: The Legendary M (https://github.com/The-Legendary-M)
 licenses: GPL-3.0
 Comment: Derived from works of Michael Zahniser (under the same license)
 
-Files: data/Hai/*
-Copyright: Hurleveur (https://github.com/Hurleveur)
-licenses: GPL-3.0
-Comment: Derived from works of Michael Zahniser (under the same license). Taken from the Unfettered Innovations plugin.
-
 Files: data/Korath/*
 Copyright: Lia Gerty (https://github.com/ravenshining)
 licenses: GPL-3.0
@@ -24,16 +19,6 @@ Files: data/Korath/Exile?outfits.txt
 Copyright: UnorderedSigh (https://github.com/UnorderedSigh)
 licenses: GPL-3.0
 Comment: Derived from works of Michael Zahniser (under the same license). The Idea of Rakulut waste launchers.
-
-Files: data/Wanderer/*
-Copyright: Becca Tommaso (https://github.com/beccabunny)
-licenses: GPL-3.0
-Comment: Derived from works of Michael Zahniser (under the same license). Ship stats for the Blizzard and parts of the main story.
-
-Files: data/Wanderer/Wanderer?ships.txt
-Copyright: Arachi-Lover
-licenses: GPL-3.0
-Comment: Derived from works of Michael Zahniser (under the same license). Ship stats for the Blizzard and the Mistral.
 
 Files: images/ship/hai?antlion.png
 Copyright: Hurleveur (https://github.com/Hurleveur)
@@ -85,6 +70,11 @@ Copyright: Darcy Manoel
 License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license). Originally for the Kar Ik Vot 711 ship.
 
+Files: 
+  images/ship/guardian-frigate*
+Copyright: Quarg Block
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license). Originally for the Korath Breaker ship.
 
 ENDLESS SKY ARTWORK
 
