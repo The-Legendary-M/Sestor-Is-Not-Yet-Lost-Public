@@ -7,7 +7,7 @@ government "Anatruskor Empire"
 		"Kor Sestor" 1
 		"Kor Efret" -.01
 
-#Wanderer Tele'ekite government. Actively hates UHai, but finds kindred spirits in the Sestor.
+#Wanderer Tele'ekite government. Finds kindred spirits in the Sestor.
 government "Wanderer (Tele'ekite)"
 	swizzle 2
 	"crew attack" 1.4
