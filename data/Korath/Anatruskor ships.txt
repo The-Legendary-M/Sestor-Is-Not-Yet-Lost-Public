@@ -119,68 +119,7 @@ ship "Pav-Kot 117"
 	"final explode" "final explosion large"
 	description "Developed after years of Sestor-Anatruskor technological exchange, the PK-117 is the first Anatruskor ship wholly dedicated to warfare, and quickly becomes the mainstay of the Anatruskor Navy. Armed with top-of-the-line Anatruskor weaponry, the PK-117 is a sight to behold in the battlefield. The large outfit space and turret points allow for the installation of many defensive systems and turrets to ensure maximum survivability."
 
-#Anatruskor capital warship. 4 guns and 5 turrets.
-ship "Lod-Kal 431"
-	sprite "ship/lod kal 431"
-	thumbnail "thumbnail/lod kal 431"
-	attributes
-		category "Heavy Warship"
-		"cost" 42300000
-		"shields" 61200
-		"hull" 61200
-		"automaton" 1
-		"crew equivalent" 150
-		"mass" 1365
-		"drag" 17
-		"heat dissipation" 0.55
-		"fuel capacity" 400
-		"cargo capacity" 90
-		"outfit space" 1048
-		"weapon capacity" 440
-		"engine capacity" 175
-		"self destruct" 0.8
-		"ramscoop" 3
-		weapon
-			"blast radius" 450
-			"shield damage" 6400
-			"hull damage" 3200
-			"hit force" 9600
-	outfits
-		"Heavy Shock-Strike Turret" 4
-		"Thunder-Lance" 4
-		"Warder Anti-Missile"
-		
-		"Control Transceiver"
-		"Triple Plasma Core"
-		"Plasma Core"
-		"Large Heat Shunt" 4
-		"Small Heat Shunt" 2
-		"Systems Core (Large)"
-		"Fuel Processor"
-		"Hyperdrive"
-		
-		"Steering (Stellar Class)"
-		"Thruster (Planetary Class)"
-		"Thruster (Asteroid Class)"
-	
-	engine -79 305
-	engine 79 305	
-	gun -54 -335 "Thunder-Lance"
-	gun 54 -335 "Thunder-Lance"
-	gun -102 -311 "Thunder-Lance"
-	gun 102 -311 "Thunder-Lance"
-	turret -362 -350 "Heavy Shock-Strike Turret"
-	turret 362 -350 "Heavy Shock-Strike Turret"
-	turret -255.5 15 "Heavy Shock-Strike Turret"
-	turret 255.5 15 "Heavy Shock-Strike Turret"
-	turret 0 166.5 "Warder Anti-Missile"
-	explode "tiny explosion" 120
-	explode "small explosion" 60
-	explode "medium explosion" 70
-	explode "large explosion" 50
-	explode "huge explosion" 15
-	"final explode" "final explosion large"
-	description `Nicknamed "The Devastator", the Lod-Kal 411 Heavy Battleship is the largest Anatruskor warship. An offshoot of a doomed attempt to be the platform of a new planet-cracker beam, LK-431s are created with a single goal in mind: Utter destruction of any enemy fleet.`
+
 
 		
 
