@@ -1,0 +1,123 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: data/*
+Copyright: The Legendary M (https://github.com/The-Legendary-M)
+licenses: GPL-3.0
+Comment: Derived from works of Michael Zahniser (under the same license)
+
+Files: data/Hai/*
+Copyright: Hurleveur (https://github.com/Hurleveur)
+licenses: GPL-3.0
+Comment: Derived from works of Michael Zahniser (under the same license). Taken from the Unfettered Innovations plugin.
+
+Files: data/Korath/*
+Copyright: Lia Gerty (https://github.com/ravenshining)
+licenses: GPL-3.0
+Comment: Derived from works of Michael Zahniser (under the same license). Korath cipher and lore.
+
+Files: data/Korath/Exile?outfits.txt
+Copyright: NomadicVolcano (https://github.com/NomadicVolcano)
+licenses: GPL-3.0
+Comment: Derived from works of Michael Zahniser (under the same license). Taken from Endless Sky Pull Request #4987.
+
+Files: data/Korath/Exile?outfits.txt
+Copyright: UnorderedSigh (https://github.com/UnorderedSigh)
+licenses: GPL-3.0
+Comment: Derived from works of Michael Zahniser (under the same license). The Idea of Rakulut waste launchers.
+
+Files: data/Wanderer/*
+Copyright: Becca Tommaso (https://github.com/beccabunny)
+licenses: GPL-3.0
+Comment: Derived from works of Michael Zahniser (under the same license). Ship stats for the Blizzard and parts of the main story.
+
+Files: data/Wanderer/Wanderer?ships.txt
+Copyright: Arachi-Lover
+licenses: GPL-3.0
+Comment: Derived from works of Michael Zahniser (under the same license). Ship stats for the Blizzard and the Mistral.
+
+Files: images/ship/hai?antlion.png
+Copyright: Hurleveur (https://github.com/Hurleveur)
+licenses: CC-BY-SA 4.0
+Comment: Derived from works of Michael Zahniser (under the same license).
+
+Files:
+  images/ship/abyssal?stream*
+  images/ship/blizzard*
+  images/ship/courier*
+  images/ship/hai?sea?dragon*
+  images/ship/hai?stag?beetle*
+  images/ship/hai?modified?shield?beetle*
+  images/thumbnail/hai?sea?dragon*
+  images/thumbnail/hai?sea?scorpion*
+  images/thumbnail/hai?stag?beetle*
+  images/thumbnail/hai?modified?beetle*
+Copyright: Becca Tommaso (https://github.com/beccabunny)
+license: CC-BY-SA 4.0
+
+Files: 
+  images/ship/hai?phrynus*
+  images/ship/hai?lycosidae*
+  images/thumbnail/hai?phrynus*
+  images/thumbnail/hai?lycosidae*
+  images/outfit/penta?pulser*
+  images/outfit/octa?annihilator*
+  images/outfit/pulse?sniper*
+  images/outfit/long?pulse?sniper*
+  images/hardpoint/penta?pulser*
+Copyright: Ejo Thims (https://github.com/EjoThims)
+License: CC-BY-SA-4.0
+Comment: Derived from works by LocalGod, Becca Tommaso and Michael Zahniser (under the same license). Taken from the Unfettered Innovations plugin.
+
+Files:
+ icon*.png
+ images/ship/hai?tarentula*
+ images/thumbnail/hai?tarentula*
+ images/outfit/unfettered?bomb*
+ images/projectile/unfettered?bomb*
+ images/icon/unfettered?bomb*
+Copyright: Redpilot57
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license). Taken from the Unfettered Innovations plugin.
+
+
+ENDLESS SKY ARTWORK
+
+* Photos from Wikimedia Commons
+
+  * Berthold Werner (CC-BY-SA-3.0)
+
+  * Dmitry A. Mottl (CC-BY-SA-3.0)
+
+  * Myrabella (CC-BY-SA-3.0)
+
+  * Matthew Field (CC-BY-SA-3.0)
+
+* and other photographers
+
+  * Chris Pickel (CC-BY-SA-4.0)
+
+  * Michael Wilson (CC-BY-SA-4.0)
+
+  * @harro.eu (CC-BY-SA-4.0)
+
+  * @Iridium Ore (CC-BY-SA-4.0)
+
+  * Eric Denni (CC-BY-SA-4.0)
+
+* and from public domain sources
+
+  * NASA
+
+  * US Geological Survey
+
+  * Library of Congress
+
+  * US Army
+
+  * morguefile.com
+
+  * unsplash.com
+
+  * pngegg.com
+
+  * texturify.com

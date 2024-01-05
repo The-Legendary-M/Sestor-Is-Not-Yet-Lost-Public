@@ -1,0 +1,1164 @@
+#---------------WANDERER--------------------WANDERER--------------------WANDERER----------
+#Variant of Tempest
+ship "Tempest" "Tempest (Moonbeam)"
+	outfits
+		"Sunbeam" 2
+		"Moonbeam" 2
+		"Dual Sunbeam Turret"
+		"Sunbeam Turret"
+		"Wanderer Anti-Missile"
+		
+		"Blue Sun Reactor"
+		"Dark Storm Shielding" 2
+		"Outfits Expansion" 2
+		"Wanderer Ramscoop"
+		"Wanderer Heat Sink"
+	
+		"Type 1 Radiant Thruster"	
+		"Type 3 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+	gun "Sunbeam"
+	gun "Sunbeam"
+	gun "Moonbeam"
+	gun "Moonbeam"
+	turret "Wanderer Anti-Missile"
+	turret "Dual Sunbeam Turret"
+	turret "Sunbeam Turret"
+
+
+
+
+
+#-------------------SESTOR---------------SESTOR------------------SESTOR-----------
+
+#Sestor carriers, but with JDs
+ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Jump)"
+outfits
+		"Korath Detainer"
+		"Piercer Missile Launcher" 3
+		"Piercer Missile" 93
+		"Banisher Grav-Turret"
+		"Warder Anti-Missile" 2
+		
+		"Double Plasma Core"
+		"Generator (Inferno Class)"
+		"Systems Core (Medium)"
+		"Large Heat Shunt"
+		"Control Transceiver"
+		
+		"Thruster (Lunar Class)"
+		"Steering (Planetary Class)"
+		"Jump Drive"
+	
+	gun "Korath Detainer"
+	gun "Piercer Missile Launcher"
+	gun "Piercer Missile Launcher"
+	gun "Piercer Missile Launcher"
+	turret "Warder Anti-Missile"
+	turret 
+	turret 
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+
+
+ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Close Quarters Jump)"
+	outfits
+		"Korath Detainer"
+		"Warder Anti-Missile" 2
+		"Thermal Repeater Turret" 3
+		
+		"Triple Plasma Core"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 3
+		"Outfits Expansion"
+		"Control Transceiver"
+		
+		"Thruster (Lunar Class)"
+		"Steering (Planetary Class)"
+		"Jump Drive"
+	
+	gun "Korath Detainer"
+	gun
+	gun
+	gun
+	turret "Warder Anti-Missile"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Warder Anti-Missile"
+
+
+#Mereti weapon Sestor variants.
+ship "Met Par Tek 53" "Met Par Tek 53 (Minelayer)"
+	outfits
+		"Warder Anti-Missile" 2
+		"Cluster Mine Layer" 3
+		"Cluster Mine Rack" 10
+		"Cluster Mine" 141
+		"Control Transceiver"
+		"Large Heat Shunt" 2
+		"Fuel Processor"
+		"Systems Core (Medium)"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Double Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Asteroid Class)"
+		"Thruster (Lunar Class)"
+	gun "Cluster Mine Layer"
+	gun "Cluster Mine Layer"
+	gun "Cluster Mine Layer"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret
+	turret
+	turret
+	turret
+
+ship "Met Par Tek 53" "Met Par Tek 53 (Mereti)"
+	outfits
+		"Husk-Slice"
+		"Warder Anti-Missile" 2
+		"Shield Disruptor Turret" 2
+		"Control Transceiver"
+		"Large Heat Shunt" 2
+		"Small Heat Shunt" 2
+		"Systems Core (Large)"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Triple Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Asteroid Class)"
+		"Thruster (Lunar Class)"
+	gun "Husk-Slice"
+	gun 
+	gun 
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+	turret
+	turret
+
+ship "Met Par Tek 53" "Met Par Tek 53 (Disruptor)"
+	outfits
+		"Thermal Repeater" 2
+		"Husk-Slice"
+		"Warder Anti-Missile" 2
+		"Shield Disruptor Turret" 2
+		"Control Transceiver"
+		"Systems Core (Large)"
+		"Large Heat Shunt" 2
+		"FUel Processor"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Double Plasma Core"
+		"Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Asteroid Class)"
+		"Thruster (Lunar Class)"
+	gun "Husk-Slice"
+	gun "Thermal Repeater"
+	gun "Thermal Repeater"
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret
+	turret
+
+
+#Sliceruptor KIV. Added thruster for a bit more speed.
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Mereti)"
+	outfits
+		"Husk-Slice" 4
+		"Husk-Slice Turret" 2
+		"Shield Disruptor Turret" 2
+		"Warder Anti-Missile" 2
+		"Control Transceiver"
+		"Systems Core (Large)"
+		"Large Heat Shunt" 4
+		"Small Heat Shunt" 2
+		"Hyperdrive"
+		"Triple Plasma Core"
+		"Plasma Core"
+		"Steering (Stellar Class)"
+		"Thruster (Planetary Class)"
+		"Thruster (Asteroid Class)"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	turret "Husk-Slice Turret"
+	turret "Husk-Slice Turret"
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret
+	turret
+
+#Cargo version = Cargo expansion only. Logistics version = minimal weaponry
+
+#Cargo version of the FL14. 15 tonnes of cargo. Barely fits 1 Cargo Expansion.
+ship "Far Lek 14" "Far Lek 14 (Cargo)"
+	outfits
+		"Cargo Expansion"
+		"Systems Core (Tiny)"
+		"Thruster (Asteroid Class)"
+		"Steering (Asteroid Class)"
+
+#Cargo version of the FS27. 30 tonnes of cargo. Thank you, Zoura, for this build.
+ship "Far Osk 27" "Far Osk 27 (Cargo)"
+	outfits
+		"Small Heat Shunt"
+		"Cargo Expansion" 2
+		"Generator (Candle Class)"
+		"Thruster (Asteroid Class)"
+		"Steering (Asteroid Class)"
+
+#Cargo version of the MPT53. 311 tonnes of cargo.
+ship "Met Par Tek 53" "Met Par Tek 53 (Cargo)"
+	outfits
+		"Small Heat Shunt"
+		"Fuel Processor" 2
+		"Hyperdrive"
+		"Cargo Expansion" 19
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Generator (Furnace Class)"
+		"Steering (Planetary Class)"
+		"Thruster (Lunar Class)"
+
+#Cargo version of the TF71L. 246 tonnes of cargo.
+ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Cargo)"
+	outfits
+		"Small Heat Shunt"
+		"Fuel Processor" 2
+		"Hyperdrive"
+		"Cargo Expansion" 14
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Plasma Core"
+		"Thruster (Asteroid Class)"
+		"Steering (Lunar Class)"
+		"Thruster (Lunar Class)"
+		"Steering (Comet Class)"
+
+#Cargo version of the TF78S. 298 tonnes of cargo.
+ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Cargo)"
+	outfits
+		"Small Heat Shunt"
+		"Fuel Processor" 3
+		"Hyperdrive"
+		"Cargo Expansion" 17
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Plasma Core"
+		"Thruster (Lunar Class)"
+		"Thruster (Comet Class)"
+		"Steering (Planetary Class)"
+
+#Cargo version of the TF109. 211 tonnes of cargo.
+ship "Tek Far 109" "Tek Far 109 (Cargo)"
+	outfits
+		"Small Heat Shunt"
+		"Fuel Processor" 3
+		"Hyperdrive"
+		"Cargo Expansion" 12
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Lunar Class)"
+
+#Cargo version of the KIV349. 597 tonnes of cargo.
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Cargo)"
+	outfits
+		"Large Heat Shunt"
+		"Fuel Processor" 2
+		"Hyperdrive"
+		"Cargo Expansion" 34
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Double Plasma Core"
+		"Thruster (Planetary Class)"
+		"Thruster (Asteroid Class)"
+		"Steering (Stellar Class)"
+
+#Logistics version of the TF78S. Thank you, Zoura, for the build.
+ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Logistics)"
+	outfits
+		"Korath Detainer"
+		"Warder Anti-Missile"
+		"Double Plasma Core"
+		"Systems Core (Medium)"
+		"Cargo Expansion" 10
+		"Small Heat Shunt" 3
+		"Control Transceiver"
+		"Thruster (Lunar Class)"
+		"Thruster (Asteroid Class)"
+		"Steering (Planetary Class)"
+		"Steering (Asteroid Class)"
+		Hyperdrive
+
+#-----------------EFRET-------------------EFRET--------------------EFRET----------------
+
+#Variants of Efreti ships using automata weapons. Mereti variants are more common. Sestor variants are rare, simply because much less chances of salvaging them.
+
+#Thermal Repeater + Disruptor. Heater build.
+ship "Charm-Shallop" "Charm-Shallop (Automata)"
+	outfits
+		"Thermal Repeater" 3
+		"Warder Anti-Missile"
+		"Shield Disruptor Turret"
+		"Large Heat Shunt"
+		"Small Heat Shunt" 2
+		"Fuel Processor"
+		"Systems Core (Medium)"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Systems Core (Small)"
+		"Double Plasma Core"
+		"Generator (Candle Class)"
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+		"Thermal Repeater Rifle" 66
+
+ship "Charm-Shallop" "Charm-Shallop (Sestor)"
+	outfits
+		"Thermal Repeater" 3
+		"Thermal Repeater Turret"
+		"Warder Anti-Missile"
+		"Large Heat Shunt" 2
+		"Fuel Processor"
+		"Systems Core (Medium)"
+		"Systems Core (Small)"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Double Plasma Core"
+		"Generator (Furnace Class)"
+		"Gaktem GP Hybrid Thruster"
+		"Gaktem GP Hybrid Steering"
+		"Thermal Repeater Rifle" 66
+
+ship "Charm-Shallop" "Charm-Shallop (Mereti)"
+	outfits
+		"Husk-Slice" 2
+		"Warder Anti-Missile"
+		"Large Heat Shunt" 
+		"Small Heat Shunt"
+		"Fuel Processor"
+		"Systems Core (Medium)"
+		"Systems Core (Tiny)"
+		"Hyperdrive"
+		"Double Plasma Core"
+		"Generator (Candle Class)"
+		"Gaktem GP Hybrid Thruster"
+		"Gaktem GP Hybrid Steering"
+		"Thermal Repeater Rifle" 66
+
+
+ship "Arch-Carrack" "Arch-Carrack (Mereti)"
+	outfits
+		"Husk-Slice" 2
+		"Shield Disruptor Turret" 2
+		"Warder Anti-Missile"
+		"Systems Core (Large)"
+		"Large Heat Shunt" 3
+		"Small Heat Shunt"
+		"Fuel Processor"
+		"Hyperdrive"
+		"Outfits Expansion" 7
+		"Double Plasma Core"
+		"Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+		"Farves GP Hybrid Steering"
+		"Thermal Repeater Rifle" 56
+
+ship "Arch-Carrack" "Arch-Carrack (Automata)"
+	outfits
+		"Thermal Repeater" 2
+		"Thermal Repeater Turret"
+		"Shield Disruptor Turret" 
+		"Warder Anti-Missile"
+		"Systems Core (Large)"
+		"Large Heat Shunt" 3
+		"Fuel Processor"
+		"Hyperdrive"
+		"Outfits Expansion" 2
+		"Double Plasma Core"
+		"Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+		"Farves GP Hybrid Steering"
+		"Thermal Repeater Rifle" 56
+
+ship "Arch-Carrack" "Arch-Carrack (Sestor)"
+	outfits
+		"Thermal Repeater" 2
+		"Thermal Repeater Turret" 2
+		"Warder Anti-Missile"
+		"Systems Core (Large)"
+		"Large Heat Shunt" 3
+		"Fuel Processor"
+		"Hyperdrive"
+		"Outfits Expansion" 
+		"Double Plasma Core"
+		"Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+		"Farves GP Hybrid Steering"
+		"Thermal Repeater Rifle" 56
+				
+
+#-----------------MERETI------------------MERETI----------------------MERETI-------------
+
+#Miner variants used by Mereti and Efreti. Cargo for Mereti.
+
+ship "Model 64" "Model 64 (Miner)"
+	outfits
+		"Digger Mining Beam"
+		"Digger Mining Turret" 4
+		"Small Heat Shunt"
+		"Fuel Processor"
+		"Hyperdrive"
+		"Cargo Expansion" 11
+		"Reasoning Node"
+		"Systems Core (Small)"
+		"Double Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Lunar Class)"
+		"Thruster (Asteroid Class)"
+
+ship "Model 64" "Model 64 (Efreti Miner)"
+	outfits
+		"Digger Mining Beam"
+		"Digger Mining Turret" 4
+		"Small Heat Shunt"
+		"Fuel Processor"
+		"Hyperdrive"
+		"Cargo Expansion" 10
+		"Systems Core (Small)"
+		"Double Plasma Core"
+		"Gaktem GP Hybrid Thruster"
+		"Gaktem GP Hybrid Steering"
+		"Arkrof GP Hybrid Steering"
+
+#Model 512 cargo variant. 617 tonnes of cargo.
+ship "Model 512" "Model 512 (Cargo)"
+	outfits
+		"Small Heat Shunt"
+		"Hyperdrive"
+		"Cargo Expansion" 34
+		"Reasoning Node"
+		"Systems Core (Small)"
+		"Double Plasma Core"
+		"Thruster (Planetary Class)"
+		"Steering (Stellar Class)"
+
+ship "Model 512" "Model 512 (Miner)"
+	outfits
+		"Digger Mining Beam" 2
+		"Digger Mining Turret" 7
+		"Large Heat Shunt"
+		"Systems Core (Medium)"
+		"Hyperdrive"
+		"Cargo Expansion" 23
+		"Reasoning Node"
+		"Double Plasma Core"
+		"Plasma Core"
+		"Thruster (Planetary Class)"
+		"Steering (Stellar Class)"
+		
+ship "Model 512" "Model 512 (Efreti Miner)"
+	outfits
+		"Digger Mining Beam" 2
+		"Digger Mining Turret" 7
+		"Large Heat Shunt"
+		"Systems Core (Medium)"
+		"Hyperdrive"
+		"Cargo Expansion" 23
+		"Control Transceiver"
+		"Double Plasma Core"
+		"Plasma Core"
+		"Nelmeb GP Hybrid Thruster"
+		"Nelmeb GP Hybrid Steering"
+
+#------------------UHAI--------------------UHAI-------------------UHAI------------------
+#Ionic SBs
+ship "Shield Beetle" "Shield Beetle (Ionic)"
+	outfits
+		"Ion Cannon" 2
+		"Ionic Blaster" 6
+		"Pulse Turret" 2
+		"Chameleon Anti-Missile" 2
+		"Boulder Reactor"
+		"Geode Reactor"
+		"Hai Ravine Batteries"
+		"Hai Gorge Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling" 2
+		"Pulse Rifle" 35
+		`"Bondir" Atomic Thruster`
+		`"Bufaer" Atomic Steering`
+		"Hyperdrive"
+	gun "Ion Cannon"
+	gun "Ion Cannon"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+
+#Ionic Solifuges
+ship "Solifuge" "Solifuge (Ionic)"
+	outfits
+		"Ionic Blaster" 5
+		"Ionic Turret" 4
+		"Chameleon Anti-Missile"
+		"Bullfrog Anti-Missile" 2
+		"Boulder Reactor" 2
+		"Hai Fissure Batteries"
+		"Hai Chasm Batteries" 2
+		"Hai Corundum Regenerator"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling" 8
+		"Pulse Rifle" 71
+		`"Benga" Atomic Steering`
+		`"Bufaer" Atomic Steering`
+		`"Bondir" Atomic Thruster`
+		Hyperdrive
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+	gun "Ionic Blaster"
+
+#Ionic Violin Spiders
+ship "Violin Spider" "Violin Spider (Ionic)"
+	outfits
+		"Ionic Blaster"
+		"Pebble Core"
+		Supercapacitor
+		"Hai Williwaw Cooling"
+		"Pulse Rifle"
+		`"Basrem" Atomic Steering`
+		`"Basrem" Atomic Thruster`
+
+
+#----------------BUNRODEA-----------------BUNRODEA--------------------BUNRODEA--------------
+
+#Sasumata Variants and JD versions.
+ship "Sasumata" "Sasumata (Jump)"
+	outfits
+		"Buzzer Anti-Missile" 2
+		"Swarm Pod" 2
+		"Swarm Clip"
+		"Swarm Missile" 1000
+		"Jump Drive"
+		"Large Shield Relay"
+		"Shield Relay Limiter" 10
+		"Solar Battery" 2
+		"Solar Cell" 30
+		"Quark Reactor"
+		"Reactor Overclocker" 2
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+
+ship "Sasumata" "Sasumata (Locust)"
+	outfits
+		"Locust Blaster" 2
+		"Buzzer Anti-Missile" 2
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Small Shield Relay"
+		"Shield Relay Booster" 3
+		"Shield Relay Limiter" 2
+		"Small Nanite Fabricator"
+		"Nanite Enhancer" 2
+		"Electroweak Reactor"
+		"Reactor Overclocker" 6
+		"Solar Battery" 2
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+		"Chiisana Rift Steering"
+
+ship "Sasumata" "Sasumata (Locust Jump)"
+	outfits
+		"Locust Blaster" 2
+		"Buzzer Anti-Missile" 2
+		"Jump Drive"
+		"Outfits Expansion"
+		"Small Shield Relay"
+		"Shield Relay Booster" 3
+		"Shield Relay Limiter" 2
+		"Small Nanite Fabricator"
+		"Nanite Enhancer" 2
+		"Electroweak Reactor"
+		"Reactor Overclocker" 6
+		"Solar Battery" 2
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+		"Chiisana Rift Steering"
+
+ship "Sasumata" "Sasumata (Unarmed)"
+	outfits
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Large Shield Relay"
+		"Shield Relay Booster" 8
+		"Large Nanite Fabricator"
+		"Nanite Enhancer" 5
+		"Electroweak Reactor"
+		"Reactor Overclocker" 2
+		"Solar Battery"
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+
+ship "Sasumata" "Sasumata (Unarmed Jump)"
+	outfits
+		"Jump Drive"
+		"Outfits Expansion"
+		"Large Shield Relay"
+		"Shield Relay Booster" 8
+		"Large Nanite Fabricator"
+		"Nanite Enhancer" 5
+		"Electroweak Reactor"
+		"Reactor Overclocker" 2
+		"Solar Battery"
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+
+#Kaiken with a Mandible Cannon instead of 3 Locusts.
+ship "Kaiken" "Kaiken (Mandible)"
+	outfits
+		"Mandible Cannon"
+		"Small Shield Relay"
+		"Solar Battery"
+		"Solar Cell" 28
+		"Nami Rift Thruster"
+		"Chiisana Rift Steering"
+	gun
+	gun "Mandible Cannon"
+	gun
+
+#Blockade runner, eh? How about 1000+ top speed?
+ship "Tanto" "Tanto (Fast)"
+	outfits
+		"Buzzer Anti-Missile"
+		"Small Shield Relay"
+		"Shield Relay Booster" 2
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Quark Reactor"
+		"Reactor Overclocker" 2
+		"Solar Battery" 2
+		"Solar Cell" 2
+		"Subarashii Rift Thruster"
+		"Chiisana Rift Thruster"
+		"Nami Rift Steering"
+
+
+#Chaser Tekkans. Prioritise thrust (>600 top speed). Chase fast/kiting enemies.
+ship "Tekkan" "Tekkan (Light Chaser)"
+	outfits
+		"Locust Blaster" 2
+		"Buzzer Anti-Missile"
+		"Locust Turret" 2
+		"Small Shield Relay"
+		"Shield Relay Booster" 6
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Quark Reactor"
+		"Reactor Overclocker" 2
+		"Solar Battery" 3
+		"Solar Cell" 22
+		"Nami Rift Thruster"
+		"Ookii Rift Thruster"
+		"Nami Rift Steering"
+
+ship "Tekkan" "Tekkan (Heavy Chaser)"
+	outfits
+		"Mandible Cannon" 2
+		"Locust Turret"
+		"Small Shield Relay"
+		"Shield Relay Booster" 6
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Quark Reactor"
+		"Reactor Overclocker" 2
+		"Solar Battery" 3
+		"Solar Cell" 25
+		"Nami Rift Thruster"
+		"Ookii Rift Thruster"
+		"Nami Rift Steering"
+
+#An improved Kunai with higher power generation and more speed.
+ship "Kunai" "Kunai (Fast)"
+	outfits
+		"Locust Blaster" 2
+		"Mandible Cannon" 4
+		"Small Nanite Fabricator"
+		"Small Shield Relay"
+		"Shield Relay Booster" 4
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Electroweak Reactor"
+		"Solar Battery" 2
+		"Solar Cell"
+		"Nami Rift Thruster"
+		"Ookii Rift Thruster"
+		"Chiisana Rift Steering"
+		"Nami Rift Steering"
+
+#Swarmer kite Kunai. More thrust for effective kiting.
+ship "Kunai" "Kunai (Swarmer)"
+	outfits
+		"Swarm Pod" 6
+		"Swarm Missile" 2400
+		"Small Shield Relay"
+		"Shield Relay Booster" 4
+		"Small Nanite Fabricator"
+		"Nanite Enhancer"
+		"Hyperdrive"
+		"Ouftits Expansion"
+		"Electroweak Reactor"
+		"Solar Battery" 2
+		"Nami Rift Thruster"
+		"Ookii Rift Thruster"
+		"Chiisana Rift Steering"
+		"Nami Rift Steering"
+
+ship "Kunai" "Kunai (Long Range)"
+	outfits
+		"Mandible Cannon" 2
+		"Swarm Pod" 4
+		"Swarm Clip"
+		"Swarm Missile" 1800
+		"Small Shield Relay"
+		"Shield Relay Booster" 6
+		"Outfits Expansion"
+		"Hyperdrive"
+		"Electroweak Reactor"
+		"Reactor Overclocker"
+		"Solar Battery"
+		"Ookii Rift Thruster" 2
+		"Nami Rift Steering"
+
+
+#Ararebo, one of the strongest Bunrodea warships without being classified as such.
+ship "Ararebo" "Ararebo (Fast)"
+	outfits
+		"Buzzer Anti-Missile" 2
+		"Locust Turret" 2
+		"Large Shield Relay"
+		"Shield Relay Booster" 16
+		"Large Nanite Fabricator"
+		"Nanite Enhancer" 5
+		"Outfits Expansion" 5
+		"Hyperdrive"
+		"Dark Reactor"
+		"Quark Reactor"
+		"Reactor Overclocker" 10
+		"Reactor Limiter" 3
+		"Solar Battery" 3
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+
+ship "Ararebo" "Ararebo (Endurance)"
+	outfits
+		"Buzzer Anti-Missile" 2
+		"Locust Turret" 2
+		"Large Shield Relay"
+		"Shield Relay Booster" 16
+		"Large Nanite Fabricator"
+		"Nanite Enhancer" 5
+		"Hyperdrive"
+		"Outfits Expansion" 4
+		"Dark Reactor"
+		"Quark Reactor"
+		"Reactor Overclocker" 7
+		"Solar Battery" 4
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+
+ship "Ararebo" "Ararebo (Korath)"
+	outfits
+		"Buzzer Anti-Missile" 2
+		"Thermal Repeater Turret" 2
+		"Systems Core (Large)"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 2
+		"Hyperdrive"
+		"Outfits Expansion" 2
+		"Large Nanite Fabricator"
+		"Double Plasma Core"
+		"Plasma Core"
+		"Thruster (Planetary Class)"
+		"Steering (Asteroid Class)"
+		"Steering (Lunar Class)"
+	turret "Thermal Repeater Turret"
+	turret "Buzzer Anti-Missile"
+	turret "Buzzer Anti-Missile"
+	turret "Thermal Repeater Turret"
+
+
+ship "Kama" "Kama (Guns)"
+	outfits
+		"Locust Blaster" 4
+		"Mandible Cannon" 6
+		"Buzzer Anti-Missile"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Small Shield Relay" 2
+		"Shield Relay Booster" 7
+		"Small Nanite Fabricator"
+		"Nanite Enhancer" 2
+		"Dark Reactor"
+		"Reactor Overclocker"
+		"Solar Battery" 2
+		"Chiisana Rift Thruster"
+		"Ookii Rift Thruster"
+		"Chiisana Rift Steering"
+		"Ookii Rift Steering"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Mandible Cannon"
+	gun "Mandible Cannon"
+	gun "Mandible Cannon"
+	gun "Mandible Cannon"
+	gun "Mandible Cannon"
+	gun "Mandible Cannon"
+	turret "Buzzer Anti-Missile"
+
+ship "Kama" "Kama (Megasa Strong)"
+	outfits
+		"Locust Blaster" 10
+		"Locust Turret"
+		"Large Shield Relay"
+		"Shield Relay Booster" 6
+		"Large Nanite Fabricator"
+		"Nanite Enhancer"
+		"Hyperdrive"
+		"Outfits Expansion" 2
+		"Solar Battery" 2
+		"Electroweak Reactor" 2
+		"Reactor Overclocker" 5
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+
+ship "Kama" "Kama (Megasa Strong Alt)"
+	outfits
+		"Locust Blaster" 9
+		"Mandible Cannon"
+		"Buzzer Anti-Missile"
+		"Large Shield Relay"
+		"Shield Relay Booster" 6
+		"Large Nanite Fabricator"
+		"Nanite Enhancer"
+		"Hyperdrive"
+		"Outfits Expansion" 2
+		"Solar Battery" 2
+		"Solar Cell"
+		"Electroweak Reactor" 2
+		"Reactor Overclocker" 2
+		"Subarashii Rift Thruster"
+		"Ookii Rift Steering"
+
+
+ship "Kama" "Kama (Erabu Strong)"
+	outfits
+		"Locust Blaster" 6
+		"Mandible Cannon" 2
+		"Locust Turret"
+		"Large Shield Relay"
+		"Shield Relay Booster" 5
+		"Large Nanite Fabricator"
+		"Nanite Enhancer" 5
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Solar Battery"
+		"Dark Reactor"
+		"Reactor Overclocker" 9
+		"Reactor Limiter"
+		"Subarashii Rift Thruster"
+		"Chiisana Rift Thruster"
+		"Ookii Rift Steering"
+
+#Mereti and Korath-ified Kama. Really, Bunrodea stuff is inferior to Korath stuff.
+ship "Kama" "Kama (Mereti)"
+	outfits
+		"Husk-Slice" 4
+		"Shield Disruptor Turret"
+		"Systems Core (Large)"
+		"Large Heat Shunt"
+		"Small Heat Shunt"
+		"Fuel Processor"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Double Plasma Core"
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun
+	gun
+	gun
+	gun
+	gun
+	gun
+	turret "Shield Disruptor Turret"
+
+ship "Kama" "Kama (Thorax)"
+	outfits
+		"Thorax Cannon" 2
+		"Large Shield Relay"
+		"Shield Relay Limiter" 5
+		"Shield Relay Booster" 4
+		"Hyperdrive"
+		"Outfits Expansion"
+		"Solar Battery"
+		"Dark Reactor"
+		"Reactor Limiter"
+		"Reactor Overclocker"
+		"Ookii Rift Thruster" 2
+		"Ooki Rift Steering"
+
+
+#Three Throrax Chigiriki.
+ship "Chigiriki" "Chigiriki (Thorax)"
+	outfits
+		"Thorax Cannon" 3
+		"Small Shield Relay"
+		"Shield Relay Booster" 6
+		"Hyperdrive"
+		"Outfits Expansion" 5
+		"Dark Reactor" 2
+		"Reactor Limiter" 4
+		"Solar Battery" 4
+		"Ookii Rift Thruster"
+		"Subarashii Rift Steering"
+
+#Pure Locust Chigiriki. Sustained fire.
+ship "Chigiriki" "Chigiriki (Locust)"
+	outfits
+		"Locust Blaster" 17
+		"Locust Turret" 2
+		"Large Shield Relay"
+		"Shield Relay Booster" 16
+		"Outfits Expansion" 4
+		"Hyperdrive"
+		"Dark Reactor" 2
+		"Quark Reactor"
+		"Reactor Limiter" 3
+		"Solar Battery" 4
+		"Subarashii Rift Thruster"
+		"Subarashii Rift Steering"
+
+#Gun Chigiriki. Replaced 3 Locusts and 2 Locust Turrets with 2 Mandibles and 2 Buzzer AMs.
+ship "Chigiriki" "Chigiriki (Guns)"
+	outfits
+		"Locust Blaster" 14
+		"Mandible Cannon" 2
+		"Buzzer Anti-Missile" 2
+		"Large Shield Relay"
+		"Shield Relay Booster" 16
+		"Outfits Expansion" 5
+		"Hyperdrive"
+		"Dark Reactor" 2
+		"Quark Reactor"
+		"Reactor Limiter" 3
+		"Solar Battery" 4
+		"Subarashii Rift Thruster"
+		"Subarashii Rift Steering"
+	gun "Mandible Cannon"
+	gun "Mandible Cannon"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	gun "Locust Blaster"
+	turret "Buzzer Anti-Missile"
+	turret "Buzzer Anti-Missile"
+
+#Swarmer Missileboat Chigiriki. 17 Swarm Pods and 7000 Swarmer Missiles.
+ship "Chigiriki" "Chigiriki (Swarmer)"
+	outfits
+		"Swarm Pod" 17
+		"Swarm Clip"
+		"Swarm Missile" 7000
+		"Large Shield Relay"
+		"Shield Relay Booster" 16
+		"Outfits Expansion" 5
+		"Hyperdrive"
+		"Dark Reactor"
+		"Reactor Overclocker" 8
+		"Solar Battery" 4
+		"Subarashii Rift Thruster"
+		"Subarashii Rift Steering"
+
+#Chigiriki with Mereti weapons.
+ship "Chigiriki" "Chigiriki (Mereti)"
+	outfits
+		"Husk-Slice" 5
+		"Shield Disruptor Turret" 2
+		"Systems Core (Large)"
+		"Large Heat Shunt" 4
+		"Hyperdrive"
+		"Outfits Expansion" 5
+		"Triple Plasma Core"
+		"Thruster (Comet Class)"
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun "Husk-Slice"
+	gun
+	gun
+	gun "Husk-Slice"
+	gun
+	gun
+	gun
+	gun
+	gun
+	gun
+	gun
+	gun
+	gun
+	gun
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+	
+
+#--------------HUMANPUG--------------------HUMANPUG----------------------HUMANPUG----------
+#Pirate outfits Zibruka. Being a cheaper ship, cheaper outfits are selected.
+ship "Pug Zibruka" "Pug Zibruka (Particle)"
+	outfits
+		"Particle Cannon" 2
+		"D23-QP Shield Generator"
+		"Hyperdrive"
+		"Greyhound Plasma Steering"
+		"Greyhound Plasma Thruster"
+		"X1700 Ion Thruster"
+
+
+#Outfits from the South.
+ship "Pug Enfolta" "Pug Enfolta (Plasma)"
+	outfits
+		"Plasma Cannon" 4
+		"Proton Turret" 2
+		"Pug Anti-Missile"
+		"Water Coolant System"
+		"Liquid Nitrogen Cooler"
+		"Hyperdrive"
+		"Outfits Expansion"
+		"D94-YV Shield Generator"
+		"D41-HY Shield Generator"
+		"Pug Cormet Thruster"
+		"Pug Cormet Steering"
+
+#Humanity's finest.
+ship "Pug Maboro" "Pug Maboro (Heavy Laser)"
+	outfits
+		"Heavy Laser" 4
+		"Heavy Laser Turret" 2
+		"Pug Anti-Missile"
+		"Liquid Helium Cooler"
+		"Hyperdrive"
+		"D94-YV Shield Generator"
+		"D67-TM Shield Generator"
+		"Outfits Expansion" 3
+		"Dwarf Core"
+		"LP576a Battery Pack"
+		"A520 Atomic Thruster"
+		"A525 Atomic Steering"
+
+#Syndicate
+ship "Pug Maboro" "Pug Maboro (Syndicate)"
+	outfits
+		"Proton Gun" 4
+		"Proton Turret" 2
+		"Pug Anti-Missile"
+		"Liquid Helium Cooler"
+		"S-270 Regenerator" 2
+		"S-970 Regenerator" 2
+		"Outfits Expansion" 3
+		"Hyperdrive"
+		"LP576a Battery Pack"
+		"A525 Atomic Steering"
+		"A520 Atomic Thruster"
+
+ship "Pug Maboro" "Pug Maboro (Plasma)"
+	outfits
+		"Plasma Cannon" 4
+		"Proton Turret" 2
+		"Pug Anti-Missile"
+		"Liquid Helium Cooler"
+		"S-270 Regenerator" 2
+		"S-970 Regenerator"
+		"D67-TM Shield Generator"
+		"Hyperdrive"
+		"Outfits Expansion" 3
+		"LP576a Battery Pack"
+		"Pug Lohmar Thruster"
+		"Pug Lohmar Steering"
+		
+
+
+#--------------BACKUP------------------------BACKUP------------------------BACKUP----------
+
+#If the KT 300 does not work, this is backup.
+ship "Palavret" "Palavret (Sestor)"
+	outfits
+		"Thermal Repeater Turret" 4
+		"Warder Anti-Missile" 2
+		"Piercer Missile Launcher" 2
+		"Piercer Missile" 78
+		"Piercer Missile Rack"
+		
+		"Triple Plasma Core"
+		"System Core (Large)"
+		"Control Transceiver"
+		"Outfits Expansion" 2
+				
+		"Steering (Planetary Class)"
+		"Steering (Comet Class)"
+		"Thruster (Planetary Class)"
+		"Thruster (Asteroid Class)"
+		
+		"Large Heat Shunt" 5
+		
+		"Control Transceiver"
+		
+		"Fuel Processor"
+		"Thermal Repeater Rifle" 196
+		"Hyperdrive"
+		
+	gun "Piercer Missile Launcher"
+	gun "Piercer Missile Launcher"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"

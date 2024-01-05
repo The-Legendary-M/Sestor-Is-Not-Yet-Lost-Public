@@ -1,0 +1,1813 @@
+#Korath. Plural "Korath". Pronouns derived from "it"
+#"Kor Sestor" refers to the pre-invasion Sestor state (when FL doesn't know about them other than "killing machines"). "Sestor Federation" refers to the one after.
+
+#Unlike what the Wanderers and the Kor Efret predicted, the Sestor Federation, a nation that had been in a constant state of war for centuries, do not die off after a single sack of its capital. They survived countless Mereti attacks, and they would survive that single Alpha assault that lasted less than a month long. 
+#The Sestor Federation did lose most of its ships and leadership in the attack. But like any competent government, backup plans exist. Currently, the Sestor Federation operates out of the bunker world of Sopi Lefarkata.
+mission "Sestor: Reappearance"
+	landing
+	invisible
+	to offer
+		has "wanderers sestor done"
+	on offer
+		event "sestor reemerges" 50
+		event "sestor reputation reset" 
+		decline
+
+event "sestor reputation reset"
+	"reputation: Kor Sestor" >= 0
+	government "Kor Sestor"
+		"attitude toward"
+			"Anatruskor Empire" 1
+
+	
+
+event "sestor reemerges"	
+
+#A mission that triggers automatic Sestor reawakening if the player does not do land on Sopi Lefarkata at all.
+
+mission "Sestor reappearance timer mission"
+	landing
+	invisible
+	to offer
+		has "sestor reemerges"
+	on offer
+		event "sestor reappear timer" 450
+		decline
+
+event "sestor reappear timer"
+
+mission "Sestor reappear: planet colonisation"
+	landing
+	invisible
+	to offer
+		has "event: sestor reappear timer"
+		not "Second Contact: Kor Sestor: declined"
+	on offer
+		event "sestor: reclaim sopi lefarkata"
+		event "sestor ikfar landfall"
+		event "drekag firask landfall"
+		event "keneska fek landfall"
+		event "firka tesk landfall"
+		event "devru kaska landfall"
+		event "saskira gatru landfall"
+		event "sebra skira landfall"
+		event "sestor ikfar recolonised" 90
+		event "drekag firask recolonised" 90
+		event "keneska fek recolonised" 90
+		event "firka tesk recolonised" 100
+		event "devru kaska activated" 10
+		event "saskira gatru recolonised" 50
+		event "sebra skira activated" 10
+		event "sestor population increase" 30
+		event "sestor population increase" 2630
+		event "sestor fleets emerge" 90
+		decline
+
+#Just a little gift mission that gives the player a KIV-349
+#Written for me to practise mission writing.
+#I love Sestor battleships.
+mission "Sestor: Ikfar Lost Ship"
+	landing
+	invisible
+	source "Sestor Ikfar"
+	to offer
+		has "wanderers sestor done"
+		has "event: sestor reemerges"
+		not "Second Contact: Kor Sestor: declined"
+		
+	on offer
+		conversation
+			`It has been a long time since the factories in Sestor Ikfar were shut down. With much fewer pollutants in the air, the ever-present smog over the planet has all but dissipated. You leave your ship, setting foot on the dusty concrete pad from which Kor Sestor drones used to take off and land. You can still see a few unrepaired drones in nearby hangars, all heavily damaged in battles years ago.`
+			`	The spaceport is heavily damaged. A gigantic collapsed building is visible to the north,and the asphalt road leading to it is riddled with with scorch marks, bones, and barricades. The Sestor Korath here must have put up a fierce fight against the Alpha invasion.`
+			`On the stretch of desert land near the hangars, two skeletons lie tangled against each other, a human one and a giant lizard skeleton you presume to be that of a Korath. You can only imagine the last moments of the Alpha fighter and the Sestor Korath, simultaneously striking killing blows against each other. The Korath's uniform lay torn and tattered, revealing a brightly-coloured metal plate. The plate's design is remarkably similar to a Republic ID card, with a photo of a Korath in the left, and short lines of symbols in the right. An ornate red logo lay near its top.`
+			`	You pick up the plate. It must be a form of identification for this Sestor korath.`
+			`Retrieving a shovel from your ship's cockpit, you untangle the two skeletons, and bury them where they lay. May the two rest in peace.`
+			`	As you wander around the abandoned spaceport, you find a gigantic Kar Ik Vot 349 attached to a robotic tug in a secluded taxiway. Apparently, the tug was deactivated just before the warship was scheduled to launch. The Korath Exiles must have missed this ship as they looted this base.`
+			`You climb up onto the tug, where an oval-shaped red LED button shone brightly in the shadows. Curious, you press the button. The button turns blue, as the tug begins to move. A faint whirr of the tug's motor signified its electric nature, as the tug tows the Kar Ik Vot 349 to a vacant launchpad next to your flagship. The tug stops, disconnects from the warship, and heads back towards the spaceport.`
+			`Mindful of the ship's Kor Sestor origin, you climb up into the warship's interior. The door you blast open during space boarding, as it turns out, can be easily opened using the Sestor ID plate. A brief scan later, the Kar Ik Vot 349's main door opened.`
+			`	You walk into the narrow corridor of the drone battleship. Just like the many times before where you captured a Sestor drone off-world, you replace the ship's IFF identification data with yours. The gigantic Sestor ship is yours.`
+				accept
+	on accept
+		give ship "Kar Ik Vot 349"
+		set "sestor id card"
+		fail
+
+#Ikagalef? Derived from Megawati, the fourth Indonesian president, and the one name I feel Korath-like after the flip and letter replacement stuff.
+#Yes, the exoskeleton thing is a Korath-Hai translator (very useful during Korath-Hai raids). Plugging it into a Hai-Human translator yields a Korath-Human translator. Due to both being designed for diplomatic use, the languages are made to be as polite as possible, hence the flowery tone.
+#Korath use simple words and gestures to communicate. The exoskeleton translator picks up both to translate. Hence it's an exoskeleton.
+#Feels like this mission is so long, but I like describing the environment. So mote it be.
+#Korath seem to be neither male nor female. Using the pronouns it/it because I want to reserve they/them for groups of Korath to reduce confusion.
+#For the story to work Ikgalef must be a competent, likeable person. Anybody else the Sestor is dead.
+#Rafeki = friend. Ralukut = trash, rubbish. Kalabet = f*cker (cuss word). Po'of = enemy. Ke'epek = annoying
+mission "Second Contact: Kor Sestor"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		has "wanderers sestor done"
+		has "event: sestor reemerges"
+		not "event: sestor reappear timer"
+		
+	on offer
+		conversation
+			`For a moment, you forgot that this was once a Kor Sestor world. A scene straight out of New Austria, snowcapped mountains and boundless forests make up most of the landscape. Flying reptiles and birds can be seen swooping in the sky. Through your ship's inbuilt ground scanner, you can see slight disturbances from beneath the trees. Animals. The juxtaposition of this serene, calm world in a region of space ravaged by centuries of warfare is jarring.`
+			`	The uneven terrain means that there are little place suitable for landing. Any flatlands that might have once existed are riddled with crater, no doubt the result of Mereti bombardments. Finally, you spot a clearing in a secluded valley, slightly larger than a Heavy Warship's size, and land your ship there.`
+			`	As a precaution against native predators, you bring your shotgun with you as you disembark your ship. Before you can relax, you notice insects immediately trying to fly into your ship via the open door. You immediately close the door and activate your ship's environmental control system. The insects should be dealt with shortly. Other than the faint hissing sound from your ship winding down, there is no artificial noises.`
+			`	The slightly yellow, waist-high grass and the faint noises of alien fauna is soothing and therapeutic, reminding you of your homeworld of New Boston. Which reminds you...`
+			`	You rush back to your ship, and retrieve a loaf of New Boston farmhouse bread from the stasis chamber. With some cheese from New Holland, a can of baked beans from New Britain, and a piece of New Icelandic cod, you make your impromptu lunch. What more can a star pilot ask for, but a fulfilling meal made of the finest ingredients across the galaxy? You clear away some grass, lay down a small mat, and start eating. Mmmm, the grilled cheese smell amazing...`
+			`	Just as you are about to finish your baked beans, you sense sudden movement out of your left eye. You turn towards the source, but nothing seems to be there. As you begin to pack away your food, you see the movement again. Picking up your rifle, you turn to investigate the source. Is it a predator stalking you? Better safe than sorry.`
+			`	After a brief chase, you finally see a pale white leg vanishing just a second too late. You speed up to catch it, but then you suddenly lose your footing and fall to the ground, face-first. You turn around, only to stare down the barrel of a Korath Thermal Repeater rifle. You freeze, slowly putting your hands up.`
+			`	The two Korath pointing their guns to you are not like the Kor Efret seen in Laki Nemparu. Large scars run down their foreheads and cheeks, and their bodies are shorter and wider. The two Korath shout frantically in a language you do not understand, and after a while, they stop.`
+			choice
+				`	(Stand still)`
+					goto still
+				`	"I come in peace!"`
+			`Both Korath do not seem to understand your words, and, instead, the left one took out a picture from its breast pocket.`
+				goto then
+			
+			label still
+			`	After a protracted period of silence, the Korath on the left rummaged through its breast pocket before it produced a photograph.`
+			
+			label then
+			`	The photograph depicts a crouching human in standard camouflage. His hairless face, ugly with bulging eyes, is contorted into a nasty snarl. And unlike you, this man has green skin.`
+			`	"Alpha?" the Korath on your left asks, the first word you recognise. The other Korath visibly tenses.`
+			`	"Human, human," you answer. Uttering a single "Alpha" might make them think you are one, and your reply is best kept simple.`
+			`	"Humani," the right Korath turns towards the left one, "Humani, Alpha po'of."`
+			`	The atmosphere visibly loosens after this exchange, as the Korath takes on a friendlier tone. It appears that these Korath consider the Alpha enemies. The impromptu interrogation happened a little longer, but not much else meaningful is exchanged between the three of you. Notable, however, is how fast the Korath are at snatching a few hair strands that happened to fall off you. You are creeped out, but are in no position to stop it.`
+			`	The left Korath gestures to the right one, who grunts and beckons you to follow it as it turns and leaves. From the bushes all around your ship, tens of Korath emerge, and go into formation around you.`
+			`	The Korath leads you out of the forest clearing, into the forest itself. `
+			choice
+				`(continue)`
+			`The forest on Sopi Lefarkata is rather similar to that of New Tibet. Tall trees shrouded in mist, with the occasional bushes here or there. The Korath take great care to avoid small hills with holes in them, which you assume to be the den of some kind of animal. Right in front of you, a large beetle-like insect jumps up, and catches a small bird that was drinking nectar from a large, blue flower.`
+			`	The Korath stop abruptly in front of a particularly large and bulbous tree. For a second, you worry whether the Korath are about to execute you. Fortunately, instead of shooting you, the Korath grabbed the thickest exposed tree root, and lift it up. The tree root turns out to be a disguise for a control panel, and a single press of an oval green button reveals a hidden doorway on the left that leads downwards. The Korath usher you into the doorway. A press of the oval red button in the doorway closes the opening.`
+			`	The doorway beyond is brutalist, the greyish-colour of concrete occasionally defaced by what you assume to be the Korath language. The Korath usher you into a zone outlined in red, before one of them speak into a black rectangle. A gigantic automatic turret pop down from the ceiling, pointing at you, before retracting after the Korath mutter something more.`
+			`	The door open to reveal a large cavern, much bigger than any you have ever seen. Thousands of buildings dot the hollowed-out area where Korath constantly stream in and out of. You can feel the heat emanating from lamps above and light tubes lining the walkways. Gigantic hangars are present, near what appears to be a launch platform facing a dark valley. Curiously, however, you see no ships launching or landing as expected from a settlement this large. Some mechanics are working on Far Lek 14's and Far Osk 29's, the only spacecraft visible here. Large greenhouses and algae tanks are visible, which probably provide the Korath food.`
+			`	The Korath around you march you down to a giant bus-sized pod, which floats along metal roads towards a large building. In the building stands even more Korath with guns. Before long you find yourself facing the what appears to be the Korath's leader. The leader, sitting on a brown, leather chair, turns towards you. The two Korath guards steps back in unison, and march out. After a few, deafening seconds, the Korath leader speaks.`
+			`	"Greetings, humani."`
+			choice
+				`	"Hello."`
+				`	"How do you know my language?"`
+					goto language
+				`	"I come in peace!"`
+			`"You are not Alpha," says the Korath leader, "Why are you here?"`
+			`	"I was just exploring this region of space," you reply truthfully, "I though you were dead."`
+			`	The Korath leader flares his nostril, as a loud snort rings your hears.`
+			`	"Bah, those green kalabet do not kill all Korath. They do not know here. We do not have visitors. Why do you know us?"`
+			`	"I was here before," you reply, "Your ships always shot at me."`
+			`	"We do not know any ships other than the ke'epek Mereti. Only us and po'of fly here. We shoot everyone."`
+			`	You feel an urge to tell the leader that their aggressive policy was what prevented visitors from coming. Antagonising the leader with many soldiers staring at you, however, is obviously unwise.`
+			`	"How do you know my language?" You ask, dropping the matter entirely.`
+			label language
+			`	"The green kalabet, 'Alphas' they call themselves, land in Sestor Ikfar, our capital, and talk with us, saying they want to learn," the Korath leader says with disdain, "Lies, ralukut lies. Steal our ships and guns, kidnap Korath like livestock, and hold our leaders at gunpoint..."`
+			`	The Korath leader starts to tremble, as his words increase in pitch, conviction, and speed, "Then they build a black ralukut. Defile our dance into their words. Despicable heresy! They do not know Sopi Lefarkata. We know them. We in Sopi Lefarkata learn Alpha tongue. We understand Alpha kalabet ralukut. We are not fooled. You are humani. Humani is Alpha po'of. You are good. You are rafeki."`
+			`	The rant is evidently exhausting for the Korath leader, as he begins to visibly pant. Yes, these are Sestor Korath, who survived the Alpha attack. Needless to say, they are sworn enemies of the Alpha.`
+			`	"So, I am here merely to explore. I have no other intentions. I, like all humans, consider Alphas the enemy," you say, as you start to show the leader the same holograph videos you showed to the two guards.`
+			`	"You do not need to prove, humani. The Sestor trust you."`
+			`	The Korath leader tilts his head, and taps his head before pushing his palm out to you. As you tilt your head in confusion, the Korath freezes, eyes going wide.`
+			`	"Travellor," the Korath leader says, "I realise you do not know me. I am Ikgalef. President of the Sestor Federation."`
+			`	"Captain <first> <last>, of New Boston," you reply in kind.`
+			`	With all suspicion between you and Ikgalef gone, the conversation takes on a lighter tone. Ikgalef starts by recounting the history of the Sestor. The Sestor Federation is one of the many Korath nations, alternating between war and peace for the past few centuries. Unfortunately, dramatic escalation of warfare due to a revolution led to a Korath-wide civil war, and the Sestor had been fighting non-stop for three centuries. Until the Mereti suddenly stop attacking the Sestor a short while ago, and a surprise Alpha raid on Sestor Ikfar. Fearing another attack, the Sestor went into hiding, enacting radio silence, grounding all their ships, and stopping all surface activities.`
+			`	In return, you tell the Sestor leader about the whole situation about the Wanderers' struggle against the Unfettered Hai, their mission to terraform planets, the pacification of the Mereti drones, and how the stolen Sestor drone ordeal was resolved. Ikgalef visibly frown, but makes no comment.`
+			`	Eventually, the interrogation-turned-amicable-discussion comes to an end. Ikgalef gives you a red tetrahedral pendant, a proof of non-hostility between you and the Sestor Korath, and and a provisional Sestor identity card.`
+			`	"Rafeki, it is a pleasure to meet you, Captain," says Ikgalef, "Please do visit us sometime. We need an eye in the outside world."`
+			`	With that, you are dismissed, and escorted out of the giant building.`
+			choice
+				`(Stay the night in this Sestor cavern)`
+				`(Leave the city and spend the night in your ship)`
+					goto shipnight
+			`Being in a cave, the Sestor city does not have a natural way to show time. A giant clock on top of the central building displays time using a traditional clock face. It appears that clocks are rather universal throughout the Galaxy. To help with the perception of time, gigantic lamps on the cave's ceilings gradually dim as "nighttime" approaches.`
+			`	Before it dismissed you, Ikgalef gave you a small card for your future stays in Sopi Lefarkata. Copying a Korath pedestrian, you scan the code representing the accomodation on a scanner installed in a street lamp. After a short while, a small portable hologram projector is activated, showing floating arrows and 3D models of buildings acting as a form of navigation. Retrieving the paper, you follow the navigator hologram's instructions for the night.`
+			`	On wide, asphalt footpaths, Korath and robots walk along, with some shooting curious glances at you every now and then. You follow a path leading underground where many Korath are heading towards, which turns out to be a train station. Metro rides are apparently free here, and you board a train that heads towards the city center.`
+			`	The train ride is smooth and quiet, just as expected of a modern maglev system. A few Korath sitting on the seats can be seen reading newspapers, with the same script you saw on the entrance's concrete walls. Two Korath sit across each other, staring at what seems to be Korath chess. Being the sole human in this Korath cave earns you many, many looks, and you do your best to ignore this.`
+			`	You leave the train where most of the passengers do as well. The city centre here on Sopi Lefarkata reminds you of the Earth cities of New York and Hong Kong, where buildings are dense and tall, people walk quickly and look down, and shops are ubiquitous.`
+			`	You find a restaurant along the path where with a long Korath queue and wait. It is fortunate that helpful photos are provided alongside written names to the few dishes served there. You decide to follow the vast majority of Korath, and choose a bowl of fish soup.`
+			`	Ordering the fish soup is the right call. The subtle flavour of algae complements the vague sweetness of fish very well, and the various pieces of tube vegetables in it provide it with something to chew. The soup is as delicious as it is filling, and you leave the shop satisfied.`
+			`	Apparently the accommodation you are staying at is the only one in Sopi Lefarkata, being a highly militarised planet. You return your holograph navigator by placing it on a silver area (the platform sinks, returning it to circulation), and use your Sestor card on an automatic counter to check in.`
+			`	The room you have has windows that overlook the city. Alongside the usual sonic shower and laundry machine always seen in a human hotel, you discover that this room's temperature control settings has a much greater range, and has an option to set temperature variations over time.`
+			`	After a thorough sonar cleansing of your body, your clothes, the pillows and the towels provided, you quickly fall asleep. It has been a stressful day.`
+			choice
+				`(continue)`
+			`	The next day, after a quick breakfast (a simple porridge-like grain stew) you take the Korath metro to the spaceport. During the interrogation the day before, the Sestor towed your ship into the spaceport, and did a thorough scanning. The spaceport itself is empty, because of the Sestor ships all being drones, and that Sestor ships had been grounded after the Alpha attack. A full body scan reveals no anomalies, and your ship is fully spaceworthy.`
+				goto final
+			label shipnight
+			`Spending the night amongst the Korath seem to be too much of a hassle, especially due to the language barrier. Despite Ikgalef giving you a card that has codes to access the most important places in Sopi Lefarkata, you decide that the familiar sleeping quarters in your ship is a better idea.`
+			`	During your interrogation, the Korath had moved your ship from the grass field into the cave's spaceport for investigation. They found nothing threatening, as they should. This does mean that your ship is now in the Sopi Lefarkata spaceport, though, and you decide to reclaim your ship by travelling there.`
+			`	The card Ikgalef gave you is easy to use. Scanning the "spaceport" code in a scanner activates a holographic navigator, which uses symbols to guide you to where you need to go. This time, the navigator points you to the city's metro system, and you board a maglev train going towards the city periphery. It is evening now, and many Korath board the same train as you as they travel from their workplaces in the city centre back to their homes. Despite the crowded train, you smell no body odour like you usually do in human or Hai cities, for the reptilian Korath produce no sweat.`
+			`	Being the only human in this Korath city spares you many, many glances, and you do your best to ignore them. Screens on carriage sides show a Korath news presenter reporting about the Korath news today, and you are very surprised to see your arrival and your ship being shown on-screen. Faces turn towards you, and you grin sheepishly and do a little wave to them. The camera cuts to a confused reporter waiting outside the building you left a while ago. You realise that you have been very lucky to evade the Korath media and the embarrassment that the language barrier would ensure. The sniggers die down to attentive gazes as the news program gives way to a Korath boxing match, and you soon leave the train.`
+			`	You see your ship parked on the sole occupied tarmac, near the draped opening where spaceships presumably enter and exit from. With Sestor drones being grounded, there is virtually no activity in the spaceport. Several autonomous robot vehicles are refuelling your ship, as per standard procedure. You enter your ship and immediately take a sonic shower. While not nearly as relaxing as a hot water shower, sonic showers give your sore muscles a subtle massage, which helps a lot, especially after standing for a whole day.`
+			`	You make yourself a small sandwich, and quickly fall asleep. The next day, you do a full scan of your ship, receiving an "all normal" sign. Your ship is ready for takeoff.`
+			label final
+			`	The spaceport is fully sealed from the outside, and to take off, the gigantic port doors must open. Fortunately, a piece of card left behind by the Korath investigators give you a small device that can toggle the doors.`
+			`	You are now able to enter and leave Sopi Lefarkata as you please.`
+				decline
+			
+	on decline
+		"reputation: Kor Sestor" += 10
+		"sestor trust" ++
+		set "known to sestor federation"
+		log "Factions" "Sestor Federation" `Once known as the "Kor Sestor", the Sestor Federation is a Korath state that went into hiding after the Alphas attacked their capital and stole some of their ships.`
+		log "People" "Ikgalef" `The Foreign Minister of the Sestor Federation, currently serving as acting President after the Sestor leadership perished in the Alpha attack.`
+		event "sestor: reclaim sopi lefarkata"
+
+#Now that First Last knows that the Sestor still exists, it is only fair to place the Sestor back on the map.
+event "sestor: reclaim sopi lefarkata"
+	government "Kor Sestor"
+		"display name" "Sestor Federation"
+		"send untranslated hails"
+	system Eneremprukt
+		government "Kor Sestor"
+	planet "Sopi Lefarkata"
+		spaceport `Two types of spaceport exists on Sopi Lefarkata: Simple, rudimentary refuelling stations that allow for rapid fleet turnaround, and the gigantic central spaceport in the Sestor's largest underground city. The central spaceport, like the rest of the city, is fully underground, and any spacecraft have to travel through a pair of reinforced doors to and from the spaceport. Because the Sestor use drones as their primary spacefaring vessels, no amenities are provided at the spaceport. One must travel into the city itself for amenities, not that there are many foreign captains travelling here in the first place. Any requests or trades have to be directed to a single droid warden that guards the port, and the goods requested will be delivered directly to the ship.`
+		outfitter "Korath Basics"
+		outfitter "Korath General Basics"
+
+#First mission.Bring a few Korath with you and scan all the former Sestor worlds. 
+#The Sestor move quickly to utilise Captain FL to their advantage. After all, huddling together in their last city and wait for their eventual doom is hardly a good survival plan.
+
+mission "Sestor: System Scans"
+	name "Scan all Kor Sestor systems"
+	description "Fly through former Sestor systems with a team of Korath scientists and some sensors, then return them to Sopi Lefarkata."
+	source "Sopi Lefarkata"
+	to offer
+		has "known to sestor federation"
+		random <50
+	waypoint "Asikafarnut"
+	waypoint "Silikatakfar"
+	waypoint "Ferukistek"
+	waypoint "Makferuti"
+	waypoint "Sobarati"
+	waypoint "Celeborim"
+	passengers 3
+	cargo "sensors" 10
+	on offer
+		conversation
+		`	Just after you get off your ship, you see Ikgalef and its entourage crowding around your ship again.`
+		`	"Rafeki captain <last>," begins Ikgalef, "We have mission for you. We need to expand."`
+		`	Ikgalef continue to describe the task to you. It is a simple scouting mission to all systems the Sestor controlled before the Alpha invasion. Three Korath specialists and ten tonnes of equipment would be installed in your ship for this mission.`
+		`	"Will you ?"`
+		choice
+				`	"Yes."`
+					accept
+				`	"No."`
+					decline
+	on waypoint
+		dialog "You have scanned all Sestor systems."
+	
+	on enter Asikafarnut
+		dialog "The Sestor capital lies silent after half a year of no Korath being present. Craters, both old and new, can be seen even from orbit."
+	
+	on enter Silikatakfar
+		dialog "Sasirka Gatru is a curious site. Despite its blue oceans and position right in the habitable zone, no plantlife, chlorophyll or retinal, can be seen. The atmospheric scans quickly give you the answers, for the chemical symbols of many toxic compounds are shown on the scanners' LCD screens."
+		
+	on enter Ferukistek
+		dialog "The planet, Keneska Fek, can visibly be divided into two biomes: the normal, pristine landscape, which covers most of the lusher, green poles, and the heavily cratered desert. Several grid-patterned settlements can be found on the planet."
+		
+	on enter Makferuti
+		dialog "Settled ocean planets are a rare sight in the Milky Way, and Drekag Firask is one such sample. Large white dots dot the marine blue landscape, which probably represent Sestor settlements and industries on this planet. Large concentrations of such structures are found on the poles."
+	
+	on enter Sobarati
+		dialog "The Sestor specialists focus more on the gas giant than the small station, the only non-natural structure in the sector. A minute later the sensor screens show the existence of helium, and the specialists are immediately satisfied, telling you to move on."
+		
+	on enter Celeborim
+		dialog "You are used to seeing either water or lava being abundant on planet surfaces, but they usually don't appear together. Here on Firka Tesk, however, lava rivers and water rivers coexist, as do lava and water lakes, seas, and oceans. Deep ravines are prominent, too. You wonder what happened to this planet."
+	
+	on visit
+		dialog "You have returned to the Sestor impromptu capital, but the scanning is not complete yet. Your Korath companions try hard to not show their impatience, but their involuntary gestures are obvious."
+		
+	on complete
+		payment 300000
+		conversation
+			`The three Korath specialists thank you, as robots heist the heavy sensor equipment out of your ship. Ikgalef expresses his gratitude, as it hands you a credit chip worth 300,000.`
+
+#Second mission. Bring a few Sestor Korath to Sestor Ikfar to get tools that the Alpha and the Exiles missed.
+#You can see that the Sestor is desperately trying to win over First Last. Especially after knowing all the improbable feats our Captain did.
+#Sestor Korath still hate the Efreti.
+#Akidato = joy. Sounds really Japanese-like lol.
+mission "Sestor: Ikfar tool requisition"
+	name "Scavenge tools from Sestor Ikfar"
+	description "Head to Sestor Ikfar with a team of Sestor Korath to retrieve some tools, and return to Sopi Lefarkata."
+	cargo "factory tools" 100
+	passengers 5
+	landing
+	source "Sopi Lefarkata"
+	stopover "Sestor Ikfar"
+	destination "Sopi Lefarkata"
+	to offer
+		or
+			and
+				has "Sestor: System Scans: done"
+				not "Sestor: Ikfar tool requisition: declined"
+				random < 70
+			and
+				has "Sestor: Ikfar tool requisition: declined"
+				random < 20
+		has "Sestor: System Scans: done"
+		random <70
+	on offer
+		conversation
+			`Sopi Lefarkata remains more or less the same as last time. You walk out of your ship, ready for a quick gander in the city centre. Out of the corner of your eye, however, you see a rapidly approaching group of Korath, led by Ikgalef.`
+			`	One of the Korath put down a black speaker on the ground, and connect it with the exo-suit Ikgalef is wearing. After a short test, Ikgalef begins talking.`
+			`	"Greetings, Rafeki Captain <last>! It is akidato to see you. We have a job for you," Ikgalef said, as his gestures visibly turn wilder and quicker, "Kalabet Alpha destroy our capital. We have important factories and equipment there. Fly there with five Korath and bring back anything they found."`
+			choice
+				`	"Certainly!"`
+					goto accepting
+					"Maybe another time?"
+			`	Ikgalef nods in understanding, "We wait."`
+				decline
+			label accepting
+			`"Thank you, Captain! The Sestor owes you," Ikgalef said, gesturing to five of his entourage, "These five Korath here accompany you to Sestor Ikfar."`
+			`	With that, Ikgalef bids his farewell, and leaves. You show the five Korath their bunkers in the ship, and begin preparing supplies for this expedition.`
+				accept
+	on stopover
+		conversation
+			`Choosing a landing area is surprisingly easy, the former spaceport on Sestor Ikfar still being a prominent landmark even after the destructive Alpha invasion. After you land your ship on one of the less-damaged landing pads, you allow the five-Korath expedition to wander out.`
+			`	You can see the spaceport in ruins from afar. Up close, however, the damage seems more serious. Everything is in ruins. All hangars around you are either collapsed, or their doors visibly torn. The landing pads and access roads are heavily cratered by bombs, and the control tower is cleanly cut in half. Dead soldiers, both Alpha and Korath, have long since decayed, but the skeletons are still recognisable.`
+			`	The hangars with missing doors have been almost completely looted. Presumably, they once housed intact and functional Sestor drones that were taken by the Alphas and the Korath Exiles. Instead, the five Korath head towards the collapsed hangars and buildings, and begin searching for them.`
+			`	To your surprise, Robot tugs and other ground service vehicles have mostly survived the cataclysm. The building that housed them was struck by a missile and burnt (the impact craters and scorch marks have but a simple explanation), but the internal fire-proof systems of both the building and the vehicles themselves saved them from being destroyed. The Alphas and the Exiles never had the time to investigate.`
+			`	The robotic vehicles proved to be of great help for the excavations the five Korath want to do. What was originally a simple scouting and scavenging mission becomes a full retrieval mission, as the Korath and the robots heisted tonnes of slightly damaged machines and other kinds of equipment onto your ship.`
+			`	With the machines all secured in the cargo bay, the Korath then request you to land near a secluded factory complex on the other side of the planet.`
+			`	You expect more ruins and empty space in the factory, after all the Alpha and the Exiles looted basically everything from Sestor Ikfar. Yet, the factory seem untouched. In front of you is a Met Par Tek 53 with its red protective armour missing. On the sides lie the protective armour. On the left, the keel of a Tek Far 109 is lain, waiting for the intricate components to be installed. Gigantic robot arms are arranged in neat columns and rows, handling a myriad of tools you can only guess the functions of. The factory is turned off, and everything is still. Maybe you should visit a Sestor factory in the future. Robots are cool. This factory must have been missed by the scouring Alphas and Exiles.`
+			`	The Korath photograph the factory's state, before heading to the factory's control room. A few minutes later, and holding a kite-shaped crystal, they return to your ship. The expedition is over, and you prepare to head back to Sopi Lefarkata.`
+	
+	on complete
+		payment 100000
+		conversation
+			`Landing back on Sopi Lefarkata with 100 tonnes of Kor Sestor industrial machinery is not something you expect to do. As the robotic workers on Sopi Lefarkata's spaceport unload the various cargo from your ship, you see a satisfied Ikgalef.`
+			`	"Thank you, rafeki!" Ikgalef greets you excitedly, "Sestor grow strong. No more Alpha kalabet tricks. You serve us well. Take this gold."`
+			`	The dramatic wordings throw you off a bit, but you still accept his gratitude. As a gesuture of thanks, Ikgalef hands you a credit chip worth 100,000 credits.`
+			`	With all said and done, you part amiably.`
+	
+	
+
+#Third mission. Ferry a lot of Korath to Sestor Ikfar. re-colonisation of Sestor Ikfar starts. 
+#pi'at afilek = Thank you
+mission "Sestor: Ikfar Recolonisation"
+	name "Bring Sestor colonists to Sestor Ikfar"
+	description "Bring a large group of Sestor Korath to Sestor Ikfar, to reclaim their former capital."
+	passengers 100
+	cargo "life-support equipment" 150
+	landing
+	source "Sopi Lefarkata"
+	destination "Sestor Ikfar"
+	to offer
+		or
+			and
+				has "Sestor: Ikfar tool requisition: done"
+				not "Sestor: Ikfar Recolonisation: declined"
+				random < 70
+			and
+				has "Sestor: Ikfar Recolonisation: declined"
+				random < 20
+	on offer
+		conversation
+			`After the successful expedition to Sestor Ikfar, the mood in Sopi Lefarkata seem to have improved a lot. You are surprised to see a huge crowd forming outside the spaceport as you land, and a few microphones are quickly thrusted in front of you as soon as you emerge from the spaceport's gates.`
+			`	There is one problem, however. You do not understand Korath, and the Sestor do not understand any human languages.`
+			`	It is a great hassle to get past the crowd, and enter the train station. Unwilling for your private activities be photographed and put on Korath newspapers and television shows, you take the train to Ikgalef's office instead.`
+			`	Ikgalef seems to be expecting a visit, for you are swiftly directed to a guest room with tea and other amenities already well-prepared, and a joyous Ikgalef sitting across, translating machine already turned on.`
+			`	"Rafeki Captain," Ikgalef begins, "The Sestor Ikfar machines work well. We have industry here. The Sestor grow strong because of you. Pi'at afilek."`
+			`	Ikgalef does a slight nod at the final phrase. It is a "thank you" expression.`
+			`	Apparently, the Sestor media had a field day knowing the existence and the outcome of the expedition. While excitement is abundant, a growing voice is demanding the Sestor return to Sestor Ikfar, now that the Alpha threat is over. A group of 100 Sestor Korath have been chosen to take part in the first colonisation effort.`
+			`	"These are brave pioneers. They are the first to fly to Sestor Ikfar. Rafeki, you are the only one who can fly a ship now. Please bring them to our capital alongside 150 tonnes of machines. Do you accept?"`
+			choice
+				`	"Yes."`
+					accept
+				`	"No."`
+					decline
+	on complete
+		payment 150000
+		event "sestor ikfar landfall"
+		event "sestor ikfar recolonised" 90
+		conversation
+			`The ship was loud with the Korath discussing their plans on the former capital while travelling through hyperspace, and you expect the same to happen after landing. When you land in front of a cave near the largest city on Sestor Ikfar, however, the Korath become quiet. They walk out of your ship in a single file silently, and wordlessly begin setting up their equipment inside the cave.`
+			`	The group's leader hand you a credit chip containing a payment of 150000 credits.`
+			
+event "sestor ikfar landfall"
+	system Eneremprukt
+		fleet "Sestor Colonisation Transports" 50000
+	system Silitakfar
+		fleet "Sestor Colonisation Transports" 50000
+	system Asikafarnut
+		government "Kor Sestor"
+		fleet "Sestor Colonisation Transports" 50000
+	planet "Sestor Ikfar"
+		description "This dry, hot world is home to almost no native life. Its closeness to its home star and flat desert terrain, however, make this planet but is ideal for solar energy generation. The once abundant skyscrapers and factories are all but destroyed due to the Alpha invasion, and, thus, the once sprawling city lies in complete ruins."
+		description `	Recently, the Sestor Korath have made a return to their former capital, bringing with them heavy equipment and machinery. Heavy reconstruction efforts of the factories, the city, and the spaceport is underway, and progress is steady.`
+		spaceport "The former spaceport of Sestor Ikfar, a large landing pad linked to massive passageways leading directly to the factories, serves as a rudimentary spaceport now. Debris and rubble is cleared from the spaceport complex, and small robot workers can be seen building a spaceport complex right around this singular landing pad."
+		add outfitter "Korath Basics"
+		add outfitter "Korath General Basics"
+		add outfitter "Kor Sestor Basics"
+
+event "sestor ikfar recolonised"
+	system Asikafarnut
+		government "Kor Sestor"
+	planet "Sestor Ikfar"
+		description `Although hostile to life, this desert planet is home to a bustling metropolis teeming with Korath life. Large skyscrapers, some completely new, some painstakingly rebuilt as those destroyed by the Alpha, feature prominently on the horizon. A metro system similar to that in Sopi Lefarkata serves the planet capital's millions of inhabitants, and high-speed rails connect the capital city with various outlying settlements. Large arrays of solar panels fill the landscape outside of cities, powering the cities and the many moisture farms that provide citizens with water.`
+		description `	Large train tracks fill the formerly empty passageways in the factory zone, with self-piloting locomotives delivering various raw and processed goods to and from them. A number of factories are delegated towards education, where aspiring Sestor engineers put their novel ideas into action.`
+		description `	Retractable barriers and automated turrets are found in every road and building, both inside and outside cities, making any potential invasion extremely difficult and costly.`
+		spaceport `The sprawling spaceport of Sestor Ikfar is the grandest throughout Sestor space. A 150-metre-tall monument is featured prominently in the Spaceport's central square as a reminder of the Alpha invasion. Surrounding the central square are large amounts of shops selling clothes, food, and souvenirs, and directly behind, the largest train station in Sestor Ikfar. Everything in this spaceport is automated, as thousands of robotic cars and mechas carry passengers and cargo directly from the train station or the reception area to their waiting spaceships. Hundreds of Gauss cannons, laser cannons, and plasma turrets can be seen throughout the spaceport, no doubt to prevent another invasion from the skies.`
+		add outfitter "Korath General Advanced"
+		add outfitter "Kor Sestor Advanced"
+
+#Fourth mission (job): Colonists from Sopi to Ikfar.
+mission "Sestor: Colonists to Sestor Ikfar"
+	job
+	repeat
+	name "Bring Korath colonists to Sestor Ikfar"
+	description "Deliver a team of Sestor Korath colonists from Sopi Lefarkata to Sestor Ikfar"
+	source "Sopi Lefarkata"
+	destination "Sestor Ikfar"
+	passengers 10 100
+	to offer
+		random < 90
+		has "Sestor: Ikfar Recolonisation: done"
+		not "event: sestor ikfar recolonised"
+	on complete
+		dialog "You land on Sestor Ikfar's developing spaceport, and bid the Korath goodbye."
+		payment 75000
+
+mission "Sestor: Materials to Sestor Ikfar"
+	job
+	repeat
+	name "Bring supplies to Sestor Ikfar"
+	description "Deliver <cargo> from Sopi Lefarkata to Sestor Ikfar"
+	source "Sopi Lefarkata"
+	destination "Sestor Ikfar"
+	cargo random 50 5 0.1
+	to offer
+		random < 70
+		has "Sestor: Ikfar Recolonisation: done"
+		not "event: sestor ikfar recolonised"
+	on complete
+		dialog "The spaceport on Sestor Ikfar is rebuilding, but robotic tugs are already functional. With ease, a fleet of them unload your cargo, and carry them to a team of colonisers."
+
+
+#Fifth mission: Ferry a small team of Korath to Drekag Firask, the ocean algae farming world. Bring back some algae samples.
+mission "Sestor: Drekag Firask Expedition"
+	name "Expedition to Drekag Firask"
+	description "Bring a team of Sestor Korath to Drekag Firask to investigate the state of the algae farms."
+	source "Sopi Lefarkata"
+	stopover "Drekag Firask"
+	destination "Sopi Lefarkata"
+	passengers 10
+	to offer
+		or
+			and
+				has "Sestor: Ikfar Recolonisation: done"
+				not "Sestor: Drekag Firask Expedition: declined"
+				random < 75
+			and
+				has "Sestor: Drekag Firask Expedition: declined"
+				random < 20
+	on offer
+		conversation
+			`Following the beginning of the Recolonisation of Sestor Ikfar, the area around the spaceport is beginning to develop. As new buildings are being constructed near the spaceport entrance, tracks are being laid to build a new train station directly in the port. The Sestor seem to be preparing to re-open space travel.`
+			`	Large LED screens are already being set up in the spaceport, currently showing a wrestling match between two incredibly muscular Korath. You do not understand the words on screen, but it seems that combat is popular amongst Korath.`
+			`	Ikgalef approaches you as you step out of the spaceport. Its entourage quickly set up the translator, and he begins talking.`
+			`	"Greetings, Rafeki Captain! Sestor Ikfar develops well. Pi'at afilek. Next target is Drekag Firask. We need algae and fish to build up industry."`
+			`	From the vivid description of the ocean planet he gives you, Ikgalef wants you to send a team of Sestor Korath to investigate the state of the Sestor's former farm world. Because farming specialists are needed in addition to the usual crew, ten Korath will board the ship instead of the five going to Sestor Ikfar.`
+			`	After much deliberation, you say...`
+			choice
+				`	"Sure, I'll go!"`
+					accept
+				`	"Sorry, maybe next time?"`
+					decline
+	on stopover
+		conversation
+			`What was assumed to be large amounts of settlements on this planet's poles turns out to just be masses of deactivated cultivator ships, drifted to the poles due to ocean currents.`
+			`	You land on one of the larger, visibly still operational ships. This ship cultivates a particular retinal-synthesising species using water from the ocean, and presses its spores to make hydrocarbon and fuel. The nature of the war means that, even after communications was severed this ship continued to synthesise fuel. Despite its operability, however, large waves still occasionally pass through the ship's barriers into the interior.`
+			`	The Korath take note of this city-ship's state, and go into its command centre. You hear massive engines start to whirr, as the ship begins to move on its own. The Korath then gesture you to land on another ship drifting nearby.`
+			`	Ships that directly grow food are in worse shapes than those that refine fuel. The one you land on have many cracks visible on its superstructure as well as its hull. It is a miracle this city-ship is still floating. After taking a few readings, the Korath once again activate the ship's thrusters, causing it to move.`
+			`	The same process repeats itself many times, and the process becomes so monotonous you decide to hover your ship directly above the ships' control centre so that the jobs can be finished quicker. When you leave, you discover that the city-ships have drifted together around the sole landmass in Drekag Firask's southern hemisphere, and parked themselves there.`
+	on complete
+		payment 175000
+		conversation
+			`Same as every time before, you land your ship back on Sopi Lefarkata. The expedition leaves, and pay you 175000 credits.`
+
+#Sixth mission: Ferry a lot of Korath to Drekag Firask. Sestor colony is re-established there.
+mission "Sestor: Drekag Firask Recolonisation"
+	name "Bring Sestor colonists to Drekag Firask"
+	description "Bring a large group of Sestor Korath to Drekag Firask, to re-activate its many refineries."
+	passengers 100
+	cargo "large machinery" 100
+	landing
+	source "Sopi Lefarkata"
+	destination "Drekag Firask"
+	to offer
+		or
+			and
+				has "Sestor: Drekag Firask Expedition: done"
+				not "Sestor: Drekag Firask Recolonisation: declined"
+				random < 70
+			and
+				has "Sestor: Drekag Firask Recolonisation: declined"
+				random < 20
+	on offer
+		conversation
+			`Before you even touch down, your sensors already picked up Ikgalef waiting on the flight apron. Once again, he has a mission for you.`
+			`	"Rafeki, rafeki! Sestor expert analyse Drekag Firask's floating settlements. The settlements sink soon if we do not intervene. Please bring ten engineers and machines to repair and rebuild our settlements there."`
+			choice
+				`	"Sure."`
+					accept
+				`	"Maybe later?"`
+					defer
+	on complete
+		payment 150000
+		event "drekag firask landfall"
+		event "drekag firask recolonised" 90
+		conversation
+			`The ship was loud with the Korath discussing their plans on the former capital while travelling through hyperspace, and you expect the same to happen after landing. When you land in front of a cave near the largest city on Sestor Ikfar, however, the Korath become quiet. They walk out of your ship in a single file silently, and wordlessly begin setting up their equipment inside the cave.`
+			`	The group's leader hand you a credit chip containing a payment of 150000 credits.`
+
+event "drekag firask landfall"
+	system Makferuti
+		government "Kor Sestor"
+		fleet "Sestor Colonisation Transports" 50000
+	planet "Drekag Firask"
+		description `Much of the surface of this world is covered in water. Ships the size of small cities float in the oceans, carried by the tides. The ships are designed to incubate algae and other microorganisms that once provided the Korath both with food and with a source of mixed hydrocarbons similar to petroleum.`
+		description `	Recently, the Sestor Korath have begun to settle on this planet again. New docks are constructed in the largest land mass near the equator, and the city-ships are being repaired there.`
+		spaceport `A large clearing on the central dock currently serves as the primary spaceport. Consisting of a single refuelling hose and a concrete pad, this spaceport provide only the barest of services, mainly used for the loading and unloading of various bulk machineries and passengers.`
+
+event "drekag firask recolonised"
+	planet "Drekag Firask"
+		description `Much of the surface of this world is covered in water. Ships the size of small cities float in the oceans, carried by the tides. Two types of these city-ships are present: City ships where native Korath resident live in, and factory ships designed to incubate algae and other microorganisms that, once processed, either provide the Korath with food or act as a source of mixed hydrocarbons similar to petroleum.`
+		description `	Small repulsor-fitted aircraft, as well as larger ocean-going vessels, transport barrels of food and various algae-derived chemicals from factory ships to city-ships and the spaceport, forming the main part of this planet's economy.`
+		spaceport `The main spaceport on Drekag Firask is situated in the small main continent near the equator. Sandwiched between the planet's largest airport and port, the spaceport acts as the centre of its transportation infrastructure. Large cargo airplanes, tracked freight trains, and container ships offload their cargo at their respective stops, and automatic robotic vehicles take the pellets to waiting spaceships for interplanetary transport. Trade and repair requests are done through automated LED screens fitted in closed-air hangars, and are carried out by said robots.`
+
+
+#Seventh mission (job): Colonists from Sopi Lefarkata to Drekag Firask.
+mission "Sestor: Colonists to Drekag Firask"
+	job
+	repeat
+	name "Bring Korath colonists to Drekag Firask"
+	description "Deliver a team of Sestor Korath colonists from Sopi Lefarkata to Sestor Ikfar"
+	source "Sopi Lefarkata"
+	destination "Drekag Firask"
+	passengers 10 100
+	to offer
+		random < 90
+		has "Sestor: Drekag Firask Recolonisation: done"
+		not "event: drekag firask recolonised"
+	on complete
+		dialog "You land on Drekag Firask's developing spaceport, and bid the Korath goodbye."
+		payment 75000
+
+mission "Sestor: Materials to Drekag Firask"
+	job
+	repeat
+	name "Bring supplies to Drekag Firask"
+	description "Deliver <cargo> from Sopi Lefarkata to Drekag Firask"
+	source "Sopi Lefarkata"
+	destination "Drekag Firask"
+	cargo random 50 5 0.1
+	to offer
+		random < 70
+		has "Sestor: Drekag Firask Recolonisation: done"
+		not "event: drekag firask recolonised"
+	on complete
+		dialog "The spaceport on Drekag Firask is rebuilding, but robotic tugs are already functional. With ease, a fleet of them unload your cargo, and carry them to a team of colonisers."
+
+
+#Korath diplomacy: Sestor and Anatruskor had been at war with Efreti-Korsmanath when Simlisti fell to a coup to form Mereti. Hence Sestor launched a surprise attack on Mereti. War becomes melee-a-trois between Efreti-Korsmanath, Sestor-Anatruskor, and Mereti. Sestor never peaced out with Efreti, and have no intention to do so. As Anatruskor falls, refugees find themselves flying into Sestor land. Being pluralistic (accepting of different cultures rather than integrating them), Anatruskor identity remains strong in Sestor Federation.
+#Ninth mission: A discussion about the emerging Sestor fleets. An introduction to the Anatruskor.
+#Setting up for the juicy, juicy political mess that will mark the second act.
+#Kipabavaf, derived from Majapahit. Urucohotab, derived from Pakubuwono, last ruler of the Mataram Sultanate.
+mission "Sestor: Coloniser Fleets"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		or
+			has "event: sestor ikfar landfall"
+			has "event: drekag firask landfall"
+	on offer
+		conversation
+			`Since the two colonisation missions, you have noticed the re-appearance of Sestor-aligned ships in Sestor space. Instead of Sestor drones you saw many times in the past, these new fleets are comprised solely of Palavrets.`
+			`	"One ship is not enough to move thousands of Korath off-world," explains Ikgalef, "We risk getting found out in space, or our colonies die. We control flight so that ke'epek do not happen."`
+			`	A Palavret sitting on the pad next to your ship is preparing for takeoff. Hundreds of Korath form a long queue, preparing to board this gigantic raiding vessel. You have fought Palavrets before, and plundered them, even. Never have you seen a Korath-owned one being serviced on the ground.`
+			`	"'Palavrets'? I know no Palavret. Kotnareb Tubfaleb Ik'ih 300, Anatruskor transport. Anatruskor Empire, Sestor Rafeki. Staunchest rafeki..."`
+			`	Ikgalef pauses, his cheery demeanour falling. Then, with a somber tone, he tells you about the Anatruskor Empire, a staunch ally of the Sestor Federation.`
+			`	The Anatruskor Empire was the Korath faction that invented the jump drive independently from the Pug and the Quarg. Due to this, the Anatruskor Korath were able to trade and interact with the Hai and other species. When the Korath nations of Korsmanath and Kashikt suffered from a cultural revolution that turned them into the Kor Efret, the Sestor and the Anatruskor became inseparable allies.`
+			`	After the Simlisti Empire, yet another ally of the Sestor and the Anatruskor, fell to a collectivist revolution and formed the Kor Mereti, the two-way conflict became a three-way struggle, which ultimately led to the Drak intervention. While many Anatruskor Korath chose to go into exile, not willing to give up jump drives, a sizeable portion still remained.`
+			`	Even after the mass exodus, the Anatruskor remained faithful allies to the Sestor, before a revolt destroyed the last settlements in Spera Anatrusk.`
+			`	Ikgalef proudly states that an Anatruskor government in exile, headed by Prince Urucohotab of Kipabavaf, the current pretender to the Anatruskor throne, exists under Sestor protection.`
+				choice
+					`(Tell Ikgalef about the Wanderers' settlements in former Anatruskor space.)`
+						goto wanderers
+					`(Do not tell)`
+						go to apparentbliss
+			label wanderers
+			`As Ikgalef continue to ramble on about a future plan to push through Mereti drones and re-settle Anatruskor refugees on the Anatruskor worlds, you mention the Wanderers occupying these territories.`
+			label catoutofbag
+			`	Initially, Ikgalef only watches on, eyebrow raised. When you talk about the Wanderer collaborating closely with the Efreti to terraform the worlds, Ikgalef visibly pales.`
+			`	"Pi'at afilek, captain, rafeki" says Ikgalef, as he turns deadly serious, "We must move quickly."`
+			`	"Why the distress?"`
+			`	Ikgalef turns to you, expression darkening, "The Efreti are kalabet traitors. They are born Korath, yet they act shamelessly and traitorously like the Hai. They cower behind the Quarg like slaves. They are as spineless as their muscles are massless. They represent everything a Korath is not. To give them Anatruskor territory is kalabet blasphemy. This is as outrageous as it is unfair. This must not happen."`
+			`	You hear Ikgalef rant with an unbridled rage against the Hai and the Kor Efret, body shaking. Slipping back into his native Korath tongue, Ikgalef flails and shakes with reckless abandon, his dance moves frantic and fast.`
+			`	"They're not that bad, Ikgalef. The Hai are peaceful traders who provide humans a safe haven. The Efreti have been cooperating peacefully with the Wand-"`
+			`	"The kalabet Hai betrayed us when we need them the most!" roars Ikgalef, "And don't defend the Efreti kalabet ralukut po'of, they bow to whoever they think is stronger than them, which is anything not Korath!"`
+			`	From Ikgalef's flushed and angry face, wild gestures, and large mouth movement, you can feel Ikgalef really, really loathes the two alien factions.`
+			`	"Please, rafeki Captain <last>, you must understand the ralukut the Efreti have done. They do not deserve, and do not fit, to live in Anatruskor land. We must convince the Wanderers to see reason!"`
+			`	Ikgalef is in an emotional state, and you know reasoning with him is bound to fail. You give a non-committal assent, which Ikgalef elatedly interprets as a full-on support. With a burst of manic energy, Ikgalef turns to you.`
+			`	"Captain, our plan to resettle our worlds need to be sped up. Please meet me in the spaceport later to discuss."`
+				accept
+			label apparentbliss
+			`Ikgalef rambles on and on about a future plan to sneak Anatruskor Korath through Mereti drones and re-settle Anatruskor refugees on former Anatruskor worlds. Before that, however, former Sestor worlds need to be re-colonised first.`
+			`	"Pi'at afilek, Rafeki Captain! The Sestor is in your debt. The reclamation is far from over, however. I tell you when the next expedition is ready."`
+				decline
+
+	on accept
+		event "sopi lefarkata outfitter add"
+		set "sestor knows wanderer plan"
+		log "Factions" "Anatruskor Empire" `A defunct Korath state situated in northern Korath space. A semi-constitutional monarchy, the Anatruskor Empire was responsible for manufacturing Korath Jump Drives. Siding with the Sestor in the Final Korath Civil War, the Anatruskor eventually died out after revolts destroyed their habitation domes.`
+		log "People" "Urucohotab of Kipabavaf" `A member of the Anatruskor royal family who sought refuge in Sestor lands when the Anatruskor civilisation ended. Currently heading the Anatruskor government-in-exile.`
+		fail
+	
+	on decline
+		log "Factions" "Anatruskor Empire" `A defunct Korath state situated in northern Korath space. A semi-constitutional monarchy, the Anatruskor Empire was responsible for manufacturing Korath Jump Drives. Siding with the Sestor in the Final Korath Civil War, the Anatruskor eventually died out after revolts destroyed their habitation domes.`
+		log "People" "Urucohotab of Kipabavaf" `A member of the Anatruskor royal family who sought refuge in Sestor lands when the Anatruskor civilisation ended. Currently heading the Anatruskor government-in-exile.`
+		
+			
+event "sopi lefarkata outfitter add"
+	planet "Sopi Lefarkata"
+		add outfitter "Korath Basics"
+		add outfitter "Korath General Basics"
+		add outfitter "Kor Sestor Basics"
+			
+
+#Tenth mission: Ferry Korath to Keneska Fek. Asteroid mining and minerals. (Future expansion of getting Gegno mining tech so no more asteroid crashes.)
+#Despite being nearer to Sopi Lefarkata, Keneska Fek is only colonised now due to its relative unimportance as a pure mineral exporter.
+#From this point on, because the Sestor flies ships again, planets will still get colonised even if the player declines. Only happens when Ikgalef knows Wanderers are coming though.
+mission "Sestor: Keneska Fek Recolonisation"
+	name "Expedition to Keneska Fek"
+	description "Bring a team of Sestor Korath to Keneska Fek, the closest planet, to prepare for resettlement."
+	source "Sopi Lefarkata"
+	destination "Keneska Fek"
+	passengers 10
+	to offer
+		has "sestor know wanderer plan"
+		or
+			and
+				has "Sestor: Drekag Firask Recolonisation: done"
+				not "Sestor: Keneska Fek Recolonisation: declined"
+			and
+				has "Sestor: Keneska Fek Recolonisation: declined"
+				not "sestor knows wanderer plan"
+				random < 20
+	on offer
+		conversation
+			branch sestorknows
+				has "sestor knows wanderer plan"
+			`Ikgalef has its spirits up when it meets you. "Greetings, Captain. The expedition to Keneska Fek is ready. May you lend your help to us once again?"`
+			choice
+				`	"Sure, I'll go!"`
+					goto ignorantok
+				`	"Sorry, maybe next time?"`
+			`"Alright, this mission can wait. Do tell us if you are ready!"`
+				decline
+			label ignorantok
+			`"La'eh! An Anatruskor transport carrying the colonists accompany you. If the expedition team that you carry clears the planet for colonisation, Korath immediately begin their work."`
+			`	Dancing in the Sestor language, Ikgalef helps you coordinate your take-off schedule with the Palavret's captain. Before long, everything is set.`
+				accept
+			label sestorknows
+			`Ikgalef shows up in the spaceport, scales dishevelled and clutching a large pile of documents.`
+			`	"Greetings, Rafeki Captain," Ikgalef talks quickly, "The expedition to Keneska Fek is ready. Ten Korathaccompany you there alongside an Anatruskor transport for immediate colonisation."`
+			choice
+				`	(accept the job)`
+					goto knowingaccept
+				`	(decline)`
+			`"Fine. We spare another transport. Tell us if you are available."`
+				decline
+			label knowingaccept
+			`"Pi'at afilek, Rafeki Captain! May we recover soon."`
+				accept
+
+	on complete
+		payment 100000
+		event "keneska fek landfall"
+		event "keneska fek recolonised" 90
+		conversation
+			`Keneska Fek is a desert world, not too dissimilar to Sestor Ikfar. Clusters of uniform, grid-shaped cities are present, with unfinished ones spreading into the cratered deserts beyond.`
+			`	You land on one of the unfinished grids with nothing built on it just yet, signalling the trailing transport to land on the one next to you. The ten Korath leave your ship, and set up a few instruments. A few minutes later, the instruments emit a green light, calling for the Korath colonisers from the large transport to disembark.`
+			`	The transport's captain hands you a credit chip worth 100000 credits, as a thank you for the troubles.`
+
+	npc accompany save
+		government "Kor Sestor"
+		personality escort timid
+		fleet
+			names "korath"
+			variant
+				"Kotnrareb Tubfaleb Ik'ih 300"
+
+
+
+mission "Sestor: Keneska Fek decline patch"
+	landing
+	invisible
+	to offer
+		has "sestor knows wanderer plan"
+		has "Sestor: Keneska Fek Recolonisation: declined"
+	on offer
+		event "keneska fek landfall" 7
+		event "keneska fek recolonised" 97
+		fail
+
+event "keneska fek landfall"
+	system Ferukistek
+		government "Kor Sestor"
+		fleet "Sestor Colonisation Transports" 50000
+	planet "Keneska Fek"
+		description `Keneska Fek is a desert planet once used by the Kor Sestor as a mining world. Craters are commonplace, a result of the Sestor crashing asteroids to mine. With communications ceasing after the Alpha invasion, all activities on this planet ceased.`
+		description `	The Sestor Korath have recently settled on this planet again, intending to continue their asteroid crashing modus operandi. Already, shields are being constructed around the settlements, as robot workers run around the grid cities to trim duplicate infrastructure.`
+		spaceport `A group of undeveloped grids currently function as Keneska Fek's spaceport. Its rudimentary concrete platforms and kit-bashed landing control highlights this spaceport's temporary nature.`
+
+event "keneska fek recolonised"
+	planet "Keneska Fek"
+		description `With thousands of aluminium, iron, and titanium asteroids being towed down and broken up every day, Keneska Fek boasts the highest metal output volume throughout Korath Space, and possibly the entire Milky Way. Compared to crashing asteroids down, as it was done for centuries, towing them down using sublight drones has proven to increase production levels by over 500%.`
+		description `	The grid pattern is still visible in settlements, but the buildings are all specialised now. Huge, 3000mm-gauged railways haul hundreds of thousands tonnes of metal ores from asteroids to refineries, where they would be processed and shipped off-world to construct various machinery.`
+		description `	With most industrial processes being autonomous, there is little need for Korath labour here. Hence, the population on this planet is small at only about one million.`
+		spaceport `Keneska Fek's spaceport is remarkably simple, with rows of landing pads leading directly to the entrance. The access roads are wide and made of reinforced concrete, enabling gigantic vehicles to haul gigantic blocks of metals directly to departing freighters.`
+
+#Twelfth mission: Ferry Korath and equipment to Firka Tesk. Lava rivers mean that rare minerals are present. Set up a mining base there.
+#Ditto for Firka Tesk. The lava river does create lots of minerals.
+mission "Sestor: Firka Tesk Recolonisation"
+	landing
+	name "Expedition to Firka Tesk"
+	description "Bring a team of Sestor Korath to Firka Tesk, a formerly habitable planet with a toxic atmosphere."
+	source "Sopi Lefarkata"
+	destination "Firka Tesk"
+	passengers 10
+	to offer
+		or
+			and
+				has "Sestor: Drekag Firask Recolonisation: done"
+				not "Sestor: Firka Tesk Recolonisation: declined"
+				random < 75
+			and
+				has "Sestor: Firka Tesk Recolonisation: declined"
+				not "sestor knows wanderer plan"
+				random < 20
+	on offer
+		conversation
+			branch ignoredlasttime
+				and
+					has "sestor knows wanderer plan"
+					has "Sestor: Keneska Fek Expedition: declined"
+			branch sestorknows
+				has "sestor knows wanderer plan"
+			`The spaceport at Sopi Lefarkata is busy, as usual. Hundreds of Korath queue up for resettlement on the fledging colonies of Sestor Ikfar and Drekag Firask. Keneska Fek, being an automaton-dominated world, has remarkably less immigration interest.`
+			`	You see Ikgalef making its way towards you, nimbly wearing the full-body translator while doing so.`
+			`	"Greetings, Rafeki Captain <last>! The Sestor is grateful to you for re-opening our metal procurement! May you transport ten Korath to Firka Tesk, one of our former colonies? It is destroyed by planet cracker, but the lava rivers provide us ample minerals."`
+			choice
+				`	"Sure, I can do that."`
+					goto ignorantok
+				`	"Sorry, I am not free right now?"`
+			`"It can wait. Tell me when you are ready."`
+				decline
+			label ignorantok
+			`"Laom a'aih! An Anatruskor transport carrying the colonists accompany you. Pi'at afilek!"`
+			`	Ikgalef once again helps you coordinate your take-off schedule with the transport's captain. Before long, everything is set.`
+				accept
+			label sestorknows
+			`Ikgalef has visibly calmed down from the frenzy before the Keneska Fek colonisation effort. This time, along with its entourage Ikgalef walks briskly towards your freshly-landed ship.`
+			`	"Pi'at afilek, Rafeki Captain," Ikgalef gestures, "Please bring ten Korath to Firka Tesk. The rest of  colonisation team accompany you there in another transport for colonisation."`
+			choice
+				`	"Sure, I'll do the job."`
+					goto knowingaccept
+				`	"Sorry, I cannot spare my ships this time."`
+			`"We spare another transport. Tell us if you are available."`
+				decline
+			label knowingaccept
+			`"Pi'at afilek, Rafeki Captain! May we regain our strength."`
+				accept
+			label ignoredlasttime
+			`(You have been rather busy last time the Sestor enlisted your help. Are you ready for another mission?)`
+			choice
+				"(Yes)"
+					goto sestorknows
+				"(No)"
+					decline
+
+	on complete
+		event "firka tesk landfall"
+		event "firka tesk recolonised" 100
+		payment 175000
+		conversation
+			branch zenithbombed
+				has "event: bombed zenith"
+			`Admiral Danforth's bomb was never used. It is a very fortunate fact that, nevertheless, makes you wonder just what a bombed planet would look. Firka Tesk gives you the answer.`
+				goto teskdesc
+			label zenithbombed
+			`Your ship lands on a basalt delta on Firka Tesk. Firka Tesk's ruined landscape reminds you strongly of a necessary evil you committed not long ago: bombing Zenith.`
+			label teskdesc
+			`	The surface of Firka Tesk resembles a shoddy reassembly of a diced onion. Tall cliffs are prominent everywhere, standing over oceans of water and lava. Peculiarly, the flows of water and lava seem to coexist in this world, forming distinctive geological features along their wake. The odd plant and lichen can be seen in places near water, but no large organism exist on this cracked world.`
+			`	Unlike the last few times, the atmospheric scanner shows a red sign, indicating a toxic atmosphere unsuitable for Korath to live in. In response, large robots emerge from the Sestor transport, and starts constructing a large dome right on top of one of the flat-topped mountains. As you prepare to leave, you see the first Korath enter the dome via an airlock, as the robots continue to construct more domes around the first.`
+	
+	npc accompany save
+		government "Kor Sestor"
+		personality escort timid
+		fleet
+			names "korath"
+			variant
+				"Kotnrareb Tubfaleb Ik'ih 300"
+
+
+
+mission "Sestor: Firka Tesk decline patch"
+	landing
+	invisible
+	to offer
+		has "sestor knows wanderer plan"
+		has "Sestor: Firka Tesk Recolonisation: declined"
+	on offer
+		event "firka tesk landfall" 7
+		event "firka tesk recolonised" 107
+		fail
+
+event "firka tesk landfall"
+	system Celeborim
+		government "Kor Sestor"
+		fleet "Sestor Colonisation Transports" 50000
+	planet "Firka Tesk"
+		description `This appears to have once been an inhabited world, and the remnants of a few cities still remain. But the planet's crust has been cracked like an eggshell, releasing rivers of lava and leaving behind unnaturally steep mountains and fault lines. The wind whistles and howls through the rifts and fissures as if the planet itself is screaming in pain. A thick haze of sulfur dioxide and ash hangs over everything.`
+		description `	Recently, a Korath outpost has been constructed on this world. Interconnected insulated glass domes form a sturdy barrier between the sulfur dioxide-laden external atmosphere and the oxygen-rich internal atmosphere. Several probes are deployed into water and lava bodies to prospect for minerals and other valuable materials.`
+		spaceport `The spaceport at Firka Tesk currently consists of a concrete pad with an extendable tube that connects directly to visiting spacecraft's doors. Due to this cumbersome process, turnover is slow, causing the colony to develop more sluggishly than the rest.`
+
+event "firka tesk recolonised"
+	planet "Firka Tesk"
+		description `Due to its inhospitable atmosphere, Firka Tesk is mostly colonised by robots. Gigantic autonomous refineries are ubiquitous, processing the various rare material found in lava. Millions of robots are sent all over the landscape to establish mines, especially at the bottom of tall cliffs where previous tectonic activities have caused previously unmineable ores to be exposed to the surface. Large collectors are established to collect the sulfur dioxide found in the atmosphere for industrial and military uses.`
+		description `	The small Korath outpost consists of merely a small dome complex, where a handful of controllers overseeing the planet's operations reside in. Due to the fragility of the habitat, massive concrete protective barriers are erected to cover the entire habitat, and gigantic ground-to-space cannons are installed to shoot down any unidentifiable spacecraft.`
+		spaceport `Two types of spaceport exists on Firka Tesk. The first is the Korath spaceport, with two landing pads and two extendable walkways that leads directly to the spaceship's doors, bypassing the atmosphere. The other is the industrial spaceport, where robots load processed materials into waiting cargo spacecraft with ease.`
+
+
+
+#Thirteenth mission (job): Transport minerals from Keneska Fek and Firka Tesk to either Ikfar or Sopi.
+
+mission "Sestor: Industrial material transportation (Fek-Ikfar)"
+	job
+	repeat
+	name "Refined metal delivery"
+	description "Deliver refined metals from Keneska Fek to Sestor Ikfar"
+	source "Keneska Fek"
+	destination "Sestor Ikfar"
+	cargo "refined metal" 10 100
+	to offer
+		random < 66
+		has "Sestor: Keneska Fek Recolonisation: done"
+	on complete
+		dialog "You land on Sestor Ikfar's spaceport, where the metals are transported away via a giant conveyer belt."
+		payment 75000
+
+mission "Sestor: Industrial material transportation (Fek-Sopi)"
+	job
+	repeat
+	name "Refined metal delivery"
+	description "Deliver refined metals from Keneska Fek to Sestor Ikfar"
+	source "Keneska Fek"
+	destination "Sopi Lefarkata"
+	cargo "refined metal" 10 100
+	to offer
+		random < 66
+		has "Sestor: Keneska Fek Recolonisation: done"
+	on complete
+		dialog "You land on Sopi Lefarkata's spaceport, where a few robots carry the metal pallets away."
+		payment 75000
+
+mission "Sestor: Industrial material transportation (Tesk-Ikfar)"
+	job
+	repeat
+	name "Rare-earth metal delivery"
+	description "Deliver rare-earth metals from Keneska Fek to Sestor Ikfar"
+	source "Firka Tesk"
+	destination "Sestor Ikfar"
+	cargo "rare earth metal" 10 100
+	to offer
+		random < 66
+		has "Sestor: Firka Tesk Recolonisation: done"
+	on complete
+		dialog "You land on Sestor Ikfar's spaceport, where the metals are transported away via a giant conveyer belt."
+		payment 100000
+
+mission "Sestor: Building material transportation (Fek-Sopi)"
+	job
+	repeat
+	name "Rare-earth metal delivery"
+	description "Deliver stones bricks from Keneska Fek to Sestor Ikfar"
+	source "Keneska Fek"
+	destination "Sopi Lefarkata"
+	cargo "stone brick" 10 100
+	to offer
+		random < 66
+		has "Sestor: Firka Tesk Recolonisation: done"
+	on complete
+		dialog "You land on Sopi Lefarkata's spaceport, where a few robots carry the brick pallets away."
+		payment 75000
+
+#Fourteenth mission: Ferry Korath to Devru Kaska. Deuterium fuel is essential for starship fuel supplies. Ferry some fuel back to Sopi and Ikfar.
+
+mission "Sestor: Devru Kaska Expedition"
+	landing
+	name "Expedition to Devru Kaska"
+	description "Bring a team of Sestor Korath to Devru Kaska, the Sestor's fuel refinery."
+	source "Sopi Lefarkata"
+	destination "Devru Kaska"
+	passengers 10
+	to offer
+		or
+			and
+				has "Sestor: Firka Tesk Recolonisation: done"
+				not "Sestor: Devru Kaska Expedition: declined"
+				random < 75
+			and
+				has "Sestor: Devru Kaska Expedition: declined"
+				not "sestor knows wanderer plan"
+				random < 20
+	on offer
+		conversation
+			branch ignoredlasttime
+				and
+					has "sestor knows wanderer plan"
+					has "Sestor: Keneska Fek Expedition: declined"
+			branch sestorknows
+				has "sestor knows wanderer plan"
+			`Ikgalef finds you in the spaceport, once again. `
+			`	"Pi'at afilek, Rafeki! Sestor recover much in the last few weeks," Ikgalef says, "Next, we reopen our fuel refinery at Devru Kaska. With that, we can resume normal spaceflight routines."`
+			`	"Help us reclaim our final stretches of land, Rafeki. The station require few Korath to operate, which travel with you. A team of engineers travel alongside you to do the initial inspection and repairs."`
+			choice
+				`	"That can be arranged."`
+					goto ignorantok
+				`	"Sorry, maybe next time?"`
+			`"This mission can wait. Tell us if you are ready!"`
+				decline
+			label ignorantok
+			`"Pi'at Afilek, rafeki. The transport will wait for you soon."`
+			`	Being the only being capable of translating English to Korath and vice-versa, Ikgalef once again helps you coordinate your take-off schedule with the transport's captain. Before long, everything is set.`
+				accept
+			label sestorknows
+			`Ikgalef, after a while of calmness, seem extraordinarily nervous again.`
+			`	"Greetings, Rafeki Captain!" Ikgalef starts, "Our foes move as we dance. We must resume normal spaceflight. Our station at Devru Kaska is chief refinery for hyperdrive fuel, and it is utmost priority to send Korath to reactivate it. May you bring ten trained station operators to this station? A transport with engineers go with you to support those operators."`
+			choice
+				`	"Of course I can!"`
+					goto knowingaccept
+				`	"Sorry, I cannot spare my ships this time."`
+			`"Fine," Ikgalef says dejectedly, "We can probably spare another transport. Please do tell us if you are available."`
+				decline
+			label knowingaccept
+			`"Thank you for your kindness, Captain! We rise quickly, as we must."`
+				accept
+			label ignoredlasttime
+			`(You were rather busy last time the Sestor enlisted your help. Are you ready for another mission?)`
+			choice
+				"(Yes)"
+					goto sestorknows
+				"(No)"
+					decline
+
+	on complete
+		event "devru kaska landfall"
+		event "devru kaska activated" 10
+		payment 175000
+		conversation
+			`You perform an orbital rendezvous the station, floating listlessly around a gigantic gas giant. Inside its massive, exposed drone bays lie thousands of small drone ships, all equipped with massive scoops in its front. The station is in dire need of repairs, with many panels fraying, punctured, or missing. `
+			`	You are surprised that, despite the state of this station, the hull is still airtight. The Korath operators leave your ship wearing spacesuits, and begin checking the station's status. You notice the Anatruskor transport scanning the station from the outside, no doubt assessing its external condition. Eventually, the transport, too, docks with the station, and offloads its few engineers to begin repair. Robotic workers are also being deployed into the station, beginning to work on the station's exterior.`
+			`	You check your bank balance, and discover that the 175000 credits promised have already been transferred to your account.`
+	
+	npc accompany save
+		government "Kor Sestor"
+		personality escort timid
+		fleet
+			names "korath"
+			variant
+				"Kotnrareb Tubfaleb Ik'ih 300"
+
+
+mission "Sestor: Devru Kaska decline patch"
+	landing
+	invisible
+	to offer
+		has "sestor knows wanderer plan"
+		has "Sestor: Devru Kaska Expedition: declined"
+	on offer
+		event "devru kaska landfall" 7
+		event "devru kaska activated" 17
+		fail
+
+
+
+event "devru kaska landfall"
+	system Sobarati
+		government "Kor Sestor"
+		fleet "Sestor Colonisation Transports" 50000
+	planet "Devru Kaska"
+		description "This station, orbiting a gas giant, serves as a deuterium refinery, collecting hydrogen from the gas giant's upper atmosphere, and separating the hydrogen into its various isotopes."
+		description "	Years of neglect has caused considerable damage to the station's structure, chiefly caused by thermal stress due to its close proximity to its star."
+		description "	Following the arrival of a team of Korath engineers and operators, the station is currently undergoing a major renovation."
+		spaceport "As the oxygen supply system is due for a replacement, the entire station is currently unpressurised, save for a small living quarters. Those visiting this station need their own spacesuits, and anything delivered have to be vacuum-proof."
+		
+event "devru kaska activated"
+	planet "Devru Kaska"
+		description "The primary volatile refinery of the Sestor Federation, Devru Kiska is one of the two major Sestor stations in operation. Thousands of drones head towards the gas giant it orbits, and scoop up hydrogen gas for the refineries in the station, such that protium, deuterium, and tritium can be separated and stored."
+		description "The protium and tritium is mostly exported to various industries elsewhere, while most of the deuterium produced is further refined into hyperspace fuel."
+		spaceport "The station's living quarters is relatively small, designed to support no more than ten permanent personnel at a time. Large solar panels and batteries provide a constant stream of electricity for even the power-hungry computers that regulate station operations. Small-scale reconstruction projects have mostly mitigated the effect of thermal expansion on the station's structure, a luxury that no pre-invasion Korath had."
+		spaceport "	Due to the station's small pressurised quarters, a retractable airlock is installed near the docking bays, allowing visiting spacecraft to directly transfer personnel and pressurised goods between ship and station."
+
+
+#Interlude. Korath breeding program.
+#Korath life span assumed to be ~40 years. This means they reach adulthood at around 7.2 years, which is about 2628 days.
+mission "Sestor: Breeding program"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		has "sestor knows wanderer plan"
+		has "event: sestor ikfar recolonised"
+		has "event: drekag firask recolonised"
+	on offer
+		conversation
+			`Your last few times visiting Sestor space has been hectic. Ever since Ikgalef knew about the Wanderers being friendly towards the Efreti, it has been constantly giving out orders for rapid expansion. Today, you don't see the acting President running towards you with missions on mind, so you decide to wander around the city instead.`
+			`	Before you leave the spaceport, you notice the advertisement showing on a noticeboard. It is nothing like what you have seen before. On a green background lies a nest of long, pale eggs, with a Korath looking at them , probably with a positive expression. You are not that good with Korath emotions yet.`
+			`	When you travel in the city metro, you notice the advertisements of the same sort playing on the train's screens. A few Korath cradling nests of eggs, young Korath playing with older ones, and a rather disturbing one where a Korath eats a piece of molted Korath skin. Everyone looks happy, especially when another Korath gets home holding a piece of paper. Korath hugging. You see more pieces of advertisement when you leave the train and going into the city centre.`
+			`	The scenes with the eggs and skin-eating throws you off a bit, but you eventually realise what these advertisements are for. The Sestor government wants more babies, and they want them bad.`
+				decline
+	on decline
+		set "sestor birth policy"
+		event "sestor population increase" 20
+		event "sestor fully repopulated" 2620
+		
+
+event "sestor population increase"
+
+event "sestor fully repopulated"
+
+
+
+#Fifteenth mission: Ferry Korath to Sasirka Gatru. De jure to set up an outpost and mining facilities. De facto to collect toxic gases for weapons and industry.
+mission "Sestor: Sasirka Gortu Recolonisation"
+	landing
+	name "Expedition to Sasirka Gatru"
+	description "Bring a group of Korath scientists to Sasirka Gatru."
+	source "Sopi Lefarkata"
+	destination "Devru Kaska"
+	passengers 20
+	to offer
+		or
+			and
+				has "Sestor: Devru Kaska Expedition: done"
+				not "Sestor: Saskira Gortu Recolonisation: declined"
+				random < 75
+			and
+				has "Sestor: Saskira Gortu Recolonisation: declined"
+				not "sestor knows wanderer plan"
+				random < 20
+	
+	on offer
+		conversation
+			branch ignoredlasttime
+				and
+					has "sestor knows wanderer plan"
+					has "Sestor: Devru Kaska Expedition: declined"
+			branch sestorknows
+				has "sestor knows wanderer plan"
+			`Once again, you see the familiar face of Ikgalef waltzing towards you as your ship finishes its landing procedures. It seems like the Sestor's leader has a new job for you.`
+			`	"Greetings, Rafeki Captain. There is one last planet in our space that is not colonised yet. May you help the Sestor to colonise this planet? An Anatruskor transport will accompany you there, to start a base right away."`
+			choice
+				`	"Sure."`
+					goto ignorantok
+				`	"Sorry, maybe next time?"`
+			`"I can wait. Do tell us if you are ready."`
+				decline
+			label ignorantok
+			`"Thank you. The transport will be ready soon."`
+			`	Being the only being capable of translating English to Korath and vice-versa, Ikgalef once again helps you coordinate your take-off schedule with the transport's captain. Before long, everything is set.`
+				accept
+			label sestorknows
+			`Once again, you see the familiar face of Ikgalef waltzing towards you as your ship finishes its landing procedures. With the resettlement of more and more Sestor worlds, Ikgalef seems more and more confident and assured.`
+			`	"Greetings, Rafeki Captain. There is one last planet in our space that has not been colonised yet. The scans you do for us indicate that large concentrations of toxic chemicals exist there, which makes large-scale production of many chemicals possible. May you help the Sestor to colonise this planet? An Anatruskor transport will accompany you there, to start a base right away."`
+			choice
+				`	"Yes, I will."`
+					goto knowingaccept
+				`	"Sorry, I cannot spare my ships this time."`
+			`"We probably spare another transport. Please do tell us if you are available."`
+				decline
+			label knowingaccept
+			`"Thank you for your kindness, Captain! We shall rise quickly, as we must."`
+				accept
+			label ignoredlasttime
+			`(You were busy last time the Sestor enlisted your help. Are you ready for another mission?)`
+			choice
+				"(Yes)"
+					goto sestorknows
+				"(No)"
+					decline
+	on complete
+		event "sasirka gatru landfall"
+		event "sasirka gatru recolonised" 50
+		payment 200000
+		conversation
+				`Sasirka Gatru is very weird when viewed from space. Despite having a normal, blue-tinted atmosphere and many water oceans on the surface, the many continents there are utterly devoid of the green or purple that photosynthetic species have. Scanners built in your ship blares off warnings about the extreme levels of organic toxins present in the atmosphere, as you choose a place to land.`
+				`	Similar to what happened in Firka Tesk, you wait for the Palavret-like transport to land on the same plateau as you. Unlike the many times you ran these Korath expeditions, the transport carries no organic Korath passengers. Instead, hundreds of robotic workers file out, before starting to construct a sealed habitat for your passengers to move into. After an hour, the habitat is deemed complete, and your passengers leave your ship via an extended walkway. You check your bank account, noting that the promised 200000 credits have been transferred successfully.`
+	npc accompany save
+		government "Kor Sestor"
+		personality escort timid
+		fleet
+			names "korath"
+			variant
+				"Kotnrareb Tubfaleb Ik'ih 300"
+
+
+
+mission "Sestor: Sasirka Gatru decline patch"
+	landing
+	invisible
+	to offer
+		has "sestor knows wanderer plan"
+		has "Sestor: Sasirka Gatru Recolonisation: declined"
+	on offer
+		event "sasirka gatru landfall" 7
+		event "sasirka gatru recolonised" 57
+		fail
+
+
+
+event "sasirka gatru landfall"
+	system Silikatakfar
+		government "Kor Sestor"
+		fleet "Sestor Colonisation Transports" 50000
+	planet "Sasirka Gatru"
+		description "A formerly habitable world, Sasirka Gatru now has a toxic atmosphere. Without plant life, the planet's landscape consists of only rocks, sand, and gravel. Various water-soluble toxins have gathered in this planet's oceans, making it extremely acidic and corrosive."
+		description "Specially-made glass domes currently houses the few Korath workers tasked to reclaim this planet. Robot workers are constructing various chemical plants planet-wide, Sasirka Gatru's toxic air and water a rich source of otherwise rare and expensive precursors to valuable products."
+		spaceport "Due to the corrosive nature of Sasirka Gatru's precipitation, a giant glass dome serves as the planet's spaceport cum air lock. The dome opens when a spacecraft approaches, closes after it lands, and the toxic air is pumped out in favour of the detoxified air breathable to organics."
+
+event "sasirka gatru recolonised" 
+	planet "Sasirka Gatru"
+		description "A lifeless planet with high concentrations of toxic chemicals, Sasirka Gatru houses hundreds of chemical plants that utilises such toxins to produce plastics, fuel, and chemical weaponry for the Sestor to use. Due to the planet's hostile environment, less than one hundred Korath are present on this planet at a time, with most activities being performed by the planet's thousands of robotic workers."
+		spaceport "Rows of glass domes serve as this planet's spaceport. A dome opens when a spacecraft approaches, closes after it lands, and the toxic air is pumped out in favour of the detoxified air breathable to organics. Due to the high productivity of this planet, hoses transporting liquid and gas chemicals and conveyer belts transporting solid chemicals lead to each dome, allowing for rapid loading and unloading."
+
+#Sixteenth mission (job): Ferry chemical from Sasirka Gatru to Ikfar/Sopi
+
+mission "Sestor: Chemical transportation (Gatru-Ikfar)"
+	job
+	repeat
+	name "Rare-earth metal transportation"
+	description "Deliver industrial-grade chemicals from Keneska Fek to Sestor Ikfar"
+	source "Sasirka Gatru"
+	destination "Sestor Ikfar"
+	cargo "chemicals" 10 100
+	to offer
+		random < 80
+		has "Sestor: Sasirka Gatru Recolonisation: done"
+	on complete
+		dialog "You land on Sestor Ikfar's spaceport, where the chemical pallets are pumped away into waiting train cars."
+		payment 125000
+
+
+
+#I had a lot of fun writing this event.
+#Ikgalef learns about the Wanderers' plan to hand Anatruskor planets to the Efreti. Naturally it's not pleased.
+#The Korath have poor healing abilities, so they mostly stop before getting hurt. Hence the bloodless boxing match.
+#Korath loves to express themselves. Hence the sticky drawing board thing.
+#Man are the Korath emotional.
+mission "Sestor: Cat out of Bag"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		has "event: sasirka gatru landfall"
+		not "sestor knows wanderer plan"
+	on offer
+		conversation
+			`Once again, you see the familiar face of Ikgalef meeting you as you step out from your ship. Unlike most other times, however, there is no mission this time. Instead, Ikgalef invites you to a dinner in one of Sopi Lefarkata's most exquisite restaurants.`
+			`	Fine dining is a rarity for you. As a starship captain, most meals you have are either simple sandwiches you make in your ship, quick pasta dishes you cook in your ship's rudimentary kitchen, or cheap meals you eat in local restaurants or spaceport cafeterias. The celebration meal you had with your parents when you graduated with flying colours in your elementary school back in New Boston was one such instance. Apart from that, only the occasional state meals you had with the leadership of the Free Worlds comes to mind.`
+			`	Korath fine dining is rather different from human fine dining. Hardly ever do you see wrestling rings or gun ranges in formal human restaurants. You also fail to remember the presence of giant billboards that allow you to post scribbled stickies on.`
+			`	Seeing your shocked look, Ikgalef chuckles.`
+			`	"Why are you so shocked? Fine dining should be fun! Nothing heals stressed-out Korath more than a few punches and a few drawings of your own!"`
+			`	It seems that the Korath idea of a "fine" dining is rather different from what humans consider one to be.`
+			`	Ikgalef and you sit down on a table a little distance away from the wrestling ring. "Better, viewing from distance," claims Ikgalef. As Ikgalef converses with the waiter what it wants, you look at the menu. Amongst the familiar images of fish steak, salad, stews and baked dishes, you see a soup bowl with weird, grey balls. Feeling adventurous, you point at that to the waiter, successfully ordering your dish non-verbally.`
+			`	In the wrestling ring, two Korath are engaged in a fierce boxing match. While the punches are fierce, you can see that both are acting with great restraint. Then, astonishingly, before first blood is drawn, the Korath visibly in a disadvantage surrender, a rather disappointing end for you. Before you can ponder any more, your dish arrives.`
+			`	The dish up close looks more appetising than the one in photos, although that's not a high bar to cross. Within the grey blobs you can see little pieces of yellow-white reflective tissue. You poke at it with your fork, discovering that the savoury blob is strangely elastic and "bouncy" in a way. The milky-white soup has a hint of sweetness within its umami flavour. The food is brilliant. Sestor cuisine is exquisite.`
+			`	"Blended fish," introduces Ikgalef, shoving a piece of fish into his mouth, "It's made of all the parts in a bony fish blended together."`
+			` 	You choke. Sometimes it's best not to ponder about the origin of food.`
+			`	Just like that, you banter with Ikgalef as you both enjoy your meals in the rowdy establishment. The topics drift quickly, going from talking about human and Korath foods (No, Ikgalef, shrimp shells are not eaten), to sport events ("How is football a sport without fighting?" shouted Ikgalef), to space combat experience (You are better with tactics, having fought in many battles, while Ikgalef is better with strategies, having constantly fought against the Mereti), and finally to the Wanderers.`
+			`	"You mention about the Wanderers pacifying the Mereti. Where do they base themselves in, anyway?" asked Ikgalef.`
+			`	"Hmm? Their first colony around here is in Spera Anatrusk, but they base themselves in Desi Seledrak now," you reply. After all, knowing thy neighbours is a good way forward.`
+			`	Ikgalef raises his eyebrows, and continued.`
+			`	"They are terraformers, right? How long are they staying?"`
+			`	"Oh, around 10,000 years last I heard. They are handing them over to the Kor Efret way in the west."`
+			`	Ikgalef freezes, his fork dropping dramatically onto the plate, impaling his fish fillet right in the middle. His eyes widens, as a feather falls from his head.`
+			`	"What? No!" Ikgalef seems to have lost its appetite in an instant.`
+			`	Confused, you try to console Ikgalef about this sudden outburst, but before you say anything Ikgalef seems to have calmed itself.`
+			`	"Pi'at Afilek, Captain," said Ikgalef, its tone turning steely, "We must move quickly."`
+			`	"Why the distress?"`
+			`	Ikgalef turns to you, expression darkening, "The Efreti are blood traitors. They are born Korath, yet they act shamelessly and traitorously like the Hai. They cower behind the Quarg like slaves. They are as spineless as their muscles are massless. They represent everything a Korath is not. To give them Anatruskor territory is blasphemy. This is as outrageous. It is unfair. This must not happen. Be'oof..."`
+			`	Ikgalef rants with an unbridled rage against the Hai and the Kor Efret, quickly slipping back into his native Sestor tongue as he shouts his throat hoarse.`
+			`	"They're not that bad, Ikgalef. The Hai are peaceful traders who provide humans a safe haven. The Efreti welcomes outsiders like me, and have been cooperating peacefully with the Wand-"`
+			`	"The Hai betrayed us when we needed them the most!" roars Ikgalef, "And don't you dare defend the Efreti, they bow to whoever they think is stronger than them, which is anything not Korath! The moment you show weakness they stab you in the back"`
+			`	From Ikgalef's flushed and angry face and wild gestures, you can feel Ikgalef really, really loath the two alien factions.`
+			`	"Please, Rafeki Captain <last>, you must understand the heinous things the Efreti have done. They do not deserve, and do not fit, to live in Anatruskor land. 10,000 years? That's forever! The Wanderers are tricking everyone else! Rafeki Captain, everyone else in this space are crooks! We must strengthen ourselves quickly!"`
+			`	Ikgalef is in an emotional state, and you know reasoning with it is bound to fail. You give a non-committal assent, which Ikgalef elatedly interprets as a full-on support. With that out of the way, you continue your meal.`
+			`	The conversation about the Wanderers, unfortunately, have ruined the mood. You both finish your meals quickly, foot the bill, and leave the restaurant.`
+			`	You return to your ship, troubled by Ikgalef's outburst and the animosity between the Efreti and Wanderers, and the Sestor.`
+				decline
+	on decline
+		set "sestor knows wanderer plan"
+
+
+
+
+
+
+#Sixteenth mission: Ferry Korath to Sebra Skira. Re-activate war platform. Ships begin full-scale production. Outfitters/Shipyard available to First Last.
+
+mission "Sestor: Sebra Skira Expedition"
+	landing
+	name "Expedition to Sebra Skira"
+	description "Bring a team of Sestor Korath to Sebra Skira, the Sestor fortress station."
+	source "Sopi Lefarkata"
+	destination "Sebra Skira"
+	passengers 10
+	to offer
+		has "Sestor: Sasirka Gatru Recolonisation: done"
+		not "Sestor: Sebra Skira Expedition: declined"
+		has "sestor knows wanderer plan"
+		random < 75
+
+		conversation
+			`Ikgalef seems revitalised with energy, as it makes its way towards you.`
+			`	"Rafeki Captain, we are almost complete in our quest of reclaiming all of Sestor space. We have but one system left, with our war platform called Sebra Skira. May you help us reactivate it?"`
+			choice
+				`	"Sure."`
+					goto knowingaccept
+				`	"Sorry, I cannot spare my ships this time."`
+			`"We can probably spare another transport soon."`
+				decline
+			label knowingaccept
+			`"Pi'at Afilek, Rafeki. An Anatruskor transport carrying necessary supplies and robot workers accompany you. Just bring 10 Korath to do the preliminary observation."`
+			`	"Got it. Thank you!"`
+				accept
+
+
+	on complete
+		event "sebra skira landfall"
+		event "sebra skira activated" 10
+		payment 175000
+		conversation
+			`The station floats alone around its star, its hull riddled with bullet holes and explosion scorches. Parts of the station was blown clean off, with repair efforts being visibly disorganised and random.`
+			`	The Korath spares but a glance towards the station, and immediately calls the robot workers to work. A small habitable section is quickly set up, as Korath and robotic workers alike begins to rebuild the station in places too heavily damaged.`
+	
+	npc accompany save
+		government "Kor Sestor"
+		personality escort timid
+		fleet
+			names "korath"
+			variant
+				"Kotnrareb Tubfaleb Ik'ih 300"
+
+
+
+mission "Sestor: Sebra Skira decline patch"
+	landing
+	invisible
+	to offer
+		has "sestor knows wanderer plan"
+		has "Sestor: Sebra Skira Expedition: declined"
+	on offer
+		event "sebra skira landfall" 7
+		event "sebra skira activated" 17
+		fail
+
+
+
+event "sebra skira landfall"
+	system Silikatakfar
+		government "Kor Sestor"
+		fleet "Sestor Colonisation Transports" 50000
+	planet "Sebra Skira"
+		description "This station, serving as a war platform, has been heavily damaged in the fighting against the Mereti drones. Half the station is visibly missing, and the automated repair system, also damaged in the fighting, patched up the holes with random and disorganised structures."
+		description "	With the Korath returning to this station, organised repair, rebuild, and renovation efforts have begun to take place, transforming this station back into operating capacity."
+		spaceport "It is unclear whether part of this station's destroyed section once functioned as a shipyard, but reconstruction efforts have put one in its place. While unfinished, the shipyard currently serves as a spaceport, where ships are able to offload passengers and cargo in its future boarding station."
+		add outfitter "Korath Basics"
+		add outfitter "Korath General Basics"
+		add outfitter "Kor Sestor Basics"
+
+		
+		
+event "sebra skira activated"
+	planet "Sebra Skira"
+		description "Painstakenly rebuilt, Sebra Skira currently serves as the Sestor Federation's first line of defense against any attacks from the west. Automated shipyards continuously produse Sestor drones using natively-harvested minerals, forming up a substantial defense fleet almost impossible to break through."
+		spaceport "Being a war platform, Sebra Skira's spaceport is built to accomodate multiple ships the size of Kar Ik Vot 349s being serviced at once. Fully automated, this port is unique in that spacecraft captains can step out of their ships without making any requests, and the artificial intelligence-augmented recognition system can fix ships, regardless of origin, into its most pristine conditions without fail." 
+		add outfitter "Korath General Advanced"
+		add outfitter "Kor Sestor Advanced"
+		
+	planet "Sopi Lefarkata"
+		add outfitter "Korath General Advanced"
+		add outfitter "Kor Sestor Advanced"
+
+
+#Seventeenth mission: Sestor reveals itself by flying ships, causing the Wanderers to notice. Mereti fires on Sestor because of protocol.
+#Beginning of the Exile storyline. The Sestor, after 300 years of isolation, think of the exiles (whom they have no contact with) as legends. 
+mission "Sestor: Resumption of Fleet Activity"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		has "sestor knows wanderer plan"
+		has "event: devru kaska activated"
+		has "event: sebra skira landfall"
+	on offer
+		conversation
+			`Ikgalef being present while you land is now a routine rather than a surprise. Today's landing is no different, with you waving to the familiar silhouette of the Sestor President, hoping for a friendlier, less tense conversation.`
+			`	To your surprise, Ikgalef is not giving you a job today. Instead, wearing a translator, it points at the many, many Sestor automata that lines the spaceport. Somehow, you have missed them, probably too focused on manoeuvring your ship through the tight gap of Sopi Lefarkata's spaceport.`
+			`	"Rafeki! Today is a great day, for the Sestor territory is whole again. Pi'at Afilek for your service for us, and we owe you a lot! Please, Rafeki Captain, join me as we watch the first Sestor automaton fleets leave their base!"`
+			`	As if on command, on your left, a gigantic Tek Far 109 filled with FO-29 fighters and FL-14 drones lifts off from the ground, engines whirring. It quickly joins the rapidly moving line of Sestor warships leaving the spaceport, racing towards the sky.`
+			`	"Isn't this marvellous, Rafeki? After the fiendish, dishonourable Alpha ralukut sacked our capital, the grand fleet of the True Korath rules the cosmos once again! With an upgraded control system and more vigorous defensive installments, we shall never be brought down again!"`
+			`	With the ship launch sequence completed, Ikgalef invites you to a pavilion in the centre of a park. You both sit down, and Ikgalef produces two bottles of reddish-yellow liquid from its bag.`
+			`	"Have a drink, my Rafeki!" Ikgalef finishes, handing you one of the bottles.`
+			`	Feeling positive and adventurous, you decide to open the bottle, and drink the thick liquid within. To your surprise, it is not alcoholic. The drink is sweet, with a slight sour tone to it, reminding you of the Caipririnha you always order in bars back on Earth. Surprisingly, the drink causes a pleasant tingling sensation throughout your mouth, eventually numbing it. You mentally remind yourself of buying some when you have the chance.`
+			`	"True Korath?" you ask.`
+			`	"Yes, us, True Korath! Those who never bend their knees, those who welcome everyone with open arms, those who fight for freedom and justice, the True Korath!"`
+			`	Ikgalef's expression then turned soft and sighed, "When the Archons come, they give us ultimatum. Join the Efreti traitors, or leave on an exile. We choose third option, to stay here, but the Archons demanded our brightest and smartest to go. They never come back."`
+			`	"You mean the Korath Exiles?" you ask.`
+			`	"Yes, you hear of them? In stories and legends, I guess," Ikgalef replies, "Like us, they do not submit. Like us, they choose freedom, the hard way. They are also True Korath. Maybe they are still out there, maybe they die by the Archons the moment they jump... At least they die for honour, unlike the cowardly Efreti traitors who bow and submit to the Quarg like slaves!"`
+			`	By the end of the sentence, Ikgalef is sporting a ferocious snarl. He sighs, "I guess we do not wallow in the past. At least the True Korath rises again-"`
+			`	"The Korath Exiles still exist," you interrupt.`
+			`	Ikgalef turns sharply towards you.`
+			`	"East of the human core worlds, south from here," you continue, "there exists a cluster of systems where a group of Korath resides. They live in stations, and occasionally raid us humans for resources."`
+			`	"What else do you know about them?"`
+			`	"The Wanderers contacted them to shut down your factories," you say, "and they took some of your schematics along with some of the Mereti's."`
+			`	Ikgalef falls silent for a long, long while. Eventually, it speaks.`
+			`	"May you meet me at the spaceport later? I have job for you."`
+			`	"Sure."`
+				decline
+	on decline
+		event "sestor fleets emerge"
+		event "sestor exile peace"
+
+event "sestor fleets emerge"
+	system "Celeborim"
+		add fleet "Small Kor Sestor" 1200
+		add fleet "Large Kor Sestor" 3600
+	system "Makferuti"
+		add fleet "Small Kor Sestor" 1200
+		add fleet "Large Kor Sestor" 3600
+	system "Asikafarnut"
+		add fleet "Small Kor Sestor" 600
+		add fleet "Large Kor Sestor" 1200
+	system "Sobarati"
+		add fleet "Small Kor Sestor" 600
+		add fleet "Large Kor Sestor" 1200
+	system "Silikatakfar"
+		add fleet "Small Kor Sestor" 400
+		add fleet "Large Kor Sestor" 1000
+	system "Ferukistek"
+		add fleet "Small Kor Sestor" 800
+		add fleet "Large Kor Sestor" 1200
+	system "Eneremprukt"
+		add fleet "Small Kor Sestor" 1000
+		add fleet "Large Kor Sestor" 1200
+	system "Mesuket"
+		add fleet "Large Kor Sestor" 2400
+
+event "sestor exile peace"
+	"reputation: Korath" >?=1
+	"reputation: Korath (Civilian)" >?=1
+	
+
+
+#FL do not know Korath exchange info by eating shed skin.
+#The skin are shed by scientists and engineers. Including JD engineers. After all, Exodus terms do not include skin exchange. Introducing engineering and scientific knowledge into Sestor gestalt goes a long way.
+mission "Sestor: Exile Meeting"
+	name "Sestor-Exile Diplomacy"
+	description "Bring Ikgalef to Far'en Lai and back to Sopi Lefarkata, to facilitate a diplomatic mission betwen the Sestor and the Korath Exiles"
+	passengers 5
+	cargo "korath skin" 5
+	source "Sopi Lefarkata"
+	stopover "Far'en Lai"
+	destination "Sopi Lefarkata"
+	to offer
+		has "Sestor: Resumption of Fleet Activity: done"
+		has "event: sestor fleets emerge"
+		"reputation: Korath" > 0
+	on offer
+		conversation
+			`Ikgalef is already in the spaceport by the time you finish your errands.`
+			`	"Thank you for your understanding, and sorry for the suddenness of the job."`
+			`	The existence of the Korath Exiles is apparently news to Ikgalef and the Sestor Korath. Like-minded, Ikgalef immediately wishes to seek alliance with the Exiles. Like last time with the Wanderers, you are to land on Far'en Lai.`
+			`	"The Exiles are hostile to all human ships, including mine."`
+			`	"Worry not, Rafeki. I make sure they do not."`
+			`	You nod, and Ikgalef begins to walk to your ship, accompanied by four bodyguards. You see several robot workers transferring refrigerated containers of some sort into your ship, but you say nothing.`
+				accept
+	on stopover
+		conversation
+			`Ever since the Exile stealing drone technology, they have become hostile to you once again. You are nervous that the Exile will attack you on sight. When Ikgalef talks to them over the communications channel, the attacks stop.`
+			`	Without further incidents, you land on Far'en Lai, closely followed by a Tubfalet you see undocking from Safaresk Enlai just as you initiate the landing sequence.`
+			`	You walk out of your ship, followed closely by Ikgalef. A group of Korath Exiles exit their ship.`
+			`	For a moment, neither group of the Korath moves. Then, Ikgalef begins to utter what seems to be an inquiry. The Korath Exile scratches his feathers, seemingly not understanding what Ikgalef was saying. Two more Korath Exiles walk out of the Exile raiding vessel, and approach Ikgalef. The older one hesitantly and rigidly makes some dance moves, clearly not too accustomed. When Ikgalef returns the dance in graititude, the two laugh and embrace each other.`
+			`	You stand aside, looking at the Korath gesturing wildly and making all kinds of weird noises. All things considered, Far'en Lai is a pretty ordinary, undeveloped world, not so different from the many sparsely-settled worlds all over human space. The only difference is the sky still being rather bright even late in the evening. One strange quirk of core planets, you suppose.`
+			`	Ikgalef occasionally gestures towards you while talking to the Exile elder. You walk towards them, and a Korath gives a white octahedron to you. "It is a safe pass," explains Ikgalef, "Show this through hologram every time you enter Exile space, and they will not harm you."`
+			`	"We have a lot to do, Rafeki Captain." says Ikgalef, barely hiding his joy.`
+			`	Some of the Korath talk into a device, and a Rano'erek soon lands near you. Yet more Korath step out, hauling large, refrigerated crates. They bring the boxes in front of Ikgalef, and lift the cover. To your utmost surprise, of all things these crates are filled with shed Korath skin. The whitish, transparent scales are folded neatly in stacks, and are labelled in characters vaguely resembling those you saw on Sestor Ikfar and Sopi Lefarkata.`
+			`	Seeing this, Ikgalef motions to its bodyguards, and remove the frozen containers from your ship as well. When they open it, once again it's Korath skin. `
+			`	As you stare dumbfounded at this exchange of peculiar goods, Ikgalef asks you permission to load the Exile skin into your cargo hold. "Sure," you affirmk, brain still not processing this exotic good.`
+			`	With everything set and done, Ikgalef clears you to return to Sopi Lefarkata.`
+	
+	on complete
+		payment 100000
+		set "sestor exile skin exchange"
+		conversation
+			`During the journey back, you cannot help but ask Ikgalef what the frozen Korath skin is used for.`
+			`	"Memories," answers Ikgalef, "Korath store memories in skin. Korath share memories by eating Korath skin. Sestor exchange skin with Exiles as a symbol of bond."`
+			`	You stare at Ikgalef, not processing whatever it said. Ikgalef shows you a video of young Korath eating the skin of older ones, and Korath eating skin from each other. It is a morbid but fascinating sight.`
+			`	Korath education must be short and quick, you think. Plans to pick up some Korath language textbooks are now impossible.`
+			`	Eventually, your ship approaches Sopi Lefarkata and begins its landing sequence. Ikgalef hands you a credit chip worth 100,000 credits and thanks you for your ride.`
+			`	"Exiles, Sestor Rafeki, as it should," said Ikgalef, "True Korath is stronger than ever!"`
+			`	You cannot shake the feeling that the skin means more than just symbols, but you know it's not time to dwell on that. You bid each other farewell, and go your separate ways.`
+
+#Ruiko'ar, from Nasution, an important Indonesian military general.
+mission "Sestor: Exile Meeting 2"
+	name "Sestor-Exile Diplomacy"
+	description `Carry Ikgalef to Safaresk Enlai to conduct a meeting.`
+	passengers 1
+	source "Sopi Lefarkata"
+	stopover "Safaresk Enlai"
+	destination "Sopi Lefarkata"
+	to offer
+		has "Sestor: Exile Meeting: done"
+	on offer
+		conversation
+			`Ikgalef seems so much more relaxed than he had ever been. His feathers now shine brilliantly in different colours, and his signature tight grip becomes much more relaxed.`
+			`	The Sestor spaceport, likewise, becomes far busy now. You see crates of fish, algae, and other foodstuff being loaded into crates, ready to be exported.`
+			`	"Greetings, Rafeki Captain! Meeting last time strengthen Sestor-Exile bonds. We must discuss our next steps. You have Jump Drive. You are our only option."`
+			choice
+				`"Sure, I'll do it."`
+					accept
+				`"Maybe next time?"`
+					defer
+	on stopover
+		conversation
+			`While you have seen many Korath Exile ships up close, in escort missions and in the battlefield, you have never approached a Korath Exile station this close, much less dock with one.`
+			`	Compared to other stations you saw in human and Hai space, and even Sasirka Gatru, Safaresk Enlai is far larger. The largest dock bays can easily fit two Bactrians and two Navy Carriers in the same place without any problems. In addition to these internal dock bays, you can also see external docking clamps, presumably for the large Korsmanath A'awojs that cannot fit in even these hangars.`
+			`	You show the white octahedron to the Korath Exile docking officer, who directs you to one of the smaller dockyards. You step out of the ship alongside Ikgalef, and are promptly led to a meeting room.`
+			`	You are once again reminded of the many, many times waiting in line of a Sestor shop, surrounded by Korath who speaks languages you don't understand. Ikgalef and his Exile counterparts chat for a long while, dancing vigorously in the middle of the meeting room, as the Korath guards watch intently. Phrases like "Alpha" and "Anatruskor" are frequently mentioned, and the Exile leader occasionally lets out lamenting moans. You, on the other hand, mostly focuses on the cup of Korath algae soup you are given, trying hard not to be bored.`
+			`	The pleasant discussion, however, slowly turns less amicable. The Exile leader suddenly seems enraged at certain words Ikgalef said, and is shouting in anger. It doesn't look like an argument, however, as Ikgalef isn't shouting back. Rather, the Sestor president seems focussed on calming the enraged Korath Leader down.`
+			`	"Be'oof! Kalabet! Ralukut Alajfenreb!" The Exile leader shouts, reminding you of the many colourful curses Sestor commuters threw once, when the train line towards the city centre broke down.`
+			`	After a long, long session of consoling, the Exile leader finally calms down.`
+			`	After the outburst, the two Korath leaders seem to turn into other topics at hand. Once again, Ikgalef gestures towards you, referring to you as "Rafeki Humanika", and seem to gesture positively about you and your deeds.`
+			`	"Rafeki... Humanika?" The Exile leader seem to have just noticed your existence.`
+			`	"Captain <first> <last>," you answer tactfully, "Human."`
+			`	Unfortunately, the sight of you and your ship, visible in the docking bay, seems to have triggered the Exile leader. Once again, the Exile leader flies into a prolonged rant, this time sneaking angry looks in your direction, no doubt speaking against you.`
+			`	"Karaiptnreb! Ranrivah!" As more and more colourful Korath insult are thrown your way, you decide glance around the room.`
+			`	The Exile conference room is surprisingly small, with no conference tables of sort. Instead, Korath cluster around a half-circle, centred around Ikgalef and the Exile leader, dance-arguing vividly over what appears to be your allegiance. Guards are understandably tense, no doubt preparing to subdue you at a moment's notice. However, no such order comes.`
+			`	Ikgalef motions you over, and you comply, maintaining distance from the fuming Exile leader.`
+			`	The Sestor President sighs, as the Exile leader turns to you, looking fiercely.`
+			`	"This is Ruiko'ar, Navarch of the Exiles.  Very skeptical of your alignment. Tell me, do you work for those 'Wanderers' you speak of?"`
+			`	"Yes," you nod. Denying now would only lead to so many more problems later on.`
+			`	"Do you open the wormhole, the 'Eye' you call it?"`
+			`	"No," you deny, "The Pug did it."`
+			`	"Do you lead the Eye to our space?"`
+			`	"No. I had no control over it."`
+			`	With that, Ikgalef turns back towards the Exile leader.`
+			`	"Nrupuhfeb! Arip!" Ruiko'ar roars, her grip on the long, wooden cane growing stronger and trembling harder.`
+			`	Ikgalef puts his hand on his forehead, ruffling his feathers there, in an almost facepalm gesture. He dances with the Ruiko'ar for a while longer. Finally, after ten more minutes of bickering and arguing, Ruiko'ar relents.`
+			`	"Ruiko'ar, opinionated Korath," Ikgalef says, "Think you betray Korath by directing the Eye here. You have no control of wormholes, I know. I convince her you do no wrong."`
+			`	The Exiles seem very very opposed to the fact that Wanderers are setting up shop in Korath space.`
+			`	"Come, Rafeki Captain, we have much to do," says the Sestor President, as he pockets a small piece of memo Ruiko'ar gave him in his shirt.`
+			`	Without any further incidents happening, the Exile visit stays mostly uneventful. Exile algae soup is far less appetising than Sestor soup, but it is far more filling. Another necessity for a group living off space stations, you suppose.`
+			`	The next day, Ikgalef and you prepare to depart from the station, returning to Sopi Lefarkata.`
+	
+	on complete
+		conversation
+			`Ikgalef leads you into his office after you land back on the bunker city. "The Galaxy changes," says the Sestor President, "We must stay strong to stay on top."`
+			`	"Give me some time to think," Ikgalef continues, as he brings out stacks of files, "Situation is far more complicated than I think."`
+			`	You cannot help but feel slightly unsettled by the Exiles' opposition to the Wanderers. With Ikgalef's position unknown, you dare not voice this thoughts to him. Maybe a visit to Wanderer space is a better option.`
+
+
+			
+		
+
+#Eighteenth mission (job): Ferry Korath between Sestor settlements. Ferry Korath skin between Exile and Sestor.
+
+mission "Korath Skin Job (Sestor - Exile)"
+	job
+	repeat
+	name "Transport Korath skin"
+	description "Transport some Korath skin from the Sestor Federation to the Korath Exiles for 300000 credits."
+	cargo "korath skin" 20 10 0.1
+	source
+		government "Kor Sestor"
+	destination
+		government "Korath"
+	to offer
+		has "sestor exile skin exchange"
+		random <60
+	on complete
+		payment 300000
+		dialog "You land in the spaceport, where many Korath Exile workers carefully remove the refrigerated containers from your ship. It seems that the skin is highly valued."
+		
+mission "Korath Skin Job (Exile - Sestor)"
+	job
+	repeat
+	name "Transport Korath skin"
+	description "Transport some Korath skin from the Korath Exiles to the Sestor Federation for 300000 credits."
+	cargo "korath skin" 20 10 0.1
+	source
+		government "Korath"
+	destination
+		government "Kor Sestor"
+	to offer
+		has "sestor exile skin exchange"
+		random <60
+	on complete
+		payment 300000
+		dialog "You land in the spaceport, where, instead of the robotic workers you see frequently, Korath workers remove the refrigerated containers from your ship. It seems that the skin is highly valued."
+
+
+#Mission to ferry Korath all over Sestor space
+mission "Transport Sestor Korath"	
+	job
+	repeat
+	name "Transport Korath"
+	description "Transport some Korath passengers to <destination> for 100000 credits."
+	passengers 30 40
+	source
+		government "Kor Sestor"
+	destination
+		government "Kor Sestor"
+		distance 1 5
+	to offer
+		has "event: sasirka gatru recolonised"
+	
+	on complete
+		payment 100000
+		dialog "You land in the spaceport, and the Korath leave your ship, gratefully paying you <payment>."
+		
+
+#Mission to colonise Avalon on Host.
+
+mission "Sestor: Avalon Colonisation 1"
+	landing
+	name "Explore Avalon"
+	description "Bring a team of Sestor Korath to Avalon to explore the abandoned Alpha base there."
+	passengers 20
+	cargo "robots and survey equipment" 250
+	source "Sopi Lefarkata"
+	destination "Avalon"
+	to offer
+		has "event: sebra skira reactivated"
+		random <75
+	on offer
+		conversation
+			`With the Sestor returning to normalcy, the spaceports at Sopi Lefarkata become increasingly busy. Sestor drones are launching to sortie every few minutes, and the spaceport is full of maintenance robots and Korath workers.`
+			`	Once again, the familiar face of Ikgalef comes to meet you.`
+			`	"Captain <last>! Nice to meet you! See those magnificent ships? Thanks to your effort, the True Korath Military has become stronger than ever!"`
+			`	"Ah, yes. Those are magnificent," you reply.`
+			`	"Despite our ships' incredible prowess, we still lack one thing: Jump Drives," says Ikgalef.`
+			`	"Do you want me to sell some to you?"`
+			`	"That would be greatly appreciated, Captain, but I have a special project at hand. Remember the Alpha who sacked Sestor Ikfar? You mentioned they were based off of 'Avalon', in 'Host', right?"`
+			`	"Yes, that's true."`
+			`	"The system, while near us, is only accessible via Jump Drives. And among my short list of contacts, you are the only one with them."`
+			`	"What do you want me to do?"`
+			`	"Please bring ten of our surveyors and travel to the planet. The Sestor is interested in retrieving anything of value there."`
+			choice
+				"Sure!"
+					accept
+				"I'm busy now. Maybe later?"
+					defer
+	
+	on enter "Host"
+		dialog "Just like last time you left, the planet is deserted. No sign of spaceflight is present. You prepare to land on Avalon."
+	
+mission "Sestor: Avalon Colonisation 2"
+	landing
+	name "Explore Avalon"
+	description "Defeat the Alpha Auxiliary on Avalon"
+	passengers 20
+	cargo "robots and survey equipment" 250
+	source "Avalon"
+	destination "Avalon"
+	to offer
+		has "Sestor: Avalon Colonisation 1: done"
+	on offer
+		conversation
+			`Slowly, you land on the concrete pad you did while accompanying Admiral Danforth. The Navy collapsed the entire limestone cave system, causing much dirt to cascade down the entrance. Fern trees have begun to grow on it, and the surface looks like just another hill side.`
+			`	The Sestor Korath leave your ship, accompanied by their robot surveyors. After a brief scan, massive crane machines are unpacked, and start excavating the entrance. Before long, a ruined entrance appears, and you enter the Alpha base with your Korath and robot companions.`
+			`	Most corridors in the base is swiped clean, no doubt the handiwork of the fleeing Alpha and the raiding Republic Navy soldiers. Much of the base is collapsed. You are sure the base is larger, but the efforts of the fleeing Alpha must have destroyed the base so thoroughly that none may enter.`
+			`	Then, one of the robots blows up one of the walls, and the real base appears. Beyond the exploded wall you find find... Nothing. You see ten metal cages with a lizard head sign hanging over the doors, and a door far away, ajar. Beyond the door lies a few scrap pieces of metal. That is it.`
+			`	Suddenly, you hear an emergency beep coming from your personal digital assistant. Your ship detects another ship leaving the atmosphere. For all you know, they can be Alphas. Unwilling to risk the occupants escaping, you head back to your ship, ready to intercept the escapees.`
+				launch
+	on enter "Host"
+		dialog "You rise out of the atmosphere, meeting the fleeing ship head-on. To your surprise, this ship's IFF code identifies it as belonging to human Pirates. You are not fooled, however. The only reason a pirate ship can appear here is because it is controlled by Alphas. You prepare to engage this ship."
+			
+		
+	npc kill
+		government "Pirate"
+		system "Host"
+		personality heroic nemesis staying vindictive target
+		ship "Auxiliary (Alpha)" "Settler"
+		ship "Far Osk 27" "Apathy"
+		ship "Far Osk 27" "Vanity"
+		ship "Far Osk 27" "Despair"
+		ship "Far Osk 27" "Envy"
+		ship "Far Osk 27" "Lust"
+		ship "Far Osk 27" "Pride"
+		ship "Far Osk 27" "Wrath"
+		ship "Far Osk 27" "Glutony"
+		ship "Far Osk 27" "Greed"
+		ship "Far Osk 27" "Desecration"
+
+
+#Like during the UHai campaign, the Alpha wants FL to think they're gone for good. Hence the similar setup and Jump Drives.
+mission "Sestor: Avalon Colonisation 3"
+	landing
+	name "Explore Avalon"
+	description "Transport the Jump Drives and the ten Korath prisoners back to Sopi Lefarkata, along with the original Korath crew and equipment."
+	passengers 20
+	cargo "robots, survey equipment, and graviton transmitter" 50
+	source "Avalon"
+	destination "Sopi Lefarkata"
+	to offer
+		has "Sestor: Avalon Colonisation 2: done"
+	
+	on offer
+		outfit "Jump Drive" 10
+		conversation
+			`Your Korath passengers are shocked and saddened to see Sestor drones attacking you, and their subsequent destruction. With great care, however, you manage to destroy the Auxiliary.`
+			`	From your ship's sensor logs, you are able to pinpoint where the Alpha ship had launched from. It is another concrete bunker similar to the one Danforth destroyed, with a rudimentary landing pad and a hangar nearby. Peculiarly, your ship's scanner picks up no life forms in the bunker, no infrared signature or movement of any kind.`
+			`	Fearing the landing pad being laced with explosives, you land on the grass field just beyond. Weapons out, you and your Korath passengers step out of your ship, deploying the robots and heavy machinery. Surprisingly, when you approach the complex the doors to the hangars and the bunker open automatically.`
+			`	You check the hangar first. A refuelling tube is abandoned in the corner, and a crew module for Navy Auxiliaries sits in the middle, held up by robotic arms. Then, after packing all the handheld scanners and weapons, you venture into the bunker with the Korath surveyors and the robots.`
+			`	The bunker is mostly empty, with no signs of struggle whatsoever. Chairs are arranged haphazardly, and drawers and cabinets are ajar, their contents missing. Behind a table, you find a stack of paper.  A blueprint of modifying Navy Auxiliaries is on the top, with arrows and comments pointing out what to alter. The subsequent pages are childish drawings of various Mereti and Sestor weapons, a Kar Ik Vot 349, and Jump Drives. They are not important, so you leave them in the bunker.`
+			`	As you make way through the bunker's toilet and laundry rooms, you hear sounds. Peculiar whimperings and hissings you sometimes hear in Sestor and Efret worlds. Curious, you go to investigate the noises.`
+			`	You are surprised to find nine Korath imprisoned in this place, huddled together and shivering. One of them glances at you at the sound of you walking in, and lets out a frightened whimper. Instantly, all Korath disentangle themselves, and crouch in a submissive position.`
+			`	The locks are simple, but unreachable from inside the cages. Using a hairpin, you pick the lock, and let the Korath inside out. Just as they are walking out, your Korath companions run into the room. After a little bit of hissing and yelping, your Korath companion turns to you, and gestures towards the Korath prisoners and to your ship. It appears they want a ride back to Korath space. You accept.`
+			`	So far, this bunker's layout is identical to the empty one you were exploring earlier. You push through the embracing Korath, into the room beyond.`
+			`	Ten Jump Drives are piled neatly along the back of the room. You make a mental note to carry them in your ship. Jump Drives are valuable after all. However, a computer terminal on your left catches your eye.`
+			`	The device resembles, of all things, a pair of graviton ray transmitters and reflectors Freya used to restore the hyperlanes in human space. In fact, they seem to be the exact devices used to link Delta Capriconi and Markab. Syndicate security must be really lax, or the devices were ignored when the link was restored. Either way, this priceless piece of technology is in the hands of the Alpha, but no more.`
+			`	You have a sudden thought. What if there was once a hyperlane between Host and Ferukistek? By putting the reflector on Avalon and the transmitter on Keneska Fek, a hyperlane might be able to be established between the two systems. With that, you pick up the ten Jump Drives and the hyperspace relay kit, and make your way back to your ship.`
+			`	The Auxiliary's appearance has interfered with the schedule somewhat. You decide to leave a few robot workers on this planet, to both establish a full-blown Sestor base, and to detect any further Alpha signatures.`
+			`	Carefully, you place the reflector on the unoccupied landing pad. You wave the Korath, signalling it's time for departure. Securing the ten Jump Drives in your cargo hold, you take off.`
+				accept
+	
+	on complete
+		conversation
+			`Ikgalef is pleased to see you return. Its smile grows wider when you show it ten Jump Drives.
+			`	"Jump Drives! They are very valuable, especially since we have yet to recover its production methods," says Ikgalef, slightly distraught, "May I buy them from you for 5000000 credits apiece?"`
+				choice
+					"Sure!"
+						goto selling
+					"Maybe another time?"
+						goto refusal
+			label selling
+			action
+				outfit "Jump Drive" -10
+                payment 50000000
+                "sestor jump drives" += 10
+			`	"Thank you! The Sestor shall remember your contribution to our cause!"`
+				goto avalon
+			label refusal
+			`	Ikgalef tries to act calm, but you can see its disappointment. "Alright, maybe next time then."`
+			label avalon
+			`	Ikgalef continues, "Just so you know, Jump Drives are very valuable to us Korath, especially since we cannot make more. We are always happy to pay you 5 million credits per unit."`
+			`	You nod in agreement. Just then, your Korath passengers disembark from your ship. Ikgalef waves at them, then freezes when the eleventh Korath leaves the ship.`
+			`	Ikgalef walks to the nineteen Korath, body slightly trembling. You are surprised to hear a low growl after several minutes of Korath mumbles. Ikgalef's face is clouded with anger, its brows furrowed and its fists shaking. Ikgalef walks towards you, and opens its mouth.`
+			`	"Thank you, Captain, for saving these nine poor souls. The Alpha is a threat to all Korath-kind, and must be stopped at all costs. I will arrange a military expedition soon. Please wait for me at the spaceport soon."`
+			`	Ikgalef must be very angry that its drops its ever politeness. Because of your friendship with Ikgalef and your hatred towards the Alpha, you decide to accept the mission. Content, Ikgalef walks off, organising its soldiers.`
+
+
+#Only the most gullible would believe the Korath actually gave up all their JDs. The Sestor stacked some of theirs in their deepest vaults, not activating them until now.
+mission "Sestor: Avalon Colonisation 4"
+	name "Occupy Avalon"
+	description "Carry 150 Korath soldiers and 300 tonnes of robotic combat equipment to root out any Alpha presence in Avalon."
+	passengers 170
+	cargo "ground assault vehicles" 300
+	source "Sopi Lefarkata"
+	destination "Avalon"
+	to offer
+		has "Sestor: Avalon Colonisation 3: done"
+	on offer
+		conversation
+			`Behind Ikgalef marches 100 muscular Korath, all of whom have equipped with a form of exoskeleton. Each of them are armed with a variety of weapons, most prominently assault rifles. Behind the Korath are a few tanks, artillery, and infantry fighting vehicles. Robot soldiers are also prominent.`
+			`	With the crew on-board, Ikgalef also assigns 20 extra Korath to the team, civilian administrators to oversee the construction efforts. With all set and done, you are ready to take off.`
+			`	As you plot your flight course, you are surprised to find two Tek Far 78-Osk's set to accompany you. "They carry fighters," explains Ikgalef, "Our Far Osk 29s can provide air support should you find yourself in need."`
+			`	"How did you get the Jump Drives?" You ask. The Sestor are supposed to give up all their Jump Drives during the Drak exile, so they should have none.`
+			`	"That would be a question for another time," says Ikgalef, waving goodbye. This conversation will have to wait.`
+				accept
+
+	npc
+		government "Kor Sestor"
+		system "Eneremprukt"
+		personality escort
+		ship "Tek Far 78 - Osk (Jump)" 
+		ship "Tek Far 78 - Osk (Close Quarters Jump)"
+		ship "Far Osk 27" 18
+
+
+
+mission "Sestor: Avalon Colonisation 5"
+	name "Occupy Avalon"
+	description "Carry 50 Korath soldiers and 20 tonnes of robotic combat equipment back to Sopi Lefarkata, to report about the mission's success."
+	passengers 150
+	cargo "ground assault vehicles" 20
+	source "Avalon"
+	destination "Sopi Lefarkata"
+	to offer
+		has "Sestor: Avalon Colonisation 4: done"
+	on offer
+		conversation
+			`Quietly, you approach the planet, sensors constantly scanning the planet of movement. Disappointingly, the only movements seem to come from the large reptiles native to this planet.`
+			`	You land on the grass clearingnear the newer bunker. You see the graviton reflector still on the landing pad. No traces of sentient life is found.`
+			`	The Korath soldiers file out, weapons in hand. The tanks behind them slowly roll out of the ship hangar, cannons primed to fire. No enemies appear, however.`
+			`	The rest of the day is spent searching for any signs of Alpha activity. None of the ground probes, the Far Osk 27's, or soldiers reported anything. You are forced to conclude that the Alpha have abandoned this world, taking all their valuables with them.`
+			`	With that, the engineers and administrators begin to work. An exhaustive scan of the Alpha bases reveals no foul play, and they are immediately turned into control centres for the Korath. Construction robots begin to clean the existing facilities, while building greenhouses and water purification plants for its future Korath inhabitants to use. Several local reptiles wander close, curious, but are completely ignored by the working robots.`
+			`	Before long, the engineers have completed their work. To prevent a potential Alpha attack, a portion of the military force will remain on Avalon, as well as one of the carriers. Your job here is done, and you can return to Sopi Lefarkata.`
+				accept
+	
+	on complete
+		event "avalon landfall"
+		conversation
+			`You return to Sopi Lefarkata, and report the emptiness of the planet to Ikgalef. Ikgalef is deeply troubled.`
+			`	"The Alpha arrives here via Jump Drive, yet the only place they can jump to is Keneska Fek. There must be somewhere else they base on. We must stay vigilant.`
+
+	npc
+		government "Kor Sestor"
+		system "Eneremprukt"
+		personality escort
+		ship "Tek Far 78 - Osk (Jump)" 
+		ship "Far Osk 27" 9
+
+
+
+mission "Sestor: Host Hyperlane"
+	landing
+	invisible
+	source "Keneska Fek"
+	to offer
+		has "Sestor: Avalon Colonisation 3: done"
+	on offer
+		conversation
+			`The mining industry on Keneska Fek is mostly automatic, with drones gliding over the ground carrying ores everywhere. Despite being built-up and industrial, it is surprisingly idyllic, the advanced machinery producing little noise. In the distance, you see several drones gently lowering a recently-captured asteroid to the ground, where swarms of miner drones are already waiting.`
+			`	As you begin to relax, admiring the beautiful industrial beauty of the world, you suddenly remember the graviton relay on Avalon. The closes planet to that system is Keneska Fek, and you have a hunch it might just work.`
+				choice
+					"(Place down the transmitter and activate it)"
+					"(Nah, I can't be bothered to do it)"
+						defer
+			`	You place down the transmitter, hook it up to the nearby power cable, and activate it. A faint hum reverberates around you, and the slowly-lowering asteroid jerks to a stop momentarily. After a second, everything resumes normalcy. You are not sure if anything happened.`
+				decline
+	
+	on decline
+		event "host ferukistek hyperlink"
+	
+event "host ferukistek hyperlink"
+	link "Ferukistek" "Host"
+
+mission "Avalon colonisation hyperlink patch"
+	landing
+	invisible
+	source
+		government "Kor Sestor"
+	to offer
+		has "event: host ferukistek hyperlink"
+	on offer
+		event "sestor ships in host"
+		event "avalon colonised" 90
+
+event "avalon landfall"
+	system Host
+		government "Kor Sestor"
+	planet "Avalon"
+		description "Avalon is a pristine, temperate world, split into two large continents and a large ocean. Large, feathered reptiles dominate the landcape, eating the abundant ferns or other reptiles for food. Birds and large, winged reptiles dominate the sky, while sea monsters up to twenty metres in length can be seen swimming in the warm oceans. Insects and mammals can be occasionally seen, scurrying in the landscape and avoiding their reptilian predators."
+		description "In this former Alpha hideout, the Kor Sestor has begun to set up colonies. The Alpha had set up two bunkers in each continent, which are now being expanded and transformed into Korath habitats. Defense instalments are being constructed, to deter possible Alpha attacks."
+		spaceport "What was once a single landing pad and a single refuelling line has since been expanded to include a control centre, a small refreshment counter, and several more landing pads. Occasionally the large reptiles can be seen wandering lose fo the spaceport, but the electric fences surrounding it protects the spaceport from any stampedes."
+	
+event "sestor ships in host"
+	system Host
+		fleet "Sestor Colonisation Transports" 20000
+		fleet "Small Kor Sestor" 1200
+		fleet "Large Kor Sestor" 3600
+	
+event"avalon colonised"
+	planet "Avalon"
+		description "Avalon is a pristine, temperate world, split into two large continents and a large ocean. Large, feathered reptiles dominate the landcape, eating the abundant ferns or other reptiles for food. Birds and large, winged reptiles dominate the sky, while sea monsters up to twenty metres in length can be seen swimming in the warm oceans. Insects and mammals can be occasionally seen, scurrying in the landscape and avoiding their reptilian predators."
+		description "Beyond the spaceport, the Korath settlements have expanded somewhat. Greenhouses and farms have been constructed, growing local flora for Korath consumption. Native fishes are now considered a delicacy in the Korath world, a popular export of Avalon. A few species of reptiles, such as the three-horned one and a heavily armoured one with club tails, have been domesticated to serve as rides, making Avalon a popular tourist destination. Still, ground-to-space cannons and laser beams are commonplace, ostensibly to defend against potential alien attacks."
+		spaceport "The spaceports in Avalon are large, comparable to the ones in Keneska Fek. Large, passenger maglev trains connect the two spaceports to the various settlemtns and to each other, forming a mature transportation network. Robot workers serve inbound and outbound ships, performing repairs and refuelling them automatically. The large glass domes allow visiting captains to gape at the magnificent flora and fauna of native life."
+		outfitter "Korath Basics"
+		outfitter "Korath General Basics"
+		outfitter "Kor Sestor Basics"
+		
+
+#Twentieth mission (side): Sestor commissions F/L to bring the Sestor Jump Drives. Required to kickstart part II (diplomacy)
+
+mission "Sestor Jump Drive Job"
+	job
+	repeat
+	name "Sestor Jump Drive Delivery"
+	description "Sell a Jump Drive to the Sestor Federation for 5,000,000 credits."
+	source
+		government "Kor Sestor"
+	to offer
+			has "Sestor: Avalon Colonisation 3: done"
+			has "outfit (cargo): Jump Drive"
+	
+	on accept
+		dialog "A team of Sestor Korath engineers carefully removes the spare Jump Drive from your ship's cargo hold, and carries it onto a sealed train carriage. The Sestor Korath team then turns to you, and bows deeply. Four million credits are added to your bank account."
+		payment 5000000
+		"sestor jump drives" ++
+		outfit "Jump Drive" -1
+		fail

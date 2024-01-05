@@ -1,0 +1,144 @@
+#Smaller stuff. Not sure why vanilla "Korath Basics" has basically nothing.
+outfitter "Korath General Basics"
+	"Steering (Asteroid Class)"
+	"Steering (Comet Class)"
+	"Steering (Lunar Class)"
+	"Steering (Planetary Class)"
+	"Thruster (Asteroid Class)"
+	"Thruster (Comet Class)"
+	"Thruster (Lunar Class)"
+	"Thruster (Planetary Class)"
+	"Small Heat Shunt"
+	"Large Heat Shunt"
+	"Systems Core (Tiny)"
+	"Systems Core (Small)"
+	"Generator (Candle Class)"
+	"Generator (Furnace Class)"
+	"Warder Anti-missile"
+
+#Larger outfits.
+outfitter "Korath General Advanced"
+	"Generator (Inferno Class)"
+	"Plasma Core"
+	"Double Plasma Core"
+	"Triple Plasma Core"
+	"Systems Core (Medium)"
+	"Systems Core (Large)"
+	"Engine (Meteor Class)"
+	"Bow Drive (Meteor Class)"
+	"Reverser (Asteroid Class)"
+	"Reverser (Comet Class)"
+	"Reverser (Lunar Class)"
+	"Reverser (Planetary Class)"
+	"Reverser (Stellar Class)"
+	"Thruster (Stellar Class)"
+	"Steering (Stellar Class)"
+
+#Smaller Sestor-exclusive stuff. Basically the Thermal Repeater.
+outfitter "Kor Sestor Basics"
+	"Control Transceiver"
+	"Thermal Repeater"
+	"Thermal Repeater Turret"
+	"Thermal Repeater Rifle"
+
+#Piercer Missiles and Detainers. The more useful Sestor stuff.
+outfitter "Kor Sestor Advanced"
+	"Piercer Missile Launcher"
+	"Piercer Missile"
+	"Grab-Strike Turret"
+	"Korath Detainer"
+
+#Again, smaller engines and weapons.
+outfitter "Kor Efret Basics"
+	"Digger Mining Beam"
+	"Digger Mining Turret"
+	"Expeller Grav-Ray"
+	"Arkrof GP Hybrid Thruster"
+	"Arkrof GP Hybrid Steering"
+	"Farves GP Hybrid Thruster"
+	"Farves GP Hybrid Steering"
+
+#Larger engines.
+outfitter "Kor Efret Advanced"
+	"Grab-Strike Turret"
+	"Banisher Grav-Turret"
+	"Gaktem GP Hybrid Thruster"
+	"Gaktem GP Hybrid Steering"
+	"Nelmeb GP Hybrid Thruster"
+	"Nelmeb GP Hybrid Steering"
+	"Liquid Sodium Cooler"
+
+
+#Anatruskor pioneers raiding, and so most raiding weaponry are Anatruskor stuff. Grab-strike to hold ship in place, while their signature power damage weapons drain their power to nil.
+#The reason why UHai has so much ion damage stuff.
+#Shunt-Strike was Similisti stuff. During their downfall the government evacuated with the Shunt Strike tech. Mereti got the nanobots and made the Sayaiban concoction instead. 
+#Grab-strikes seem to be universal. Banishers and Expellers Grav-weapons are Efreti inventions.
+outfitter "Anatruskor Basics"
+	"Thunder-Lance"
+	"Storm-Pike Turret"
+	"Grab-Strike Turret"
+	"Shock-Strike"
+	"Shock-Strike Turret"
+	"Heavy Shock-Strike Turret"
+
+
+#Pug stuff in Vara Pug.
+outfitter "Pug Basics"
+	"Pug Zapper"
+	"Pug Zapper Turret"
+	"Pug Akfar Thruster"
+	"Pug Akfar Steering"
+	"Pug Cormet Thruster"
+	"Pug Cormet Steering"	
+	"Pug Peacekeeping Staff"
+
+outfitter "Pug Advanced"
+	"Pug Seeker"
+	"Pug Anti-Missile"
+	"Pug Lohmar Thruster"
+	"Pug Lohmar Steering"
+	"Pug Biodefenses"
+
+#Nope, not buyable. Just here for the sake of it.
+outfitter "Pug T3"
+	"Pug Gridfire Turret"
+	"Tier 3 Anti-Missile"
+
+
+
+
+outfitter "Jump Drive Only"
+	"Jump Drive"
+
+#-----------------------SHIPYARDS------------------------------
+shipyard "Sestor Basics"
+	"Far Lek 14"
+	"Far Osk 27"
+	"Met Par Tek 53"
+
+shipyard "Sestor Advanced"
+	"Kar Ik Vot 349"
+	"Tek Far 109"
+	"Tek Far 78 - Osk"
+	"Tek Far 71 - Lek"
+	
+shipyard "Efret Basics"
+	"Arch-Carrack"
+	"Charm-Shallop"
+
+shipyard "Efret Advanced"
+	"Echo-Galleon"
+
+#Tubfalets are Exile modifications. Anatruskor still only manufacture the original designs.
+#The 'olofez-class Chaser was a joint Anatruskor-Sestor development.
+shipyard "Anatruskor Ships"
+	"Lilot Korati"
+	"Kotnrareb Tubfaleb Ik'ih 300"
+	"Pav-Kot 117"
+	"Ra-Kot 145"
+	"'olofez"
+	
+#Uhai ships that are produced in Wanderer space using Wanderer tech
+shipyard "Unfettered Wanderer"
+	"Phrynus"
+

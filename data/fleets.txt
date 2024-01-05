@@ -1,0 +1,77 @@
+#KTI-300s for Korath. TF78S's for cargo.
+fleet "Sestor Colonisation Transports"
+	government "Kor Sestor"
+	names "kor sestor"
+	fighters
+		names "kor sestor fighter"
+	commodities Food Clothing Metal Plastic Medical Equipment Industrial Electronics "Heavy Metals"
+	personality timid
+	variant 
+		"Kotnrareb Tubfaleb Ik'ih 300"
+		"Far Osk 27 (Cargo)" 2
+	variant 2
+		"Tek Far 78 - Osk (Logistics)"
+		"Far Osk 27 (Cargo)" 9
+		
+fleet "Sestor Logistics"
+	government "Kor Sestor"
+	names "kor sestor"
+	fighters "kor sestor fighter"
+	commodities Metal Plastic Equipment Industrial Electronics "Heavy Metals"
+	personality coward timid
+		confusion 15
+	variant 10
+		"Kar Ik Vot 349 (Cargo)"
+	variant 7
+		"Kar Ik Vot 349 (Cargo)" 2
+		"Kar Ik Vot 349"
+	variant 8
+		"Tek Far 71 - Lek (Cargo)"
+		"Far Lek 14 (Cargo)" 10
+	variant 8
+		"Tek Far 71 - Lek (Cargo)"
+		"Far Lek 14 (Cargo)" 10
+	variant 8
+		"Tek Far 78 - Osk (Logistics)"
+		"Far Osk 27 (Cargo)" 9
+	variant 4
+		"Tek Far 78 - Osk (Cargo)"
+		"Far Osk 27 (Cargo)" 9
+	variant 2
+		"Tek Far 78 - Osk (Logistics)"
+		"Far Osk 27 (Cargo)" 2
+	variant 6
+		"Tek Far 78 - Osk (Logistics)" 2
+		"Far Osk 27 (Cargo)" 18
+	variant 6
+		"Tek Far 78 - Osk (Cargo)" 2
+		"Far Osk 27 (Cargo)" 18
+	variant 8
+		"Tek Far 109 (Cargo)"
+		"Far Osk 27 (Cargo)" 7
+		"Far Lek 14 (Cargo)" 9
+	variant 20
+		"Met Par Tek 53 (Cargo)"
+	variant 10
+		"Met Par Tek 53 (Cargo)" 2
+
+fleet "Anatruskor Defense"
+	government "Anatruskor Empire"
+	names "korath"
+	fighters
+		names "korath"
+	cargo 0
+	variant 2
+		"Kotnrareb Tubfaleb Ik'ih 300"
+	variant 3
+		"Kotnrareb Nrase 300"
+
+fleet "Anatruskor Miners"
+	government "Anatruskor Empire"
+	names "korath"
+	fighters
+		names "korath"
+	personality timid disables plunders frugal mining harvests
+	cargo 0
+	variant 
+		"'olofez (Digger)" 4

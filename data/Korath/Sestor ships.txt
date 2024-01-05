@@ -1,0 +1,74 @@
+#Sestor capital ship. Kinda strays into Superheavy category. A very powerful ship that gives the Heliarch, and even the Quarg, a run for its money.
+ship "Tek Ot Rah 681"
+  sprite "ship/Tek Ot Rah 681"
+	thumbnail "thumbnail/Tek Ot Rah 681"
+	attributes
+		category "Heavy Warship"
+		cost 147550000
+		shields 108400
+		hull 98100
+		automaton 1
+		mass 2410
+		drag 30.6
+		"heat dissipation" .4
+		"fuel capacity" 700
+		"cargo space" 56
+		"outfit space" 1630
+		"weapon capacity" 681
+		"engine capacity" 306
+		"self destruct" .9
+		ramscoop 3
+		weapon
+			"blast radius" 570
+			"shield damage" 6900
+			"hull damage" 4100
+			"hit force" 9500
+	outfits
+		"Control Transceiver" 
+		"Banisher Grav-Turret" 2
+		"Korath Detainer" 4
+		"Thermal Repeater Turret" 8
+		"Warder Anti-Missile" 4
+		"Large Heat Shunt" 7
+		"Small Heat Shunt" 2
+		"Systems Core (Large)" 2
+		"Thruster (Lunar Class)"
+		"Triple Plasma Core" 2
+		"Grav-Thruster (Nebula Class)"
+		"Grav-Steering (Nebula Class)"
+		Hyperdrive
+	engine -57.5 297
+		over
+	engine 57.5 297
+		over
+	engine -31.5 365.5 1.2
+	engine 31.5 365.5 1.2
+	turret -50.5 -259.5 "Thermal Repeater Turret"
+	turret 50.5 -259.5 "Thermal Repeater Turret"
+	turret -52 -235.5 "Thermal Repeater Turret"
+	turret 52 -235.5 "Thermal Repeater Turret"
+	turret -54.5 -207.5 "Thermal Repeater Turret"
+	turret 54.5 -207.5 "Thermal Repeater Turret"
+	turret -55 -178.5 "Banisher Grav-Turret"
+	turret 55 -178.5 "Banisher Grav-Turret"
+	turret -53 -152.5
+	turret 53 -152.5
+	turret -50.5 -128.5 "Warder Anti-Missile"
+	turret 50.5 -128.5 "Warder Anti-Missile" 
+	turret -123.5 201 "Thermal Repeater Turret"
+	turret -102.5 201 "Warder Anti-Missile"
+	turret 102.5 201 "Warder Anti-Missile"
+	turret 123.5 201 "Thermal Repeater Turret"
+	gun -11.5 -319.5 "Korath Detainer"
+	gun 11.5 -319.5 "Korath Detainer"
+  	gun -21.5 -267 "Korath Detainer"
+ 	gun 21.5 -267 "Korath Detainer"
+	explode "huge explosion" 20
+	explode "large explosion" 60
+	explode "medium explosion" 90
+	explode "small explosion" 70
+	explode "tiny explosion" 140
+	"final explode" "final explosion large"
+	description "Originally developed by the Sestor Federation to single-handedly destroy entire Efreti-Korsmanathi and Mereti fleets, the Tek Ot Rah 681 was never completed when the Archons intervened. With the restoration of peace and resumption of trade within and without Korath Space, the Sestor have finally completed the development of this massive ship."
+	description "  The Tek Ot Rah 681 is the pinnacle of Korath ship building. Four gun ports and sixteen turret points are well-complemented by the ship's massive outfit and weapon spaces. Ample engine space allow the Tek Ot Rah to pursue larger fleeing enemies with ease, which are common sights when one such warship is encountered in the battlefield."
+	description "  Rumours have it that a new type of engines were being developed specifically for this ship, but ultimately they were never completed."

@@ -1,0 +1,146 @@
+#Act two: Korath politics. Sestor starts by scouting and colonising Seleptra Nak.
+mission "Sestor: Anatruskor Surveillance"
+	landing
+	name "Survey Anatruskor worlds"
+	description "Fly your ship through the marked worlds with Sestor equipment, and deliver the data back to Sopi Lefarkata."
+	passengers 10
+	cargo "sensor equipment" 10
+	source "Sopi Lefarkata"
+	waypoint "Seketra"
+	waypoint "Chikatip"
+	waypoint "Fornarep"
+	destination "Sopi Lefarkata"
+	to offer
+		has "Sestor: Exile Meeting 2: done"
+		random <80
+	on offer
+		conversation
+			`Your curiosity towards what Ikgalef and Ruiko'ar discussed during your visit is finally answered today, as Ikgalef summons you to his office in Sopi Lefarkata.`
+			`	"Greetings, Rafeki Captain" says the Sestor President, "These 'Wanderer' aliens expand their holdings in Korath Space, as do the heretical Efreti. We must colonise them before those ralukut get there!"`
+			`	"Where else can you occupy?" you ask, "All planets around here are occupied."`
+			`	Ikgalef chuckles.`
+			`	"No, Humani," says Ikgalef, "Anatruskor."`
+			`	Instead of sending Sestor colonists, Ikgalef seems to be considering reviving the Anatruskor Empire instead.`
+			`	"Seleptra Nak loss impact Anatruskor economy in the Last War," reminisces Ikgalef, "Their economy never recovered. Anatruskor die because of it. The Wanderers do not colonise Seleptra Nak yet. We beat them to it. Excellent way to revive Anatruskor."`
+			`	Reconciling the Sestor and the Efreti will need a large effort, you note to yourself.`
+			`	Ikgalef continues, "To secure the sectors we must colonise it ourselves. Please, my Rafeki, transport these ten Korath and the sensors with you. Your ship, unlike ours, do not raise suspicions."`
+			`	Do you agree?`
+			choice
+				`(yes)`
+					accept
+				`(no)`
+					defer
+	on enter Seketra
+		dialog "Seleptra Nak is a pristine planet in prime condition. The landscape and climate resembles the Paradise Worlds, and seems to be a pleasant place to live in. Many Korath cities are built on this, but they are all weirdly empty. You can only guess why."
+	on enter Chikatip
+		dialog "The station, Selefkar Refinery, is barely holding itself together. It was blasted open so much that the interior is fully visible to the passing spacecraft. Needless to say, the station is completely uninhabitable."
+	on enter Fornarep
+		dialog "Large fissures are visible along Sek Alarfarat. No animal life is detected, and only a few plants can be seen struggling along the few remaining water bodies. Large magma pools illuminate the world, even during nighttime."
+	
+	on complete
+		event "anatruskor reputation reset"
+		conversation
+			`Ikgalef grins wide as you bring him the results..`
+			`	"Seleptra Nak is as pristine as I remember!" Ikgalef dances ecstatically, "Prince Urucohotab will be pleased to hear. I get him. Colonisation can begin right away."`
+			`	"Meet me in the spaceport later. Prepare 205 bunks and 300 tonnes of cargo space."`
+	
+event "anatruskor reputation reset"
+	"reputation: Anatruskor Empire" >?=0
+
+mission "Sestor: Seleptra Nak Anatruskor Colonisation"
+	name "Colonise Seleptra Nak"
+	description "Bring 200 Anatruskor Korath refugees to re-settle Seleptra Nak, and re-establish the Anatruskor Empire there."
+	to offer
+		has "Sestor: Anatruskor Surveillance: done"
+	passengers 205
+	cargo "heavy machinery" 300
+	source "Sopi Lefarkata"
+	destination "Seleptra Nak"
+	blocked "You need 205 bunks and 300 tonnes of cargo space to transport Anatruskor refugees to Seleptra Nak."
+	on offer
+		conversation
+			`Ikgalef is in high spirits when you show up.`
+			`	"Splendid, Captain! We must depart now. Each second wasted is one second closer to the Efreti getting it."`
+			`	Behind the Sestor President stands an army of Korath, dressed similarly to Sestor soldiers, but with yellow sashes rather than red ones. Ikgalef gestures to their leader, and starts speaking again.`
+			`	"Rafeki Captain, this is his Royal Highness, Prince Urucohotab of the Anatruskor Empire. He take up administrative duty in Seleptra Nak. For this trip, I accompany them, too, along with four bodyguards. The Pact of Mesuket stands!"`
+			`	Prince and soon-to-be Emperor Urucohotab nods to you, and the entourage begins boarding your ship.`
+	on complete
+		event "seleptra nak landfall"
+		event "seleptra nak colonised" 10
+		conversation
+			`Your ship gently touches down on Seleptra Nak's abandoned spaceport. Being in the centre of the city, the spaceport is only slightly colonised by plants. The 200 Anatruskor refugees leave your ship orderly, and solemnly marches to the abandoned spaceport building.`
+			`	Ikgalef walks beside you, and watches the Anatruskor Korath gathering in the middle of the spaceport. There, a makeshift flagpole is constructed using wooden staves, and a yellow emblem is slowly hoisted up. The Anatruskor Korath then collectively kneel towards the emblem, before lightly bowing.`
+			`	"Anatruskor flag-raising ceremony," Ikgalef tells you, "I only ever see it in a hologram."`
+			`	One of the Anatruskor Korath then hands Urucohotab a piece of purple ribbon, which the Prince ties around its neck. Each Anatruskor Korath then plucks their most colourful feathers out, and hand them over to the Prince. With that done, the Korath bows again, and disperses.`
+			`	"Our job here is done," says Ikgalef, "The Anatruskor is safe, and Urucohotab is crowned Emperor. The Anatruskor Empire is reborn, as is the natural order of things. I stay here for a while, so there is no need to transport me back. Tell us if the Wanderers have any reactions."`
+			`	You nod. The heavy machines and robots start scurrying around, repairing and rebuilding things. You have done much as a starship captain, but never had you ever thought you would take part in restoring a fallen empire, much less a Korath one.`
+
+event "seeptra nak landfall"
+	system "Seketra"
+		government "Anatruskor Empire"
+	planet "Seleptra Nak"
+		description "Seleptra Nak is a pristine, habitable planet, with plentiful precipitation and a pleasant, temperate climate. Originally settled by the Anatruskor Empire, all settlements on Seleptra Nak were mysteriously depopulated during the height of the Korath Civil War. Fortunately, buildings were completely unscathed, and the ecosystem rebounded back quickly."
+		description "With the return of the Sestor-bound Anatruskor refugees, Seleptra Nak's numerous buildings are being cleaned and repaired, and the largest cities are being repopulated. Due to extremely favourable conditions, resettlement efforts is expected to be swift."
+		spaceport "Seleptra Nak's centuries-old marble spaceport requires remarkably little maintenance before it is operable again. Large, open-air passageways connect the ivory white buildings with the concrete landing pads, letting massive wheeled vehicles ferry arriving Anatruskor refugees and incoming supplies to the newly-constructed supply depot."
+
+event "seleptra nak colonised" 10
+	system "Seketra"
+		add fleet "Anatruskor Defense" 500
+		add fleet "Small Kor Sestor" 5000
+		add fleet "Large Kor Sestor" 10000
+	planet "Seleptra Nak"
+		description "The capital of the revived Anatruskor Empire, Seleptra Nak is a metropolis comparable to the large cities on Sestor Ikfar and Laki Nemparu. A century of abandonment have absolved the Korath's sins of polluting this planet, and Korath now flourishes in this pristine, temperate planet. Pro-natalist posters are everywhere, representing the revived government's desire of population numbers."
+		description "The biggest landmark of the planet is the Imperial Palace, built much more modestly compared to the extravagant construction in Spera Anatrusk. Next to the Palace is the Anatruskor's Parliament, signifying the Empire's status as a constitutional monarchy. In constrast to the rail-based transportation in Sestor worlds or the petrol-based system in Efreti worlds, electric and hydrogen-powered vehicles are the most common transportation infrastructure in this Anatruskor world. Buses and road signs are common, carrying newly-settled Korath to their destinations without fail."
+		spaceport "Anatruskor efficiency is perfectly reflected in Seleptra Nak's spaceport, when an electric pod vehicle stops right next to your ship's doors, opening its doors for you to enter. Behind it, robots can be seen refuelling your ship and opening your cargo hold. Trading is easy through the screen in the pod, just by selecting the cargo and the number desired in the pod. Similarly, outfits are ordered this way. By the time you step out of the pod into the spaceport main building, everything about your ship is dealt with, and you can directly enter the city without worries."
+		outfitter "Anatruskor Basics"
+		outfitter "Korath Basics"
+		outfitter "Korath General Basics"
+
+mission "Sestor: Selefkar Refinery Anatruskor Colonisation"
+	landing
+	name "Recolonise Selefkar Refinery"
+	description "Ferry 10 Anatruskor Korath and 200 tonnes of equipment from Seleptra Nak to the Selefkar Refinery, to reopen the refinery station."
+	to offer
+		has "seleptra nak colonised"
+		has "Wanderers: Anatruskor Revival: declined"
+	passengers 10
+	cargo "construction robots" 200
+	source "Seleptra Nak"
+	destination "Selefkar Refinery"
+	on offer
+		conversation
+			`Development on Seleptra Nak is proceeding rapidly, and you can already see the city closest to the spaceport bustling with life. Roads, once cracked by overgrown trees' roots, have been re-paved, and the city now looks extremely presentable.`
+			`	You find Ikgalef and Urucohotab conversing. Seeing you approach, Ikgalef motions towards Urucohotab, and turns towards you.`
+			`	"Greetings, Rafeki Captain! Pi'at afilek, Anatruskor is thriving!"`
+			`	"The Wanderers are aware of the Anatruskor," you report, "They are still deciding based on who takes care of their planets better."`
+			`	Ikgalef visibly deflates, and converses with the Anatruskor Emperor. After a while, it turns to you again.`
+			`	"Despite that, the plan continue. Captain, please carry ten of the Anatruskor Korath to the nearby Seleptra Refinery? This way, west Anatruskor territory is secure."`
+			choice
+				"Sure!"
+					accept
+				"Maybe next time?"
+					defer
+	on complete
+		event "selefkar refinery landfall"
+		event "selefkar refinery activated" 20
+		conversation
+			`It is a miracle that the Selefkar Refinery is still intact, for its hull is heavily damaged by explosions throughout its entire structure. Everything inside is visible in space, and scanning the interior is proven to be wholly unnecessary.`
+			`	The Anatruskor Korath leaves your ship after wearing spacesuits, and begin working on the station. The robots you carried along are deployed as well. The leader waves at you, signallin that your task is done.`
+	
+event "selefkar refinery landfall"
+	system "Chikatip"
+		government "Anatruskor Empire"
+		add fleet "Anatruskor Defense" 500
+		add fleet "Small Kor Sestor" 5000
+		add fleet "Large Kor Sestor" 10000
+	planet "Selefkar Refinery"
+		description "Formerly an asteroid refinery, the Selefkar Refinery had been heavily damaged during the Korath Civil War, rendering it inoperable. Recently, however, Korath workers have arrived at the station relic, and begun to repair it. Currently habitable areas is restricted to a small dome near the docks, with a simple computer terminal controlling robot operations."
+		spaceport "During battles eons ago, the Selefkar Refinery's docking module was heavily damaged and subsequently lost. Currently, visiting spacecraft have to park near the airlock of the station, and any goods and visitors have to enter it via spacewalks."
+
+event "selefkar refinery activated"
+	system "Chikatip"
+		add fleet "Anatruskor Miners" 200
+	planet "Selefkar Refinery"
+		description "Abundant lead, silicon, and silver asteroids leads to the construction of the Selefkar Refinery in the Chikatip Sector. Fully automated with the latest machinery and technologies, the Refinery accepts unprocessed asteroids and minerals in one of the openings, and automatically sorts and refines whatever ore present in them. The streamlined process means that this Refinery is one of the most efficient in the Milky Way."
+		description "Because of its high degree of automation, only ten Korath workers are normally present in the station. Amenities such as holograph projectors and chess sets are provided, as are emergency defensive cannons and a distress signal emitter. Large Sestor drones are stationed at this station at all times, guarding it from threats from the Efreti and beyond."
+		spaceport "Like the rest of the station, the Selefkar Refinery's spaceport is also fully automated. Visiting spacecrafts dock at one of the Refinery's many docks, and cargo chutes are connected directly to the ship's cargo bay, carrying out any cargo transfers automatically."

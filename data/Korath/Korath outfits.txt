@@ -1,0 +1,297 @@
+outfit "Fuel Stack"
+	category "Systems"
+	cost 400000
+	thumbnail "outfit/korath fuel stack"
+	"mass" 66
+	"outfit space" -66
+	"fuel capacity" 800
+	"ramscoop" 20
+	"energy consumption" 0.55
+	"heat generation" 2.2
+	description "The Korath developed this giant fuel processor for capital ships that carry many of their fuel-guzzling outfits. It maintains a negative vacuum pressure, pulling gas into the ramscoops faster than a fuel processor would alone. Unfortunately, this comes with a constant heat and energy cost."
+
+#Korath waste launcher. Will be replaced with proper Ralukut sprites once they are available.
+outfit "Ralukut Pellet"
+	category "Ammunition"
+	cost 200
+	thumbnail "outfit/ralukut pellet"
+	"mass" .0625
+	"ralukut capacity" -1
+	description "Ralukut is created as byproduct in Korath Exile organic waste processing systems. Whatever isn't reused s fertiliser, fish food, drinking water, or other safe or useful things, are compressed and condensed into these Rakulut pellets."
+  description "Ralukut pellets are composed of the most toxic and corrosive compounds known to the Korath, and their potential as weapons is quickly realised. Hence, the resourceful Korath Exiles quickly created a series of weapons to utilise this fact."
+
+outfit "Ralukut Launcher"
+	category "Secondary Weapons"
+	cost 393000
+	thumbnail "outfit/ralukut launcher"
+	"mass" 20
+	"outfit space" -20
+	"weapon capacity" -20
+	"energy capacity" 50
+	"gun ports" -1
+	"ralukut capacity" 96
+	weapon
+		sprite "projectile/ralukut"
+			"frame rate" 20
+		sound "ralukut"
+		ammo "Ralukut Pellet"
+		icon "icon/ralukut"
+		"hit effect" "ralukut impact"
+		"inaccuracy" 1
+		"velocity" 20
+		"lifetime" 40
+		"reload" 60
+		"firing energy" 36
+		"firing heat" 105
+		"shield damage" 450
+		"hull damage" 150
+   		"burn damage" 10
+	description "Ralukut launchers are the simplest Rakulut-based system. Simple gases are used to levitate individual Rakulut pellets into the launcher, where electric coils accelerate the pellets into high speeds before throwing them at unsuspecting enemy ships."
+
+effect "ralukut impact"
+	sprite "effect/ralukut"
+		"no repeat"
+		"frame rate" 12
+	"lifetime" 30
+	"velocity scale" .02
+
+#Efreti weapon, derived from the Digger Mining Beam.
+outfit "Driller Beam"
+	category "Guns"
+	cost 555000
+	thumbnail "outfit/korath digger"
+	"mass" 10
+	"outfit space" -10
+	"weapon capacity" -10
+	"gun ports" -1
+	weapon
+		sprite "projectile/digger thin"
+			"frame rate" 20
+		sound "korath digger"
+		"hit effect" "korath digger hit"
+		"inaccuracy" 0.1
+		"velocity" 480
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 2.6
+		"firing heat" 5.3
+		"shield damage" 1.1
+		"hull damage" 4.6
+		"piercing" 0.3
+	description `Instead of pursuing a completely new design, Kor Efret engineers instead modified the ancient, classic Digger Mining Beam into a formidable weapon on its own. Thanks to an improved resonator, the beam dea;s the same damage to ship hulls as the Digger does to asteroids.`
+
+outfit "Driller Beam Turret"
+	category "Turrets"
+	cost 689000
+	thumbnail "outfit/korath digger turret"
+	"mass" 16
+	"outfit space" -16
+	"weapon capacity" -16
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/digger"
+			"frame rate" 20
+		"hardpoint sprite" "hardpoint/digger turret"
+		sound "korath digger"
+		"hit effect" "korath digger hit"
+		"inaccuracy" 1.5
+		"turret turn" 4.6
+		"velocity" 480
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 3.6
+		"firing heat" 5.9
+		"shield damage" 1.5
+		"hull damage" 5.2
+		"piercing" 0.35
+	description `The logical evolution of the light-weight Driller Beam is, naturally, mounting it on a turret mount. Unconstrained by gun ports, the Driller Beam Turret provides slightly increased stats, at the cost of slightly more energy supply.`
+
+
+
+#Anatruskor piercer beam weapon. Ion damage.
+outfit "Thunder-Lance"
+	category "Guns"
+	cost 568000
+	thumbnail "outfit/thunder lance"
+	"mass" 23
+	"outfit space" -23
+	"weapon capacity" -23
+	"gun ports" -1
+	weapon
+		sprite "projectile/ionbeam"
+			"random start frame"
+		sound "heavy laser"
+		"hit effect" "ion impact"
+		"inaccuracy" .15
+		"velocity" 600
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 2.5
+		"firing heat" 1.9
+		"shield damage" 1.5
+		"hull damage" 2.3
+		"energy damage" 5
+		"ion damage" 0.05
+		"disruption damage" 0.07
+		"piercing" 0.2
+	description `Facing increasingly powerful Efreti and Korsmanathi enemies, the Anatruskor Empire desperately searched for a solution, a weapon that can defeat ships of both rival Korath states and the Hai alike. The Thunder-Lance is the result.`
+	description `	The pinnacle of Korath beam technology, the Thunder-lance shoots a concentrated beam of positively-charged halogen ions at enemies. Not only do these highly unstable ions interfere heavily with the target's computer systems, the presence of such intense electromagnetic field disrupts the targets' shield matrix enough for other anti-hull weapons to pass through more easily.`
+	
+outfit "Storm-Pike Turret"
+	category "Turrets"
+	cost 568000
+	thumbnail "outfit/storm pike turret"
+	"mass" 31
+	"outfit space" -31
+	"weapon capacity" -31
+	"turret mounts" -1
+	weapon
+		sprite "projectile/ionbeam"
+			"random start frame"
+		sound "heavy laser"
+		"hit effect" "ion impact"
+		"inaccuracy" .12
+		"turret turn" 2.1
+		"velocity" 600
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 2.8
+		"firing heat" 2.4
+		"shield damage" 2
+		"hull damage" 2.9
+		"energy damage" 10
+		"ion damage" 0.05
+		"disruption damage" 0.09
+		"piercing" 0.2
+	description `While developing the Thunder-Lance, Anatruskor engineers frequently had to cut down the scale of certain components, in order to fit the gun inside the small gun ports of Anatruskor automata. Mounting the weapon on a turret mount, however, does not have such size restrictions, and hence the full suite of the original design can be incorporated, resulting in this slightly more powerful beam.`
+
+
+
+	
+
+
+#Shock Strike line of weapons. Developed by the Anatruskor, and recovered by an archaeology chain. 
+outfit "Shock-Strike"
+	category "Guns"
+	cost 419000
+	thumbnail "outfit/korath shocker"
+	"mass" 23
+	"outfit space" -23
+	"weapon capacity" -23
+	"gun ports" -1
+	"energy capacity" 190
+	weapon
+		sprite "projectile/shock"
+			"frame rate" 20
+		sound "korath shocker"
+		"inaccuracy" 0.4
+		"velocity" 12
+		"lifetime" 90
+		"reload" 60
+		"acceleration" 1
+		"drag" .1
+		"turn" 1.35
+		"homing" 4
+		"tracking" 0.8
+		"firing energy" 190
+		"firing heat" 210
+		"shield damage" 140
+		"hull damage" 45
+		"ion damage" 3
+	description `Developed by the Anatruskor Empire, the Shock-Strike is designed to incapacitate small vessels long enough for a Korath mothership to disable and pillage them.`
+	
+outfit "Shock-Strike Turret"
+	category "Turrets"
+	cost 509000
+	thumbnail "outfit/korath shock turret"
+	"mass" 25
+	"outfit space" -25
+	"weapon capacity" -25
+	"turret mounts" -1
+	"required crew" 1
+	"energy capacity" 190
+	weapon
+		sprite "projectile/shock"
+			"frame rate" 20
+		"hardpoint sprite" "hardpoint/korath shock turret"
+		sound "korath shocker"
+		"turret turn" 3.6
+		"inaccuracy" 0.2
+		"velocity" 12
+		"lifetime" 90
+		"reload" 60
+		"acceleration" 1
+		"drag" .1
+		"turn" 1.35
+		"homing" 4
+		"tracking" 0.8
+		"firing energy" 190
+		"firing heat" 210
+		"shield damage" 140
+		"hull damage" 45
+		"ion damage" 3
+	description `The Heavy Shock-Strike turret is an extremely powerful weapon, but its large size heavily impedes its versatility and usage. Hence, the Anatruskor designed this scaled-down version of the Heavy Shock-Strike Turret, allowing even fighter-class vessels to slowly drain power from their targets' energy reserves.`
+
+outfit "Heavy Shock-Strike Turret"
+	category "Turrets"
+	cost 509000
+	thumbnail "outfit/korath heavy shock turret"
+	"mass" 75
+	"outfit space" -75
+	"weapon capacity" -75
+	"turret mounts" -1
+	"required crew" 1
+	"energy capacity" 190
+	weapon
+		sprite "projectile/shock"
+			"frame rate" 20
+		"hardpoint sprite" "hardpoint/korath heavy shock turret"
+		sound "korath shocker"
+		"turret turn" 2.4
+		"inaccuracy" 0.2
+		"velocity" 13
+		"lifetime" 100
+		"reload" 20
+		"acceleration" 1
+		"drag" .1
+		"turn" 1.35
+		"homing" 4
+		"tracking" 0.8
+		"firing energy" 190
+		"firing heat" 210
+		"shield damage" 140
+		"hull damage" 45
+		"ion damage" 3
+	description `Mounting two Shock-Strike guns on a single turret mount creates the Heavy Shock-Strike Turret, which can rapidly drain its target's energy reserves. If they haven't generator capacity to spare, the unfortunate targets may soon be stripped bare by a Korath raiding party.`
+
+#Engines made for the Tek Ot Rah 681.
+outfit "Grav-Thruster (Nebula Class)"
+	plural "Thrusters (Nebula Class)"
+	category "Engines"
+	"cost" 5430000
+	thumbnail "outfit/hybrid korath thruster"
+	"mass" 184
+	"outfit space" -184
+	"engine capacity" -184
+	"thrust" 248.4
+	"thrusting energy" 28.1
+	"thrusting heat" 49.4
+	"flare sprite" "effect/korath flare/huge"
+		"frame rate" 6
+	"flare sound" "plasma huge"
+	description "When Sestor engineers designed the Tek Ot Rah 681 capital ship, they needed larger thrusters so it could catch up to prey held by its four Detainers. Any thrusters beyond Stellar Class simply melted themselves; the Korath could not manufacture a material to handle such high temperatures. For the longest time, this development bottleneck prevented the TOR-681 from ever reaching completion. Fresh insights from acquired Efreti Graviton-plasma hybrid thrusters, however, finally granted the Sestor the technological breathrought they needed, combining an anti-gravity field generator with their existing massive plasma thrusters."
+
+
+outfit "Grav-Steering (Nebula Class)"
+	plural "Grav-Steerings (Stellar Class)"
+	category "Engines"
+	"cost" 4496000
+	thumbnail "outfit/hybrid korath steering"
+	"mass" 122
+	"outfit space" -122
+	"engine capacity" -122
+	"turn" 7005
+	"turning energy" 16.4
+	"turning heat" 32
+	description "The high mass of the Tek Ot Rah 618 initially made Sestor engineers give up on any prospects for the ship to turn at an acceptable rate. The development of the Grav-thruster, however, brought back the possibility of the capital ship being a respectably mobile war platform. A pair of slightly scaled down Grav-thrusters, this steering system incorporates anti-gravity to accelerate the propelled plasma far beyond what the engine can manage on its own. The engine was first tested on a Met Par Tek 53; the ship spun so fast its Piercer missiles flew out of their racks and hit the hull."
