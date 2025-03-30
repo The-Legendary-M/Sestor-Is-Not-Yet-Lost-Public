@@ -83,7 +83,7 @@ event "seeptra nak landfall"
 		description "With the return of the Sestor-bound Anatruskor refugees, Seleptra Nak's numerous buildings are being cleaned and repaired, and the largest cities are being repopulated. Due to extremely favourable conditions, resettlement efforts is expected to be swift."
 		spaceport "Seleptra Nak's centuries-old marble spaceport requires remarkably little maintenance before it is operable again. Large, open-air passageways connect the ivory white buildings with the concrete landing pads, letting massive wheeled vehicles ferry arriving Anatruskor refugees and incoming supplies to the newly-constructed supply depot."
 
-event "seleptra nak colonised" 10
+event "seleptra nak colonised" 
 	system "Seketra"
 		add fleet "Anatruskor Defense" 500
 		add fleet "Small Kor Sestor" 5000

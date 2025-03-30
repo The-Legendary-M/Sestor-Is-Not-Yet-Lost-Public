@@ -1,3 +1,38 @@
+
+
+#Sestor fleets
+fleet "Small Kor Sestor"
+	add variant
+		"Met Par Tek 53 (Mereti)" 2
+		"Met Par Tek 53 (Sniper)"
+	add variant
+		"Met Par Tek 53" 2
+		"Met Par Tek 53 (Mereti)"
+	
+fleet "Large Kor Sestor"
+	add variant 2
+		"Kar Ik Vot 349 (Mereti)"
+		"Tek Far 71 - Lek"
+		"Far Lek 14" 10
+		"Met Par Tek 53" 2
+	add variant
+		"Kar Ik Vot 349 (Mereti)"
+		"Tek Far 71 - Lek"
+		"Far Lek 14" 10
+		"Met Par Tek 53 (Mereti)" 2
+	add variant
+		"Kar Ik Vot 349 (Mereti)"
+		"Tek Far 71 - Lek"
+		"Far Lek 14" 10
+		"Met Par Tek 53 (Mereti)" 
+		"Met Par Tek 53 (Minelayer)"
+	
+#Efreti fleets
+fleet "Kor Efret Home"
+	add variant
+		"Arch-Carrack"
+		"Charm-Shallop" 2
+
 #KTI-300s for Korath. TF78S's for cargo.
 fleet "Sestor Colonisation Transports"
 	government "Kor Sestor"
@@ -8,10 +43,8 @@ fleet "Sestor Colonisation Transports"
 	personality timid
 	variant 
 		"Kotnrareb Tubfaleb Ik'ih 300"
-		"Far Osk 27 (Cargo)" 2
-	variant 2
 		"Tek Far 78 - Osk (Logistics)"
-		"Far Osk 27 (Cargo)" 9
+		"Far Osk 27 (Cargo)" 11
 		
 fleet "Sestor Logistics"
 	government "Kor Sestor"
@@ -20,51 +53,68 @@ fleet "Sestor Logistics"
 	commodities Metal Plastic Equipment Industrial Electronics "Heavy Metals"
 	personality coward timid
 		confusion 15
-	variant 10
+	variant 5
 		"Kar Ik Vot 349 (Cargo)"
-	variant 7
+	variant 2
 		"Kar Ik Vot 349 (Cargo)" 2
 		"Kar Ik Vot 349"
-	variant 8
-		"Tek Far 71 - Lek (Cargo)"
-		"Far Lek 14 (Cargo)" 10
-	variant 8
-		"Tek Far 71 - Lek (Cargo)"
-		"Far Lek 14 (Cargo)" 10
-	variant 8
-		"Tek Far 78 - Osk (Logistics)"
-		"Far Osk 27 (Cargo)" 9
 	variant 4
-		"Tek Far 78 - Osk (Cargo)"
+		"Tek Far 71 - Lek (Cargo)"
+		"Far Lek 14 (Cargo)" 10
+	variant 4
+		"Tek Far 71 - Lek (Cargo)"
+		"Far Lek 14 (Cargo)" 10
+	variant 4
+		"Tek Far 78 - Osk (Logistics)"
 		"Far Osk 27 (Cargo)" 9
 	variant 2
+		"Tek Far 78 - Osk (Cargo)"
+		"Far Osk 27 (Cargo)" 9
+	variant 
 		"Tek Far 78 - Osk (Logistics)"
 		"Far Osk 27 (Cargo)" 2
-	variant 6
+	variant 2
 		"Tek Far 78 - Osk (Logistics)" 2
 		"Far Osk 27 (Cargo)" 18
-	variant 6
+	variant 2
 		"Tek Far 78 - Osk (Cargo)" 2
 		"Far Osk 27 (Cargo)" 18
-	variant 8
+	variant 3
 		"Tek Far 109 (Cargo)"
 		"Far Osk 27 (Cargo)" 7
 		"Far Lek 14 (Cargo)" 9
-	variant 20
-		"Met Par Tek 53 (Cargo)"
 	variant 10
+		"Met Par Tek 53 (Cargo)"
+	variant 5
 		"Met Par Tek 53 (Cargo)" 2
+
 
 fleet "Anatruskor Defense"
 	government "Anatruskor Empire"
-	names "korath"
+	names "anatruskor"
 	fighters
-		names "korath"
+		names "anatruskor"
 	cargo 0
-	variant 2
-		"Kotnrareb Tubfaleb Ik'ih 300"
 	variant 3
-		"Kotnrareb Nrase 300"
+		"Pav-Kot 117"
+	variant
+		"Pav-Kot 117" 2
+
+fleet "Anatruskor Logistics"
+	government "Anatruskor Empire"
+	names "anatruskor"
+	fighters
+		names "anatruskor"
+	commodities Metal Plastic Equipment Industrial Electronics "Heavy Metals"
+	variant 4
+		"Lilot Korati"
+	variant
+		"Lilot Korati" 2
+	variant
+		"Kotnrareb Tubfaleb Ik'ih 300"
+
+		
+
 
 fleet "Anatruskor Miners"
 	government "Anatruskor Empire"

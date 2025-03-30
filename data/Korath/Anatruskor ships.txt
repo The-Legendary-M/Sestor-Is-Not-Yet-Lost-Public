@@ -8,8 +8,8 @@ ship "Lilot Korati"
 		"shields" 13300
 		"hull" 20100
 		"automaton" 1
-		"mass" 520
-		"drag" 7.8
+		"mass" 1040
+		"drag" 15.6
 		"heat dissipation" .7
 		"fuel capacity" 400
 		"cargo space" 848
@@ -69,8 +69,8 @@ ship "Pav-Kot 117"
 		"shields" 36500
 		"hull"  33500
 		"automaton" 1
-		"mass" 780
-		"drag" 13.8
+		"mass" 1770
+		"drag" 20.0
 		"heat dissipation" .6
 		"fuel capacity" 400
 		"cargo space" 60
@@ -121,7 +121,8 @@ ship "Pav-Kot 117"
 
 
 
-		
+
+
 
 #"Medium transport" -> "Pengangkut sedang" -> "Gnades Tukgnagnep" -> "Nrase' Kotnrareb"
 #"Bus" -> "Bis" -> "Sib" -> "'ih"
@@ -137,8 +138,8 @@ ship "Kotnrareb Tubfaleb Ik'ih 300"
 		"hull" 7500
 		“"required crew" 75
 		"bunks" 375
-		"mass" 720
-		"drag" 12
+		"mass" 1440
+		"drag" 18.0
 		"heat dissipation" .5
 		"fuel capacity" 600
 		"cargo space" 150

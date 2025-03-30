@@ -1,0 +1,18 @@
+phrase "anatruskor"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"-"
+	phrase
+		"digit"
+	phrase
+		"."
+	phrase
+		"digit"
+	phrase
+		"digit"
+

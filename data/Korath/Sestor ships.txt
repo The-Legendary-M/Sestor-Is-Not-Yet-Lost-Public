@@ -5,11 +5,11 @@ ship "Tek Ot Rah 681"
 	attributes
 		category "Heavy Warship"
 		cost 147550000
-		shields 108400
-		hull 98100
+		shields 124800
+		hull 108000
 		automaton 1
-		mass 2410
-		drag 30.6
+		mass 4500
+		drag 40.8
 		"heat dissipation" .4
 		"fuel capacity" 700
 		"cargo space" 56

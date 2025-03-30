@@ -1,0 +1,360 @@
+#The Kor Efret are not happy after knowing that the Sestor, their mortal enemy, survived.
+#Currently, their main goal is to sway the Wanderers into handing over terraformed Korath planets to them.
+#Secondary goal is to militarise and defeat the Sestor.
+
+
+#Like the Sestor, the Efret wants to expand, now that the automaton threat is gone(?)
+#The thing is, unlike the Anatruskor, there are quite a few planets that are liveable straight away, needing no terraformation.
+
+#They are the Kor Efret, or the Efreti Korath. Their stuff is Efret stuff. 
+
+#Calm before the storm. Escorting Efreti Korath between Wanderer worlds and Efreti worlds.
+mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Charm)"
+	landing
+	repeat
+	name "Escort to <system>"
+	description "Escort these Efreti Korath to <destination>."
+	source
+		government "Kor Efret"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	destination
+		distance 0 10
+		government "Wanderer"
+		not attributes "uninhabited"
+	to offer
+		has "event: wanderers taking jobs from kor efreti"
+		not "language: Korath"
+		random < 10
+	on offer
+		conversation
+			`As you wander around the spaceport, munching on your sandwich, you notice a group of Korath approach.`
+			`	One of them steps forward, and attempts to communicate with you. It points at its ship, a Charm-Shallop, with its left hand, then to you with its right hand. As it pushes its hands outwards with one hand trailing the other, it chants, "<planet>, <planet>."`
+			`	You realise it wants an escort towards <destination>.`
+			choice
+				`(Escort the ship)`
+				`(Decline the job)`
+					goto sayingno
+			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
+			
+			label sayingno
+			`You cross your hands in front of your chest. The Korath walks away, head hung.`
+				decline
+
+	on complete
+		payment 150000
+		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
+		
+	npc accompany save
+		government "Kor Efret"
+		personality target escort timid
+		fleet
+			names "korath"
+			variant
+				"Charm-Shallop"
+
+mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Charm)"
+	landing
+	repeat
+	name "Escort to <system>"
+	description "Escort these Efreti Korath to <destination>."
+	source
+		government "Wanderer"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	destination
+		distance 0 10
+		government "Kor Efret"
+		not attributes "uninhabited"
+	to offer
+		has "event: wanderers taking jobs from kor efreti"
+		not "language: Korath"
+		random < 10
+	on offer
+		conversation
+			`You are sitting in the spaceport, looking for a job, when you notice a group of Korath approach.`
+			`	One of them steps forward, and attempts to communicate with you. It points at its ship, a Charm-Shallop, with its left hand, then to you with its right hand. As it pushes its hands outwards with one hand trailing the other, it chants "<planet>, <planet>" over and over again.`
+			`	You realise it wants an escort towards <destination>.`
+			choice
+				`(Escort the ship)`
+				`(Decline the job)`
+					goto sayingno
+			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
+			
+			label sayingno
+			`You cross your hands in front of your chest. The Korath walks away, head hung.`
+				decline
+
+	on complete
+		payment 150000
+		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
+		
+	npc accompany save
+		government "Kor Efret"
+		personality target escort timid
+		fleet
+			names "korath"
+			variant
+				"Charm-Shallop"
+
+mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Arch)"
+	landing
+	repeat
+	name "Escort to <system>"
+	description "Escort these Efreti Korath to <destination>."
+	source
+		government "Kor Efret"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	destination
+		distance 0 10
+		government "Wanderer"
+		not attributes "uninhabited"
+	to offer
+		has "event: wanderers taking jobs from kor efreti"
+		not "language: Korath"
+		random < 10
+	on offer
+		conversation
+			`As you wander around the spaceport, munching on your sandwich, you notice a group of Korath approach.`
+			`	One of them steps forward, and attempts to communicate with you. It points at its ship, an Arch-Carrack, with its left hand, then to you with its right hand. As it pushes its hands outwards with one hand trailing the other, it chants, "<planet>, <planet>."`
+			`	You realise it wants an escort towards <destination>.`
+			choice
+				`(Escort the ship)`
+				`(Decline the job)`
+					goto sayingno
+			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
+			
+			label sayingno
+			`You cross your hands in front of your chest. The Korath walks away, head hung.`
+				decline
+
+	on complete
+		payment 150000
+		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
+		
+	npc accompany save
+		government "Kor Efret"
+		personality target escort timid
+		fleet
+			names "korath"
+			variant
+				"Arch-Carrack"
+
+mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Charm)"
+	landing
+	repeat
+	name "Escort to <system>"
+	description "Escort these Efreti Korath to <destination>."
+	source
+		government "Wanderer"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	destination
+		distance 0 10
+		government "Kor Efret"
+		not attributes "uninhabited"
+	to offer
+		has "event: wanderers taking jobs from kor efreti"
+		not "language: Korath"
+		random < 10
+	on offer
+		conversation
+			`You are sitting in the spaceport, looking for a job, when you notice a group of Korath approach.`
+			`	One of them steps forward, and attempts to communicate with you. It points at its ship, an Arch-Carrack, with its left hand, then to you with its right hand. As it pushes its hands outwards with one hand trailing the other, it chants "<planet>, <planet>" over and over again.`
+			`	You realise it wants an escort towards <destination>.`
+			choice
+				`(Escort the ship)`
+				`(Decline the job)`
+					goto sayingno
+			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
+			
+			label sayingno
+			`You cross your hands in front of your chest. The Korath walks away, head hung.`
+				decline
+
+	on complete
+		payment 150000
+		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
+		
+	npc accompany save
+		government "Kor Efret"
+		personality target escort timid
+		fleet
+			names "korath"
+			variant
+				"Arch-Carrack"
+
+
+#News travel quick in Korath world, since skin-eating is very common.
+mission "Efret: Uninhabited Efret Planets Surveillance"
+	landing
+	name "Efreti Surveillance"
+	description "Fly through the highlighted Efreti systems with a team of Efreti scientists, and return them to Laki Nemparu."
+	source "Laki Nemparu"
+	waypoint "Furmeliki"
+	waypoint "Chornifath"
+	waypoint "Hesselpost"
+	destination "Laki Nemparu"
+	passengers 10
+	cargo "scanning equipment" 5
+	to offer
+		has "Efreti: Distress Call 7: done"
+		random < 85
+	on offer
+		conversation
+			`Laki Nemparu is as polluted as you remember, its air having an acidy, metallic smell and dust being everywhere. You decide to put on your gas mask, and use the air lock to get out of your ship.`
+			`	After your daring rescue of the Charm-Shallop a while back, the Efreti Korath seem much more friendly to you. Despite the language barrier, the Efreti Korath still tries their best to communicate to you with gestures. They are improving quick, you discover, as by now you more or less understands what they try to tell you.`
+			`	For example, the slight bow the spaceport counter clerk gives you is a friendly greeting, while the Korath next to a yellow-striped blackpetrol car, waving to you and pointing to its car is offering its taxi services to you. You put your hands up, politely refusing the offer, and point to a nearby bar, inviting it to a drink instead. It nods its head, accepting the invitation.`
+			`	The Korath mouth-numbing sweet drink is growing on you. It is a refreshing break from the alcoholic drinks all over human and Hai space, and the weird taste of drinks in the Coalition. The drink is slightly addicting, you admit, but as long as you consume it sparingly it should be fine.`
+			`	As you and your bar-mates start engaging in increasingly wild gesturings, the bar suddenly goes still. Like all other customers, you look towards the door, only to see a Korath dressed in navy-blue uniform walking towards you.`
+			`	Seeing it has caught your attention, the newcomer takes out a star map, and starts signing.`
+			`	The Korath taps its cap, showing the governing emblem of the Efreti Republic, and an arm pad showing its rank in the military. Then, it moves its hand towards the map.`
+			`	You look at the map. It is an old map of Korath space, showing all of the Efreti systems and some beyond. It then gestures towards a team of ten Korath trailing behind it, and your ship. Then, using its index finger the Korath makes a trail from Kashikt, through three systems you recognise as Furmeliki, Chornifath, and Hesselpost, and back to Kashikt. Through experience, you can tell that it wants you to take the ten Korath to the three systems, and back.`
+				choice
+					`(Nod your head and do a "thumbs up" gesture)`
+						accept
+					`(Cross your arms and shake your head)`
+						defer
+	on enter "Furmeliki"
+		dialog "For its orbit, Elek Kartans is abnormally hot. Much of its water content is in its atmosphere, while the surface water level is low. Surface wind is strong and high, which, coupled with the humidity, means that most Korath cities there have already dried up. You shudder to think about what might have caused this planet's demise."
+	on enter "Chornifath"
+		dialog "Eskar Kortuka seems like an untouched world. The entire world is covered with snow, save for its most equatorial regions. Few plants and animals exist, and wind is strong. The Korath passengers seem disinterested in this planet, however."
+	on enter "Hesselpost"
+		dialog "A quick glance at Sarisa Centra is sufficient to reveal its past of being a nuclear bomb target. Massive craters still exist, and large patches of glass can be seen in its many deserts. Plants have mostly reclaimed the devastated landscape, giving it a colour palette not unlike ordinary, unscathed planets."
+		
+	on complete
+		"Reputation: Kor Efret" += 10
+		payment 500000
+		conversation
+			`You land back onto Laki Nemparu, where the Efreti military officer awaits. The ten Korath researchers salute their commander as they walk out of your ship. The officer hands you 500,000 credits as the Korath starts looking at the sensor data. You notice Efreti police restricting pedestrians from interfering with the researchers.`
+			`	As you leave, the officer signals you to not reveal it to random Korath personnel. You agree.`
+
+mission "Efret: Korsmanath Surveillance"
+	landing
+	name "Korsmanath Planets Surveillance"
+	description "Fly through planets formerly of the Korsmanath Empire, with a team of 10 Efreti scientists and 5 tonnes of sensor equipment."
+	source "Laki Nemparu"
+	waypoint "Farbutero"
+	waypoint "Feroteri"
+	waypoint "Korsmanath"
+	waypoint "Chornifath"
+	destination "Laki Nemparu"
+	passengers 10
+	cargo "sensor equipment" 5
+	to offer
+		has "Efret: Uninhabited Efret Planets Surveilance: done"
+		random < 60
+	on offer
+		conversation
+			`When you land on Laki Nemparu's spaceport again, you already see the officer you met before walking up towards you. You wave at it, inquiring what the officer wants from you.`
+			`	"Urpasom," the officer says, pointing to herself. She then pulls out a map, this time pointing to several systems south of Efreti space. A green emblem adorns the system you recognise as Korsmanath. Once again, like last time, Urpasom points to ten Korath behind her, to your ship, and to the sensors they used last time. It is clear that she wants you to visit those systems with the scanner.`
+				choice
+					`(Accept)`
+						accept
+					`(Decline)`
+						decline
+	on enter Farbutero
+		dialog "At first glance, Solima Skarati seems like just another habitable terrestrial planet. A closer look, however, reveals that no vegetation exists in coastal areas. Something in the oceans must be inhibiting life."
+	on enter Feroteri
+		dialog "Esperaktu Station looks like just another standard Korath station. Compared to many others, this station is relatively undamaged, with shallow blast marks all over it."
+	on enter "Korsmanath"
+		dialog "The Korath home planet, Kasichara Fet, seems to be a rather pleasant place. Lush forests cover much of the landscape, and the many ruins do not show signs of battle damage at all. You can only guess what happened to its inhabitants."
+	on enter Chornifath
+		dialog "Eskar Kortuka is a standard, run-of-the-mill icy mining planet very similar to Eskar Kortuka you surveyed earlier. And similarly, the Korath engineers are disinterested in exploring this world further."
+	
+	on complete
+		payment 500000
+		conversation
+			"Urpasom thanks you for your help, and hands you 500,000 credits. Once again, she signals you to not disclose it to random pedestrians. You once again agrees."
+
+mission "Efret: Sarisa Fentra Outpost"
+	landing
+	name "Establish Outpost at Sarisa Fentra"
+	description "Escort an Echo-Galleon to Sarisa Fentra to establish an Efreti outpost in the irradiated world."
+	source "Laki Nemparu"
+	destination "Sarisa Fentra"
+	to offer
+		has "Efret: Uninhabited Efret Planets Surveillance"
+		random < 75
+	on offer
+		conversation
+			`The smog in Laki Nemparu is particularly strong today, and you see Korath wearing yellow flashlights to avoid bumping into each other often. The usual dust seems more invasive than usual.`
+			`	You see the familiar figure of Urpasom approach you. Once again, her hands are holding a paper map, and ten Korath are trailing behind her. You expect another surveillance mission, but Urpasom's gestures are wildly different today.`
+			`	Instead of pointing to star systems one after another, her hands never leaves Hesselpost. "Sarisa Fentra, Sarisa Fentra," she mutters.`
+			`	The portable holograph projector Urpasom has then projects a 3D model of an outpost, with Korath moving in and out. With that, you understand her request. She wants you to escort Efreti freighters to Sarisa Fentra to establish an outpost, just like how you helped the Sestor.`
+			choice
+				` (Nod, and make a take-off gesture)`
+					accept
+				`(Cross your hands and shake your head)`
+					defer
+	on complete
+		payment 100000
+		event "sarisa fentra landfall"
+		event "sarisa fentra developed" 20
+		conversation
+			`Compared to much of Korath Space, Sarisa Fentra seems mostly normal, if you do not look at your ship's external Geiger counter. Even after a century of abandonment, the landscape is still highly radioactive after the Korath Civil War. The Efreti Korath, knowing this, decide to deploy the robots first.`
+			`	Gingerly, the robots installs a sort of shielding device, illuminating the ground around with a faint blue glow. Then, they start placing large metal slabs on the ground.`
+			`	Hours pass as the robots continue to build the outpost, up from the steel-framed lead base. The outpost is short but wide, probably because of the softness of lead. You watch, along with the Korath in the landed Echo-Galleon nearby, as a greenhouse and a water purifier is constructed, with special anti-radiation mechanisms. Eventually, the robots tun on a green LED lamp, allowing the Korath to enter the base.`
+			`	The Korath leader thanks you, and gives you 100,000 credits and a Korath candy as payment.`
+	
+	npc accompany save
+		government "Kor Efret"
+		personality target escort timid
+		fleet
+			names "korath"
+			variant
+				"Echo-Galleon"
+
+		
+
+event "sarisa fentra landfall"
+	system "Hesselpost"
+		government "Kor Efret"
+		clear fleet "Kor Efret Miners"
+		add fleet "Kor Efret Home" 700
+		add fleet "Kor Efret Miners" 3600
+	planet "Sarisa Fentra"
+		description "A victim of dirty nuclear bombs during the Korath Civil War, Sarisa Fentra has a highly radioactive surface. Mutated versions of land insects and sea creatures are ubiquitous, which are unanimously hostile to any sentient beings venturing on this planet."
+		description "Recently, the Efreti Korath have established an outpost here. Heavily shielded against the planet's high background radiation and powerful native animals, the outpost houses one hundred Korath and many robots, constantly sending out probes and conducting experiments in a bid to make this world fully habitable."
+		spaceport "Like the rest of the base, Sarisa Fentra's spaceport is built upon a thick foundation made of lead and steel frames. Large signs and LED lights illuminate the landing pads brightly, ensuring that arriving ships do not land on the wrong places, and potentially get damaged by the powerful, hostile native animals."
+
+event "sarisa fentra development"
+	planet "Sarisa Fentra"
+		description "A victim of dirty nuclear bombs during the Korath Civil War, Sarisa Fentra has a highly radioactive surface. Mutated versions of land insects and sea creatures are ubiquitous, which are unanimously hostile to any sentient beings venturing on this planet."
+		description "The Kor Efret owns a large outpost here, heavily shielded against the intense radiation and large native lifeforms. This planet's irradiated past makes it a target of intense Efreti scientific scrutiny, with numerous experiments under way aiming to tackle the radiation problems that many other Korath planets suffer from."
+
+
+
+#Mission where the Efret opens up their outfitter, grateful for First Last saving their Charm-Shallop in the vanilla "Efreti: Distress Call" mission chain.
+mission "Efret: Laki Nemparu Outfitter"
+	landing
+	invisible
+	source "Laki Nemparu"
+	to offer
+		has "Efreti: Distress Call 7: done"
+	on offer
+		conversation
+			`You land your ship in Laki Nemparu's spaceport, grabbing a gas mask, as you prepare to spend the night in this polluted planet.`
+			`	As you walk to the spaceport's registrar, you see the captain of the Charm-Shallop you rescued earlier talking with another, taller Korath, while gesturing towards you.`
+			`	The larger Korath sees you, and gives you a shallow bow. It motions the captain and you towards the outfitter.`
+			`	Like the rest of the spaceport, the outfitter mostly consists of a grey, featureless concrete counter where you order your parts. Seeing you, the clerk hands you the familiar card that has all the basic Korath outfits you can buy. The large Korath, seeing the short list, snatched the card from you, and start talking animatedly to the clerk, occasionally jabbing its hands towards you and the Charm-Shallop captain. The clerk turns towards you, wide-eyes shining through the gas mask, before reaching below the counter and giving you a much longer list.`
+			`	You stare at the list, wide-eyed. Although you still cannot read Korath, you still understand its content thanks to the colourful diagrams printed on it. Besides the Fuel Processor and the Command Centre, the sole reasons you came to this outfitter, the card also contains far more: A new line of engines, several weapons you see equipped by the Exiles, and even the powerful Liquid Sodium Cooler.`
+			`	It seems that, by rescuing the Charm-Shallop, the Efreti now consider you their friend.`
+				decline
+	on decline
+		event "access efreti outfitter"
+		
+event "access efreti outfitter"
+	planet "Laki Nemparu"
+		add outfitter "Korath General Basics"
+		add outfitter "Korath General Advanced"
+		add outfitter "Kor Efret Basics"
+		add outfitter "Kor Efret Advanced"
+	planet "Setar Fort"
+		add outfitter "Korath General Basics"
+		add outfitter "Kor Efret Basics"
+
+
+
+
