@@ -1,0 +1,353 @@
+#Abyssal Stream, Deep Rivers converted into drone carriers. Mostly used to transport rather than deploy.
+ship "Abyssal Stream"
+	sprite "ship/abyssal stream"
+	attributes
+		category "Heavy Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 39800000
+		"shields" 96500
+		"hull" 48900
+		"required crew" 25
+		"bunks" 40
+		"mass" 1720
+		"drag" 17
+		"heat dissipation" .6
+		"fuel capacity" 500
+		"cargo space" 75
+		"outfit space" 690
+		"weapon capacity" 300
+		"engine capacity" 132
+		weapon
+			"blast radius" 350
+			"shield damage" 2800
+			"hull damage" 1700
+			"hit force" 5500
+	outfits
+		"Wanderer Anti-Missile" 2
+		"Thunderhead Launcher" 4
+		"Thunderhead Missile" 160
+		
+		"Blue Sun Reactor" 
+		"Red Sun Reactor"
+		"Dark Storm Shielding" 4
+		"Wanderer Ramscoop"
+		"Wanderer Heat Sink" 3
+		
+		"Type 4 Radiant Thruster"
+		"Type 2 Radiant Steering"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+
+	gun -35 -265.5 "Thunderhead Launcher"
+	gun 35 -265.5 "Thunderhead Launcher"
+	gun -63 -138 "Thunderhead Launcher"
+	gun 63 -138.5 "Thunderhead Launcher"
+	turret 0 228 "Wanderer Anti-Missile"
+	turret 0 121.5 "Wanderer Anti-Missile"
+	bay "Drone" 50 -56 under right
+		"launch effect" "korath external"
+	bay "Drone" -50 -56 under left
+		"launch effect" "korath external"
+	bay "Drone" 43 0 under right
+		"launch effect" "korath external"
+	bay "Drone" -43 0 under left
+		"launch effect" "korath external"
+	bay "Drone" 36 40 under right
+		"launch effect" "korath external"
+	bay "Drone" -36 40 under left
+		"launch effect" "korath external"
+	bay "Drone" 30.5 82.5 under right
+		"launch effect" "korath external"
+	bay "Drone" -30.5 82.5 under left
+		"launch effect" "korath external"
+	bay "Drone" 25.5 130 under right
+		"launch effect" "korath external"
+	bay "Drone" -25.5 130 under left
+		"launch effect" "korath external"
+	engine 21 285
+	engine -21 285
+	engine 60 269 0.5
+	engine -60 269 0.5
+	explode "small explosion" 80
+	explode "medium explosion" 60
+	explode "large explosion" 30
+	explode "huge explosion" 20
+	"final explode" "final explosion large"
+	description "Developed from the ancient Deep River chasis, the Abyssal Stream-class carrier is the Wanderer's primary method of transporting and deploying drones, both in battlefield and between worlds. Consisting of a metal frame reinforcing the carrier modules in the middle, the Abyssal Stream sacrifices everything for carrying capacity and survivability. Its capacity of ten drones makes the Abyssal Stream one of the largest carriers in the galaxy."
+
+#Wanderer Squall, a medium drone/fighter carrier. Inspired by the Sestor TF-109.
+ship "Squall"
+	sprite "ship/squall"
+	thumbnail "thumbnail/squall"
+	attributes
+		category "Medium Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 25000000
+		"shields" 43100
+		"hull" 28300
+		"required crew" 45
+		"bunks" 62
+		"mass" 920
+		"drag" 14.2
+		"heat dissipation" 0.6
+		"fuel capacity" 700
+		"cargo space" 51
+		"outfit space" 637
+		"weapon capacity" 253
+		"engine capacity" 119
+		weapon
+			"blast radius" 340
+			"shield damage" 3400
+			"hull damage" 1700
+			"hit force" 5100
+	outfits
+		"Dual Sunbeam Turret"
+		"Moonbeam Turret" 3
+		"Thunderhead Launcher" 2
+		"Thunderhead Missile" 80
+
+		"Blue Sun Reactor"
+		"Dark Storm Shielding" 2
+		"Wanderer Heat Sink"
+		"Wanderer Ramscoop"
+		
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+	
+	engine -34 135.5
+	engine 34 135.5
+	gun -22.5 -106 "Thunderhead Launcher"
+	gun 22.5 -106 "Thunderhead Launcher"
+	turret 0 -68.5 "Moonbeam Turret"
+	turret -21 29.5 "Moonbeam Turret"
+	turret 21 29.5 "Moonbeam Turret"
+	turret 0 87 "Dual Sunbeam Turret"
+	bay Fighter -33 -4
+		angle 325
+	bay Fighter 33 -4
+		angle 35
+	bay Drone -75.5 18.5
+		angle 340
+		under
+	bay Drone 75.5 18.5
+		angle 20
+		under
+	bay "Drone" -67 100
+		angle 320
+		under
+	bay "Drone" 67 100
+		angle 40
+		under
+	explode "small explosion" 80
+	explode "medium explosion" 50
+	explode "large explosion" 25
+	"final explode" "final explosion medium" 1
+	description "With the production of Flycatcher drones, the question of moving them between worlds have become a focus of Wanderer research efforts. The Squall is the result of their efforts, a new design capable of carrying four of the drones and two Hailstone fighters in a single fight. Because of the Unfettered Hai's aggressive tactics, this carrier is heavily armoured and shielded, providing a reliable firing platform in fights."
+
+#Hailstones and Graupels are the fighters and drones carried on Squalls. Some of the strongest currently in service, rivalling even the Remnant.
+ship "Hailstone"
+	sprite "ship/hailstone"
+	thumbnail "thumbnail/hailstone"
+	attributes
+		category "Fighter"
+		licenses
+			"Wanderer Military"
+		"cost" 1241000
+		"shields" 3600
+		"hull" 3200
+		"required crew" 1
+		"bunks" 1
+		"mass" 25
+		"drag" 0.9
+		"heat dissipation" 0.9
+		"outfit space" 109
+		"weapon capacity" 38
+		"engine capacity" 36
+		"shield generation" 0.75
+		"shield energy" 1.2
+		weapon
+			"blast radius" 24
+			"shield damage" 240
+			"hull damage" 120
+			"hit force" 360
+	outfits
+		"Moonbeam" 2
+		
+		"Small Biochemical Cell" 2
+		
+		"Type 1 Radiant Thruster"
+		"Type 2 Radiant Steering"
+	
+	engine -10 37.5
+	engine 10 37.5
+	gun -13.5 -5.5 "Moonbeam"
+	gun 13.5 -5.5 "Moonbeam"
+	explode "tiny explosion" 20
+	explode "small explosion" 6
+	"final explode" "final explosion small"
+	description "The existence of the Solifuge showed the Wanderers the effectiveness of carried fighter combat, and the Hailstone is developed as an answer to the Violin Spider. While heavier ships such as the Hurricane and the Heavy Gust distracts enemy firepower, these fighters will sneak in and quickly disable enemy ships using two Moonbeam lasers."
+
+#Removing a turret mount frees up some outfit and weapon space.
+ship "Graupel"
+	sprite "ship/flycatcher"
+	thumbnail "thumbnail/flycatcher"
+	licenses
+		Wanderer
+	attributes
+		category "Drone"
+		"cost" 830000
+		"shields" 1600
+		"hull" 4700
+		"mass" 40
+		"drag" .6
+		"heat dissipation" .9
+		"outfit space" 90
+		"weapon capacity" 30
+		"engine capacity" 26
+		"automaton" 1
+		weapon
+			"blast radius" 10
+			"shield damage" 100
+			"hull damage" 150
+			"hit force" 250
+	outfits
+		"Moonbeam"
+		
+		"Small Biochemical Cell" 2
+		
+		"Type 1 Radiant Thruster"
+		"Type 1 Radiant Steering"
+		
+	engine -9 28
+	engine 9 28
+	gun 0 4
+	explode "tiny explosion" 30
+	explode "small explosion" 20
+	description `The Graupel is a combat-oriented modification of the Flycatcher. Replacing the single turret mount with a gun port, the Graupel is able to field comparatively more powerful armaments compared to the Flycatcher, allowing it to carry out certain combat operations not worth risking pilots for.`
+
+
+ship "Heavy Gust"
+	sprite "ship/heavy gust"
+	thumbnail "thumbnail/heavy gust"
+	attributes
+		category "Medium Warship"
+    "cost" 27500000
+		"shields" 46500
+		"hull" 30000
+		"required crew" 52
+		"bunks" 69
+		"mass" 460
+		"drag" 4.9
+		"heat dissipation" .5
+		"fuel capacity" 600
+		"cargo space" 40
+		"outfit space" 730
+		"weapon capacity" 300
+		"engine capacity" 133
+		weapon        
+            blast radius 280        
+            shield damage 2800        
+            hull damage 1400        
+            hit force 4200 
+    outfits
+    	"Moonbeam" 2
+    	"Sunbeam" 4
+    	"Moonbeam Turret"
+    	"Wanderer Anti-missile"
+    	
+		"Blue Sun Reactor"
+		"Red Sun Reactor"
+		"Bright Cloud Shielding"
+		"Dark Storm Shielding" 2
+		"Wanderer Heat Sink" 3
+		"Wanderer Ramscoop"
+		
+		"Type 1 Radiant Thruster"
+		"Type 1 Radiant Steering"
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+		
+    engine 31.5 131.5
+	engine -31.5 131.5
+	gun -65.5 16.5 "Moonbeam"
+	gun -58.5 23 "Sunbeam"
+	gun -34.5 59.5 "Sunbeam"
+	gun 34.5 59.5 "Sunbeam"
+	gun 58.5 23 "Sunbeam"
+	gun 65.5 16.5 "Moonbeam"
+    turret 0 -60.5 "Moonbeam Turret"
+	turret 0 21.5 "Wanderer Anti-missile"
+	explode "small explosion" 80
+	explode "medium explosion" 50
+	explode "large explosion" 25
+	"final explode" "final explosion medium" 1
+	description "With a reinforced hull and two turret mounts added, the Heavy Gust is developed as a successor to the Strong Wind, being a dedicated warship that fills the niche originally fulfilled only by retrofitting a scientific vessel. Expanded engine space also allows it to carry out interception roles, quickly disabling enemy ships with its six gun ports."
+		
+ship "Blizzard"
+	sprite "ship/blizzard"
+	attributes
+		category "Heavy Warship"
+		licenses
+        		"Wanderer Military"
+		"cost" 39800000
+		"shields" 76700
+		"hull" 49900
+		"required crew" 84
+		"bunks" 109
+		"mass" 1560
+		"drag" 22.6
+		"heat dissipation" 0.54
+		"fuel capacity" 600
+		"cargo space" 56
+		"outfit space" 1120
+		"weapon capacity" 550
+		"engine capacity" 160
+		weapon
+			"blast radius" 450
+			"shield damage" 4600
+			"hull damage" 2340
+			"hit force" 6500
+	outfits
+		"Moonbeam" 6
+		"Dual Sunbeam Turret" 4
+		"Wanderer Anti-Missile" 2
+		
+		"Blue Sun Reactor"
+		"White Sun Reactor"
+		"Small Biochemical Cell"
+		"Dark Storm Shielding" 3
+		"Wanderer Heat Sink" 3
+		"Wanderer Ramscoop"
+		
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Type 2 Radiant Thruster"
+		"Type 2 Radiant Steering"
+		"Hyperdrive"
+
+	engine -54.5 116.5 0.6
+	engine -13 151.5 0.8
+	engine 13 151.5 0.8
+	engine 54.5 116.5 0.6
+	gun -35 -35 "Moonbeam"
+	gun -20 -114 "Moonbeam"
+	gun -10.5 -137.5 "Moonbeam"
+	gun 10.5 -137.5 "Moonbeam"
+	gun 20 -114 "Moonbeam"
+	gun 35 -35 "Moonbeam"
+	turret -51 32 "Dual Sunbeam Turret"
+	turret -26 -9 "Dual Sunbeam Turret"
+	turret 0 -46 "Wanderer Anti-Missile"
+	turret 0 28 "Wanderer Anti-Missile"
+	turret 26 -9 "Dual Sunbeam Turret"
+	turret 51 32 "Dual Sunbeam Turret"
+	explode "small explosion" 25
+	explode "medium explosion" 100
+	explode "large explosion" 95
+	explode "huge explosion" 35
+	"final explode" "final explosion large" 1
+	description "The cumulation of Wanderer-Sestor technological exchange, the Blizzard-class Heavy Warship is a powerful warship capable of single-handedly defeating the strongest ships seen in Hai, Wanderer, and Korath spaces, its six gun ports and turret mounts capable of outputting damage potential only seen in the most powerful of ships imaginable."
