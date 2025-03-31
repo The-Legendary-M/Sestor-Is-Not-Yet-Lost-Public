@@ -39,13 +39,13 @@ The future is yet uncertain, filled with too many variables to predict. The time
 * Expands the content of the following Korath factions, closely following planned vanilla storylines:
   * Various Korath states and factions:
     * Sestor Federation (Kor Sestor)
-    * Anatruskor Empire (Kor Anatrusk)
+    * Anatruskor Empire (Kor Anatrusk) [PLANNED]
     * Efreti Republic (Kor Efret)
-    * Mereti Collective (Kor Mereti) 
-    * Isaha faction (Kor Isaha)
-    * Alaji raiders (Kor Alaji)
-  * Wanderers
-  * Remnant
+    * Mereti Collective (Kor Mereti) [PLANNED]
+    * Isaha faction (Kor Isaha) [PLANNED]
+    * Alaji raiders (Kor Alaji) [PLANNED]
+  * Wanderers [PLANNED]
+  * Remnant [PLANNED]
 * A continuation and conclusion of the current Wanderer storyline, with heavy Sestor/Efreti involvement, and an ending that is rather unexpected.
 * The aftermath of the Korath Exiles gaining automaton technologies. It's not sunshine and rainbows for the Korath.
 
