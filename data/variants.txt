@@ -34,7 +34,7 @@ ship "Tempest" "Tempest (Moonbeam)"
 
 #Sestor carriers, but with JDs
 ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Jump)"
-outfits
+	outfits
 		"Korath Detainer"
 		"Piercer Missile Launcher" 3
 		"Piercer Missile" 93
@@ -150,7 +150,7 @@ ship "Met Par Tek 53" "Met Par Tek 53 (Disruptor)"
 		"Control Transceiver"
 		"Systems Core (Large)"
 		"Large Heat Shunt" 2
-		"FUel Processor"
+		"Fuel Processor"
 		"Hyperdrive"
 		"Outfits Expansion"
 		"Double Plasma Core"
@@ -726,7 +726,7 @@ ship "Kunai" "Kunai (Swarmer)"
 		"Small Nanite Fabricator"
 		"Nanite Enhancer"
 		"Hyperdrive"
-		"Ouftits Expansion"
+		"Outfits Expansion"
 		"Electroweak Reactor"
 		"Solar Battery" 2
 		"Nami Rift Thruster"
@@ -931,7 +931,7 @@ ship "Kama" "Kama (Thorax)"
 		"Reactor Limiter"
 		"Reactor Overclocker"
 		"Ookii Rift Thruster" 2
-		"Ooki Rift Steering"
+		"Ookii Rift Steering"
 
 
 #Three Throrax Chigiriki.
@@ -1048,7 +1048,55 @@ ship "Chigiriki" "Chigiriki (Mereti)"
 	gun
 	turret "Shield Disruptor Turret"
 	turret "Shield Disruptor Turret"
-	
+
+
+#--------------HUMAN--------------------HUMAN-------------------HUMAN
+ship "Auxiliary" "Auxiliary (Alpha)"
+	plural "Auxiliaries"
+	sprite "ship/auxiliaryc"
+	thumbnail "thumbnail/auxiliaryc"
+	add attributes
+		"bunks" -112
+		"cargo space" 200
+		"alpha logs" 1
+		"unfettered remote" 1
+	outfits
+		"Hai Tracker Pod" 2
+		"Hai Tracker" 112
+		"Shield Disruptor Turret"
+		"Husk-Slice Turret"
+		"Bullfrog Anti-Missile" 2
+
+		"Double Plasma Core"
+		"Systems Core (Large)" 2
+		"Large Heat Shunt" 2
+		"Wanderer Ramscoop"
+		"Fuel Processor" 2
+		"Brig"
+		"Fragmentation Grenades" 20
+		"Laser Rifle" 30
+
+		`"Bufaer" Atomic Thruster`
+		"Steering (Planetary Class)"
+		"Jump Drive"
+		"Scram Drive"
+	gun -12 -186
+	gun 12.5 -186
+	turret 0 -72 "Bullfrog Anti-Missile"
+	turret 0 -20
+	turret 0 32
+	turret 0 83 "Bullfrog Anti-Missile"
+	bay "Fighter" 0 -72
+		"launch effect" "human internal"
+	bay "Fighter" 0 -20
+		"launch effect" "human internal"
+	bay "Fighter" 0 32
+		"launch effect" "human internal"
+	bay "Fighter" 0 83
+		"launch effect" "human internal"
+	description "This ship was stolen by the Alphas to move supplies and outfits, mainly for trading with the Unfettered. It seems that they did not modify it much and it conveniently retained their logs, although in an encrypted form."
+
+
 
 #--------------HUMANPUG--------------------HUMANPUG----------------------HUMANPUG----------
 #Pirate outfits Zibruka. Being a cheaper ship, cheaper outfits are selected.
@@ -1066,7 +1114,7 @@ ship "Pug Zibruka" "Pug Zibruka (Particle)"
 ship "Pug Enfolta" "Pug Enfolta (Plasma)"
 	outfits
 		"Plasma Cannon" 4
-		"Proton Turret" 2
+		"Proton Turret" 
 		"Pug Anti-Missile"
 		"Water Coolant System"
 		"Liquid Nitrogen Cooler"
@@ -1137,7 +1185,7 @@ ship "Palavret" "Palavret (Sestor)"
 		"Piercer Missile Rack"
 		
 		"Triple Plasma Core"
-		"System Core (Large)"
+		"Systems Core (Large)"
 		"Control Transceiver"
 		"Outfits Expansion" 2
 				

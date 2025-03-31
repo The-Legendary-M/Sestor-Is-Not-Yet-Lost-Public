@@ -126,8 +126,10 @@ ship "Pav-Kot 117"
 
 #"Medium transport" -> "Pengangkut sedang" -> "Gnades Tukgnagnep" -> "Nrase' Kotnrareb"
 #"Bus" -> "Bis" -> "Sib" -> "'ih"
+# Ik = "Modification"
 #"Raider ship" -> "Kapal perampok" -> "Kopmarep Lapak" -> "Tubfaleb Mabat"
 #This unreasonably long name causes the Exiles to name their subsequent raiders after famous "Tubfaleb" raiders. Including a raider named "Tubfalet".
+
 ship "Kotnrareb Tubfaleb Ik'ih 300"
 	sprite "ship/raider"
 	thumbnail "thumbnail/raider"
@@ -136,7 +138,7 @@ ship "Kotnrareb Tubfaleb Ik'ih 300"
 		"cost" 16570000
 		"shields" 18900
 		"hull" 7500
-		“"required crew" 75
+		"required crew" 75
 		"bunks" 375
 		"mass" 1440
 		"drag" 18.0
@@ -159,7 +161,7 @@ ship "Kotnrareb Tubfaleb Ik'ih 300"
 		"Piercer Missile Rack"
 		
 		"Double Plasma Core"
-		"System Core (Medium)"
+		"Systems Core (Medium)"
 				
 		"Steering (Planetary Class)"
 		"Steering (Comet Class)"

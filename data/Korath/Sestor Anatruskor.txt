@@ -12,7 +12,7 @@ mission "Sestor: Anatruskor Surveillance"
 	destination "Sopi Lefarkata"
 	to offer
 		has "Sestor: Exile Meeting 2: done"
-		random <80
+		random < 80
 	on offer
 		conversation
 			`Your curiosity towards what Ikgalef and Ruiko'ar discussed during your visit is finally answered today, as Ikgalef summons you to his office in Sopi Lefarkata.`
@@ -45,7 +45,7 @@ mission "Sestor: Anatruskor Surveillance"
 			`	"Meet me in the spaceport later. Prepare 205 bunks and 300 tonnes of cargo space."`
 	
 event "anatruskor reputation reset"
-	"reputation: Anatruskor Empire" >?=0
+	"reputation: Anatruskor Empire" >?=  0
 
 mission "Sestor: Seleptra Nak Anatruskor Colonisation"
 	name "Colonise Seleptra Nak"
@@ -75,7 +75,7 @@ mission "Sestor: Seleptra Nak Anatruskor Colonisation"
 			`	"Our job here is done," says Ikgalef, "The Anatruskor is safe, and Urucohotab is crowned Emperor. The Anatruskor Empire is reborn, as is the natural order of things. I stay here for a while, so there is no need to transport me back. Tell us if the Wanderers have any reactions."`
 			`	You nod. The heavy machines and robots start scurrying around, repairing and rebuilding things. You have done much as a starship captain, but never had you ever thought you would take part in restoring a fallen empire, much less a Korath one.`
 
-event "seeptra nak landfall"
+event "seleptra nak landfall"
 	system "Seketra"
 		government "Anatruskor Empire"
 	planet "Seleptra Nak"

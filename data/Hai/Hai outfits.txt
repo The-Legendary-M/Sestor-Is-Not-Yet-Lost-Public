@@ -1,7 +1,7 @@
 outfit "Ionic Blaster"
 	category "Guns"
 	cost 330000
-	thumbnail "outfit/ionic blaster"
+	thumbnail "outfit/hai ionic blaster"
 	"mass" 18
 	"outfit space" -18
 	"weapon capacity" -18
@@ -507,7 +507,7 @@ outfit "Stealth Engine"
 effect "medium unfettered afterburner"
 	sprite "effect/atomic flare/small"
 		"frame rate" 100
-	soud "ionic afterburner"
+	sound "ionic afterburner"
 	"random angle" 1
 	lifetime 1
 	"random lifetime" 0.5
