@@ -14,7 +14,7 @@ outfitter "Korath General Basics"
 	"Systems Core (Small)"
 	"Generator (Candle Class)"
 	"Generator (Furnace Class)"
-	"Warder Anti-missile"
+	"Warder Anti-Missile"
 
 #Larger outfits.
 outfitter "Korath General Advanced"
@@ -135,7 +135,6 @@ shipyard "Anatruskor Ships"
 	"Lilot Korati"
 	"Kotnrareb Tubfaleb Ik'ih 300"
 	"Pav-Kot 117"
-	"Ra-Kot 145"
 	"'olofez"
 	
 #Uhai ships that are produced in Wanderer space using Wanderer tech

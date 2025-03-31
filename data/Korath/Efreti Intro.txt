@@ -141,7 +141,7 @@ mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Arch)"
 			variant
 				"Arch-Carrack"
 
-mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Charm)"
+mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Arch)"
 	landing
 	repeat
 	name "Escort to <system>"
@@ -211,11 +211,11 @@ mission "Efret: Uninhabited Efret Planets Surveillance"
 			`	Seeing it has caught your attention, the newcomer takes out a star map, and starts signing.`
 			`	The Korath taps its cap, showing the governing emblem of the Efreti Republic, and an arm pad showing its rank in the military. Then, it moves its hand towards the map.`
 			`	You look at the map. It is an old map of Korath space, showing all of the Efreti systems and some beyond. It then gestures towards a team of ten Korath trailing behind it, and your ship. Then, using its index finger the Korath makes a trail from Kashikt, through three systems you recognise as Furmeliki, Chornifath, and Hesselpost, and back to Kashikt. Through experience, you can tell that it wants you to take the ten Korath to the three systems, and back.`
-				choice
-					`(Nod your head and do a "thumbs up" gesture)`
-						accept
-					`(Cross your arms and shake your head)`
-						defer
+			choice
+				`(Nod your head and do a "thumbs up" gesture)`
+					accept
+				`(Cross your arms and shake your head)`
+					defer
 	on enter "Furmeliki"
 		dialog "For its orbit, Elek Kartans is abnormally hot. Much of its water content is in its atmosphere, while the surface water level is low. Surface wind is strong and high, which, coupled with the humidity, means that most Korath cities there have already dried up. You shudder to think about what might have caused this planet's demise."
 	on enter "Chornifath"
@@ -249,11 +249,11 @@ mission "Efret: Korsmanath Surveillance"
 		conversation
 			`When you land on Laki Nemparu's spaceport again, you already see the officer you met before walking up towards you. You wave at it, inquiring what the officer wants from you.`
 			`	"Urpasom," the officer says, pointing to herself. She then pulls out a map, this time pointing to several systems south of Efreti space. A green emblem adorns the system you recognise as Korsmanath. Once again, like last time, Urpasom points to ten Korath behind her, to your ship, and to the sensors they used last time. It is clear that she wants you to visit those systems with the scanner.`
-				choice
-					`(Accept)`
-						accept
-					`(Decline)`
-						decline
+			choice
+				`(Accept)`
+					accept
+				`(Decline)`
+					decline
 	on enter Farbutero
 		dialog "At first glance, Solima Skarati seems like just another habitable terrestrial planet. A closer look, however, reveals that no vegetation exists in coastal areas. Something in the oceans must be inhibiting life."
 	on enter Feroteri
@@ -319,7 +319,7 @@ event "sarisa fentra landfall"
 		description "Recently, the Efreti Korath have established an outpost here. Heavily shielded against the planet's high background radiation and powerful native animals, the outpost houses one hundred Korath and many robots, constantly sending out probes and conducting experiments in a bid to make this world fully habitable."
 		spaceport "Like the rest of the base, Sarisa Fentra's spaceport is built upon a thick foundation made of lead and steel frames. Large signs and LED lights illuminate the landing pads brightly, ensuring that arriving ships do not land on the wrong places, and potentially get damaged by the powerful, hostile native animals."
 
-event "sarisa fentra development"
+event "sarisa fentra developed"
 	planet "Sarisa Fentra"
 		description "A victim of dirty nuclear bombs during the Korath Civil War, Sarisa Fentra has a highly radioactive surface. Mutated versions of land insects and sea creatures are ubiquitous, which are unanimously hostile to any sentient beings venturing on this planet."
 		description "The Kor Efret owns a large outpost here, heavily shielded against the intense radiation and large native lifeforms. This planet's irradiated past makes it a target of intense Efreti scientific scrutiny, with numerous experiments under way aiming to tackle the radiation problems that many other Korath planets suffer from."
