@@ -64,6 +64,7 @@ mission "Sestor: Seleptra Nak Anatruskor Colonisation"
 			`	Behind the Sestor President stands an army of Korath, dressed similarly to Sestor soldiers, but with yellow sashes rather than red ones. Ikgalef gestures to their leader, and starts speaking again.`
 			`	"Rafeki Captain, this is his Royal Highness, Prince Urucohotab of the Anatruskor Empire. He take up administrative duty in Seleptra Nak. For this trip, I accompany them, too, along with four bodyguards. The Pact of Mesuket stands!"`
 			`	Prince and soon-to-be Emperor Urucohotab nods to you, and the entourage begins boarding your ship.`
+				accept
 	on complete
 		event "seleptra nak landfall"
 		event "seleptra nak colonised" 10
@@ -102,7 +103,6 @@ mission "Sestor: Selefkar Refinery Anatruskor Colonisation"
 	description "Ferry 10 Anatruskor Korath and 200 tonnes of equipment from Seleptra Nak to the Selefkar Refinery, to reopen the refinery station."
 	to offer
 		has "seleptra nak colonised"
-		has "Wanderers: Anatruskor Revival: declined"
 	passengers 10
 	cargo "construction robots" 200
 	source "Seleptra Nak"

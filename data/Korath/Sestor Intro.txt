@@ -1570,7 +1570,7 @@ mission "Sestor: Avalon Colonisation 1"
 	destination "Avalon"
 	to offer
 		and
-			has "event: sebra skira reactivated"
+			has "event: sebra skira activated"
 			random < 75
 	on offer
 		conversation
@@ -1720,6 +1720,7 @@ mission "Sestor: Avalon Colonisation 4"
 
 
 mission "Sestor: Avalon Colonisation 5"
+	landing
 	name "Occupy Avalon"
 	description "Carry 50 Korath soldiers and 20 tonnes of robotic combat equipment back to Sopi Lefarkata, to report about the mission's success."
 	passengers 150
