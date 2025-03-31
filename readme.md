@@ -46,8 +46,8 @@ The future is yet uncertain, filled with too many variables to predict. The time
     * Alaji raiders (Kor Alaji) [PLANNED]
   * Wanderers [PLANNED]
   * Remnant [PLANNED]
-* A continuation and conclusion of the current Wanderer storyline, with heavy Sestor/Efreti involvement, and an ending that is rather unexpected.
-* The aftermath of the Korath Exiles gaining automaton technologies. It's not sunshine and rainbows for the Korath.
+* A continuation and conclusion of the current Wanderer storyline, with heavy Sestor/Efreti involvement, and an ending that is rather unexpected. [PLANNED]
+* The aftermath of the Korath Exiles gaining automaton technologies. It's not sunshine and rainbows for the Korath. [PLANNED]
 
 
 # Development Status
