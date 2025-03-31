@@ -54,9 +54,7 @@ The future is yet uncertain, filled with too many variables to predict. The time
 It is currently in early pre-pre-Alpha (The status, not the race).
 
 * Sestor introduction and expansion done, but subject to further updates.
-* Wanderer Campaign Part 3 done. Part 4 ongoing.
-* Exile automaton story not started yet.
-* Wanderer planet development events done. Concurrent with Part 4.
+
 
 ## Special thanks
 (I'll collage all copyright people here later)
