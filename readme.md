@@ -35,7 +35,7 @@ The future is yet uncertain, filled with too many variables to predict. The time
 
 ## Content:
 
-* Expands the content of the following Korath factions, closely following planned vanilla storylines:
+* Expands the content of the following Korath factions:
   * Various Korath states and factions:
     * Sestor Federation (Kor Sestor)
     * Efreti Republic (Kor Efret)
