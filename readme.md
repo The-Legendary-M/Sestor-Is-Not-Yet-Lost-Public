@@ -33,7 +33,7 @@ The Remnant discovery of the Sheragi Ssil Vida station spurred on a flurry of sc
 
 The future is yet uncertain, filled with too many variables to predict. The time's a-changing, and no faction will emerge from it unchanged. 
 
-## This plugin:
+## Content:
 
 * Adds governments that are related to the vanilla storyline.
 * Expands the content of the following Korath factions, closely following planned vanilla storylines:
