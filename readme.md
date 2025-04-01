@@ -48,5 +48,3 @@ It is currently in early pre-pre-Alpha (The status, not the race).
 * Wanderers, Remnant, and Korath Exile content planned.
 
 
-## Special thanks
-(I'll collage all copyright people here later)
