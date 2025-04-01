@@ -36,7 +36,7 @@ mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Charm)"
 				`(Decline the job)`
 					goto sayingno
 			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
-			
+				accept
 			label sayingno
 			`You cross your hands in front of your chest. The Korath walks away, head hung.`
 				decline
@@ -80,7 +80,7 @@ mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Charm)"
 				`(Decline the job)`
 					goto sayingno
 			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
-			
+				accept
 			label sayingno
 			`You cross your hands in front of your chest. The Korath walks away, head hung.`
 				decline
@@ -124,7 +124,7 @@ mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Arch)"
 				`(Decline the job)`
 					goto sayingno
 			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
-			
+				accept
 			label sayingno
 			`You cross your hands in front of your chest. The Korath walks away, head hung.`
 				decline
@@ -168,7 +168,7 @@ mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Arch)"
 				`(Decline the job)`
 					goto sayingno
 			`You point to your ship, then to the Korath's ship, followed by the same gesture the Korath did. The Korath seems pleased.`
-			
+				accept
 			label sayingno
 			`You cross your hands in front of your chest. The Korath walks away, head hung.`
 				decline

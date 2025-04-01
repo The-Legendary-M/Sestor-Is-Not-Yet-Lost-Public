@@ -102,7 +102,7 @@ mission "Sestor: Selefkar Refinery Anatruskor Colonisation"
 	name "Recolonise Selefkar Refinery"
 	description "Ferry 10 Anatruskor Korath and 200 tonnes of equipment from Seleptra Nak to the Selefkar Refinery, to reopen the refinery station."
 	to offer
-		has "seleptra nak colonised"
+		has "event: seleptra nak colonised"
 	passengers 10
 	cargo "construction robots" 200
 	source "Seleptra Nak"
