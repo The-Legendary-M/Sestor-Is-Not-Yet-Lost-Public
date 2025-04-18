@@ -326,28 +326,6 @@ event "sarisa fentra developed"
 		description "A victim of dirty nuclear bombs during the Korath Civil War, Sarisa Fentra has a highly radioactive surface. Mutated versions of land insects and sea creatures are ubiquitous, which are unanimously hostile to any sentient beings venturing on this planet."
 		description "The Kor Efret owns a large outpost here, heavily shielded against the intense radiation and large native lifeforms. This planet's irradiated past makes it a target of intense Efreti scientific scrutiny, with numerous experiments under way aiming to tackle the radiation problems that many other Korath planets suffer from."
 
-mission "Efret: More Jobs Available"
-	landing
-	invisible
-	source
-		government "Kor Efret"
-	destination "Earth"
-	to offer
-			"efret jobs" >= 2
-	on offer
-		set "more efreti jobs"
-		conversation
-			`Ever since you are acquainted with the Kor Efret, courtesy of the Wanderers, you have started taking up jobs ferrying Efreti Korath and Wanderers between the Wanderer planets in Korath Space, and Efreti space.`
-			`	Of all friendly races you have met, the Efret seem to be rather unique. Unlike everyone else, whose job boards are packed with various jobs you can take, the Efreti spaceports' boards seem to be perpetually empty, the only quests posted are those by the Wanderers.`
-			`	But, this seem to be changing.`
-			`	As you disembark from your ship, hoping to get some refreshment from the spaceport pub nearby, you notice a few Korath approach.`
-			`	"<last>, <last>?" The leader Korath's tone pitches up in the end, indicating a question.`
-			`	"<last>," you reply.`
-			`	The Korath waves you to follow them, and you comply. The group leads you to a room next to where you normally purchase and sell goods. Like the rest of the spaceport, it is mostly  grey, brutalist architecture, as Korath captains continuously stream in and out of the various doors it has. A few Korath, probably some kind of receptionists, sit behind wooden desks, where a few Korath captains occasionally linger around.`
-			`	Your Korath companions approach one of the receptionists, and begin dancing and speaking, occasionally gesturing to you. A while later, the receptionist nods, and hands out document to you.`
-			`	While you do not understand the Korath language in its written form, the Arabic numerals and the pictures on it makes it clear that it is indeed some kind of job catalogue, requesting the delivery of certain things to their destination.`
-			`	It seems that you can now accept normal jobs by the Kor Efret, just like in any other faction now.`
-				decline
 
 #Mission where the Efret opens up their outfitter, grateful for First Last saving their Charm-Shallop in the vanilla "Efreti: Distress Call" mission chain.
 mission "Efret: Laki Nemparu Outfitter"
