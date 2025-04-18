@@ -1,0 +1,244 @@
+mission "Sestor: Cargo"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination> for the Kor Sestor. Payment is <payment>."
+	cargo random 10 2 .18
+	to offer
+		has "wanderers sestor done"
+		random < 50
+	source
+		government "Kor Sestor"
+	destination
+		distance 1 8
+		government "Kor Sestor" "Wanderer"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		dialog phrase "generic cargo delivery payment"
+		
+mission "Sestor: Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination> for the Kor Sestor. Payment is <payment>."
+	cargo random 10 2 .14
+	to offer
+		has "wanderers sestor done"
+		random < 20
+	source
+		government "Kor Sestor"
+	destination
+		distance 1 8
+		government "Kor Sestor" "Wanderer"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 500
+		dialog phrase "generic cargo delivery payment"
+
+mission "Sestor: Food Cargo [0]"
+	name "Food to <planet>"
+	job
+	repeat
+	description "The Kor Sestor need some food supplies moved to another planet. Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo "Food" 5 3 .16
+	to offer
+		has "wanderers sestor done"
+	source
+		government "Kor Sestor"
+		not attributes "station"
+	destination
+		distance 1 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		dialog phrase "generic cargo delivery payment"
+
+mission "Sestor: Food Cargo [1]"
+	name "Food to <planet>"
+	job
+	repeat
+	description "The Kor Sestor need some food supplies moved to another planet. Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo "Food" 5 3 .14
+	to offer
+		has "wanderers sestor done"
+		random < 70
+	source
+		government "Kor Sestor"
+		not attributes "station"
+	destination
+		distance 1 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 1000
+		dialog phrase "generic cargo delivery payment"
+		
+mission "Sestor: Rush Delivery Food"
+	name "Rush delivery to <planet>"
+	job
+	repeat
+	description "The Kor Sestor on <destination> are dangerously low on food supplies. Deliver <cargo> by <date> to alleviate the crisis. Payment is <payment>."
+	cargo "Food" 10 6 .1
+	deadline
+	to offer
+		has "wanderers sestor done"
+		random < 60
+	source
+		government "Kor Sestor"
+		not attributes "station"
+	destination
+		distance 1 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 2000
+		dialog phrase "generic cargo delivery payment"
+
+mission "Sestor: Passengers [0]"
+	name "Korath passengers to <planet>"
+	job
+	repeat
+	description "Bring this group of <bunks> Kor Sestor to <destination>. Payment is <payment>."
+	passengers 3 2 .15
+	to offer
+		has "wanderers sestor done"
+	source
+		government "Kor Sestor"
+	destination
+		distance 1 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		dialog phrase "generic passenger dropoff payment"
+
+mission "Sestor: Passengers [1]"
+	name "Korath passengers to <planet>"
+	job
+	repeat
+	description "Bring this group of <bunks> Kor Sestor to <destination>. Payment is <payment>."
+	passengers 3 2 .1
+	to offer
+		has "wanderers sestor done"
+		random < 60
+	source
+		government "Kor Sestor"
+		not attributes "station"
+	destination
+		distance 1 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 500
+		dialog phrase "generic passenger dropoff payment"
+
+mission "Sestor: Metal Delivery"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "Keneska Fek produces lots of raw material ready to be shipped elsewhere. Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo "Metal" 5 3 .13
+	to offer
+		has "wanderers sestor done"
+		random < 75
+	source
+		planet "Keneska Fek"
+	destination
+		distance 2 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 500
+		dialog phrase "generic cargo delivery payment"
+
+
+
+mission "Sestor: Chemicals Delivery"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "<origin> produces lots of chemicals ready to be shipped elsewhere. Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo "Chemicals" 5 3 .13
+	to offer
+		has "wanderers sestor done"
+		random < 75
+	source 
+		planet "Devru Kaska" "Sasirka Gatru"
+	destination
+		distance 2 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 500
+		dialog phrase "generic cargo delivery payment"
+
+mission "Sestor: Food Delivery"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "<origin> produces lots of food ready to be shipped elsewhere. Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo "Food" 5 3 .13
+	to offer
+		has "wanderers sestor done"
+		random < 75
+	source 
+		planet "Drekag Firask"
+	destination
+		distance 2 8
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 500
+		dialog phrase "generic cargo delivery payment"
+
+
+mission "Sestor: Settlers"
+	name "Korath settlers to <planet>"
+	job
+	repeat
+	description "Take these <bunks> migrating Kor Sestor from Sopi Lefarkata and their <cargo> to the new Sestor settlement on <destination>. Payment is <payment>."
+	passengers 10 5 .15
+	cargo "supplies" 5 3 .16
+	to offer
+		has "wanderers sestor done"
+		random < 90
+	source
+		planet "Sopi Lefarkata"
+	destination 
+		government "Kor Sestor"
+	on visit
+		dialog phrase "generic cargo and passenger on visit"
+	on complete
+		"sestor jobs" ++
+		payment
+		payment 2000
+		dialog "The Korath settlers slowly depart your ship with their cargo, seemingly apprehensive to step onto this once-dead world. The Korath in charge gives you a gesture of thanks and hands you <payment>."
