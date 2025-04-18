@@ -16,7 +16,6 @@ mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Charm)"
 	description "Escort these Efreti Korath to <destination>."
 	source
 		government "Kor Efret"
-		attributes "spaceport"
 		not attributes "uninhabited"
 	destination
 		distance 0 10
@@ -42,6 +41,7 @@ mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Charm)"
 				decline
 
 	on complete
+		"efret jobs" ++
 		payment 150000
 		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
 		
@@ -60,7 +60,6 @@ mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Charm)"
 	description "Escort these Efreti Korath to <destination>."
 	source
 		government "Wanderer"
-		attributes "spaceport"
 		not attributes "uninhabited"
 	destination
 		distance 0 10
@@ -86,6 +85,7 @@ mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Charm)"
 				decline
 
 	on complete
+		"efret jobs" ++
 		payment 150000
 		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
 		
@@ -104,7 +104,6 @@ mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Arch)"
 	description "Escort these Efreti Korath to <destination>."
 	source
 		government "Kor Efret"
-		attributes "spaceport"
 		not attributes "uninhabited"
 	destination
 		distance 0 10
@@ -130,6 +129,7 @@ mission "Efret: Escort Efreti Visitors (Efret-Wanderer, Arch)"
 				decline
 
 	on complete
+		"efret jobs" ++
 		payment 150000
 		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
 		
@@ -148,7 +148,6 @@ mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Arch)"
 	description "Escort these Efreti Korath to <destination>."
 	source
 		government "Wanderer"
-		attributes "spaceport"
 		not attributes "uninhabited"
 	destination
 		distance 0 10
@@ -174,6 +173,7 @@ mission "Efret: Escort Efreti Visitors (Wanderer-Efret, Arch)"
 				decline
 
 	on complete
+		"efret jobs" ++
 		payment 150000
 		dialog `Grateful, the captain of the <npc> hands you a credit chip worth 150000.`
 		
@@ -199,7 +199,8 @@ mission "Efret: Uninhabited Efret Planets Surveillance"
 	passengers 10
 	cargo "scanning equipment" 5
 	to offer
-		has "Efreti: Distress Call 7: done"
+		has "wanderers sestor done"
+		"efret jobs" >= 2
 		random < 85
 	on offer
 		conversation
@@ -224,6 +225,7 @@ mission "Efret: Uninhabited Efret Planets Surveillance"
 		dialog "A quick glance at Sarisa Centra is sufficient to reveal its past of being a nuclear bomb target. Massive craters still exist, and large patches of glass can be seen in its many deserts. Plants have mostly reclaimed the devastated landscape, giving it a colour palette not unlike ordinary, unscathed planets."
 		
 	on complete
+		"efret jobs" ++
 		"Reputation: Kor Efret" += 10
 		payment 500000
 		conversation
@@ -243,8 +245,8 @@ mission "Efret: Korsmanath Surveillance"
 	passengers 10
 	cargo "sensor equipment" 5
 	to offer
-		has "Efret: Uninhabited Efret Planets Surveilance: done"
-		random < 60
+		has "Efret: Uninhabited Efret Planets Surveillance: done"
+		random < 50
 	on offer
 		conversation
 			`When you land on Laki Nemparu's spaceport again, you already see the officer you met before walking up towards you. You wave at it, inquiring what the officer wants from you.`
@@ -275,8 +277,8 @@ mission "Efret: Sarisa Fentra Outpost"
 	source "Laki Nemparu"
 	destination "Sarisa Fentra"
 	to offer
-		has "Efret: Uninhabited Efret Planets Surveillance"
-		random < 75
+		has "Efret: Uninhabited Efret Planets Surveillance: done"
+		random < 30
 	on offer
 		conversation
 			`The smog in Laki Nemparu is particularly strong today, and you see Korath wearing yellow flashlights to avoid bumping into each other often. The usual dust seems more invasive than usual.`
@@ -332,7 +334,7 @@ mission "Efret: Laki Nemparu Outfitter"
 	invisible
 	source "Laki Nemparu"
 	to offer
-		has "Efreti: Distress Call 7: done"
+		"efret jobs" >= 10
 	on offer
 		conversation
 			`You land your ship in Laki Nemparu's spaceport, grabbing a gas mask, as you prepare to spend the night in this polluted planet.`

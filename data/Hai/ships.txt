@@ -9,7 +9,7 @@ ship "Phrynus"
 		"hull" 11200
 		"required crew" 34
 		"bunks" 62
-		"mass" 820
+		"mass" 1640
 		"drag" 7.2
 		"heat dissipation" .75
 		"fuel capacity" 600
@@ -92,7 +92,7 @@ ship "Tarentula"
 		hull 26800
 		"required crew" 101
 		bunks 252
-		mass 1500
+		mass 3000
 		drag 19
 		"heat dissipation" .4
 		"fuel capacity" 600
