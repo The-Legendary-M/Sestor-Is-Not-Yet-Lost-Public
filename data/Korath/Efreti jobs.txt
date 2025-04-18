@@ -1,0 +1,106 @@
+mission "Efreti: Cargo transport 0"
+	name "Shipment to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 5 2 .1
+	to offer
+		random < 80
+		"efret jobs" > 1
+	source
+		government "Kor Efret"
+	destination
+		government "Kor Efret"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"efret jobs" ++
+		payment
+		payment 500
+		dialog phrase "generic cargo delivery payment"
+
+mission "Efreti: Cargo transport 1"
+	name "Shipment to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 5 4 .4
+	to offer
+		random < 80
+		"efret jobs" > 1
+	source
+		government "Kor Efret"
+	destination
+		government "Kor Efret"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"efret jobs" ++
+		payment
+		payment 1000
+		dialog phrase "generic cargo delivery payment"
+
+mission "Efreti: Cargo transport 2"
+	name "Shipment to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 5 6 .4
+	to offer
+		random < 80
+		"efret jobs" > 1
+	source
+		government "Kor Efret"
+	destination
+		government "Kor Efret"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		"efret jobs" ++
+		payment
+		payment 1500
+		dialog phrase "generic cargo delivery payment"
+
+mission "Efreti: Passenger 0"
+	name "Passenger transport to <planet>"
+	job
+	repeat
+	description "Bring <fare> to <destination>. Payment is <payment>."
+	passengers 1 10 .9
+	to offer
+		random < 70
+		"efret jobs" > 1
+	source
+		government "Kor Efret"
+	destination
+		distance 1 5
+		government "Kor Efret"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		"efret jobs" ++
+		payment
+		payment 2150
+		dialog phrase "generic passenger dropoff payment"
+
+mission "Efreti: Passenger 1"
+	name "Passenger transport to <planet>"
+	job
+	repeat
+	description "Bring <fare> to <destination>. Payment is <payment>."
+	passengers 1 20 .9
+	to offer
+		random < 70
+		"efret jobs" > 1
+	source
+		government "Kor Efret"
+	destination
+		distance 1 5
+		government "Kor Efret"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		"efret jobs" ++
+		payment
+		payment 3250
+		dialog phrase "generic passenger dropoff payment"

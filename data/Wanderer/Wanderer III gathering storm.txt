@@ -397,7 +397,7 @@ mission "Wanderers: Ion Blaster Retrieval"
 			`	"Surely they cannot get past the two Pug Arfecta's in Ap'arak?"`
 			`	"Perhaps, but we must always stay [alert, vigilant], and counter this probable threat."`
 			`	Sobari Tele'ek seems more and more interested and learned in military affairs.`
-			`	"Captain <last>, please help us retrieve two samples of this new Hai weapon. Our intelligence suggests that ships equipped with them are stationed at Sich'ka'ara. Our lab will analyse them as we fight them, so that we can counter them."`
+			`	"Our intelligence suggests that ships equipped with them are stationed at Sich'ka'ara. Our lab will analyse them as we fight them, so that we can counter them."`
 			choice
 				`"Sure!"`
 					accept
@@ -409,17 +409,17 @@ mission "Wanderers: Ion Blaster Retrieval"
 		conversation
 			scene "outfit/hai ionic blaster"
 			scene "ship/hai phrynus"
-			`The battle against the three Heavy Warships equipped with various ionic weapons was exhausting and dangerous. You managed to disable and loot it, however. The moment you touch down on Vara K'chrai's spaceport, Tele'ek comes running towards you.`
+			`The battle against the three Heavy Warships equipped with various ionic weapons was exhausting and dangerous. You managed to kill all of them, however. The moment you touch down on Vara K'chrai's spaceport, Tele'ek comes running towards you.`
 			`	"Sorry, Captain! Our intelligence have made a [mistake, wrongdoing], and instead of a lone ship there are three! I am [joyous? jubilant? relieved?] you are alive. Do you have the weapons I requested?"`
 			`	"Yes, I do," you reply, as the Wanderer workers remove the four weapons from your ship's cargo.`
 			`	"Perfect. This will hopefully improve our position in the [war, struggle] against the Hai."`
 			`	"Wait, there is something more," you say, before you describe the new ship you battled to Tele'ek.`
-			`	As Tele'ek watches on, his eyebrows slowly furrowed.`
+			`	As Tele'ek watches on, his eyebrows slowly furrows.`
 			`	"It has a stronger hull than the previous models," observes Tele'ek, "But it is still vastly inferior to our ships. It will be [troublesome, threatening] if it is in high numbers."`
 			`	Tele'ek thinks for a moment, before talking to you again.`
 			`	"Meet me at the spaceport half an hour later. Prepare your fastest ship. We are going on a stealth mission."`
-			`	"Alright, you agree."`
-	npc disable
+			`	"Alright", you agree.`
+	npc kill
 		government "Hai (Unfettered)"
 		personality staying target heroic
 		system "Sich'ka'ara"
@@ -601,3 +601,5 @@ mission "Wanderers: Abyssal Stream"
 			`	Despite his words, you can hear Tele'ek's breathing becoming quicker. Before you can respond, Tele'ek forcefully switches topic to some random Wanderer space trivia. Seeing Tele'ek so unwilling to discuss assault drones, you comply.`
 				decline
 	
+
+

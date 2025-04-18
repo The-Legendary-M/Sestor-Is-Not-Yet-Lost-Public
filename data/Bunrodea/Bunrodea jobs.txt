@@ -86,7 +86,7 @@ mission "Megasa passenger 0"
 		"bunrodea jobs" ++
 		payment
 		payment 2150
-		dialog phrase "generic cargo delivery payment"
+		dialog phrase "generic passenger dropoff payment"
 
 mission "Megasa passenger 1"
 	name "Passenger transport to <planet>"
@@ -108,7 +108,7 @@ mission "Megasa passenger 1"
 		"bunrodea jobs" ++
 		payment
 		payment 3250
-		dialog phrase "generic cargo delivery payment"
+		dialog phrase "generic passenger dropoff payment"
 
 
 
