@@ -11,10 +11,10 @@ mission "Sestor: Reappearance"
 	on offer
 		event "sestor reemerges" 50
 		event "sestor reputation reset" 
-		decline
+		fail
 
 event "sestor reputation reset"
-	"reputation: Kor Sestor" >= 0
+	"reputation: Kor Sestor" >?= 0
 	government "Kor Sestor"
 		"attitude toward"
 			"Anatruskor Empire" 1
@@ -32,7 +32,7 @@ mission "Sestor reappearance timer mission"
 		has "sestor reemerges"
 	on offer
 		event "sestor reappear timer" 450
-		decline
+		fail
 
 event "sestor reappear timer"
 
@@ -50,19 +50,19 @@ mission "Sestor reappear: planet colonisation"
 		event "keneska fek landfall"
 		event "firka tesk landfall"
 		event "devru kaska landfall"
-		event "saskira gatru landfall"
+		event "sasirka gatru landfall"
 		event "sebra skira landfall"
 		event "sestor ikfar recolonised" 90
 		event "drekag firask recolonised" 90
 		event "keneska fek recolonised" 90
 		event "firka tesk recolonised" 100
 		event "devru kaska activated" 10
-		event "saskira gatru recolonised" 50
+		event "sasirka gatru recolonised" 50
 		event "sebra skira activated" 10
 		event "sestor population increase" 30
 		event "sestor population increase" 2630
 		event "sestor fleets emerge" 90
-		decline
+		fail
 
 #Just a little gift mission that gives the player a KIV-349
 #Written for me to practise mission writing.
@@ -114,9 +114,8 @@ mission "Second Contact: Kor Sestor"
 			`For a moment, you forget that this was once a Kor Sestor world. A scene straight out of New Austria, snowcapped mountains and boundless forests make up most of the landscape. Flying reptiles and birds can be seen swooping in the sky. Through your ship's inbuilt ground scanner, you can see slight disturbances from beneath the trees. Animals. The juxtaposition of this serene, calm world in a region of space ravaged by centuries of warfare is jarring.`
 			`	The uneven terrain means that there are little places suitable for landing. Any flatlands that might have once existed are riddled with craters, no doubt the result of Mereti bombardments. Finally, you spot a clearing in a secluded valley, slightly larger than a Heavy Warship's size, and land your ship there.`
 			`	As a precaution against native predators, you bring your shotgun with you as you disembark your ship. Before you can relax, you notice insects immediately trying to fly into your ship via the open door. You immediately close the door and activate your ship's environmental control system. The insects should be dealt with shortly. Other than the faint hissing sound from your ship winding down, there is no artificial noises.`
-			`	The slightly yellow, waist-high grass and the faint noises of alien fauna is soothing and therapeutic, reminding you of your homeworld of New Boston. Which reminds you...`
-			`	You rush back to your ship, and retrieve a loaf of New Boston farmhouse bread from the stasis chamber. With some cheese from New Holland, a can of baked beans from New Britain, and a piece of New Icelandic cod, you make your impromptu lunch. What more can a star pilot ask for, but a fulfilling meal made of the finest ingredients across the galaxy? You clear away some grass, lay down a small mat, and start eating. Mmmm, the grilled cheese smell amazing...`
-			`	Just as you are about to finish your baked beans, you sense sudden movement out of your left eye. You turn towards the source, but nothing seems to be there. As you begin to pack away your food, you see the movement again. Picking up your rifle, you turn to investigate the source. Is it a predator stalking you? Better safe than sorry.`
+			`	The slightly yellow, waist-high grass and the faint noises of alien fauna is soothing and therapeutic, reminding you of your homeworld of New Boston. Ah, even alien planets can feel familiar...`
+			`	Just as you are about to finish your lunch, you sense sudden movement out of your left eye. You turn towards the source, but nothing seems to be there. As you begin to pack away your food, you see the movement again. Picking up your rifle, you turn to investigate the source. Is it a predator stalking you? Better safe than sorry.`
 			`	After a brief chase, you finally see a pale white leg vanishing just a second too late. You speed up to catch it, but then you suddenly lose your footing and fall to the ground, face-first. You turn around, only to stare down the barrel of a Korath Thermal Repeater rifle. You freeze, slowly putting your hands up.`
 			`	The two Korath pointing their guns to you are not like the Kor Efret seen in Laki Nemparu. Large scars run down their foreheads and cheeks, and their bodies are shorter and wider. The two Korath shout frantically in a language you do not understand, and after a while, they stop.`
 			choice
@@ -204,7 +203,7 @@ mission "Second Contact: Kor Sestor"
 				decline
 			
 	on decline
-		"reputation: Kor Sestor" += 10
+		"reputation: Kor Sestor" >?= 10
 		"sestor trust" ++
 		set "known to sestor federation"
 		log "Factions" "Sestor Federation" `Once known as the "Kor Sestor", the Sestor Federation is a Korath state that went into hiding after the Alphas attacked their capital and stole some of their ships.`
@@ -241,9 +240,10 @@ mission "Sestor: System Scans"
 	name "Scan all Kor Sestor systems"
 	description "Fly through former Sestor systems with a team of Korath scientists and some sensors, then return them to Sopi Lefarkata."
 	source "Sopi Lefarkata"
+	landing
 	to offer
 		has "known to sestor federation"
-		random <50
+		random < 50
 	waypoint "Asikafarnut"
 	waypoint "Silikatakfar"
 	waypoint "Ferukistek"
@@ -254,18 +254,18 @@ mission "Sestor: System Scans"
 	cargo "sensors" 10
 	on offer
 		conversation
-		`As you get off your ship, you see Ikgalef and a few Korath crowding around your ship.`
-		`	"Rafeki captain <last>," begins Ikgalef, "We have mission for you. You say that the other planets around here are abandoned, yes?"`
-		`	To be honest, you are not sure if you actually mentioned that. The interrogation you had days ago was quite an intense event, and the way the meeting turned out was honestly the best you could hope for.`
-		`	"Yes," you answer, "There seem to be no activity in any Sestor planets around here."`
-		`	"Good. We have mission for you. Bring these Korath..." Ikgalef gestures to three of the people around him, "and fly around our space..."`
-		`	Ikgalef continue to describe the task to you. It is a simple scouting mission to all systems the Sestor controlled before the Alpha invasion. Three Korath specialists and ten tonnes of equipment would be installed in your ship for this mission.`
-		`	"Will you?"`
-		choice
-				`	"Yes."`
-					accept
-				`	"No."`
-					decline
+			`As you get off your ship, you see Ikgalef and a few Korath crowding around your ship.`
+			`	"Rafeki captain <last>," begins Ikgalef, "We have mission for you. You say that the other planets around here are abandoned, yes?"`
+			`	To be honest, you are not sure if you actually mentioned that. The interrogation you had days ago was quite an intense event, and the way the meeting turned out was honestly the best you could hope for.`
+			`	"Yes," you answer, "There seem to be no activity in any Sestor planets around here."`
+			`	"Good. We have mission for you. Bring these Korath..." Ikgalef gestures to three of the people around him, "and fly around our space..."`
+			`	Ikgalef continue to describe the task to you. It is a simple scouting mission to all systems the Sestor controlled before the Alpha invasion. Three Korath specialists and ten tonnes of equipment would be installed in your ship for this mission.`
+			`	"Will you?"`
+			choice
+					`	"Yes."`
+						accept
+					`	"No."`
+						decline
 	on waypoint
 		dialog "You have scanned all Sestor systems."
 	
@@ -317,8 +317,7 @@ mission "Sestor: Ikfar tool requisition"
 			and
 				has "Sestor: Ikfar tool requisition: declined"
 				random < 20
-		has "Sestor: System Scans: done"
-		random <70
+
 	on offer
 		conversation
 			`Sopi Lefarkata remains more or less the same as last time. You walk out of your ship, ready for a quick gander in the city centre. Out of the corner of your eye, however, you see a rapidly approaching group of Korath, led by Ikgalef.`
@@ -327,7 +326,7 @@ mission "Sestor: Ikfar tool requisition"
 			choice
 				`	"Certainly!"`
 					goto accepting
-					"Maybe another time?"
+				`	"Maybe another time?"`
 			`	Ikgalef nods in understanding, "We wait."`
 				decline
 			label accepting
@@ -401,7 +400,7 @@ mission "Sestor: Ikfar Recolonisation"
 event "sestor ikfar landfall"
 	system Eneremprukt
 		fleet "Sestor Colonisation Transports" 50000
-	system Silitakfar
+	system Silikatakfar
 		fleet "Sestor Colonisation Transports" 50000
 	system Asikafarnut
 		government "Kor Sestor"
@@ -532,7 +531,7 @@ mission "Sestor: Drekag Firask Recolonisation"
 		event "drekag firask landfall"
 		event "drekag firask recolonised" 90
 		conversation
-			`The ship was labound with anticipation, as Korath exchange sketchings of various plants while travelling through hyperspace, and you expect the same to happen after landing. 
+			`The ship was labound with anticipation, as Korath exchange sketchings of various plants while travelling through hyperspace, and you expect the same to happen after landing.`
 			`You pilot your ship to approach the small island where most of the city-ships are now floating around, and gently touch down near the coast. As the Korath leave your ship, unloading the various aquatic tugs and engineering machinery from your cargo bay, you decide to help a few Korath setting up a rudimentary spaceport.`
 			`	The group's leader hand you a credit chip containing a payment of 150000 credits.`
 
@@ -594,9 +593,10 @@ mission "Sestor: Coloniser Fleets"
 	invisible
 	source "Sopi Lefarkata"
 	to offer
-		or
+		and
 			has "event: sestor ikfar landfall"
 			has "event: drekag firask landfall"
+			random < 50
 	on offer
 		conversation
 			`Since the two colonisation missions, you have noticed the re-appearance of Sestor-aligned ships in Sestor space. Instead of Sestor drones you saw many times in the past, these new fleets are comprised solely of Palavrets.`
@@ -608,11 +608,11 @@ mission "Sestor: Coloniser Fleets"
 			`	After the Simlisti Empire, yet another ally of the Sestor and the Anatruskor, fell to a collectivist revolution and formed the Kor Mereti, the two-way conflict became a three-way struggle, which ultimately led to the Drak intervention. While many Anatruskor Korath chose to go into exile, not willing to give up jump drives, a sizeable portion still remained.`
 			`	Even after the mass exodus, the Anatruskor remained faithful allies to the Sestor, before a revolt destroyed the last settlements in Spera Anatrusk.`
 			`	Ikgalef proudly states that an Anatruskor government in exile, headed by Prince Urucohotab of Kipabavaf, the current pretender to the Anatruskor throne, exists under Sestor protection.`
-				choice
-					`(Tell Ikgalef about the Wanderers' settlements in former Anatruskor space.)`
-						goto wanderers
-					`(Do not tell)`
-						go to apparentbliss
+			choice
+				`(Tell Ikgalef about the Wanderers' settlements in former Anatruskor space.)`
+					goto wanderers
+				`(Do not tell)`
+					goto apparentbliss
 			label wanderers
 			`As Ikgalef continue to ramble on about a future plan to push through Mereti drones and re-settle Anatruskor refugees on the Anatruskor worlds, you mention the Wanderers occupying these territories.`
 			label catoutofbag
@@ -662,15 +662,15 @@ mission "Sestor: Keneska Fek Recolonisation"
 	destination "Keneska Fek"
 	passengers 10
 	to offer
-		has "sestor know wanderer plan"
-		or
-			and
-				has "Sestor: Drekag Firask Recolonisation: done"
-				not "Sestor: Keneska Fek Recolonisation: declined"
-			and
-				has "Sestor: Keneska Fek Recolonisation: declined"
-				not "sestor knows wanderer plan"
-				random < 20
+		and
+			has "sestor knows wanderer plan"
+			or
+				and
+					has "Sestor: Drekag Firask Recolonisation: done"
+					not "Sestor: Keneska Fek Recolonisation: declined"
+				and
+					has "Sestor: Keneska Fek Recolonisation: declined"
+					random < 20
 	on offer
 		conversation
 			branch sestorknows
@@ -688,7 +688,7 @@ mission "Sestor: Keneska Fek Recolonisation"
 				accept
 			label sestorknows
 			`Ikgalef shows up in the spaceport, scales dishevelled and clutching a large pile of documents.`
-			`	"Greetings, Rafeki Captain," Ikgalef talks quickly, "The expedition to Keneska Fek is ready. Ten Korathaccompany you there alongside an Anatruskor transport for immediate colonisation."`
+			`	"Greetings, Rafeki Captain," Ikgalef talks quickly, "The expedition to Keneska Fek is ready. Ten Korath accompany you there alongside an Anatruskor transport for immediate colonisation."`
 			choice
 				`	(accept the job)`
 					goto knowingaccept
@@ -1059,12 +1059,12 @@ event "sestor fully repopulated"
 
 
 #Fifteenth mission: Ferry Korath to Sasirka Gatru. De jure to set up an outpost and mining facilities. De facto to collect toxic gases for weapons and industry.
-mission "Sestor: Sasirka Gortu Recolonisation"
+mission "Sestor: Sasirka Gatru Recolonisation"
 	landing
 	name "Expedition to Sasirka Gatru"
 	description "Bring a group of Korath scientists to Sasirka Gatru."
 	source "Sopi Lefarkata"
-	destination "Devru Kaska"
+	destination "Sasirka Gatru"
 	passengers 20
 	to offer
 		or
@@ -1243,11 +1243,11 @@ mission "Sestor: Sebra Skira Expedition"
 	destination "Sebra Skira"
 	passengers 10
 	to offer
-		has "Sestor: Sasirka Gatru Recolonisation: done"
-		not "Sestor: Sebra Skira Expedition: declined"
-		has "sestor knows wanderer plan"
-		random < 75
-
+		and
+			has "Sestor: Sasirka Gatru Recolonisation: done"
+			random < 75
+	
+	on offer
 		conversation
 			`Ikgalef seems revitalised with energy, as it makes its way towards you.`
 			`	"Rafeki Captain, we are almost complete in our quest of reclaiming all of Sestor space. We have but one system left, with our war platform called Sebra Skira. May you help us reactivate it?"`
@@ -1295,9 +1295,6 @@ mission "Sestor: Sebra Skira decline patch"
 
 
 event "sebra skira landfall"
-	system Silikatakfar
-		government "Kor Sestor"
-		fleet "Sestor Colonisation Transports" 50000
 	planet "Sebra Skira"
 		description "This station, serving as a war platform, has been heavily damaged in the fighting against the Mereti drones. Half the station is visibly missing, and the automated repair system, also damaged in the fighting, patched up the holes with random and disorganised structures."
 		description "	With the Korath returning to this station, organised repair, rebuild, and renovation efforts have begun to take place, transforming this station back into operating capacity."
@@ -1327,9 +1324,10 @@ mission "Sestor: Resumption of Fleet Activity"
 	invisible
 	source "Sopi Lefarkata"
 	to offer
-		has "sestor knows wanderer plan"
-		has "event: devru kaska activated"
-		has "event: sebra skira landfall"
+		and
+			has "sestor knows wanderer plan"
+			has "event: devru kaska activated"
+			has "event: sebra skira landfall"
 	on offer
 		conversation
 			`Ikgalef being present while you land is now a routine rather than a surprise. Today's landing is no different, with you waving to the familiar silhouette of the Sestor President, hoping for a friendlier, less tense conversation.`
@@ -1358,7 +1356,9 @@ mission "Sestor: Resumption of Fleet Activity"
 	on decline
 		event "sestor fleets emerge"
 		event "sestor exile peace"
-
+		"reputation: Korath" >?= 1
+		"reputation: Korath (Civilian)" >?= 1
+		
 event "sestor fleets emerge"
 	system "Celeborim"
 		add fleet "Small Kor Sestor" 1200
@@ -1385,8 +1385,7 @@ event "sestor fleets emerge"
 		add fleet "Large Kor Sestor" 2400
 
 event "sestor exile peace"
-	"reputation: Korath" >?=1
-	"reputation: Korath (Civilian)" >?=1
+
 	
 
 
@@ -1401,7 +1400,7 @@ mission "Sestor: Exile Meeting"
 	stopover "Far'en Lai"
 	destination "Sopi Lefarkata"
 	to offer
-		has "Sestor: Resumption of Fleet Activity: done"
+		has "Sestor: Resumption of Fleet Activity: declined"
 		has "event: sestor fleets emerge"
 		"reputation: Korath" > 0
 	on offer
@@ -1515,7 +1514,7 @@ mission "Korath Skin Job (Sestor - Exile)"
 		government "Korath"
 	to offer
 		has "sestor exile skin exchange"
-		random <60
+		random < 60
 	on complete
 		payment 300000
 		dialog "You land in the spaceport, where many Korath Exile workers carefully remove the refrigerated containers from your ship. It seems that the skin is highly valued."
@@ -1532,7 +1531,7 @@ mission "Korath Skin Job (Exile - Sestor)"
 		government "Kor Sestor"
 	to offer
 		has "sestor exile skin exchange"
-		random <60
+		random < 60
 	on complete
 		payment 300000
 		dialog "You land in the spaceport, where, instead of the robotic workers you see frequently, Korath workers remove the refrigerated containers from your ship. It seems that the skin is highly valued."
@@ -1569,8 +1568,9 @@ mission "Sestor: Avalon Colonisation 1"
 	source "Sopi Lefarkata"
 	destination "Avalon"
 	to offer
-		has "event: sebra skira reactivated"
-		random <75
+		and
+			has "event: sebra skira activated"
+			random < 75
 	on offer
 		conversation
 			`With the Sestor returning to normalcy, the spaceports at Sopi Lefarkata become increasingly busy. Sestor drones are launching to sortie every few minutes, and the spaceport is full of maintenance robots and Korath workers.`
@@ -1665,18 +1665,18 @@ mission "Sestor: Avalon Colonisation 3"
 	
 	on complete
 		conversation
-			`Ikgalef is pleased to see you return. Its smile grows wider when you show it ten Jump Drives.
+			`Ikgalef is pleased to see you return. Its smile grows wider when you show it ten Jump Drives.`
 			`	"Jump Drives! They are very valuable, especially since we have yet to recover its production methods," says Ikgalef, slightly distraught, "May I buy them from you for 5000000 credits apiece?"`
-				choice
-					"Sure!"
-						goto selling
-					"Maybe another time?"
-						goto refusal
+			choice
+				`"Sure!"`
+					goto selling
+				`"Maybe another time?"`
+					goto refusal
 			label selling
 			action
 				outfit "Jump Drive" -10
-                payment 50000000
-                "sestor jump drives" += 10
+				payment 50000000
+				"sestor jump drives" += 10
 			`	"Thank you! The Sestor shall remember your contribution to our cause!"`
 				goto avalon
 			label refusal
@@ -1719,6 +1719,7 @@ mission "Sestor: Avalon Colonisation 4"
 
 
 mission "Sestor: Avalon Colonisation 5"
+	landing
 	name "Occupy Avalon"
 	description "Carry 50 Korath soldiers and 20 tonnes of robotic combat equipment back to Sopi Lefarkata, to report about the mission's success."
 	passengers 150
@@ -1762,10 +1763,10 @@ mission "Sestor: Host Hyperlane"
 		conversation
 			`The mining industry on Keneska Fek is mostly automatic, with drones gliding over the ground carrying ores everywhere. Despite being built-up and industrial, it is surprisingly idyllic, the advanced machinery producing little noise. In the distance, you see several drones gently lowering a recently-captured asteroid to the ground, where swarms of miner drones are already waiting.`
 			`	As you begin to relax, admiring the beautiful industrial beauty of the world, you suddenly remember the graviton relay on Avalon. The closes planet to that system is Keneska Fek, and you have a hunch it might just work.`
-				choice
-					"(Place down the transmitter and activate it)"
-					"(Nah, I can't be bothered to do it)"
-						defer
+			choice
+				"(Place down the transmitter and activate it)"
+				"(Nah, I can't be bothered to do it)"
+					defer
 			`	You place down the transmitter, hook it up to the nearby power cable, and activate it. A faint hum reverberates around you, and the slowly-lowering asteroid jerks to a stop momentarily. After a second, everything resumes normalcy. You are not sure if anything happened.`
 				decline
 	
@@ -1800,7 +1801,7 @@ event "sestor ships in host"
 		fleet "Small Kor Sestor" 1200
 		fleet "Large Kor Sestor" 3600
 	
-event"avalon colonised"
+event "avalon colonised"
 	planet "Avalon"
 		description "Avalon is a pristine, temperate world, split into two large continents and a large ocean. Large, feathered reptiles dominate the landcape, eating the abundant ferns or other reptiles for food. Birds and large, winged reptiles dominate the sky, while sea monsters up to twenty metres in length can be seen swimming in the warm oceans. Insects and mammals can be occasionally seen, scurrying in the landscape and avoiding their reptilian predators."
 		description "Beyond the spaceport, the Korath settlements have expanded somewhat. Greenhouses and farms have been constructed, growing local flora for Korath consumption. Native fishes are now considered a delicacy in the Korath world, a popular export of Avalon. A few species of reptiles, such as the three-horned one and a heavily armoured one with club tails, have been domesticated to serve as rides, making Avalon a popular tourist destination. Still, ground-to-space cannons and laser beams are commonplace, ostensibly to defend against potential alien attacks."

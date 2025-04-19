@@ -61,58 +61,57 @@ ship "Charge-Shallop"
 
 #Efreti Medium Warship. Originally the Korath Breaker by Quarg Block.
 ship "Guardian-Frigate"
-    sprite "ship/guardian-frigate"
-    attributes
-        category "Medium Warship"
-        "cost" 1190000
-        "shields" 33400
-        "hull" 32500     
-        "automaton" 1    
-        "crew equivalent" 100
-        "drag" 10 
-        "mass" 1066  
-        "heat dissipation" 1.0
-        "fuel capacity" 600
-        "cargo space" 74        
-        "outfit space" 721        
-        "weapon capacity" 275
-        "engine capacity" 155
-        "self destruct" .5     
-        "ramscoop" 3
-        weapon
-            "blast radius" 250
-            "shield damage" 3600
-            "hull damage" 1800
-            "hit force" 5400
-    outfits
-        "Grab-Strike Turret" 2
-        "Driller Beam Turret" 2
-        "Warder Anti-Missile"
-        
-        "Triple Plasma Core"  
-        "Systems Core (Large)"
-        "Systems Core (Medium)"
-        "Large Heat Shunt" 2            
-        "Fuel Processor" 2
-        
-        "Nelmeb GP Hybrid Thruster"
-        "Nelmeb GP Hybrid Steering"
-        "Scram Drive"
-    
-    turret -15 -57 "Grab-Strike Turret"
-    turret 15 -57 "Grab-Strike Turret"
-    turret 34 80 "Driller Beam Turret"
-    turret -34 80 "Driller Beam Turret"
-    turret 1.5 92.5 "Warder Anti-Missile"
-    engine -60 77
-    engine 60 77
-
-    explode "tiny explosion" 20
-    explode "small explosion" 45
-    explode "medium explosion" 50
-    explode "large explosion" 40
-    explode "huge explosion" 10
-    "final explode" "final explosion large"
-    description "Unique to the various Korath states, the Efreti never truly dedicated its resources to war, the Guardian-Frigate being one of the only designs for this purpose. Above all, this Efreti Medium Warship prioritises survivability, boasting disproportionately high health and low mass of a ship its class."
+	sprite "ship/guardian-frigate"
+	attributes
+		category "Medium Warship"
+		"cost" 1190000
+		"shields" 33400
+		"hull" 32500
+		"automaton" 1
+		"crew equivalent" 100
+		"drag" 10
+		"mass" 1066
+		"heat dissipation" 1
+		"fuel capacity" 600
+		"cargo space" 74
+		"outfit space" 800
+		"weapon capacity" 165
+		"engine capacity" 200
+		"self destruct" .5
+		"ramscoop" 3
+		weapon
+			"blast radius" 250
+			"shield damage" 3600
+			"hull damage" 1800
+			"hit force" 5400
+	outfits
+		"Grab-Strike Turret" 2
+		"Driller Beam Turret" 2
+		"Warder Anti-Missile"
+		
+		"Triple Plasma Core"
+		"Systems Core (Large)"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 2
+		"Fuel Processor" 2
+		
+		"Nelmeb GP Hybrid Thruster"
+		"Nelmeb GP Hybrid Steering"
+		"Scram Drive"
+		
+	turret -15 -57 "Grab-Strike Turret"
+	turret 15 -57 "Grab-Strike Turret"
+	turret 34 80 "Driller Beam Turret"
+	turret -34 80 "Driller Beam Turret"
+	turret 0 92.5 "Warder Anti-Missile"
+	engine -60 77
+	engine 60 77
+	explode "tiny explosion" 90
+	explode "small explosion" 50
+	explode "medium explosion" 55
+	explode "large explosion" 45
+	explode "huge explosion" 12
+	"final explode" "final explosion large"
+	description `Unique to the various Korath states, the Efreti never truly dedicated its resources to war, the Guardian-Frigate being one of the only designs for this purpose. Above all, this Efreti Medium Warship prioritises survivability, boasting disproportionately high health and low mass of a ship its class.`
 
 

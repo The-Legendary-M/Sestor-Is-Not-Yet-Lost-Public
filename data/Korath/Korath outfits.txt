@@ -18,7 +18,7 @@ outfit "Ralukut Pellet"
 	"mass" .0625
 	"ralukut capacity" -1
 	description "Ralukut is created as byproduct in Korath Exile organic waste processing systems. Whatever isn't reused s fertiliser, fish food, drinking water, or other safe or useful things, are compressed and condensed into these Rakulut pellets."
-  description "Ralukut pellets are composed of the most toxic and corrosive compounds known to the Korath, and their potential as weapons is quickly realised. Hence, the resourceful Korath Exiles quickly created a series of weapons to utilise this fact."
+	description "Ralukut pellets are composed of the most toxic and corrosive compounds known to the Korath, and their potential as weapons is quickly realised. Hence, the resourceful Korath Exiles quickly created a series of weapons to utilise this fact."
 
 outfit "Ralukut Launcher"
 	category "Secondary Weapons"
@@ -45,7 +45,7 @@ outfit "Ralukut Launcher"
 		"firing heat" 105
 		"shield damage" 450
 		"hull damage" 150
-   		"burn damage" 10
+		"burn damage" 10
 	description "Ralukut launchers are the simplest Rakulut-based system. Simple gases are used to levitate individual Rakulut pellets into the launcher, where electric coils accelerate the pellets into high speeds before throwing them at unsuspecting enemy ships."
 
 effect "ralukut impact"
@@ -113,7 +113,7 @@ outfit "Driller Beam Turret"
 outfit "Thunder-Lance"
 	category "Guns"
 	cost 568000
-	thumbnail "outfit/thunder lance"
+	thumbnail "outfit/ionbeamoutfit"
 	"mass" 23
 	"outfit space" -23
 	"weapon capacity" -23
@@ -141,7 +141,7 @@ outfit "Thunder-Lance"
 outfit "Storm-Pike Turret"
 	category "Turrets"
 	cost 568000
-	thumbnail "outfit/storm pike turret"
+	thumbnail "outfit/ionbeamturret"
 	"mass" 31
 	"outfit space" -31
 	"weapon capacity" -31

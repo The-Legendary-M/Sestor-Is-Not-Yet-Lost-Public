@@ -5,11 +5,11 @@ phrase "anatruskor"
 		"digit"
 	phrase
 		"digit"
-	phrase
+	word
 		"-"
 	phrase
 		"digit"
-	phrase
+	word
 		"."
 	phrase
 		"digit"

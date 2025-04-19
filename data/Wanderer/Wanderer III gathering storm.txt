@@ -1,0 +1,1156 @@
+#mission "Wanderers: Renewed Evacuation"
+#mission "Wanderers: Renewed Terraforming"
+#mission "Wanderers: Sestor Information"
+#mission "Wanderers: Wanderer-Sestor Meeting"
+#mission "Wanderers: Unfettered Systems Scouting"
+#mission "Sestor: Preparation for War"
+#mission "Efreti: First Expansion"
+#mission "Efreti: Fixing Laki Nemparu"
+#mission "Efreti: Mereti Surveillance"
+#mission "Efreti: Learn Language 1"
+#mission "Sestor: Learn Language 1"
+#mission "Bunrodea: Megasa Rumours"
+#mission "Sestor: Anatruskor Surveillance"
+#mission "Sestor: Anatruskor Colonisation"
+#mission "Efreti: Preparation for War"
+#mission "Efreti: Korsmanath Surveillance"
+#mission "Bunrodea: Korath Surveillance"
+#mission "Sestor: Exiles Relationship Intensify"
+#mission "Wanderers: Further Korath Cooperation"
+#mission "Wanderers: Tele'ek: Sestor Cooperation 1"
+#mission "Wanderers: Tele'ek: The Flying Circus"
+#mission "Wanderers: War wanes"
+
+
+#Wanderers start evacuating again, as terraform efforts continue in earnest
+mission "Wanderers: Renewed Evacuations"
+	landing
+	invisible
+	source "Vara K'chrai"
+	destination "Earth"
+	to offer
+		has "event: wanderers: moonbeam mass production"
+	
+	on offer
+		conversation
+			`It has been a while since you have set foot on the Wanderer capital. The stress of stopping the Alphas' attack and the negotiations with the Korath exiles have stressed you out, and you decide to take a stroll in this beautiful planet.`
+			`	When you are about to leave the spaceport, you catch sight of a gigantic Riptide-class transport landing. To your surprise, the Wanderer passengers within do not leave the spaceport, quickly boarding another Riptide a short distance away. Several Wanderers from Vara K'chrai itself also join this group, and before long the Riptide takes off.`
+			`	Interplanetary passenger transportation jobs are commonplace throughout the Milky Way. Usually, passengers commissions a starship captain for the whole journey in one go. Seldom does anybody change ships in the middle, and certainly not groups this big. Weirded out, you decide to ask a security officer in the spaceport.`
+			`	"These Wanderers are [moving, migrating] to the worlds beyond the Eye," replies the security officer, "To organise transports [effectively, efficiently] our government decides to transport everyone here, before moving them to Spera Anatrusk on the other side."`
+			`	It appears that the Wanderers have standardised the evacuation efforts. You silently wish the evacuating Wanderers the best of luck.`
+				decline
+
+mission "Wanderers: Renewed Terraforming"
+	landing
+	invisible
+	source 
+		government "Kor Mereti"
+	destination "Earth"
+	to offer
+		has "event: wanderers: moonbeam mass production"
+	on offer
+		conversation
+			`Ever since you inserted the Wanderer code into the Mereti Mind, the automaton swarm has always been a most unpredictable faction in Korath space. You still remember the hard-earned victories you had over the Mereti drones, and you absolutely do not want to face similar foes again.`
+			`	"Ah, captain <last>," a voice rings out behind you, "[Nice, delighted] to see you here." You turn around, and notice Meto Pa'aret approaching.`
+			`	"The Mereti have been [obedient, compliant]. They are now [creating, manufacturing] additional terraforming equipment for us, to further terraform our planets.`
+			`	"Don't worry, Captain <last>," Pa'aret pats your shoulder, "Our program is carefull [programmed, created] that the Mereti will not rebel."`
+			`	While you are warmed by his reassurance, you cannot help but wonder just how effective this would be. Would the Pug take up the Mereti as a Wanderer sidekick? Hmmm...`
+				decline
+
+mission "Wanderers: Spera Anatrusk Development"
+	landing
+	invisible
+	to offer
+		has "wanderers sestor done"
+	source
+		government "Wanderer"
+	on offer
+		event "spera anatrusk development" 30
+		event "desi seledrak development" 45
+		event "sabira eseskrai development" 60
+
+event "spera anatrusk development"
+	planet "Spera Anatrusk"
+		description "This dry planet once again flourishes with life, as the Wanderers start to build settlements around it. Craters are patched up, and ruins are demolished in favour of newer Wanderer settlements, while buildings in better shapes are meticulously repaired."
+		description "Symbols of the fallen Anatruskor Empire are kept in a large building, serving as a memoir of the once mighty Korath state. Water from ice asteroids and moisture farms are used to irrigate the dry lanscape, and already the first forests are seen sprouting up in the countryside."
+		spaceport "The Wanderers have built their spaceport in a secluded canyon, covered up with terrain lookalike and making any observers believe it is nothing but another patch of desert. Inside the canyon are rows of landing pads served by Mereti-built drones, and numerous hangars, offices, and resting areas are carved into the canyon side. Short underground shuttles connect the growing Wanderer city and this spaceport."
+		shipyard "Wanderer Basics"
+		outfitter "Wanderer Advanced"
+
+event "desi seledrak development"
+	planet "Desi Seledrak"
+		description "While methane and carbon dioxide generators continue to accelerate the rate of greenhouse effect in Desi Seledrak, Wanderers have built dome settlements all over the planet. Korathi destructive farming practises have mostly depleted the soil here, and factories and mines are built here alongside greenhouses. The ruins of Korath cities eons ago are now being rebuilt, owing to the high demands of housing created by Wanderers fleeing the war with the Unfettered."
+		description "Near the spaceport lies the administrative district, featuring a gigantic egg-shaped government complex. Here, Wanderer leaders and politicians bicker about their policies, and ordinary bureaucrats work on their paperwork via advanced, holographic computer systems."
+		spaceport "The once disorganised Mereti-built spaceport have since been rebuilt into a uniform grid. Massive Wanderer freighters arrive here from their original space, unloading vital terraforming equipment and evacuating Wanderers looking for a new life here. Being the new Wanderer capital, commercial districts are prominent, with skyscrapers being seen everywhere."
+		outfitter "Wanderer Basics"
+
+event "sabira eseskrai development"
+	planet "Sabira Eseskrai"
+		description "Massive forestry efforts have mostly calmed the once horrid sandstorms that ravaged this world. In the equatorial region, massive oilfields are found, and the Wanderers have set up factories to convert this abundant yet limited resource into parts of specialised machinery."
+		spaceport "Asphalt roads leading from concrete landing pads show Sabira Eseskrai's booming oil industry. Despite its hydrocarbon industry, internal combustion engines are not used in transportations, being viewed as dirty and primitive. Instead, plastics are abundantly used to enhance the performance of various machines around the spaceport. Outside of that, the spaceport is of typical Wanderer design, featuring wooden furnitures, indoor plants, and a large garden."
+
+
+#Before the Sestor gets their fleets ready, you can tell the Wanderers.
+mission "Wanderers: Sestor Information (Before fleet)"	
+	landing
+	repeat
+	invisible
+	source "Desi Seledrak"
+	destination "Earth"
+	to offer
+		has "Second Contact: Kor Sestor: declined"
+		not "event: sestor fleets emerge"
+	on offer
+		conversation
+			`The impromptu Wanderer capital is developing rapidly. From the distance, you see the volcanoes billowing out ash and smoke, and the Wanderer terraforming plants releasing white clouds of water, carbon dioxide, and methane. It is mesmerising how these two processes, pushing the planet's temperature in opposite directions, can be so similar in appearance. The Wanderers seems to have tamed the other volcano near the city, however, with large constructs surrounding the caldera.`
+			`	In the streets, Wanderers and the occasional Mereti drone fly side by side, even occasionally talking. Near the city centre, you see a few Efreti Korath walking around and taking pictures with their small cameras.`
+			`	The appearance of the Korath reminds you of the Sestor in Sopi Lefarkata. The Sestor Korath survived the ordeal, and are wooing you while gathering strength. Especially interesting is their leader, Ikgalef, who seems to be rather ambitious and knowledgeable.`
+			`	Do you tell the Wanderers about the survival of the Sestor?`
+			choice
+				`(Yes)`
+				`(No)`
+					goto end
+			action
+				set "wanderers know sestor"
+			`Ektasi Rek is sitting in a room, having just finished meeting with a council of Wanderer politicians, including Sobari Tele'ek. She seems surprised when you enter the room.`
+			`	"What brings you here, Captain?" she asks, "I was just discussing with Tele'ek over our evacuation efforts."`
+			`	"It's about something I discovered in the East. The Sestor Korath are alive."`
+			`	You then proceed to tell Rek everything you know about the Sestor, from their highly developed bunker city in Sopi Lefarkata to their no-flight rule. You tell her about the enigmatic leader, Ikgalef. You also tell her how they want you to work for them.`
+			`	Rek becomes silent for a bit, brows furrowed in concentration. A minute later, she opens her mouth again.`
+			`	"Are the Sestor still [hostile, aggressive]?"`
+			`	"Probably not. They don't even run ships anymore now."`
+			`	"May I pay them a visit?"`
+			`	You are tempted to say yes, but the Sestor are adamant that you contact them alone, and tell no one. You politely decline Rek's offer.`
+			`	"Alright, but keep us updated about the Sestor's movements."`
+			`	With that, you part ways, but not before seeing Rek rushing over and snatching up a telephone.`
+				decline
+			label end
+			`	You decide not to say anything, and bask in the view instead. The planet is harmonious and peaceful, perfect for you to relieve your stress.`
+				defer
+
+
+mission "Wanderers: Sestor Information Update"
+	landing
+	invisible
+	source "Desi Seledrak"
+	destination "Earth"
+	to offer
+		has "Wanderers: Sestor Information (Before fleet): declined"
+		has "event: sestor fleets emerge"
+	
+	on offer
+		conversation
+			`Following your meeting with Rek about the whole Sestor situation, you have been keeping the young leader up to date about Sestor news whenever you can. Now, the much-anticipated moment has arrived: The Sestor have finally decided to reveal themselves.`
+			`	In the council room sits Ektasi Rek and Sobari Tele'ek, the two most important Wanderer leaders in this situation. You tell them about the situation, how you helped the Sestor in colonising all the planets, retrieving fuel, and allowing the Sestor to finally launch their ships.`
+			`	"I told Ikgalef about the Wanderers and your work a while ago, and Ikgalef immediately became distressed. The quick pace is the result of Ikgalef wanting to show force. Now that it thinks the Sestor is ready, Ikgalef is expecting you to notice," you conclude.`
+			`	"The Sestor and the Mereti were enemies."`
+			`	"Yes, and with the Efreti too. The civil war was three-way," you confirm.`
+			`	Just then, a Wanderer assistant walk in, and calls Tele'ek to the side. He soon comes back, with a grave expresison.`
+			`	"The Mereti just gave us a [report, news]. They claim that they have [discovered, encountered] a new Sestor fleet, and have engaged it as per protocol."`
+			`	"This has been a mistake," declares Rek, "Tell the Mereti to hold fire against the Sestor. We must prepare an envoy to them immediately."`
+			`	"Meet me at the spaceport later."`
+				decline
+
+mission "Wanderers: Sestor Information (After fleet)"
+	landing
+	invisible
+	source "Desi Seledrak"
+	destination "Earth"
+	to offer
+		has "Second Contact: Kor Sestor: declined"
+		has "event: sestor fleets emerge"
+		not "Wanderers: Sestor Information (Before fleet)"
+	on offer
+		set "wanderers know sestor"
+		conversation
+			`Soon after you land, you are ushered into a room. In the middle of the room stands Sobari Tele'ek, the Wanderer military commander.`
+			`	"The unexpected has happened!" said Tele'ek, just as you enter the room, "Ektasi Rek is coming, but we must wait no longer. Sestor drones are [attacking, fighting] our Mereti ally!"`
+			`	You, unlike Tele'ek, is not disturbed. Having worked with the Sestor, you know that the last thing the Sestor needs is another enemy. Maybe the Mereti are still programmed to attack the Sestor. Maybe the Sestor still view the Mereti as enemies. Either way, this can be solved easily.`
+			`	"We cannot prevail in such a two-front conflict," Tele'ek continues, anxious, "Captain, what is your suggestion?"`
+			`	You calmly explain your experience with the Sestor, from meeting them to helping them setting up their colonies. As Tele'ek listens, his attitude softens a little.`
+			`	"Why did you not [tell, inform] us of this big development, Captain?"`
+			`	"I never though it was necessary," you answer.`
+			`	Tele'ek decides to drop this matter, and tell you to meet him in the spaceport later, and escort Rek to the Sestor for negotiations.`
+				decline
+		
+mission "Wanderers: Wanderer-Sestor Meeting"
+	name "Wanderer-Sestor Diplomacy"
+	description "Bring Ektasi Rek to Sopi Lefarkata to meet Ikgalef."
+	source "Desi Seledrak"
+	stopover "Sopi Lefarkata"
+	destination "Desi Seledrak"
+	passengers 2
+	to offer
+		or
+			has "Wanderers: Sestor Information Update: declined"
+			has "Wanderers: Sestor Information (After fleet): declined"
+	on offer
+		conversation
+			`Ektasi Rek and Sobari Tele'ek arrive shortly, as you finish preparing your ship for takeoff.`
+			`	"The Mereti have designated Sestor ships as neutral," reports Tele'ek. In the better-lit spaceport, you finally takes notice of the two Wanderers' appearances. Compared to a few months ago, Tele'ek's plumage is even more disheveled, and most of his crown feathers are gone. Tele'ek's body seems to be bloating unhealthily in all directions, making the once-fit Wanderer's movement more awkward and slow.`
+			`	"You need rest, Tele'ek," you say, concerned.`
+			`	"The Sestor matter is more important," says Tele'ek, adamant.`
+			`	Unwilling to start an argument over such a minor matter, you nod, and the two Wanderers board your ship in preparation for the trip to Sopi Lefarkata. With her are suitcases that you guess contains important documents and media.`
+				accept
+	on stopover
+		conversation
+			`You see the familiar face of Ikgalef waving at you as you come in to land. The Sestor President promptly freezes as he sees the two Wanderer ambassadors walking down the ramp besides you.`
+			`	Before you can do anything, Rek walks up to the Korath leader, and starts speaking in the Korath language. Ikgalef, however, does not seem to understand Rek's words. Glancing at you, Rek begins conversing with Ikgalef in the human language instead. Tele'ek, seeing that, also dons a translator.`
+			`	Quickly recovering, Ikgalef invites the Wanderers and you to the palace where you first met it. Eventually you find the three of you sitting around a round table, Korath assistants streaming in and out pouring drinks to everyone. Rek seems to be the chief negotiator of the Wanderers, and starts talking to Ikgalef.`
+			`	"You, 'Wanderers', correct?" Ikgalef begins the conversation.`
+			`	"Yes."`
+			`	"You occupy Desi Seledrak and Spera Anatrusk. You occupy Korath worlds."`
+			`	"Those were dead worlds. We Wanderers are temporary visitors that transform them into habitable worlds," Rek counters.`
+			`	"Desi Seledrak and Spera Anatrusk, Korath planets. Anatruskor Empire lives. You occupy territories illegally," Ikgalef replies, anger starting to seep into his voice.`
+			`	"We arrive on deserted planets who nobody had claims on, so that we may transform it into their best possible form. Moreover, we are visitors. After we are done, we leave."`
+			`	"Willing to leave? When?"`
+			`	"The Keepers shall decide on that."`
+			`	"Quit the ralukut, bird! When are you leaving?"`
+			`	"Calm down, Mr. President," placates Ektasi Rek, "Usually it takes around 20,000 years."`
+			`	"20,000?" Ikgalef snaps, visibly incensed.`
+			`	"We do not claim any territories. We are mere visitors."`
+			`	"You might as well say you stay forever, dishonest swindler! You obribeb-"`
+			`	Once again, an angry Ikgalef slips back into his native Sestor tongue. It is becoming increasingly clear that this conversation is going nowhere. This territorial dispute cannot be ignored, but you can still say something.`
+			choice
+				`(Ikgalef is angry because he doesn't understand the Wanderers' motives and past.)`
+					goto past
+				`(If the Wanderers are leaving Hai space because the Unfettered claim their old planets, why aren't the Wanderers leaving this space as well when the Sestor claim it?)`
+					goto why
+			label past
+			`Having met the Wanderers merely minutes ago, Ikgalef obviously has little idea what the Wanderers are like, and how they think. Giving Ikgalef a quick run-down of the Wanderers' motivations would surely help.`
+			`	"Ikgalef, the Wanderers are not land grabbers, nor are they dishonest," you say.`
+			`	At first, Ikgalef gets even angrier as you seemingly side with the Wanderers over his "true Korath", but then his demeanor changes when you start mentioning the Wanderers' conflict with the Unfettered Hai in the North, and how the Eye brought the Wanderers here.`
+			`	"Hai? The be'oof in the North?"`
+			`	"Yes, Ikgalef," you say, "A group of millitant Hai attacked the Wanderers, and they are now going through a wormhole that leads them here."`
+			`	Ikgalef freezes, an eyebrow raised. His anger seems to have dissipated instantly, and his eyes seem almost bemused.`
+				goto uhai
+			label why
+			`One thing that starts bugging you, is how firm the highly principled and pacifistic Wanderers are treating the issue of Spera Anatrusk. After all, if the Wanderers are acquiescing to the Unfettered Hai's dubious claims to their northern worlds, the Wanderers should naturally recognise the Sestor's claims to the Korath worlds as well. After all, Wanderer psychology is different from human.`
+			`	"It is undeniable that these worlds were once occupied by the Korath," you say, "Just like how the Hai once occupied the lands in the North."`
+			`	"This is indeed true. Hence, when the Unfettered Hai came to reclaim their planets, we allow them in. The Keepers led us here, and this is where our new job is."`
+			`	"But aren't-" you begin to say, but Ikgalef's louder voice cut you off.`
+			label uhai
+			`	"These Wanderer birds, leave through a wormhole because Hai chase them out?"`
+			`	"No, no," you reply, "The Wanderers are leaving anyway, but the Hai were impatient."`
+			`	Ikgalef lets out a bark, as he starts snickering. Rek and Tele'ek looks on, unamused.`
+			`	"Leave? They flee, Rafeki Captain <last>! They cannot defeat Hai, yet they are prideful. They must feel ashamed. They do not want you to know that, and make the story up."`
+			`	"Do not [insult, make fun of] our soldiers," a cold voice slices through the Sestor president's speech, "We do not [fight, struggle] for territories we do not own" You turn, and see Sobari Tele'ek clenching his claws, eyes focussed on the Korath.`
+			`	"Who fight and lose on purpose?" Ikgalef seems to disagree, "Nobody lose planets on purpose. You are just too embarrassed to admit defeat!"`
+			`	"Those planets are not ours to claim! We merely terraform them then leave! The Keepers guide us, and the Eye lead us, to new planets! The ones we are standing on!" Rek, normally eternally cheerful, is also starting to become frustrated.`
+			`	"Your ancestors work night and day, fight scale-and-claw for each planet they get, and now you flee on the first chance of escape. Have you no shame?"`
+			`	"We do not fight for planets that is not ours," interrupts Rek, "You have not been listening to us."`
+			`	"Do you not arrive to the planets abandoned and empty? Do you not build them up yourselves? Have you never called the planets home?" Ikgalef presses on.`
+			`	Rek starts to reply, "Yes, we did. But now the Hai are claiming them back, and-"`
+			`	"Then those planets are yours!" Ikgalef ejaculates angrily, "Your kind lives on the planets, not the Hai. Your kind build it up, not the Hai. Those planets are your territory, not the Hai's!"`
+			`	As Rek starts opening her mouth to argue back, you realise that, once again, the conversation has turned hostile and unproductive...`
+			choice
+				`(Ikgalef thinks that, if Wanderers settled on empty planets and built it up themselves, then the planets are the Wanderers'. By the same logic, the Wanderers also settled on the Anatruskor planets in an empty state, and built them up. By this logic, those planets are also the Wanderers'.)`
+					goto anatruskor
+				`(The Wanderers have settled on Hai planets for tens of thousands of years. The last Anatruskor Korath have died less than a century ago, with a functional government-in-exile that is very much active. This is Korath space, that is Wanderer space, and that is how it should be.)`
+					goto settled
+				`(This is an issue the Korath and the Wanderers have to sort out themselves. Say nothing.)`
+					goto apathy
+				`(Continuing to argue is pointless. Ask Ikgalef what he proposes instead.)`
+					goto askik
+			label anatruskor
+			`Ikgalef is being rather hypocritical here. Simultaneously pushing for the Wanderers' planets being in former Hai space while denying Wanderer claims in Korath space seem contradictory in itself.`
+			`	"Ikgalef, the Wanderers are settling Anatruskor planets that were also abandoned and empty, like the Hai planets before. The Wanderers are free to choose what to do with their planets. They want peace and dislike fighting," you say.`
+			`	"This is totally different!" Ikgalef counters, "The Anatruskor still exist! The last planet-dwellers perished less than a century ago! They have been in Hai space for millennia!"`
+			`	"Time is irrelevant here, Ikgalef," you counter, "There is no difference between the Wanderers' colonisation of Vara K'chrai and Spera Anatrusk."`
+			`	"The Hai abandoned their planets like the cowards they are! We Korath never abandoned them!"`
+			`	As you open your mouth to retort, you feel Tele'ek's wing patting your back. You turn, and Tele'ek starts to speak instead.`
+				goto telespeech
+			label settled
+			`To be honest, the Wanderers not willing to fight the Unfettered Hai while being rather stubborn in Anatruskor worlds is rather hypocritical of them.`
+			`	"Rek, the Korath have only recently died out on Spera Anatrusk, while a fully-formed government-in-exile is active with the Sestor. They have a stronger claim to their planets than the Unfettered Hai do."`
+			`	"This is our job, Captain <last>," says Rek, "The Sestor are trying to obstruct the Keepers' tasks for us."`
+			`	"I don't care about your keeper ralukut," Ikgalef interjects, "Instead of fighting the thieving Hai, you want to fight Korath to steal planets to retreat to."`
+			`	There seem to be little hope of any understanding being formed between the Wanderers, and Ikgalef. Then, you hear Sobari Tele'ek clearing his throat.`
+				goto telespeech
+			label apathy
+			`Silence is golden, and it is best to keep your head cool and your mouth shut.`
+			`	Unimpeded, Rek retorts, "Planets are ours only when we claim it so, and we do not. They were once Hai planets, and we give the planets back to the Hai when they ask it back."`
+			`	"Then why are you fighting and losing?"`
+			`	"We did not lose!" exclaims Rek, producing a map out of the suitcase Tele'ek was bringing,"We give our planets to the Hai, as long as we can evacuate our brethren. We are holding our capital, because we need it to evacuate the rest of us!"`
+			`	"That makes no sense!" Ikgalef retorts, "You migrate willingly, and evacuate when fleeing! Your words betray the truth!"`
+				goto telespeech
+			label askik
+			`This argument, you realise, increasingly resembles children fighting over toys both want. The only way forward here, is an alternative proposal. As Ikgalef is constantly berating the Wanderers' plans, it would be a good idea to hear whether he has an alternative proposal instead.`
+			`	"Ikgalef," you interrupt, "You seem to be very upset with the Wanderers' actions here. Do you have any ideas to solve the debacle?"`
+				goto sestorproposal
+			label telespeech
+			`	"This is doing nothing productive," states Tele'ek, "What are you proposing then, Ikgalef, if you are so smart about it?"`
+			label sestorproposal
+			`	"Ah, finally, finally you ask," says Ikgalef, turning towards Tele'ek, "You are the military commander, right?"`
+			`	"Yes," answers Tele'ek.`
+			`	"Your kind are too weak to fight against the Hai. We Korath fight and beat Hai easily. The Sestor help you destroy the Hai, so you can stay in your original planets."`
+			`	"Ah, eh, n-" Rek sputters, but is quickly cut off by Tele'ek.`
+			`	"We shall [discuss, debate] this proposal amongst ourselves."`
+			`	"You should," Ikgalef replies, "The Sestor look forward to a fruitful cooperation."`
+			`	Rek turns towards Tele'ek, a look of disbelief and disapproval, but Tele'ek maintains his steeled face, and looks back. Rek decides to switch topics instead.`
+			`	"The argument before had derailed the conversation a lot," the young Wanderer diplomat states, "We were here about the Mereti drones."`
+			`	Ikgalef raises an eyebrow, but says nothing.`
+			`	"Through past efforts, we have successfully pacified them," says Rek, "They are no longer hostile to any factions by default. Please stop attacking them."`
+			`	Ikgalef seems to want to discuss more, but he stops. "Sure," he mutters.`
+			`	With that, the meeting comes to an anticlimatic end. Ikgalef waves the three of you goodbye, as a Korath assistant hands the three of you confectionary. They are mildly sweet, reminding you of a certain type of candy you had on New Sahara.`
+			`	On the way back to your ship, Rek seems deep in thought.`
+			
+			
+	on complete
+		set "sestor wanderer diplomacy"
+		event "sestor mereti truce"
+		conversation
+			`Rek is unlike her usual bubbly, happy-go-lucky self the entire flight back to Desi Seledrak. You try to engage her in small talk, but she always refuses.`
+			`	Eventually, as the familiar sight of the recovering former Anatruskor planet approaches, Rek finally opens her mouth.`
+			`	"Why, Tele'ek?"`
+			`	"Why what?"`
+			`	"War is not our way."`
+			`	"[Yes, affirmative]."`
+			`	"Why did you not reject the Sestor's offer?"`
+			`	"They may help us [end, finish] the war quickly."`
+			`	"Our destiny is to come here, not stay in the North!"`
+			`	"The Korath view these planets as theirs. Rejecting everything will make us new enemies."`
+			`	"But this is our job, as determined by the Keepers! That would mean we giving up on our planets here!"`
+			`	"And start another [quarrel, argument] with the Sestor Korath?" Tele'ek replies, "After starting one with the Unfettered Hai via the spying, and one with the Korath Exiles by showing them our [progress, fruits]?"`
+			`	"We had no idea what would happen! This is totally different!"`
+			`	"Everything is different from previous situations," Tele'ek says, "We shall see how the Council view this issue."`
+			`	With that, the pair falls silent, and no further words are exchanged until they bid you farewell.`
+
+#Still hostile to the Efreti, whom the Sestor consider a blight on all Korathkind.
+event "sestor mereti truce"
+	government "Kor Sestor"
+		"attitude toward"
+			"Kor Mereti" 0
+			"Wanderer" 0
+			"Quarg" 0
+			"Quarg (Kor Efret)" 0
+	government "Kor Mereti"
+		"attitude toward"
+			"Kor Sestor" 0
+	government "Wanderer"
+		"attitude toward"
+			"Kor Sestor" 0
+
+#MOAR TELE'EK CONTENT
+mission "Wanderers: Moonbeam Production"
+	landing
+	name "Meet Tele'ek"
+	description "Meet Sobari Tele'ek at Vara K'chrai."
+	source
+		government "Wanderer"
+		not planet "Vara K'chrai"
+	destination "Vara K'chrai"
+	to offer
+		has "event: wanderers: moonbeam mass production"
+	on offer
+		conversation
+			scene "outfit/moonbeam"
+			`As you wander around the Wanderer spaceport, you cannot help but notice a large crowd forming near the outfitter section. Prominently displayed on top of a display box is a device you have never seen before.`
+			`	"Captain <first> <last>, I presume?" you suddenly hear a voice.`
+			`	You turn around, and see Tema'a Iriket waving towards you.`
+			`	"I have received a [notice, memo] from Sobari Tele'ek," Iriket begins, "He wants to meet you at Vara K'chrai."`
+			`	"Sure, I'll go there soon," you reply. Hearing this, Iriket walks away, probably immersing herself in terraforming business.`
+				accept
+	on complete
+		event "uhai ion blaster timer" 20
+		conversation
+			scene "ship/tempest"
+			scene "ship/winter gale"
+			`Sobari Tele'ek is delighted to meet you. "Follow me, Captain," he says, "I want to show you my research complex."`
+			`	As Tele'ek waves you forward, you cannot help but notice the Wanderer leader's body is more bloated compared to the last time you saw him. It is not him being fat, you note, having seen obese Wanderers struggling to fly in cities before. As it is rather rude to point out health problems to someone you are not too acquainted with, you decide to not say anything.`
+			`	Tele'ek leads you into a basement near the spaceport. A short train ride later, you emerge into a cave just outside of Vara K'chrai's capital. And lo, what a sight to behold!`
+			`	Hundreds of Wanderers are busy working, some flying and some walking. You can hear the constant whirring of machines and tools tinkering. Automaton robots, commonly seen in Korath planets but much rarer in Wanderer worlds, are also seen involved in the most burdensome work.`
+			`	Following Tele'ek, you take a left turn, and enters a hangar. In the spacious opening stands two ships. A Tempest you are familiar with, and a design you have never seen before. In fact, the ship's cockpit design is so different from other Wanderer vessels you would not identify it as Wanderer-made at first glance.`
+			`	Tele'ek leads you to the Tempest. Upon closer inspection, you realise that the Medium Warship's guns and turret ports have the unfamiliar weapon you saw installed. Seeing you wide-eyed apparently gives Tele'ek joy.`
+			`	"Captain, this is our newest weapon, the Moonbeam," Tele'ek starts speaking, "Since our encounter with the [aggressive, belligerent] Korath robots down in the South, we realised that our Sunbeams are [inadequate, weak] against ships with strong hull. We need a [strong, capable] gun to damage and disable enemy hulls quickly and efficiently."`
+			`	"Interesting," you say. Compared to the first time Tele'ek showed you warships, he seems much less disgusted at these weapons. Maybe Tele'ek's bloating illness is slowly affecting him.`
+			`	"After the Sestor drones bombed our planet, demand for such a weapon [skyrocketed, soared]. We are [afraid, anxious, scared] another automaton invasion might happen."`
+			`	"The two Korath factions are pacified," you say.`
+			`	"True, but they serve well to [placate, pacify] the public in fear," Tele'ek replies, a slight hint of sadness tinting his voice. With that, Tele'ek becomes silent, and beckons you towards the exit.`
+			`	"Wait, Tele'ek, what is the other ship here?" you ask.`
+			`	"The hull is slated for [dismantlement, disassembly]," replies Tele'ek, "This model is originally made to counter the [aggressive, belligerent] robots. The robots are no longer [antagonistic, hostile], and this design becomes unnecessary."`
+			`	"You spent months building this ship, and now you are giving up?"`
+			`	"This model is never finished. It is not needed, and there is no [reason, point] to continue development."`
+			`	You remember Tele'ek being disgusted by the development of the Tempest, and expect him to feel nothing but joy. Tele'ek, instead, quietly guides you through the door, head lowered, refusing to look at the hull. There is no shred of happiness in his actions. Rather, Tele'ek seems strangely depressed.`
+			`	Tele'ek's mood improves as the tour continues. You see several Wanderer scientists experimenting on different metal plates and certain organic tissues, noting their properties and reaction to the environment. Giant reactors are configured to try mass-producing newly developed mixtures, while large machines you have no idea what it does churn out metal plates for testing.`
+			`	You stop in front of a familiar sight: A textile machine making a new military uniform every two seconds. Part of you are in awe of its efficiency, and part of you feel relieved you quit your job as a textile worker to become a starship captain. You are getting replaced as soon as this Wanderer technology enters human space.`
+			`	This entire complex is a giant military lab, something you expect to be present in the most secure Republic worlds. Somehow you never expected a pacifistic race like the Wanderers having such a dedicated facility for military research. To develop the Derecho and the Hurricane so quickly, however, they must have an exquisite research and development division. Before you know it, your tour around the Wanderer complex comes to an end.`
+			`	As the Wanderer scientists continue their work in grim determination, Tele'ek bids you farewell. His attitude throughout the tour is rather surprising, going completely unexpected. Again, probably because he is molting. You decide to go to a bar, have a drink, and forget your worries.`
+
+event "uhai ion blaster timer"
+
+mission "Wanderers: Ion Blaster Retrieval"
+	landing
+	infiltrating
+	name "Ion Blaster Retrieval"
+	description "Head to Sich'ka'ara, disable an Unfettered Hai ship there, and bring two Ionoc Blasters and two Ionic Turrets back to Vara K'chrai for Tele'ek to study."
+	autosave
+	source "Vara K'chrai"
+	waypoint "Sich'ka'ara"
+	destination "Vara K'chrai"
+	to offer
+		has "event: uhai ion blaster timer"
+	on offer
+		conversation
+			`As you are leaving the spaceport, you see Sobari Tele'ek approach.`
+			`	"Our scouts in the East have [reported, relayed] to us that the Unfettered Hai are [deploying, using] a new weapon. It appears that, in addition to damaging shields or hull, the new weapon [interferes, messes with] with our ship's power systems."`
+			`	"Surely they cannot get past the two Pug Arfecta's in Ap'arak?"`
+			`	"Perhaps, but we must always stay [alert, vigilant], and counter this probable threat."`
+			`	Sobari Tele'ek seems more and more interested and learned in military affairs.`
+			`	"Our intelligence suggests that ships equipped with them are stationed at Sich'ka'ara. Our lab will analyse them as we fight them, so that we can counter them."`
+			choice
+				`"Sure!"`
+					accept
+				`"Maybe later?"`
+					defer
+	on enter "Sich'ka'ara"
+		dialog "When Tele'ek told you about this Hai deployment, you expect Solifuges and Shield Beetles. When you emerge from your jump, however, you see a third model you have never met before. There is no time to lose, however, and you warm up your weapons to fight it."
+	on complete
+		conversation
+			scene "outfit/hai ionic blaster"
+			scene "ship/hai phrynus"
+			`The battle against the three Heavy Warships equipped with various ionic weapons was exhausting and dangerous. You managed to kill all of them, however. The moment you touch down on Vara K'chrai's spaceport, Tele'ek comes running towards you.`
+			`	"Sorry, Captain! Our intelligence have made a [mistake, wrongdoing], and instead of a lone ship there are three! I am [joyous? jubilant? relieved?] you are alive. Do you have the weapons I requested?"`
+			`	"Yes, I do," you reply, as the Wanderer workers remove the four weapons from your ship's cargo.`
+			`	"Perfect. This will hopefully improve our position in the [war, struggle] against the Hai."`
+			`	"Wait, there is something more," you say, before you describe the new ship you battled to Tele'ek.`
+			`	As Tele'ek watches on, his eyebrows slowly furrows.`
+			`	"It has a stronger hull than the previous models," observes Tele'ek, "But it is still vastly inferior to our ships. It will be [troublesome, threatening] if it is in high numbers."`
+			`	Tele'ek thinks for a moment, before talking to you again.`
+			`	"Meet me at the spaceport half an hour later. Prepare your fastest ship. We are going on a stealth mission."`
+			`	"Alright", you agree.`
+	npc kill
+		government "Hai (Unfettered)"
+		personality staying target heroic
+		system "Sich'ka'ara"
+		fleet
+			names "hai"
+			variant
+				"Phrynus" 
+				"Solifuge (Ionic)"
+				"Violin Spider (Ionic)" 6 
+				"Shield Beetle (Ionic)"
+
+
+#Ik'kara'ka
+#More Tele'ek foreshadowing.
+#Tele'ek sees UHai ruining Wanderer planet. He visibly disapproves.
+mission "Wanderers: Varu Mer'ek Infiltration"
+	name "Infiltrate Varu Mer'ek"
+	description "Infiltrate Varu Mer'ek, where the Unfettered Hai's primary shipyards lie, with Tele'ek, and return to Vara K'chrai."
+	autosave
+	passengers 1
+	source "Vara K'chrai"
+	stopover "Varu Mer'ek"
+	destination "Vara K'chrai"
+	infiltrating
+	clearance
+	to offer
+		has "Wanderers: Ion Blaster Retrieval: done"
+	on offer
+		conversation
+			`You see Sobari Tele'ek running towards you as you prepare the appropriate ship for the infiltration mission.`
+			`	"Varu Mer'ek is our destination," says Tele'ek, "There is one of our shipyards once stood. The Unfettered may be [manufacturing, producing] ships there."`
+			`	"This is a very dangerous mission," you say, "We are going into the middle of Unfettered territory."`
+			`	"I trust you, Captain. You are the only one that can [succeed, pull this off]."`
+			`	"Alright, alright. Where are we landing?"`
+			`	"To the old spaceport," Tele'ek replies, "It was abandoned when the new one was built 200 [years, cycles] ago. The Unfettered are unlikely to be using it."`
+			`	"Just tell me the coordinates," you say, as you prepare for liftoff.`
+				accept
+	on stopover
+		conversation
+			`Skilfully manoeuvring between Unfettered Hai radars, you manage to land on Varu Mer'ek's old spaceport without being noticed. Native plants grow quick, and the old spaceport is already covered by trees.`
+			`	Tele'ek disembarks from your ship along with you, and begins hiking to the nearest mountain. It takes a long time, however, as Tele'ek's bloated body impedes his movements somewhat, and you find yourself frequently helping Tele'ek through the hardest parts of the course. On the peak, Tele'ek releases a small drone, which quickly flies off to the distance.`
+			`	"The drone is fitted with cameras and a small cloak," Tele'ek explains, chest slightly puffed, "It can fly through crowds without being noticed."`
+			`	You and Tele'ek sits on the mountain, watching the drone's feedback on Tele'ek's computer terminal. For a few minutes, the footage shows nothing but rolling hills and plains, until a city slowly grows larger.`
+			`	"This is the former planet capital," Tele'ek explains in a neutral tone, "This was once the library - it seems the Hai [made, transformed] it into a barrack. This open area, Captain, was once a garden. It's now a shooting range. The former research centre..."`
+			`	Tele'ek's voice slowly becomes more and more gravelly, as he talks at an increasingly fast pace.`
+			`	"The zoo is now a wrestling ring. The spaceport cafeteria is another wrestling ring. The community centre is now a [betting shop, casino]. The greenhouses are looted and empty."`
+			`	Suddenly, Tele'ek begins to hyperventilate. A sudden jerk to the joystick sends the drone directly into a collision course with a nearby Hai's head. You quickly pitch the drone up, so it merely ruffles the Hai's fur instead. This is enough to trigger the Hai, however, as it begins to dance wildly to swat what it assumes to be a fly. Tele'ek, regaining his senses, quickly flies the drone away from the Hai and into the sky.`
+			`	"Sorry, Captain, I lost my [temper, composure]. I must focus on the target, the factories."`
+			`	Eventually, Tele'ek manages to sneak the drone into the heavily guarded main factory. Inside, you find assembly lines constantly churning out Shield Beetles, Solifuges, and the new "Phrynus" ship you encountered yesterday.`
+			`	"So this is where they make all their new ships without needing Jump Drives," you say, "Do you have any explosives with you? We can bomb this factory now, and delay their production."`
+			`	Tele'ek's eyebrows perk up, but he quickly regains a neutral expression.`
+			`	"Our job here is to [scout, infiltrate] the Unfettered Hai, and devise new strategies to defend our planets while civilians evacuate. We are not here to [destroy, harm] the Hai. After all, we are but [visitors, tourists], not inhabitants. If the Hai are their destined owners, so be it."`
+			`	Tele'ek sounds somewhat downcast by the end of it, but you decide not to inquire further. Molting is an enigmatic process, after all.`
+			`	The drone flies to the factory's other rooms. Assembly lines for Violin Spider-class fighters are prominent, but you also see the Hai welding crates marked with the Explosive warning to some of the fighters, while replacing their cockpits with some sort of machine. Suicide bombers, you quickly realise. By the severe look Tele'ek sports, he is aware of it too.`
+			`	Most other rooms are of lesser productions. Pulse Cannons, turret mounts, and armour platings are being wrought here using high-precision machinery. A few rooms are dedicated to painting the ships with the Unfettered's purple colour scheme, but other than that, there are no remarkable discoveries.`
+			`	As the Sun slowly sets, Tele'ek recalls the drone, and you hike back to the ship, once again supporting Tele'ek's bulbous, unwieldy body. By the time you return to your ship, it is night time. Carefully, you lift off, and prepare for the return journey back to Vara K'chrai.`
+				launch
+	on complete
+		event "phrynus deployed"
+		payment 60000
+		conversation
+			`Managing to evade all pursuing Unfettered Hai ships, you land on Vara K'chrai. As he leaves, Sobari Tele'ek thanks you for the transport.`
+			`	"The Unfettered are indeed starting to use our [equipment, tools, technique] to build ships. They may soon become our peer in terms of strength. This is an important strategic intelligence, and I thank you for providing me it."`
+			`	With that, Tele'ek hands you 60,000 credits for the trouble, and disappears into the crowd.`
+
+event "phrynus deployed"
+	planet "Varu Mer'ek"
+		description "Having captured this Wanderer world months ago, the Unfettered Hai has since developed this world. The numerous factories here has begun churning out ships, as the remaining Wanderer ships have been taken apart to be studied."
+		spaceport "Being a primary factory world, Varu Mer'ek's spaceport is directly linked to its many shipyards. Large brutalist concrete structures make up the various buildings, where hundreds of Unfettered Hai constantly move between."
+		add shipyard "Mon Ki o'Uden Advanced"
+		add shipyard "Unfettered Wanderer"
+		add outfitter "Unfettered Basics"
+	shipyard "Mon Ki o'Uden Advanced"
+		add "Ladybug"
+	fleet "Large Unfettered"
+		add variant 2
+			"Phrynus"
+		add variant 1
+			"Phrynus"
+			"Solifuge"
+			"Violin Spider" 3
+			"Violin Spider (Pulse)" 3
+		add variant 2
+			"Phrynus"
+			"Shield Beetle (Pulse)"
+			"Solifuge"
+			"Violin Spider" 3
+			"Violin Spider (Pulse)" 3
+		add variant 1
+			"Phrynus" 2
+		add variant 2
+			"Phrynus"
+			"Shield Beetle (Tracker)"
+			"Solifuge (Tracker)"
+			"Violin Spider" 2
+			"Violin Spider (Pulse)" 4
+			"Lightning Bug" 2
+		add variant 1
+			"Phrynus"
+			"Shield Beetle (Pulse)" 2
+
+
+#Tele'ek is slowly gaining a positive opinion on warships. He doesn't admit it yet.
+mission "Wanderers: Winter Gale Development"
+	landing
+	invisible
+	source "Vara K'chrai"
+	destination "Earth"
+	to offer
+		has "event: phrynus deployed"
+	on offer
+		event "abyssal stream development" 20
+		conversation
+			scene "ship/winter gale"
+			`Just as you leap off your ship, you find Sobari Tele'ek walking towards you.`
+			`	"Hello, Captain <last>! I have been waiting for you. Come, I have something to [show, present to] you!"`
+			`	Tele'ek leads you down the passage way to his laboratory, which seems to have been expanded somewhat.`
+			`	"I have [discussed, conversed] with the elders, ever since our infiltration," Tele'ek startsm "They do not view increasing military production as necessary. So, instead, we are working on another method."`
+			`	With that, Tele'ek dramatically opens the garage door. Inside lies... the same hull Tele'ek said is slated for dismantlement.`
+			`	"Isn't this hull supposed to be dismantled?"`
+			`	"Yes, it was originally. However, everyone in this lab decided to [keep, preserve] it as a testament of us Wanderers being forced into fighting again. With the Hai threat increasingly credible, we have decided to [revive, rejuvenate] this project."`
+			`	Seeing this ship, you are tempted to ask Tele'ek when it will be available for purchase, but ultimately decide against it. The project has just started, after all.`
+			`	"Are there any other ship projects currently under development?" you ask instead.`
+			`	"Oh, there are a few. Mostly [derivatives, modifications] from existing models, however. You may find them available soon."`
+			`	With that, Tele'ek bids you goodbye, and sends you on the way back to the city.`
+				decline
+
+
+event "abyssal stream development"
+	shipyard "Wanderer Advanced"
+		add "Abyssal Stream"
+	fleet "Wanderer Defense"
+		add variant
+			"Abyssal Stream"
+			"Flycatcher" 10
+		add variant
+			"Abyssal Stream"
+			"Flycatcher" 10
+			"Strong Wind"
+			"Summer Leaf" 3
+		add variant
+			"Abyssal Stream"
+			"Flycatcher" 10
+			"Tempest" 2
+		add variant
+			"Abyssal Stream"
+			"Flycatcher" 10
+			"Derecho" 
+			"Strong Wind" 3
+			"Tempest" 2
+			"Autumn Leaf" 5
+
+#Abyssal Stream, a reinforced Deep River lookalike ship, but with massively strengthened shields.
+#Large drone-only carrier. Capacity is 10, marginally better than the TF71L.
+mission "Wanderers: Abyssal Stream"
+	landing
+	invisible
+	source "Vara K'chrai"
+	destination "Earth"
+	to offer
+		has "event: abyssal stream development"
+	on offer
+		conversation
+			scene "ship/abyssal stream"
+			`As you land at Vara K'chrai's spaceport, you notice a new ship parking on the apron next to you.`
+			`	The ship looks like a shorter Deep River, but with its cargo holds reinforced with metal bars. You watch as spaceport workers tug a pair of Flycatcher drones underneath the cargo holds. Suddenly, large clamps appear below the cargo holds, grab onto the drones, and lift them inside the ship. You realise that this ship is in fact a carrier, created to transport the Wanderers' previously planetbound drones.`
+			`	"This ship will provide our fleet with ample anti-missile protection," a voice rings behind you. You swivel around, and see the bulgy body of Sobari Tele'ek wadding over to you.`
+			`	"It is nice to see that a carrier is developed," you say, "But without attack drones, its utility is limited."`
+			`	"We are [defenders, protectors], not attackers," replies Tele'ek, "There is no need for offensive drones to be made."`
+			`	"Combat drones lower casualty rate, meaning you do not have to fight at all," you counter, unconvinced.`
+			`	"Maybe, but our [aim, goal] against the Hai is to defend. Combat drones and fighters are good for offensive purposes, but merely [waste, take up] resources on defensive battles."`
+			`	"Only conducting defensive battles will lead to massive damage on your worlds only."`
+			`	"Again, Captain, we are but [visitors, tourists] of these worlds. We are [restorers, repairers] of worlds. We do not destroy worlds owned by others."`
+			`	"You have been living on these worlds for centuries. That is not what 'tourists' do."`
+			`	"These worlds are not ours. We do not decide these worlds' [fate, destiny]. [Fate, Destiny] has determined that Hai will get all these worlds. If they destroy our worlds it is their [actions, choice]."`
+			`	"Do you not feel sad and angry when you saw the Hai destroying your beautiful worlds?"`
+			`	Tele'ek inhales, preparing to speak, but no voice leaves his pharynx. His eyes dart around, as he visibly struggles with himself. Eventually, he speaks again.`
+			`	"These are not our planets. We have no right to feel angry."`
+			`	Despite his words, you can hear Tele'ek's breathing becoming quicker. Before you can respond, Tele'ek forcefully switches topic to some random Wanderer space trivia. Seeing Tele'ek so unwilling to discuss assault drones, you comply.`
+				decline
+	
+#First lessons. Rek teaches FL basic phrases (greetings, daily life, etc.), grammar, expressions, etc. 1 month break as FL internalises them.
+mission "Wanderers: Efreti Language 1"
+	landing
+	invisible
+	source "Desi Seledrak"
+	to offer
+		has "wanderers know sestor"
+		has "Efret: Sarisa Fentra Outpost: done"
+	on offer
+		conversation
+			`You land on Desi Seledrak, where Ektasi Rek currently resides on, working on Korath-related matters. With the Efreti and Sestor both known to the Wanderers, it is high time to learn the Korath language. Do you approach her to learn the Korath language?`
+			choice
+				`Yes`
+				`No`
+					defer
+			`	You walk to Desi Seledrak's central administrative building, where a shiny plate with Rek's face is clearly visible on the lobby. Rek's face on the lift's buttons also helpfully guide you to her office.`
+			`	"Hello, Captain! I was not expecting anyone today," greets Rek. With the lack of paperwork or conversing Wanderers, you are rather sure you are not interrupting anything.`
+			`	"Rek, I would like to learn the Korath language."`
+			`	"Are you sure, Captain? The Korath language is complex, with gestures involved. It is not easy for a human like you to learn."`
+			`	"Yes, Rek, I have made up my mind."`
+			`	With that, Rek brings you to a separate room, and begins the lessons.`
+			`	"We will start by learning the Korath letters."`
+			`	Fifteen minutes later, you manage to remember them, from Ak to Zel. Then, Rek moves on to greetings and simple phrases. Instead of sitting down like human language classes, Rek stands up, and motions you to follow her movements.`
+			branch remnantconnection
+				has "event: remnant: sign studies complete"
+			action
+				event "efreti language timer 1" 30
+			`	The lesson now resembles dancing and gymnastics classes you used to take backin New Boston, with you mimicking Rek's movements while Rek corrects your rigid, unfamiliar gestures every now and then. The way the Korath sign language works is wholly different from human ones, acting as a vital part of the conversation alongside vocals.`
+			`	When the day ends, you have gone through most of the basic Korath words. Although your gesturing still need work, you are more hopeful about mastering the Korath language than you thought you world.`
+			`	Before you leave, Rek hands you a short tape she made about basic Korath vocabularies. "I want other Wanderers to learn Korath too," she says, "Watch them if you have time, and tell me if they are useful. Return after you feel confident about it."`
+				decline
+			label remnantconnection
+			action
+				event "efreti language timer 1" 10
+			`	Rek is somewhat surprised by your dexterity, being able to work on various Korath gestures with relative ease. Korath gestures, as it turns out, are very similar to Remnant ones. By relating the Remnant language with the Korath one, you are able to quickly and easily finish the tasks Rek gave you.`
+			`	When the day ends, you have mastered all of the basic Korath words. Rek is pleasantly surprised, and is ecstatic at your progress.`
+			`	"With this, mastering the Korath language will take no time!"`
+			`	Before you leave, Rek hands you a tape she made about basic Korath vocabularies. "I want other Wanderers to learn Korath too," she says, "Watch them if you have time, and tell me if they are useful. Return after you feel confident about it."`
+			`	"Of course!" you reply. After all, you are already experienced in learning with tape. You are confident that you can communicate with the Korath in no time at all.`
+				decline
+
+event "efreti language timer 1"
+
+mission "Wanderers: Efreti Language 1 Update"
+	invisible
+	landing
+	source
+		government "Wanderer" "Kor Mereti" "Anatruskor Empire" "Kor Sestor" "Kor Efret" "Quarg (Kor Efret)"
+	to offer
+		has "efreti language timer 1"
+	on offer
+		conversation
+			`After a while of self-learning Korath language, you believe you have managed to master the tape Rek recorded for you. You remind yourself to visit Rek at Desi Seledrak to continue your lessons.`
+				decline
+
+		
+#More lessons. Rek teaches FL more phrases, mostly about natural phenomenon, actions, verbs, adjectives and adverbs.
+mission "Wanderers: Efreti Language 2"
+	landing
+	invisible
+	source "Desi Seledrak"
+	to offer
+		has "Wanderers: Efreti Language 1 Update: declined"
+	on offer
+		conversation
+			`When you land on Desi Seledrak, you once again remind yourself of the Korath phrases Rek taught you a while ago. Do you feel ready for more lessons?`
+			choice
+				`Yes`
+				`No`
+					defer
+			`	Rek is grinning as you walk up. "Greetings, Captain! Good to see you making progress in the Korath language!"`
+			`	Once again, Rek leads you to the classroom, and begins to lecture about other Korath words. Topics like food and water, stars and moons, talking and writing, and various adjectives are covered.`
+			branch remnantconnection
+				has "event: remnant: sign studies complete"
+			action
+				event "efreti language timer 2" 30
+			`	Compared to last time, your gesturing have improved somewhat. You find doing more gestures while talking to most people being a good way to familiarise yourself to the Korath kind of communication.`
+				goto end
+			label remnantconnection
+			action
+				event "efreti language timer 2" 10
+			`	Naturally, you master these new gestures quickly. The words are a different story, however. The lack of "S" sounds is jarring, considering the language of most other aliens you have met, and the sounds of lizards and snakes.`
+			label end
+			`	You, once again, spend hours listing down words and corresponding gestures. The old Phonetic Alphabet proves to be very useful in learning the Korath language, which is to be expected, you reckon.`
+			`	As you leave, Rek once again gives you a tape about today's lessons, hoping you would find them useful. Like last time, you gratefully accept.`
+				decline
+
+event "efreti language timer 2"
+
+mission "Wanderers: Efreti Language 2 Update"
+	invisible
+	landing
+	source
+		government "Wanderer" "Kor Mereti" "Anatruskor Empire" "Kor Sestor" "Kor Efret" "Quarg (Kor Efret)"
+	to offer
+		has "efreti language timer 2"
+	on offer
+		conversation
+			`After a while of self-learning Korath language, you believe you have managed to master the various verbs, adjectives, and adverbs Rek taught you. You remind yourself to visit Rek at Desi Seledrak to continue your lessons.`
+				decline
+
+		
+
+
+#Even more lessons. Rek teaches FL more advanced Korath stuff. Spaceflight, politics, military, etc.
+mission "Wanderers: Efreti Language 3"
+	landing
+	invisible
+	source "Desi Seledrak"
+	to offer
+		has "Wanderers: Efreti Language 2 Update: declined"
+	on offer
+		conversation
+			`When you land on Desi Seledrak, you once again remind yourself of the Korath phrases Rek taught you a while ago. Do you feel ready for more lessons?`
+			choice
+				`Yes`
+				`No`
+					defer		
+			`	"Today, we are going to learn about space and politics," says Rek, "They will be very useful in the future, whenever you deal with the Korath factions."`
+			`	Korath, as you discover, use compounded words, much like the dialects in New Austria and New Switzerland. Having experienced the culture of both planets, you are rather quick to accustom yourself to these new Korath words. The Korath have more words reserved for scientific theories and materials with no human equivalent, a natural result of the Korath being centuries more advanced than humans.`
+			`	Once again, Rek gives you a tape to study as you leave. Like the last few times, you promise to let Rek know when you are ready.`
+			branch remnantconnection
+				has "event: remnant: sign studies complete"
+			action
+				event "efreti language timer 3" 50
+			`	`
+				decline
+			label remnantconnection
+			action
+				event "efreti language timer 3" 25
+			`	`
+				decline
+
+
+event "efreti language timer 3"
+
+mission "Wanderers: Efreti Language 3 Update"
+	invisible
+	landing
+	source
+		government "Wanderer" "Kor Mereti" "Anatruskor Empire" "Kor Sestor" "Kor Efret" "Quarg (Kor Efret)"
+	to offer
+		has "efreti language timer 3"
+	on offer
+		conversation
+			`After a while of self-learning Korath language, you believe you have managed to master the various verbs, adjectives, and adverbs Rek taught you. You remind yourself to visit Rek at Desi Seledrak to continue your lessons.`
+				decline
+
+#Fourth series of lessons. Rek teaches FL Korath culture, phenomena, idioms and phrases.
+mission "Wanderers: Efreti Language 4"
+	landing
+	invisible
+	source "Desi Seledrak"
+	to offer
+		has "Wanderers: Efreti Language 3 Update: declined"
+	on offer
+		conversation
+			`When you land on Desi Seledrak, you once again remind yourself of the Korath phrases Rek taught you a while ago. Do you feel ready for more lessons?`
+			choice
+				`Yes`
+				`No`
+					defer
+			`	This time, Rek teaches you about words that have no equivalents in either human or Wanderer languages. Evidently these are cultural terms and idioms in Korath culture. Learning them is somewhat harder, reminding you of the strange rituals you sometimes see in Hai space.`
+			branch remnantconnection
+				has "event: remnant: sign studies complete"
+			action
+				event "efreti language timer 4" 70
+			`	Once again, Rek hands you a tape concerning the words you learnt. Rek also helpfully adds several videos of the Korath doing their rituals. You thank Rek, and prepare for months of intense study.`
+				decline
+			label remnantconnection
+			action
+				event "efreti language timer 4" 35
+			`	Once again, Rek hands you a tape concerning the words you learnt. Rek also helpfully adds several videos of the Korath doing their rituals. You thank Rek, and prepare for months of intense study.`
+				decline
+
+event "efreti language timer 4"
+
+mission "Wanderers: Efreti Language 4 Update"
+	invisible
+	landing
+	source
+		government "Wanderer" "Kor Mereti" "Anatruskor Empire" "Kor Sestor" "Kor Efret" "Quarg (Kor Efret)"
+	to offer
+		has "efreti language timer 4"
+	on offer
+		conversation
+			`After a while of self-learning Korath language, you believe you have managed to master the Korath cultural words Rek taught you. You remind yourself to visit Rek at Desi Seledrak to continue your lessons.`
+				decline
+
+
+#Practical lessons. Rek and FL start conversing entirely in Korath, mostly with the Efreti, and sometimes with the Sestor. With that, FL is more trusted by the Efreti.
+#No, romance is absolutely not included.
+#The Efreti obviously do not like the Wanderers actually settling into Efreti territory. Which ironically puts them around the same trust-ability level as the Sestor as far as the Wanderers are concerned.
+#And oh boy are the Efreti slowly gearing up for conflicts themselves.
+#Solima Skarati is strategical, for it forms the only links to systems like Korsmanath outside Mereti space. Getting this planet implies access to all others.
+
+mission "Wanderers: Efreti Language 5"
+	landing
+	name "Korath Meeting"
+	description "Bring Ektasi Rek to Laki Nemparu for a discussion with Efreti leaders."
+	source "Desi Seledrak"
+	destination "Laki Nemparu"
+	to offer
+		has "Wanderers: Efreti Language 4 Update: declined"
+	on offer
+		conversation
+			`Ektasi Rek meets you when you land, visibly pleased with your progress on Korath language.`
+			`	"Captain <last>, you have done a lot in learning Korath language, and can now probably talk to a Korath freely. Would you like to accompany me on a trip to the Efreti, for a new round of negotiations?"`
+			choice
+				`"Sure!"`
+				`"Maybe next time?"`
+					defer
+			`	"Perfect," says Rek, "I'll be at the spaceport later. Our destination is Laki Nemparu, where the Efreti houses their heavy industry."`
+				accept
+	on complete
+		set "Language: Efreti"
+		conversation
+			`Upon landing, Ektasi Rek and you boards a bus, which to your surprise runs on old-fashioned internal combustion engines. The low humming of the engines are mesmerising, but Rek only shows distaste at this primitive transportation method.`
+			`	The bus takes the two of you outside the spaceport and the industrial zone, and the air slowly gets less acidic and more breathable. Eventually, it stops outside of a pearly white building on the outskirts of the city, where plants are prominently seen and the air is completely breathable.`
+			`	The Efreti governmental building is completely sealed. Air showers blow off all dust from your clothes before you enter, and large metal detectors are present to confirm that you and Rek are indeed unarmed. With all checks complete, you are allowed into the meeting room.`
+			`	The meeting room is massive. A long, oak table is situated in the middle, with matching chairs. On the one of the walls near the table's end hangs a large, purple Efreti emblem and a portrait of a Korath. As you sit, a Korath aide skilfully pours you a cup of tea.`
+			branch meturpasom
+				has "Efret: Korsmanath Surveillance: offered"
+			`	The Efreti representative is already present when Rek and you walk in, sitting in front of the emblem. After a brief greeting, Rek and the Efreti representative begins talking in Korath.`
+				goto next
+			label meturpasom
+			`	You glance up, and is surprised to see Urpasom sitting under the emblem, wide-eyed as she recognises you too. You do a Korath greeting gesture, and Urpasom reciprocates. Why a low-ranking officer is meeting Rek is beyond you, but Urpasom is able to quickly calm down and start the meeting.`
+			label next
+			`	"Hello, Ms. Urpasom," Rek begins, "Thank you for arranging this meeting in short notice."`
+			`	The meeting goes on for a while. Between Rek's slow, deliberate movements and Urpasom's more fluid movements, you are surprised but proud that you are able to follow the flow of the conversation. Apparently, the Wanderers wish to start a new colony down in Solima Skarati, which is a former Korsmanath territory. Unfortunately, the Korsmanath are staunch Efreti allies.`
+			`	"Please understand, Ms. Rek, that we consider Solima Skarati our own, and we wish to settle it ourselves. Your help is appreciated, but we do not need it."`
+			`	"Again, we are here to fix worlds. That world has a toxic ocean biome, which means it cannot be settled without any precautions. We can reverse it."`
+			`	"Thank you for your help so far," Urpasom says, "Precisely due to the lessons we have learnt, we are hoping to settle a planet ourselves as a practise ground, without your assistance. Solima Skarati, with its relatively simple toxins, seem to be a perfect start."`
+			`	"My reports indicate that the techological exchange we are having is insufficient to facilitate a successful terraformation and settlement. Many Korath will die if rash action is taken."`
+			`	"Thank you for your concern, but we believe we can handle this planet. After all, we do not rely on biology alone to survive on ravaged worlds," Urpasom replies, a hint of smugness as you identify.`
+			`	It appears that neither side is backing down soon. Rek still wants Wanderers to fix the planet, but Urpasom is adamant that the Efreti be the sole occupiers. You also realise you are in the perfect position to resolve this crisis.`
+			`	And so you begin gesturing, the first time you actively engage in a conversation in Korath, to Korath. Urpasom emits a surprised yelp as you begin.`
+			`	"The Wanderers want to settle Solima Skarati, but the Efreti wants to settle it themselves, right?"`
+			`	"Aye."`
+			`	"Yes."`
+			choice
+				`(Support Rek and her Wanderer colony proposal)`
+					goto sidewithwanderer
+				`(Support Urpasom and her Efreti colony proposal)`
+					goto sidewithefreti
+				`(Compromise solution. Solima Skarati becomes an Efreti-Wanderer condominium)`
+					goto compromise
+			label sidewithwanderer
+			action
+				"wanderer opinion" ++
+				"efreti wanderer relations" --
+				event "solima skarati landfall (wanderer)" 5
+				event "solima skarati development (wanderer)" 55
+				set "solima skarati wanderer"
+			`	"The Wanderers have a point, Urpasom," you say, "It is much safer for the Wanderers to settle and transform first."`
+			`	Urpasom is notably upset. "We have no prove they are handing us anything other than technology," Urpasom adds bitterly.`
+			`	"Are you doubting our conviction?" Rek is outraged at Urpasom's doubt.`
+			`	"We do not tolerate any of our territory being handed over to others without compensation."`
+			`	"We are currently handing territory to the Unfettered Hai. We are evacuating our people here."`
+			`	"You are being defeated by the Hai, and retreating here is your only option."`
+			`	Both Rek and Urpasom are visibly incensed, and further discussion seem to be fruitless. Outnumbered, Urpasom eventually relents, and gives you a withering look before storming out.`
+			`	"The discussions could have gone better," says Rek, "But at least Solima Skarati is no longer conflicted. We have to be careful dealing with them in the future."`
+				goto end
+			label sidewithefreti
+			action
+				"efreti opinion" ++
+				"efreti wanderer relations" --
+				event "solima skarati landfall (efreti)" 5
+				event "solima skarati development (efreti)" 65
+				set "solima skarati efreti"
+			`	"Rek, maybe it's better to let the Efreti try," you say, "The Korath seem to be confident in their capabilities, and it's better for the Wanderers to watch in the distance, and help only if a catastrophe is coming."`
+			`	"Captain, you must understand that unprepared settlers will be doomed! Toxic oceans is tricky to deal with, and we have yet to teach them how to detoxify oceans!" Rek indignantly says.`
+			`	"Thank you for placing your trust in us," Urpasom cuts Rek off, "Contrary to what Rek claims, we have ways to cope with the hostile environment. Rek's concerns are unfounded."`
+			`	"We are unwilling to sacrifice members of your species in this doomed endeavour."`
+			`	"With all due respect, Rek, this is a calculated program that does not risk Korath lives," Urpasom counters.`
+			`	Rek continues to argue for a little longer, but eventually relents. Solima Skarati shall be settled by Efreti settlers alone.`
+				goto end
+			label compromise
+			action 
+				set "solima skarati compromise"
+				"efreti wanderer relations" ++
+				event "solima skarati landfall (compromise)" 5
+				event "solima skarati development (compromise)" 45
+			`	Siding with either side is unwise, and you quickly think about compromises.`
+			`	"Rek, please respect Urpasom's concern about the Wanderers permanently occupying planets," you start, "Urpasom, please respect Rek's concern about the dangers in terraforming the planet."`
+			`	You see both Rek and Urpasom calming down slightly, motioning you to continue.`
+			`	"We turn Solima Skarati into a condominium of sorts," you elaborate, "The Korath will be the ones settling on this planet, but the Wanderers will have a settlement as well, overseeing the terraformation."`
+			`	Both Rek and Urpasom consider this proposal for a while, before ultimately accepting. You congratulate yourself internally, for solving a diplomatic incident the first time you speak Korath.`
+			label end
+			`	It appears that the meeting is all about settlement plans. With the Anatruskor settling their worlds quickly, only Korsmanath and Efreti planets are open for Wanderer settlement. Without further agreements, the meeting ends.`
+			`	Rek says that she will remain on Laki Nemparu for a while, and thanks you for the transportation. As you part, you suddenly realise the entire time you had been speaking in Korath. Today marks your mastery of the Korath language, being able to communicate with the reptilian aliens with ease.`
+
+
+mission "Wanderers: Sestor Language 1"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		"sestor jobs" > 10
+	on offer
+		conversation
+			`As you wander around the spaceport, looking for more jobs for you from the Sestor, you cannot help but feel a little bit frustrated. Unlike with many other species' spaces, where you can directly ask the client if they have any special needs, food allergies, or other things to note, here in Sestor space you can only communicate via drawings and rudimentary gestures. It is not hard to see why; the language barrier is a limitation very hard to overcome.`
+			`	This was not a big problem at first when you have Ikgalef, who can talk in the common Human tongue thanks to a large translator. As time goes on, however, the impacts of the language barrier is becoming clearer and clearer. If you can learn the Korath language the Sestor uses, you would have a much better time in Sestor space.`
+			`	Do you contact Ikgalef to learn Sestor?`
+			choice
+				`Yes!`
+				`Maybe later`
+					defer
+			`	The train ride to Ikgalef's office once again shows you how the Sestor communicate. The words here are of a harsh tone, and the dance moves are fluid and dramatic. While there are similarities between these movements and those you saw in Efreti space, it is rather obvious that the pronunciations and the gestures are different.`
+			`	As you walk into the Sestor governmental offices, Ikgalef has just finished being questioned by various Sestor parliament members for various points of its policy in the past. A rather tired Ikgalef greets you.`
+			`	"Elections are coming up, <first>, and the opposition is ramping up their campaign, as our lands grow more secure," grumbles the Sestor President, "They won't win, however. I brought us back to glory, not them."`
+			`	Being an outsider, you are considerably less interested in Sestor politics than anyone else on this planet, and the topic soon shifts to the language issue.`
+			branch efretilanguage
+				has "language: Efreti"
+			action
+				event "sestor language timer 1" 50
+			`	"Korath language seems different from human language," you say.`
+			`	"Korath uses gestures in addition to voice," Ikgalef replies, as he uses his limbs to flail more wildly than usual, "We True Korath proudly preserve this tradition forever!"`
+			`	Ikgalef's mood visibly improves as he rants on about the Korath language. It seems that the Korath language, as he stated, relies on gestures as much as speech, as some sort of hybrid language.`
+			`	As you continue to ponder, Ikgalef waves you into a part of the city.`
+				goto languagestart
+			label efretilanguage
+			action
+				event "sestor language timer 1" 25
+			`	"I have been learning Korath from the Wanderers," you begin, "But it seems that the Efreti speaks differently compared to you."`
+			`	As you begin to try speaking some phrases in Efreti, Ikgalef stops you.`
+			`	"Stop, stop, Rafeki captain, the Efreti are naught but a band of perversion that poisons our sacred culture! You must not pay them any more attention than you need to strictly!"`
+			`	Seeing Ikgalef going into another anti-Efreti rant, you slowly tune out the incoming noises. It is only fair for Ikgalef to let off some steam, after the presumably stressful interrogation in the Sestor Parliament. As it finishes, however, Ikgalef leads you out of the room.`
+			`	"Hmph, at least you are not contaminated with Efreti views yet, which is a great relief. Come with me!"`
+			label languagestart
+			`	You follow Ikgalef as you make your way into the city. A brief tram ride later, you emerge into what looks like an elementary school. You see schoolchildren leaving the building, gawking at the President and you. They cannot be older than five to six, you think. Smiling, Ikgalef does a waving gesture you assume to be similar to a human wave, and you follow suit. The children visibly brightens at it, and begins to chatter amongst themselves. Ikgalef smiles and leads you into the school building.`
+			`	The school building reminds you strongly of the classes in New Boston. Plushes, spaceship models, puzzles, and other kinds of games and toys are all around, as a form of chalk-less blackboard is filled with various diagrams and symbols.`
+			`	"This is Sopi Lefarkata's central school," Ikgalef says, "All our hatchlings study here for twelve years until they graduate."`
+			`	In the middle of a classroom with many pictures, symbols, and Korath stick figures around, lies a pile of small, black holograph projectors. Compared to the ones you see in Ikgalef's office or in the various Sestor meeting rooms, this seems simpler and somewhat bulkier.`
+			`	Ikgalef picks up one of the projectors, and presses a small button. A holographic image of a Korath appears, and it quickly begins to speak in Sestor. Naturally, you do not understand a single word.`
+			`	"Take it," says Ikgalef, "This is a standard language learner given to every single hatchling. It should help you too."`
+			`	"Ikgalef, I don't understand a single word it's saying," you reply, "It won't help with grammar."`
+			`	"Everyone will have to start somewhere," Ikgalef replies, "Try to notice and emulate my movements."`
+			`	With that, Ikgalef waves at a sensor, and the room shines a beacon of light on it.`
+			`	"Observe, <first>!" Ikgalef says, "Hello! Nice to meet you..."`
+			`	For the next two hours, Ikgalef slowly goes through the most basic of Sestor vocabularies with you, donning and taking off the translation device to let you know how the words actually sound. You record the whole session your personal digital assistant with the President's permission, for your future reference.`
+			`	As the day winds down, Ikgalef hands you a stack of books. Apparently, living in bunkers in a constant warzone makes physical copies of texts much more valuable in Sestor space than elsewhere. You feel a strange wave of nostalgia; physical books are rare outside of New Boston.`
+			`	You thank Ikgalef, promising to study the Sestor language in earnest. On your train ride to the hostel and back to the spaceport the next day, you find yourself starting to understand small parts of the broadcasts.`
+				decline
+
+event "sestor language timer 1"
+
+mission "Wanderers: Sestor Language 1 Update"
+	invisible
+	landing
+	source
+		government "Wanderer" "Kor Mereti" "Anatruskor Empire" "Kor Sestor" "Kor Efret" "Quarg (Kor Efret)"
+	destination "Earth"
+	to offer
+		has "sestor language timer 1"
+	on offer
+		conversation
+			`For the past four weeks, you have been diligently looking through the video recordings of Ikgalef performing basic phrases, the Sestor hatchling (Yes, hatchling, not children) hologram, and the books. Practise makes perfect, and you are not confident that you have grasped a basic understanding of the Sestor language. It is time to head back to Sopi Lefarkata and continue your studies.`
+				decline
+
+mission "Wanderers: Sestor Language 2"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		has "Wanderers: Sestor Language 1: declined"
+	on offer
+		event "sestor language timer 2" 21
+		conversation
+			`While the various markings on the Sestor bunker entrance still cannot be read, you can somewhat understand the spaceport clerks' greetings. Perhaps the greatest cultural shock is the lack of "Good morning" or "good afternoon", replacing it with a universal "Hello" instead. Moreover, the spaceport broadcasts seem much more intelligible to you. Although most words are still unrecognisable, you start to recognise the grammar structure. Through watching the gestures, you also start to discern the words' meaning.`
+			`	Are you confident in taking the next step at learning the Sestor language?`
+			choice
+				`Yes!`
+				`Not yet. I need to work harder!`
+					defer
+			`	Ikgalef meets you at the classroom, like last time. After school hours, most classrooms are deserted, save for some club activities that are on. You can hear emotional speeches and debates from some of the classrooms, and spaceship simulation in others. A large boxing ring is present in the school's gymnasium, where young Korath hatchlings in full protective gear fight against each other, as spectators cheer and jive. A comprehensive medical team is visible on full alert near the rings.`
+			`	You start talking to Ikgalef in Sestor without it using the translation device. Simple greeting, asking for directions, inviting for a drink, the usual stuff. Satisfied, the lesson carries on.`
+			`	The Kor Efret style themselves as the "Korath Friends" or "Friendly Korath". Somehow you expect, despite all the differences, "Friend" in Korath will still be "Efret". Ikgalef is quick to correct you that, in Sestor, "friend" is "rafeki" instead. You wonder whether the Sestor-Efreti animosity contribute to this change.`
+			`	Today, Ikgalef focusses its efforts in the less common everyday words. From the underground trains that travel everywhere in the cities, to the various algae and fish that made up the delicious soup the first time you were here, to the various services and stations that may provide emergency help, these words would be sufficient for you to communicate in most situations.`
+			`	Once again, you videotape the whole session, and save it alongside with a hologram and more intermediate books. Ikgalef bids you farewell, and you go separate ways.`
+				decline
+
+event "sestor language timer 2"
+
+mission "Wanderers: Sestor Language 2 Update"
+	invisible
+	landing
+	source
+		government "Wanderer" "Kor Mereti" "Anatruskor Empire" "Kor Sestor" "Kor Efret" "Quarg (Kor Efret)"
+	to offer
+		has "sestor language timer 2"
+	on offer
+		conversation
+			`Having grasped the basic grammar of the Korath Sestor language, it is but a matter of memorising the various words and dances about everyday objects and places. Three weeks is what it takes to get these words, and you are once again confident enough to continue your tutelage.`
+				decline
+
+#Sestor language mission 3. More excuse to show Sestor culture (as opposed to Efreti and Exile). Unlike the Efreti, the Sestor is a free democratic society, and the Korath are much more expressive and liberal. Unlike the Exiles, the Efreti do not have the deep insecurity and scarring the Drak ingrained into them. Of all, the Sestor resembles the old Korath culture the most, where the deity Isi'i is revered the most.
+#Beginning here, most conversation between FL and Korath will be in Korath language. (After Exile language, as well). Korath language rules apply:
+#No past/future tense. Broad generalisations. Dances frequently, sometimes only dance. Occasional untranslated words. Frequent swears. 
+mission "Wanderers: Sestor Language 3"
+	landing
+	invisible
+	source "Sopi Lefarkata"
+	to offer
+		has "Wanderers: Sestor Language 2: declined"
+	on offer
+		set "sestor ally"
+		conversation
+			`Your progress at learning the Korath language is going on swimmingly. Already, you can mostly discern the meaning of the news broadcast in the Sestor underground trains and accomodations you stay in.`
+			`	You walk into a bar near the spaceport, and once again buys a glass of the special numbing drink you drank with Ikgalef as the Sestor resumed its spaceflight operations. The process is clear, and you understand everything throughout the entire process. You do notice, however, that the words and gestures fellow patrons are using aren't something you know before. Time for more lessons.`
+			`	Are you confident in taking the next step at learning the Sestor language?`
+			choice
+				`Yes!`
+				`Not yet. I need to work harder!`
+					defer
+			`	Ikgalef is beaming when he sees you enter. "As expected, it is our victory! The opposition had no chance," Ikgalef dances wildly.`
+			`	Elections seems to be a huge part in Sestor society. Perhaps because of this, Ikgalef focusses the lesson on Sestor culture and identity. "We are the true Korath," emphasizes Ikgalef, "We are the scions of Isi'i."`
+			`	Ikgalef's words and gestures become considerably stiffer and serious, as it talks about Isi'i, the three-eyed god of Creation and Destruction. In a reverent voice, Ikgalef begins recounting Isi'i's presence.`
+			`	"Isi'i creates cycles, overseeing those who create and those who destroy. Isi'i maintains balance, protecting the weak while rewarding the strong. Isi'i governs change, for without destruction there can be no creation. Through light and the dark, through the peace and the war, Isi'i watches over all Korath."`
+			`	You cannot help but fall silent as well, as Ikgalef piously recites the god's mantra. After the recital, Ikgalef motions you to imitate him, in a strange half-bow half-hug position. Slowly, Ikgalef begins to chant and dance at the same time. A graceful dance and a short chant later, Ikgalef thanks you, as it hands you a small, red feather on its back.`
+			`	"Captain <last>, please do accept it. "`
+			choice
+				`(Take it)`
+			`Solemnly, you take Ikgalef's feather. Unsure of where to put the feather, you glance at Ikgalef. Around his belt, you notice a small, transparent pouch that houses a few feathers. It seems that feathers mean a lot in Korath relationships. Carefully, you place the feather in your waistbag.`
+			`	"I don't have a pouch like you yet, but I will treasure it," you say.`
+			`	Ikgalef seems pleased by your reverence.`
+			`	As you both walk towards the nearby restaurant you both frequent after the meetings, Ikgalef looks at you, and starts speaking.`
+			`	"I have your back, you have mine. Okote'."`
+			`	And you know enough Sestor to understand that the Sestor now thinks of you as an ally.`
+				decline
+
+
+#Final lesson. Rek sends FL for a mission in Sestor space. FL, if successful, becomes fluent in Korath language.
+#Efreti room is modelled after the Kremlin meeting room. Sestor is modelled after the one in the White House.
+#The way I portray the difference between "syncreistic" and "original" Korath gestalts, is that the Efreti are outwardly more reserved and controlled, while the Sestor readily expresses their emotions. Ultimately, however, the Efreti are as emotional as the Sestor, as seen by Urpasom's outburst. 
+#Both Efreti and Sestor have very strong "with-us-or-against-us" mentality. Ditto for the exiles, but they are too busy to care.
+mission "Wanderers: Sestor Language 4"
+	landing
+	name "Wanderer-Sestor Summit"
+	description "Bring Ektasi Rek to Sopi Lefarkata to meet with the Sestor leader."
+	source "Desi Seledrak"
+	destination "Sopi Lefarkata"
+	to offer
+		has "Wanderers: Sestor Language 3: declined"
+	on offer
+		conversation
+			`Once again, you see Ektasi Rek waving at you as you land on the spaceport. "Thank you for accompanying me to Laki Nemparu last time, Captain <last>. Are you free today? I have to go on a mission to Sopi Lefarkata and meet the Sestor there."`
+			choice
+				"Sure"
+					accept
+				"Maybe next time?"
+					defer
+	on complete
+		set "language: Sestor"
+		event "sestor shipyard 1"
+		"sestor wanderer relations" ++
+		conversation
+			`The spaceport on Sopi Lefarkata is like last time, tucked away behind a disguised mountain side. As you come in for the landing, you see a few Sestor drones preparing for takeoff. After all these years, you still cannot help but feel their imposing, powerful aura.`
+			`	Ikgalef is already waiting for you, like how it always did. Quickly, the three of you enter into a pod, speeding through the Sestor city into the governmental building.`
+			`	As you walk through Sopi Lefarkata's government hall, you see a giant indoor flagpole flying the Sestor Federation's crimson flag, its bold, agressive printing contrasting well against the milder Efreti emblem. The Sestor's meeting room, however, is much more modest than the Efreti's. A simple mahogany desk is surrounded by black leather seats. As Ikgalef motions you to sit, an intricate machine built in the desk fills you a cup of tea automatically.`
+			`	Ikgalef motions for his Korath-human translator device, but you declines using the Korath language. Ikgalef freezes in shock for a short while, then he beams.`
+			`	"Captain <last>, my old friend! You have learnt our language!" Ikgalef motions excitedly and joyfully, momentarily forgetting about the meeting. After a short while of passionate celebration, Ikgalef realises that Rek exists, and calms down.`
+			`	"Greetings, President," Rek begins, "May I assume that the matter of the Anatruskor are also to be discussed today?"`
+			`	"The Anatruskor Empire and the Sestor Federation are staunch allies. We will not give up our planets," Ikgalef says adamantly.`
+			`	"President, I am here to inform you our planned settlement on Sek Alarfarat, an abandoned cracked planet."`
+			`	"Sek Alarfarat is Anatruskor territory," Ikgalef's tone becomes considerably colder.`
+			`	"It was, until the planet is cracked and the population perished," Rek responds, "Also, there are no direct links from current Anatruskor sectors to Fornarep."`
+			`	Ikgalef's face darkens, as its gaze hardens. The Sestor President's anger, however, does not seem to be directed at Rek. Through gritted teeth, Ikgalef assents.`
+			`	The first agenda seems to have been met quickly, and the discussion quickly turns to the matter of the Mereti.`
+			`	"Ms. Representative, I take it that the Mereti are now part of you?"`
+			`	"No. The Mereti are an independent gestalt that currently views terraforming as their primary directive. We aim to teach them."`
+			`	"By terraforming, do they mean all the planets in Mereti space?"`
+			`	"Currently their focus is on Korbatri Eska, but yes. All planets are slated for Mereti terraformation," replies Rek.`
+			`	"The Sestor wants run ships through Mereti territory to facilitate closer cooperation," Ikgalef offers. To nobody's surprise, this is accepted.`
+			`	With both goals completed, the negotiations end. Like last time, Rek wants to stay in Sopi Lefarkata for a while, so no return trip is needed. Before you leave, Ikgalef pulls you to the side.`
+			`	"Okote'! You have learnt our language!" says Ikgalef, the second time, "Thanks to that, I won't need that cumbersome translator!"`
+			`	With a holler of joy, Ikgalef leaps from the translator, and starts speaking directly to you in Sestor. A hand wave calls a few Korath aides forward, who quietly fold the translator up, and carry it to a small storage shed nearby.`
+			`	"We must tread carefully, Okote'," Ikgalef says, "We must make sure the Efreti do not benefit from the Wanderers too much."`
+			`	The bad blood between the Sestor and the Efreti need a lot of effort to breake.`
+			`	"Another good news, Okote'! Our factories run at a surplus now, especially our fighter division. You are free to buy our Far Lek 14's and Far Osk 29's at our shipyards."`
+			`	With that, the day ends. Compared to the Efreti negotiations, you do not get to change anything today. However, You cannot help but think that you are going to have a heavy hand in shaping the future of the Korath Space.`
+			
+event "sestor shipyard 1"
+	planet "Sestor Ikfar"
+		shipyard "Sestor Basics"
+	planet "Sopi Lefarkata"
+		shipyard "Sestor Basics"
+	planet "Sebra Skira"
+		shipyard "Sestor Basics"
+
+
+
+#Traditional Wanderer colony, prioritising the environment over all else.
+event "solima skarati landfall (wanderer)"
+	system Farbutero
+		government "Wanderer"
+		fleet "Wanderer Defense" 600
+		fleet "Wanderer Freight" 400
+	planet "Solima Skarati"
+		description "Centuries of careless industrialisation have filled this planet's oceans with industrial toxins. The landscape is mostly barren, thanks to constant acid rains and powerful storms. Due to a strengthened greenhouse effect, the planet's surface temperature is also higher than normal."
+		description "	The Wanderers have established a base on the beaches of the largest continent, and have constructed purification and carbon fixation plants to reverse the damage done to it. Progress is steady, and the efficient catalyst is predicted to finish its work in around two months."
+		spaceport "A large excavated rocky plain currently serves as Solima Skarati's spaceport. Mobile tankers are the only facilities available apart from a rudimentary tent not unlike New Boston's spaceport. Due to a lack of stable electricity supply, petrol-fuelled vehicles with internal combustion engines are the prevalent transportation here. Thick-tired busses transport Wanderer workers from the factories to a budding settlement near the coast."
+
+event "solima skarati development (wanderer)"
+	planet "Solima Skarati"
+		outfitter "Wanderer Basics"
+		outfitter "Wanderer Advanced"
+		description "Solima Skarati is a middle-sized terrestrial planet recovering from rampant pollution. Artificial forests and algae farms cover much of this planet's surface, as carbon fixing plants and water purification plants continuously work to reverse the harmful atmosphere and hydrosphere around the planet. Massive dams separate designated water reservoirs from toxin-fuelled oceans, providing a stable water supply for local industries and residents."
+		spaceport "Near the coast lies Solima Skarati's primary spaceport. Large conveyer belt systems transfer pallets and containers between spaceship docks and the neighbouring airport, maritime port, train station, and truck depot. Byproducts of the detoxification and carbon fixation can be seen frequently shipped off-world, while fresh catalysts and building materials constitute much of the incoming flow. A dedicated section of the spaceport is reserved for incoming Riptides, ferrying evacuating Wanderers to this new world."
+
+#The Efreti industrialise this world as they slowly heal it, for they have a much lesser economic base to pour money into terraforming.
+event "solima skarati landfall (efreti)"
+	system Farbutero
+		government "Kor Efret"
+		fleet "Small Kor Efret" 600
+	planet "Solima Skarati"
+		description "Centuries of careless industrialisation have filled this planet's oceans with industrial toxins. The landscape is mostly barren, thanks to constant acid rains and powerful storms. Due to a strengthened greenhouse effect, the planet's surface temperature is also higher than normal."
+		description "	Far from the toxic coast, the Kor Efret have established a rudimentary settlement. Gas masks are mandatory, as small-scale water purification plants are constructed along the coast. The progress is slow, however, and it is projected to take years before the planet is completely pollutant-free."
+		spaceport "Wasting no time, the Efreti have constructed a large spaceport near their first settlement. Petrol-fuelled vehicles are currently the mainstay, although electric lines are already being constructed everywhere. Large Echo-Galleons are a frequent sight, ferrying thousands of Korath settlers in daily."
+
+event "solima skarati development (efreti)"
+	planet "Solima Skarati"
+		outfitter "Korath Basics"
+		outfitter "Korath General Basics"
+		outfitter "Kor Efret Basics"
+		description "This rebuilt factory world serves as the Efreti's second industrial centre, with hundreds of factories processing mined minerals and building vessels large and small. Being abandoned until recently have allowed advance planning to take place, and numerous specialised industrial districts have appeared, streamlining manufacturing processes."
+		description "	The Efreti have taken great care in pollution control, a result of living in the heavily polluted Laki Nemparu for centuries. Massive filters are installed, transforming toxic wastewater into harmless substances before passing into the ocean. Catalytic converters are installed on factory chimneys as well. Along the coastline, rows of pumps feed the polluted ocean water into special plants, cleaning the environment."
+		spaceport "Solima Skarati's spaceport is the cumulation of the many lessons the Efreti have learnt in environmental protection. Large walkways and electric vehicles minimise emissions, and ubiquitous trees and gardens provide the spaceport with comparatively fresh air. Efreti freighters and space liners continue to pour in and out of this spaceport, relieving the other Efreti planets' overpopulation problems."
+
+#Compromising allow more balanced development
+event "solima skarati landfall (compromise)"
+	system Farbutero
+		government "Kor Efret"
+		fleet "Small Kor Efret" 1200
+		fleet "Wanderer Defense" 1200
+		fleet "Wanderer Freight" 300
+	planet "Solima Skarati"
+		government "Wanderer"
+		description "Centuries of careless industrialisation have filled this planet's oceans with industrial toxins. The landscape is mostly barren, thanks to constant acid rains and powerful storms. Due to a strengthened greenhouse effect, the planet's surface temperature is also higher than normal."
+		description "	The Wanderers established a city near the coast, while the Efreti base themselves further inland, an asphalt road connecting the two. With the Wanderers' help, the Efreti are in the process of installing advanced anti-pollution devices on the planet's many factories. In the future, this planet would be the model for green Korath industrialisation."
+		spaceport "The joint Wanderer-Korath spaceport is much unlike any existing designs. Landing pads are elevated ten metres in the air, with movable platforms allowing easy transferral of goods and passengers from the pads to the many facilities downstairs. A train line runs from the spaceport to the two settlements on this planet."
+
+event "solima skarati development (compromise)"
+	planet "Solima Skarati"
+		description "The first world with both Wanderer and Korath permanent inhabitants, Solima Skarati is a Korath model colony. Thanks to the Wanderers' waste treatment technology, factories are able to operate under strict environmental regulations without sacrificing productivity. Thanks to Korath protection technology, both Wanderers and Korath can walk around the polluted landscape without suffering from ill health effects."
+		description "	The Korath and Wanderer inhabitants live next as neighbours and housemates in the planet's numerous cities, all interconnected by Korath-style trains and Wanderer-derived aircraft. With much economic opportunities, Solima Skarati is a desired destination for many evacuating Wanderers and Efreti Korath alike."
+		outfitter "Wanderer Basics"
+		outfitter "Korath Basics"
+		outfitter "Korath General Basics"
+
+
+
+
