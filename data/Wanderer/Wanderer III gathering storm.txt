@@ -1045,6 +1045,7 @@ mission "Wanderers: Sestor Language 4"
 	destination "Sopi Lefarkata"
 	to offer
 		has "Wanderers: Sestor Language 3: declined"
+		has "sestor wanderer diplomacy"
 	on offer
 		conversation
 			`Once again, you see Ektasi Rek waving at you as you land on the spaceport. "Thank you for accompanying me to Laki Nemparu last time, Captain <last>. Are you free today? I have to go on a mission to Sopi Lefarkata and meet the Sestor there."`
