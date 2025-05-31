@@ -1433,39 +1433,12 @@ mission "Sestor: Resumption of Fleet Activity"
 			`	As you leave your ship, a group of Sestor officials accompany you to an impromptu stage set up in the middle of the spaceport, where a group of Korath, lead by Ikgalef, are waiting for you.`
 			`	"Greetings, Humanika Captain!" says Ikgalef, "Because of your effort, the Sestor Federation is whole again! This is the day we celebrate our rise! I give speech in Korath soon. You do not understand it yet, so I prepare a translation of it for you."`
 			`	The speech, going off by the translated transcript, seem to be a standard politician's message to the nation, informing them about your, and Ikgalef's, heroic deeds bringing the Kor Sestor back to whole again. In the middle of his speech, Ikgalef gestures at you, and you stand as the Korath applaud you by pawing at their chests.`
-			`	Near the end of the speech, Ikgalef gives a wild gesture towards the sky. In unison, a massive Sestor drone fleet, parked in the spaceport, lift off in unison, and fly over the stage before pitching upwards towards the sky.`
+			`	Near the end of the speech, Ikgalef gives a wild gesture towards the sky. In unison, a massive Sestor drone fleet, parked in the spaceport, lift off in unison, and fly over the stage before pitching upwards towards the sky. Almost immediately after, a second fleet takes off, and trails behind the first. Then another lifts off, followed by yet more fleets. The automaton fleet seem endless from the ground; the massive Sestor fleet the Alpha took to strike Farpoint must have been but a fraction of the Sestor's true capabilities.`
 			`	After a short question session, the celebrations truly begin, with free drinks and food being offered to everyone in the spaceport. As everyone is immersed in the joyous atmosphere, you see Ikgalef approach you.`
-			`	`
-			
-			
-			
-			
-			
-			
-			`Ikgalef being present while you land is now a routine rather than a surprise. Today's landing is no different, with you waving to the familiar silhouette of the Sestor President, hoping for a friendlier, less tense conversation.`
-			`	To your surprise, Ikgalef is not giving you a job today. Instead, wearing a translator, he points at the many, many Sestor automata that lines the spaceport. Somehow, you have missed them, probably too focused on manoeuvring your ship through the tight gap of Sopi Lefarkata's spaceport.`
-			`	"Rafeki! Today is a great day, for the Sestor territory is whole again. Pi'at Afilek for your service for us, and we owe you a lot! Please, Rafeki Captain, join me as we watch the first Sestor automaton fleets leave their base!"`
-			`	As if on command, on your left, a gigantic Tek Far 109 filled with FO-29 fighters and FL-14 drones lifts off from the ground, engines whirring. It quickly joins the rapidly moving line of Sestor warships leaving the spaceport, racing towards the sky.`
-			`	"Isn't this marvellous, Rafeki? After the fiendish, dishonourable Alpha ralukut sacked our capital, the grand fleet of the True Korath rules the cosmos once again! With an upgraded control system and more vigorous defensive installments, we shall never be brought down again!"`
-			`	With the ship launch sequence completed, Ikgalef invites you to a pavilion in the centre of a park. You both sit down, and Ikgalef produces two bottles of reddish-yellow liquid from its bag.`
-			`	"Have a drink, my Rafeki!" Ikgalef finishes, handing you one of the bottles.`
-			`	Feeling positive and adventurous, you decide to open the bottle, and drink the thick liquid within. To your surprise, it is not alcoholic. The drink is sweet, with a slight sour tone to it, reminding you of the Caipririnha you always order in bars back on Earth. Surprisingly, the drink causes a pleasant tingling sensation throughout your mouth, eventually numbing it. You mentally remind yourself of buying some when you have the chance.`
-			`	"True Korath?" you ask.`
-			`	"Yes, us, True Korath! Those who never bend their knees, those who welcome everyone with open arms, those who fight for freedom and justice, the True Korath!"`
-			`	Ikgalef's expression then turned soft and sighed, "When the Archons come, they give us ultimatum. Join the Efreti traitors, or leave on an exile. We choose third option, to stay here, but the Archons demanded our brightest and smartest to go. They never come back."`
-			`	"You mean the Korath Exiles?" you ask.`
-			`	"Yes, you hear of them? In stories and legends, I guess," Ikgalef replies, "Like us, they do not submit. Like us, they choose freedom, the hard way. They are also True Korath. Maybe they are still out there, maybe they die by the Archons the moment they jump... At least they die for honour, unlike the cowardly Efreti traitors who bow and submit to the Quarg like slaves!"`
-			`	By the end of the sentence, Ikgalef is sporting a ferocious snarl. He sighs, "I guess we do not wallow in the past. At least the True Korath rises again-"`
-			`	"The Korath Exiles still exist," you interrupt.`
-			`	Ikgalef turns sharply towards you.`
-			`	"East of the human core worlds, south from here," you continue, "there exists a cluster of systems where a group of Korath resides. They live in stations, and occasionally raid us humans for resources."`
-			`	"What else do you know about them?"`
-			`	"The Wanderers contacted them to shut down your factories," you say, "and they took some of your schematics along with some of the Mereti's."`
-			`	Ikgalef falls silent for a long, long while. Eventually, it speaks.`
-			`	"May you meet me at the spaceport later? I have job for you."`
-			`	"Sure."`
-				decline
-	on decline
+			`	"Humanika Captain <last>, I do not know enough Human to show how much we owe you. Because of you, we are saved from dying slowly in Sopi Lefarkata, and are instead thriving here.`
+			`	"When the Drak come, they give us two choices. Join the traitors in Laki Nemparu, or go to the Core. We choose third option, to stay here, but the Archons demand our brightest and smartest to go. They think we all die, but we survive. Our economy runs. Our shipyards run. Our people live. The True Korath rise, and we shall never fall!"`
+			`	You sit next to Ikgalef, as you watch the endless stream of Sestor drones taking off towards the cosmos. The Sestor are now allied to you, and the Wanderers are probably receptive to them. The Unfettered Hai up north may still be a problem, but that would be a question for tomorrow. Today, you can sit back and relax.`
+	on complete
 		event "sestor fleets emerge"
 		
 event "sestor fleets emerge"
@@ -1515,6 +1488,7 @@ mission "Sestor: Exile Meeting"
 	stopover "Far'en Lai"
 	destination "Sopi Lefarkata"
 	to offer
+		never
 		has "Sestor: Resumption of Fleet Activity: declined"
 		has "event: sestor fleets emerge"
 		"reputation: Korath" > 0
