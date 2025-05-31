@@ -424,7 +424,7 @@ mission "Sestor: Restore Ikfar Outfitter"
 			`	The scene inside is surprisingly similar to a library you find back in human space. Thousands of books sit on rows of shelves, neatly arranged based on the colours on the book spines. Unlike a human library, however, the space is noisy, and food and drinks are served via a counter nearby. As Ikgalef approaches and talks to a clerk behind a desk nearby, you notice a pair of Korath handing each other small patches of scales, suspiciously like shed Korath skin. Then, they eat the skin in one bite, before washing them down with a large gulp of yellowish brown beverage.`
 			choice
 				`(stay silent)`
-				goto blue
+					goto blue
 				`"What is that?!"`
 			`Before you can ask, however, Ikgalef is evidently done with the clerk, now carrying a large suitcase where the blueprints and the plans are stored in.`
 				goto startmission
@@ -1416,7 +1416,7 @@ mission "Sestor: Resumption of Fleet Activity"
 	invisible
 	source
 		government "Kor Sestor"
-		not "Sestor Ikfar"
+		not planet "Sestor Ikfar"
 	destination "Sestor Ikfar"
 	to offer
 		has "event: sebra skira activated"
