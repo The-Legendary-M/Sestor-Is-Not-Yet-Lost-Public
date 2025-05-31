@@ -1152,6 +1152,106 @@ event "solima skarati development (compromise)"
 		outfitter "Korath Basics"
 		outfitter "Korath General Basics"
 
+mission "Wanderers: Korath Exile Reconaissance"
+	landing
+	name "Spy on Korath Exile systems"
+	description "Bring Sobari Tele'ek to the Korath Exile systems in the south, to see what they are up to."
+	source
+		government "Wanderer"
+	destination "Desi Seledrak"
+	passengers 1
+	waypoint "Kor Fel'tar"
+	waypoint "Kor En'lakfar"
+	waypoint "Kor Men"
+	waypoint "Kor Zena'i"
+	waypoint "Kor Tar'bei"
+	waypoint "Kor Nor'peli"
+	waypoint "Parca"
+	waypoint "Lucina"
+	to offer
+		has "language: Efreti"
+		has "language: Sestor"
+	on offer
+		unvisit "Parca"
+		unvisit "Lucina"
+		event "korath colonise ember wastes" 2
+		conversation
+			`In the past few months, you have dedicated much time in Korath space, studying the languages of both the Efret and Sestor. The large library on your ships are now filled with Efreti comics and novels Rek gave you as you finished your studies, as well as Sestor textbooks and encyclopaedias Ikgalef pushed into your hands when you asked him for some.`
+			`	Yet, for all the Korath culture you have immersed yourself in, the archives are incomplete. Despite your (and the Wanderers') best efforts, the Korath Exiles, the group of Korath hanging out in the core and occasionally raiding human ships nearby, remain hostile. And by the way they stole Mereti and Sestor technology as they left Korath Space, they do not seem to be keen on making friends with you any time soon.`
+			`	As you mull over the prospects of a seemingly inevitable war with the Korath Exiles, you notice the unique, bloated silhouette of Sobari Tele'ek approaching you.`
+			`	"Greetings, Captain <last>," says Tele'ek, "Thank you for your [help, assistance] in negotiating with the two Korath nations. Other than the Unfettered Hai, the only threat to us are the Korath Exiles in the south."`
+			choice
+				`"Should we attempt a pre-emptive strike?"`
+					goto preemptive
+				`"We must stay vigilant."`
+			`"Indeed we should," replies Tele'ek.`
+				goto scouting
+			label preemptive
+			`"It would be unwise to attack them now," replies Tele'ek, "Our Jump Drive stash is limited, and we have no intelligence on them just yet. It would be [risky, dangerous]."`
+			`	Suddenly, Tele'ek stops, and inhales deeply. Clenching his talons, he speaks in a much flatter tone.`
+			`	"We must not forget that we are [tourists, visitors] in Korath space as well. We do not attack, merely defend."`
+			`	Tele'ek shudders, and his tone returns to normal.`
+			label scouting
+			`	"Before we attempt anything, we must first [find, gather] intelligence on the Korath Exiles. Captain <last>, I want to visit Korath Exile systems to see their current [preparation, deployment]. May you help me?"`
+			choice
+				`"Sure."`
+					accept
+				`"Maybe later?"`
+					defer
+		
+	on enter "Kor Fel'tar"
+		dialog "This system seems rather peaceful, and activity comprises mostly of miner vessels mining asteroids and docking with the station. Military vessels are very rare. Tele'ek tells you to head further south."
+	
+	on enter "Kor En'lakfar"
+		dialog "This system looks like the major shipyard of the Korath Exiles. Cargo vessels can be seen approaching the station, and occasionally new Mereti and Sestor automata can be seen leaving the docks and heading southwards. Tele'ek tells you to head further south."
+	
+	on enter "Kor Men"
+		dialog "Massive solar arrays are visibly present on this station, and, while flying close to the station, you can see green things being encased in what appears to be glass domes. This station is probably the food production centre of the Korath Exiles. Tele'ek tells you to head further south, like all the raiders seem to be going."
+	
+	on enter "Kor Zena'i"
+		dialog "You notice Palavrets, Rano'ereks, and Mereti and Sestor automata avoiding you while entering the station. The majority of the ships that leave the station, however, seem to jump Southwards. Furrowing his brows, Tele'ek tells you to head further south."
+	
+	on enter "Kor Tar'bei"
+		dialog "Similar to the station in Kor Fel'tar, Sessiliki Far seems to be a refinery. The ships that jumped from Kor Zena'i do not stop here and jumps further south. Tele'ek tells you to head further south."
+		
+	on enter "Kor Nor'peli"
+		dialog "Tele'ek expects that, with how all the Korath ships seemingly going south now, this system would be their rally point. This is not the case, however, as you detect Palavrets and other raider vessels, alongside automata, jumping towards the Southeast... Tele'ek tells you to head that way."
+	
+	on enter "Parca"
+		dialog "The fleet Tele'ek was expecting in Kor Nor'peli is, as it turns out, stationed here. A large concentration of Korath forces, the majority of them automata, seem to be orbiting the star, and protecting Baianus. Yet, when you detect a few vessels moving further southeast, Tele'ek tells you to go that way."
+	
+	on enter "Lucina"
+		dialog "As it turns out, the fleet over Baianus in Parca is not the entire fleet; the rest of the fleet is here. Another large automata fleet hovers above Far Monad, with ships occasionally jumping between here and Parca."
+	
+	on waypoint
+		dialog "After lingering here for a while longer, and without detecting any Korath ships jumping to any other systems not yet visited, Tele'ek decides to call it a day, and tells you to return to Desi Seledrak."
+		
+	on complete
+		conversation
+			`Instead of preparing to invade Korath Space, the Korath Exiles seem to be invested in expanding south instead. Tele'ek's mood is visibly pleasant the entire trip back to Desi Seledrak.`
+			`	"With the Exiles [concerned, invested] in the south, our southern flank is secure for now. For now, we focus on the Unfettered Hai only.`
+			`	"However, we can now [confirm, know for sure] that the Exiles are using Mereti and Sestor automata as combat force. From my analysis of these ships, they are our [peer, same level] in terms of force.`
+			`	"We must improve our defence forces further to ensure our victory."`
+			`	As you land on Desi Seledrak, Tele'ek immediately rushes to his office after a rushed farewell.`
+
+event "korath colonise ember wastes"
+	system Parca
+		government "Korath"
+		add fleet "Korath Home" 3000
+	planet Baianus
+		description `From a distance, this large, icy moon is superficially reminiscent of Enceladus back in Sol: it is similarly exposed to its giant parent's radiation belts, and scans indicate countless tantalizing traces of chemicals that suggest there may be something more to the moon than it appears.`
+		description `	Unlike Enceladus, however, the surface of Baianus is regularly wracked by both waves of heat and energy. A stay of any length on the surface is likely to see waves of auroras swirl through its unbreathably thin atmosphere, accompanied by glows and sparks rippling across the terrain. Your environmental system strongly recommends remaining inside your ship whenever ion storms are active.`
+		description `	Recently, the Korath Exiles have begun setting up an outpost in this desolate, icy world. Build partially underground, the outpost serves little more than an anchor point for the various automata to operate in the Ember Wastes unimpeded.`
+		spaceport `Baianus's spaceport is pretty rudimentary, consisting of a simple ice landing pads with a refuelling nozzle. There are no amenities present here, and any trades have to be communicated directly to the base to be processed.`
+	system Lucina
+		government "Korath"
+		add fleet "Korath Home" 3000
+	planet "Far Monad"
+		description `Unique for a terrestrial planet orbiting close to a red dwarf, Far Monad is not tidally locked at all, and instead have a 24-hour day cycle very similar to Earth. Two large continents dominate the landscape, and large, purple plants can be ubiquitously seen. The oxygen-rich atmosphere makes it an ideal place for terrestrial animals to live on.`
+		description `	Recently, the Korath Exiles have set up an outpost in this planet, with large-scale constructions ongoing to transform a flat part of the central desert into a large spaceport complex. Automata ships can be seen flying to and from this land, delivering cargo onto the world.`
+		spaceport `The spaceport is still under construction, but the fruit of Korath labour is already taking place. Large buildings similar to those seen in Efreti and Sestor space are being constructed, and a comprehensive trade hall is already set up, although the goods it offer is still lacking.`
+		outfitter "Korath Basics"
 
 
+			
 

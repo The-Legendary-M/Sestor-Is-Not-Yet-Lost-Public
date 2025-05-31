@@ -89,6 +89,7 @@ mission "Bunrodea: Korath Raid Defense"
 			`	"Fulfil our quests, and Her Majesty may yet grant you greater rewards."`
 			`	With that, the leader waves you off. As you look at the job board next to the spaceport, you find a few that you can take. The Bunrodea has indeed opened their job market to you.`
 
+#The only places FL can go is Megasa space, where a rebellion is brewing. To prevent the player from siding against them, the Queen's government quickly allows the player to go to Erabu space as well.
 mission "Bunrodea: Queen likes you"
 	landing
 	invisible
@@ -96,11 +97,22 @@ mission "Bunrodea: Queen likes you"
 		government "Bunrodea" "Bunrodea (Guard)"
 	destination "Earth"
 	to offer
-		"bunrodea jobs" > 9
+		"bunrodea jobs" > 10
 	on offer
 		"reputation: Bunrodea" += 50
 		"reputation: Bunrodea (Erabu)" += 50
 		"reputation: Bunrodea (Guard)" += 50
 		"reputation: Bunrodea (Megasa)" += 50
 		conversation
-			`Ever since you obtained the Queen's permission, you have completed a handful of jobs posted in the job boards of Bunrodea space. `
+			`Ever since you obtained the Queen's permission, you have completed a handful of jobs posted in the job boards of Bunrodea space. The translator the Bunrodea gave you functioned well, and, gradually, the Bunrodea in the four planets you are allowed to go to, are getting used to your presence.`
+			`	As you land on <origin>, you expect the same, idyllic feeling you felt every time you landed on the planets. However, this time, a Bunrodean official seems to be waiting for you.`
+			`	"Hello," the official says, "Hello, hello, hello..."`
+			`	Before you can respond, the official produces a document from her pocket, and starts reading.`
+			`	"Take this, human. Her Majesty's government has instructed us that, from today onwards, you are granted entry to planets equal to an Erabu citizen. All planets in Megasa space, and most planets in Erabu space, will now allow you to land."`
+			`	"Be reminded that, however, the Royal Capital is still off limits."`
+			`	With that finished, the official immediately turns around and leaves.`
+				decline
+			
+			
+			
+			

@@ -1,5 +1,3 @@
-
-
 #Sestor fleets
 fleet "Small Kor Sestor"
 	add variant
@@ -10,6 +8,11 @@ fleet "Small Kor Sestor"
 		"Met Par Tek 53 (Mereti)"
 	
 fleet "Large Kor Sestor"
+	add variant
+		"Kar Ik Vot 349"
+		"Tek Far 109"
+		"Far Osk 27" 7
+		"Far Lek 14" 9
 	add variant 2
 		"Kar Ik Vot 349 (Mereti)"
 		"Tek Far 71 - Lek"
@@ -32,8 +35,17 @@ fleet "Kor Efret Home"
 	add variant
 		"Arch-Carrack"
 		"Charm-Shallop" 2
+	add variant 2
+		"Charm-Shallop (Mereti)" 2
+	add variant 2
+		"Charm-Shallop (Sestor)" 2
+	add variant
+		"Charm-Shallop (Automata)" 2
+	add variant
+		"Arch-Carrack (Mereti)"
+	add variant
+		"Arch-Carrack (Sestor)"
 
-#KTI-300s for Korath. TF78S's for cargo.
 fleet "Sestor Colonisation Transports"
 	government "Kor Sestor"
 	names "kor sestor"
@@ -41,10 +53,18 @@ fleet "Sestor Colonisation Transports"
 		names "kor sestor fighter"
 	commodities Food Clothing Metal Plastic Medical Equipment Industrial Electronics "Heavy Metals"
 	personality timid
+	variant 5
+		"I'tak Korati" 3
+	variant 3
+		"Lilot Korati"
+	variant 2
+		"Lilot Korati" 2
 	variant 
-		"Kotnrareb Tubfaleb Ik'ih 300"
 		"Tek Far 78 - Osk (Logistics)"
-		"Far Osk 27 (Cargo)" 11
+		"Far Osk 27 (Cargo)" 9
+	variant 2
+		"Met Par Tek 53 (Cargo)"
+
 		
 fleet "Sestor Logistics"
 	government "Kor Sestor"
@@ -111,9 +131,7 @@ fleet "Anatruskor Logistics"
 	variant
 		"Lilot Korati" 2
 	variant
-		"Kotnrareb Tubfaleb Ik'ih 300"
-
-		
+		"I'tak Korati"
 
 
 fleet "Anatruskor Miners"
@@ -125,3 +143,217 @@ fleet "Anatruskor Miners"
 	cargo 0
 	variant 
 		"'olofez (Digger)" 4
+	
+fleet "Kor Alaji Raid"
+	government "Kor Alaji"
+	names "korath"
+	fighters
+		names "korath"
+	cargo 1
+	commodities "Food" "Clothing" "Metal" "Plastic" "Medical" "Heavy Metals"
+	outfitters "Korath Exiles Remnant Donations"
+	personality
+		disables plunders opportunistic harvests
+	variant 15
+		"Palavret (Ember)"
+		"'olofez" 2
+	variant 3
+		"Palavret (Ember Blaze)"
+		"'olofez" 2
+	variant 3
+		"Palavret (Ember Shunt)"
+		"'olofez" 2
+	variant 2
+		"Rano'erek"
+		"'olofez" 4
+	variant 2
+		"Rano'erek (Shunt)"
+		"'olofez" 4
+
+
+
+
+	
+fleet "Small Rigra"
+	government "Bashkmul (Rigra)"
+	names "rigra"
+	cargo 1
+	personality
+		coward disables plunders harvests
+	variant
+		"Flintlock" 2
+	variant
+		"Flintlock (Plague)" 2
+	variant 2
+		"Flintlock (Thunderstrike)" 2
+	variant 2
+		"Flintlock (Thiik)" 2
+	variant 2
+		"Flintlock (Thiik Fast)" 3
+	variant
+		"Flintlock (Full Thunderstrike)" 2
+	variant
+		"Flintlock (Pug)" 2
+	variant
+		"Flintlock (Thunderstrike)"
+		"Trident"
+		"Slingshot" 9
+	variant
+		"Flintlock (Thunderstrike)"
+		"Trident"
+		"Slingshot (Thunderstrike)" 9
+	variant
+		"Trident"
+		"Slingshot" 9
+		"Flintlock (Thunderstrike)" 2
+
+fleet "Large Rigra"
+	government "Bashkmul (Rigra)"
+	names "rigra"
+	cargo 1
+	personality
+		coward disables plunders harvests
+	variant 10
+		"Flintlock (Thunderstrike)" 5
+	variant 10
+		"Flintlock (Thiik Fast)" 5
+	variant 10
+		"Flintlock (Thiik)" 5
+	variant 10
+		"Flintlock (Full Thunderstrike)" 3
+		"Flintlock (Thunderstrike)" 2
+	variant 10
+		"Trident"
+		"Slingshot" 9
+		"Flintlock (Thunderstrike)" 5
+	variant 10
+		"Trident" 2
+		"Slingshot" 18
+	variant 10
+		"Trident" 2
+		"Slingshot" 9
+		"Slingshot (Thunderstrike)" 9
+		"Flintlock (Thunderstrike)" 5
+	variant 10
+		"Trident" 3
+		"Slingshot" 27
+	variant 10
+		"Flintlock (Thiik)" 10
+	variant 10
+		"Flintlock (Thiik Fast)" 10
+	variant
+		"Pug Maboro (Thiik)"
+		"Flintlock (Thunderstrike)" 5
+	variant
+		"Pug Maboro (Thunderstrike)"
+		"Flintlock (Thunderstrike)" 5
+	variant
+		"Pug Maboro (Plague)"
+		"Flintlock (Plague)" 5
+
+fleet "Rigra Traders"
+	government "Bashkmul (Rigra)"
+	names "rigra"
+	cargo 1
+	personality
+		coward
+	variant
+		"Trident (Cargo)"
+		"Coffer" 9
+
+fleet "Rigra Raid"
+	government "Bashkmul (Rigra)"
+	names "rigra"
+	cargo 1
+	personality
+		coward plunders
+	variant
+		"Flintlock (Thiik)" 5
+	variant
+		"Flintlock (Thiik Fast)" 5
+
+
+fleet "Small Pug (Bashkmul)"
+	government "Pug (Bashkmul)"
+	names "pug"
+	cargo 1
+	personality
+		heroic
+	variant 1
+		"Pug Zibruka"
+	variant 2
+		"Pug Zibruka" 2
+	variant 2
+		"Pug Enfolta"
+	variant 1
+		"Pug Enfolta"
+		"Pug Zibruka"
+
+fleet "Large Pug (Bashkmul)"
+	government "Pug (Bashkmul)"
+	names "pug"
+	cargo 1
+	personality
+		heroic
+	variant 1
+		"Pug Enfolta"
+		"Pug Zibruka" 2
+	variant 1
+		"Pug Enfolta" 2
+	variant 1
+		"Pug Zibruka" 5
+	variant 2
+		"Pug Maboro"
+		"Pug Zibruka" 2
+	variant 3
+		"Pug Maboro"
+		"Pug Enfolta"
+		"Pug Zibruka"
+	variant 2
+		"Pug Maboro"
+		"Pug Enfolta" 2
+	variant 1
+		"Pug Maboro"
+		"Pug Enfolta"
+		"Pug Zibruka" 2
+
+fleet "Quarg (Bashkmul)"
+	government "Quarg (Bashkmul)"
+	names "quarg"
+	cargo 3
+	personality
+		forbearing opportunistic
+	variant
+		"Quarg Lindwyrm"
+	variant
+		"Quarg Wardragon"
+	variant
+		"Quarg Drake" 2
+
+fleet "Large Quarg (Bashkmul)"
+	government "Quarg (Bashkmul)"
+	names "quarg"
+	cargo 1
+	personality
+		forbearing opportunistic
+	variant 2
+		"Quarg Wardragon" 4
+	variant 2
+		"Quarg Wardragon" 3
+		"Quarg Wyvern"
+	variant 2
+		"Quarg Wardragon" 2
+		"Quarg Wyvern" 2
+	variant
+		"Quarg Wyvern" 3
+	variant
+		"Quarg Wardragon" 3
+		"Quarg Drake" 3
+	variant
+		"Quarg Wyvern" 2
+		"Quarg Drake" 4
+	variant
+		"Quarg Hydra"
+		"Quarg Wyvern"
+		"Quarg Wardragon" 2
+

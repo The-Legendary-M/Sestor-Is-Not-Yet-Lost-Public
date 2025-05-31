@@ -528,6 +528,7 @@ ship "Solifuge" "Solifuge (Ionic)"
 		"Hai Corundum Regenerator"
 		"Hai Diamond Regenerator"
 		"Hai Williwaw Cooling" 8
+		"Outfits Expansion" 2
 		"Pulse Rifle" 71
 		`"Benga" Atomic Steering`
 		`"Bufaer" Atomic Steering`
@@ -822,7 +823,6 @@ ship "Kama" "Kama (Guns)"
 		"Dark Reactor"
 		"Reactor Overclocker"
 		"Solar Battery" 2
-		"Chiisana Rift Thruster"
 		"Ookii Rift Thruster"
 		"Chiisana Rift Steering"
 		"Ookii Rift Steering"
@@ -860,7 +860,7 @@ ship "Kama" "Kama (Megasa Strong Alt)"
 		"Mandible Cannon"
 		"Buzzer Anti-Missile"
 		"Large Shield Relay"
-		"Shield Relay Booster" 6
+		"Shield Relay Booster" 5
 		"Large Nanite Fabricator"
 		"Nanite Enhancer"
 		"Hyperdrive"
@@ -889,7 +889,6 @@ ship "Kama" "Kama (Erabu Strong)"
 		"Reactor Overclocker" 9
 		"Reactor Limiter"
 		"Subarashii Rift Thruster"
-		"Chiisana Rift Thruster"
 		"Ookii Rift Steering"
 
 #Mereti and Korath-ified Kama. Really, Bunrodea stuff is inferior to Korath stuff.
@@ -971,7 +970,7 @@ ship "Chigiriki" "Chigiriki (Guns)"
 		"Mandible Cannon" 2
 		"Buzzer Anti-Missile" 2
 		"Large Shield Relay"
-		"Shield Relay Booster" 16
+		"Shield Relay Booster" 14
 		"Outfits Expansion" 5
 		"Hyperdrive"
 		"Dark Reactor" 2
@@ -1159,7 +1158,7 @@ ship "Pug Maboro" "Pug Maboro (Syndicate)"
 ship "Pug Maboro" "Pug Maboro (Plasma)"
 	outfits
 		"Plasma Cannon" 4
-		"Proton Turret" 2
+		"Proton Turret"
 		"Pug Anti-Missile"
 		"Liquid Helium Cooler"
 		"S-270 Regenerator" 2
@@ -1170,8 +1169,187 @@ ship "Pug Maboro" "Pug Maboro (Plasma)"
 		"LP576a Battery Pack"
 		"Pug Lohmar Thruster"
 		"Pug Lohmar Steering"
-		
 
+#---------BASHKMUL-------------BASHKMUL-------------------BASHKMUL-----------
+ship "Trident" "Trident (Cargo)"
+	outfits
+		"Piston Reactor"
+		"Spout Battery"
+		
+		"Hyperdrive"
+		"Steel Shield Generator"
+		"Cargo Expansion" 12
+		
+		"Madith Steering"
+		"Shum Thruster"
+		"Vogul Thruster"
+
+ship "Flintlock" "Flintlock (Thunderstrike)"
+	outfits
+		"Thunderstrike Blaster" 3
+		"Turtle Anti-Missile"
+		
+		"Hyperdrive"
+		"Steel Shield Generator" 3
+		"Piston Reactor"
+		"Fountain Battery"
+		
+		"Madith Steering"
+		"Madith Thruster"
+
+ship "Flintlock" "Flintlock (Thiik)"
+	outfits
+		"Thiik Laser" 3
+		"Turtle Anti-Missile"
+		
+		"Hyperdrive"
+		"Steel Shield Generator" 3
+		"Piston Reactor"
+		"Fountain Battery"
+		
+		"Madith Steering"
+		"Madith Thruster"
+
+ship "Flintlock" "Flintlock (Thiik Fast)"
+	outfits
+		"Thiik Laser" 3
+		"Turtle Anti-Missile"
+		
+		"Hyperdrive"
+		"Steel Shield Generator" 3
+		"Piston Reactor"
+		"Fountain Battery"
+		
+		"Kaich Steering"
+		"Shum Thruster"
+
+
+ship "Flintlock" "Flintlock (Full Thunderstrike)"
+	outfits
+		"Thunderstrike Blaster" 3
+		"Thunderstrike Turret"
+		
+		"Hyperdrive"
+		"Steel Shield Generator" 2
+		"Iron Shield Generator"
+		"Piston Reactor"
+		"Fountain Battery"
+		
+		"Madith Steering"
+		"Madith Thruster"
+
+ship "Flintlock" "Flintlock (Plague)"
+	outfits
+		"Plague Cannon" 3
+		"Plague Barrel" 60
+		
+		"Hyperdrive"
+		"Steel Shield Generator" 2
+		"Iron Shield Generator"
+		"Piston Reactor"
+		"Fountain Battery"
+		
+		"Madith Steering"
+		"Madith Thruster"
+
+ship "Flintlock" "Flintlock (Pug)"
+	outfits
+		"Thunderstrike Blaster" 2
+		"Gadfly Blaster"
+		"Pug Anti-Missile"
+		
+		"Hyperdrive"
+		"Steel Shield Generator" 2
+		"Iron Shield Generator"
+		"Piston Reactor"
+		"Fountain Battery"
+		
+		"Madith Steering"
+		"Madith Thruster"
+
+
+ship "Slingshot" "Slingshot (Thunderstrike)"
+	outfits
+		"Thunderstrike Blaster"
+		
+		"Piston Reactor"
+		"Spout Battery"
+		
+		"Pump Cooling"
+		"Steel Shield Generator"
+		
+		"Vogul Thruster"
+		"Vogul Steering"
+
+ship "Slingshot" "Slingshot (Thiik)"
+	outfits
+		"Thiik Laser"
+		
+		"Piston Reactor"
+		"Spout Battery"
+		
+		"Pump Cooling"
+		"Steel Shield Generator"
+		
+		"Vogul Thruster"
+		"Vogul Steering"
+
+
+#-----------BASHKMULPUG---------------BASHKMULPUG------------BASHKMULPUG-----------
+
+# Thunderstrike equipped Maboro. The Bashkmul flagship (owing to having no native HWs). 4 Mantle Hull Regenerators for survivability.
+ship "Pug Maboro" "Pug Maboro (Thunderstrike)"
+	outfits
+		"Thunderstrike Blaster" 4
+		"Thunderstrike Turret" 2
+		"Pug Anti-Missile"
+		
+		"Hyperdrive"
+		"Pump Cooling"
+		"Mantle Hull Regenerator" 4
+		"Piston Reactor"
+		"Spout Battery"
+		
+		"Pug Lohmar Steering"
+		"Pug Lohmar Thruster"
+		
+		"Bazooka Blaster" 54
+
+ship "Pug Maboro" "Pug Maboro (Plague)"
+	outfits
+		"Plague Cannon" 4
+		"Plague Barrel" 80
+		"Pug Anti-Missile" 2
+		"Thunderstrike Turret"
+		
+		"Hyperdrive"
+		"Mantle Hull Regenerator" 2
+		"Iron Shield Generator"
+		"Steel Shield Generator" 2
+		"Well Battery"
+		
+		"Pug Lohmar Steering"
+		"Pug Lohmar Thruster"
+		"Bazooka Blaster" 54
+
+#Thiik Laser. A brawler using Pug Zappers too. Maximum shield regen.
+ship "Pug Maboro" "Pug Maboro (Thiik)"
+	outfits
+		"Thiik Laser" 4
+		"Pug Anti-Missile"
+		"Pug Zapper Turret" 2
+		
+		"Hyperdrive"
+		"Mantle Hull Regenerator"
+		"Steel Shield Generator" 5
+		"Pump Cooling" 2
+		"Outfits Expansion" 3
+		"Spout Battery"
+		
+		"Pug Lohmar Steering"
+		"Pug Lohmar Thruster"
+		"Bazooka Blaster" 54
+		
 
 #--------------BACKUP------------------------BACKUP------------------------BACKUP----------
 
