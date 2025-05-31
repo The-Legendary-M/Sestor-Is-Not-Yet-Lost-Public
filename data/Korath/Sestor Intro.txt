@@ -259,9 +259,9 @@ mission "Sestor: Korath Rescue"
 			`	"Humanika... Alfa... Alfa, anov Humanika... Be'oof! Po'of! Obrieb! Raporohfeb!"`
 			`	The Korath continue to tense up, as their shouts become frantic and loud. It seems that they still view you as an adversary.`
 			choice
-				`(show them evidence of you fighting the Alpha)`
+				`(Show them evidence of you fighting the Alpha)`
 					goto alphaevidence
-				`(tell them that you are a friend)`
+				`(Tell them that you are a friend)`
 			`	"Human, Korath friend!" you tell the Korath, as you lower your gun. The Korath's eyes widens a bit, and all four loosens their postures somewhat. However, they still seem be be very much en garde.`
 			`	"Alfa, porohfeb. Alfa, Korath raporohfeb. Humani... Ratoh Korath raporohfeb?"`
 			`	"No kill, no kidnap. Human, Korath friend!" You reiterate. To de-escalate, you decide to holster your gun after switching the safety back on. The Korath put away their weapons as well.`
@@ -297,7 +297,7 @@ mission "Sestor: Reclaim Sestor Ikfar"
 	source "Sopi Lefarkata"
 	destination "Sestor Ikfar"
 	to offer
-		has "Sestor: Korath Rescue: doone"
+		has "Sestor: Korath Rescue: done"
 	on offer
 		conversation
 			`As promised, Ikgalef is already waiting for you as you arrive at the spaceport.`
@@ -309,7 +309,7 @@ mission "Sestor: Reclaim Sestor Ikfar"
 					goto agree
 			label looted
 			`Ikgalef exhales sharply, as a ripple courses through his body.`
-			`	"Yes, kalabet Alpha take all our stuff... Coward"`
+			`	"Yes, kalabet Alpha take all our stuff... Coward..."`
 			`	Before you mention the Korath Exiles' looting, and the Wanderers' research efforts, Ikgalef turns to you.`
 			`	"The Alpha must leave something behind. They cannot take everything. We have knowledge. We can reclaim the capital and shipyards."`
 			`	With that, Ikgalef turns around, and gestures towards a spaceship.`
@@ -395,7 +395,8 @@ mission "Sestor: Restore Ikfar Outfitter"
 	landing
 	name "Retrieve Banisher Grav-Turret"
 	description "Bring the Banisher Grav-Turret to Sestor Ikfar, to aid in the Sestor's shipyard reconstruction efforts."
-	source "Sopi Lefarkata"
+	source "Sestor Ikfar"
+	stopover "Sopi Lefarkata"
 	destination "Sestor Ikfar"
 	passengers 1
 	to offer
