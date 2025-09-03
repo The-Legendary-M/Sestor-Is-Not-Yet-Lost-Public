@@ -33,18 +33,30 @@ The Remnant discovery of the Sheragi Ssil Vida station spurred on a flurry of sc
 
 The future is yet uncertain, filled with too many variables to predict. The time's a-changing, and no faction will emerge from it unchanged. 
 
-## Content:
+## This plugin:
 
-* Expands the content of the following Korath factions:
+* Adds governments that are related to the vanilla storyline.
+* Expands the content of the following Korath factions, closely following planned vanilla storylines:
   * Various Korath states and factions:
     * Sestor Federation (Kor Sestor)
+    * Anatruskor Empire (Kor Anatrusk)
     * Efreti Republic (Kor Efret)
+    * Mereti Collective (Kor Mereti) 
+    * Isaha faction (Kor Isaha)
+    * Alaji raiders (Kor Alaji)
+  * Wanderers
+  * Remnant
+* A continuation and conclusion of the current Wanderer storyline, with heavy Sestor/Efreti involvement, and an ending that is rather unexpected.
+* The aftermath of the Korath Exiles gaining automaton technologies. It's not sunshine and rainbows for the Korath.
 
 
 # Development Status
 It is currently in early pre-pre-Alpha (The status, not the race).
 
 * Sestor introduction and expansion done, but subject to further updates.
-* Wanderers, Remnant, and Korath Exile content planned.
+* Wanderer Campaign Part 3 done. Part 4 ongoing.
+* Exile automaton story not started yet.
+* Wanderer planet development events done. Concurrent with Part 4.
 
-
+## Special thanks
+(I'll collage all copyright people here later)

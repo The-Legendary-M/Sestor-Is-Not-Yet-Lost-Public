@@ -105,9 +105,10 @@ ship "I'tak Korati"
 #Naming scheme: First syllables, then number.
 #PK-117s are the main Anatruskor warships, with its six turret mounts allowing the installation of large and powerful weaponry.
 #Old Korath Raider sprite looks so clean and pristine, so I chose it as the basis of Anatruskor drones.
-ship "Pav-Kot 117"
-	sprite "ship/pav kot 117"
-	thumbnail "thumbnail/pav kot 117"
+#Middle Arrestor (Panrek Batnareb)
+ship "Bat-Pan 126"
+	sprite "ship/bat pan 126"
+	thumbnail "thumbnail/bat pan 126"
 	attributes
 		category "Medium Warship"
 		"cost" 16570000
@@ -128,28 +129,28 @@ ship "Pav-Kot 117"
 			"hull damage" 1800
 			"hit force" 5400
 	outfits
-		"Storm-Pike Turret" 2
+		"Shock-Strike Turret" 2
 		"Heavy Shock-Strike Turret" 2
 		"Warder Anti-Missile" 2
 			
 		"Triple Plasma Core"
+		"Plasma Core"
 		"Large Heat Shunt" 3
-		"Systems Core (Medium)"
+		"Systems Core (Large)"
 		"Fuel Processor"
-		"Thermal Repeater Rifle" 196
+		"Outfits Expansion"
 		
 		"Steering (Planetary Class)"
 		"Steering (Comet Class)"
 		"Thruster (Planetary Class)"
-		"Thruster (Asteroid Class)"
 		"Hyperdrive"
 	
 	engine -20 130 
 	engine 20 130 
 	turret -8 -145 "Heavy Shock-Strike Turret"
 	turret 8 -145 "Heavy Shock-Strike Turret"
-	turret -34 -143 "Storm-Pike Turret"
-	turret 34 -143 "Storm-Pike Turret"
+	turret -34 -143 "Shock-Strike Turret"
+	turret 34 -143 "Shock-Strike Turret"
 	turret 0 35 "Warder Anti-Missile"
 	turret 0 90 "Warder Anti-Missile"
 	bay "Fighter" -75 100 back
@@ -162,9 +163,10 @@ ship "Pav-Kot 117"
 	explode "large explosion" 40
 	explode "huge explosion" 10
 	"final explode" "final explosion large"
-	description "Developed after years of Sestor-Anatruskor technological exchange, the PK-117 is the first Anatruskor ship wholly dedicated to warfare, and quickly becomes the mainstay of the Anatruskor Navy. Armed with top-of-the-line Anatruskor weaponry, the PK-117 is a sight to behold in the battlefield. The large outfit space and turret points allow for the installation of many defensive systems and turrets to ensure maximum survivability."
+	description "Developed after years of Sestor-Anatruskor technological exchange, the BP-126 is the first Anatruskor ship wholly dedicated to warfare, and quickly becomes the mainstay of the Anatruskor Navy. Armed with top-of-the-line Anatruskor weaponry, this ship is a sight to behold in the battlefield. The large outfit space and turret points allow for the installation of many defensive systems and turrets to ensure maximum survivability."
 
-ship "Lek-Mid 15"
+# Sub Leech (Fek Pakrim)
+ship "Pak-Fek 15"
 	sprite "ship/chaser"
 	thumbnail "thumbnail/chaser"
 	attributes
@@ -190,16 +192,15 @@ ship "Lek-Mid 15"
 		
 		"Generator (Furnace Class)"
 		"Small Heat Shunt"
-		"Thermal Repeater Rifle"
 		
 		"Thruster (Asteroid Class)"
 		"Steering (Asteroid Class)"
 	
 	engine -7 23
 	engine 7 23
-	gun 0 -28 "Fire-Lance"
+	gun 0 -28 "Shock-Strike"
 	explode "tiny explosion" 20
-	description "The LM-15, or the Small Arrestor, is the standard fighter employed by the Anatruskor Empire, widely used in all Anatruskor fleets from its invention all the way to its final days trapped on Spera Anatrusk. Armed with potent ion weapons, a swarm of these can quickly drain their targets of energy, allowing stronger capital ships to easily disable them without taking any damage."
+	description "The PF-15, or the Small Leech, is the standard fighter employed by the Anatruskor Empire, widely used in all Anatruskor fleets from its invention all the way to its final days trapped on Spera Anatrusk. Armed with potent ion weapons, a swarm of these can quickly drain their targets of energy, allowing stronger capital ships to easily disable them without taking any damage."
 	description "	Fighters do not come equipped with a hyperdrive. You cannot carry a fighter unless you have a ship in your fleet with a fighter bay."
 
 

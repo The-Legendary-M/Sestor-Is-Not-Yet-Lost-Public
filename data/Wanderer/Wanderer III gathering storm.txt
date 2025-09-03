@@ -118,10 +118,10 @@ mission "Wanderers: Sestor Information (Before fleet)"
 			`	You then proceed to tell Rek everything you know about the Sestor, from their highly developed bunker city in Sopi Lefarkata to their no-flight rule. You tell her about the enigmatic leader, Ikgalef. You also tell her how they want you to work for them.`
 			`	Rek becomes silent for a bit, brows furrowed in concentration. A minute later, she opens her mouth again.`
 			`	"Are the Sestor still [hostile, aggressive]?"`
-			`	"Probably not. They don't even run ships anymore now."`
+			`	"No, they do not wish for war."`
 			`	"May I pay them a visit?"`
 			`	You are tempted to say yes, but the Sestor are adamant that you contact them alone, and tell no one. You politely decline Rek's offer.`
-			`	"Alright, but keep us updated about the Sestor's movements."`
+			`	Rek sighs when she hears your answer, "When they are ready, tell me."`
 			`	With that, you part ways, but not before seeing Rek rushing over and snatching up a telephone.`
 				decline
 			label end
@@ -169,7 +169,9 @@ mission "Wanderers: Sestor Information (After fleet)"
 			`	"We cannot prevail in such a two-front conflict," Tele'ek continues, anxious, "Captain, what is your suggestion?"`
 			`	You calmly explain your experience with the Sestor, from meeting them to helping them setting up their colonies. As Tele'ek listens, his attitude softens a little.`
 			`	"Why did you not [tell, inform] us of this big development, Captain?"`
-			`	"I never though it was necessary," you answer.`
+			choice
+				`"They told me to keep it a secret."`
+				`"I didn't think it was necessary."`
 			`	Tele'ek decides to drop this matter, and tell you to meet him in the spaceport later, and escort Rek to the Sestor for negotiations.`
 				decline
 		
@@ -181,6 +183,8 @@ mission "Wanderers: Wanderer-Sestor Meeting"
 	destination "Desi Seledrak"
 	passengers 2
 	to offer
+		not "Sestor: Wanderer Diplomacy: active"
+		not "sestor wanderer diplomacy"
 		or
 			has "Wanderers: Sestor Information Update: declined"
 			has "Wanderers: Sestor Information (After fleet): declined"
@@ -188,27 +192,45 @@ mission "Wanderers: Wanderer-Sestor Meeting"
 		conversation
 			`Ektasi Rek and Sobari Tele'ek arrive shortly, as you finish preparing your ship for takeoff.`
 			`	"The Mereti have designated Sestor ships as neutral," reports Tele'ek. In the better-lit spaceport, you finally takes notice of the two Wanderers' appearances. Compared to a few months ago, Tele'ek's plumage is even more disheveled, and most of his crown feathers are gone. Tele'ek's body seems to be bloating unhealthily in all directions, making the once-fit Wanderer's movement more awkward and slow.`
-			`	"You need rest, Tele'ek," you say, concerned.`
+			`	"You need rest, Tele'ek," Rek says, concerned.`
 			`	"The Sestor matter is more important," says Tele'ek, adamant.`
-			`	Unwilling to start an argument over such a minor matter, you nod, and the two Wanderers board your ship in preparation for the trip to Sopi Lefarkata. With her are suitcases that you guess contains important documents and media.`
+			`	The two Wanderers board your ship in preparation for the trip to Sopi Lefarkata. With her are suitcases that you guess contains important documents and media.`
 				accept
 	on stopover
 		conversation
 			`You see the familiar face of Ikgalef waving at you as you come in to land. The Sestor President promptly freezes as he sees the two Wanderer ambassadors walking down the ramp besides you.`
-			`	Before you can do anything, Rek walks up to the Korath leader, and starts speaking in the Korath language. Ikgalef, however, does not seem to understand Rek's words. Glancing at you, Rek begins conversing with Ikgalef in the human language instead. Tele'ek, seeing that, also dons a translator.`
-			`	Quickly recovering, Ikgalef invites the Wanderers and you to the palace where you first met it. Eventually you find the three of you sitting around a round table, Korath assistants streaming in and out pouring drinks to everyone. Rek seems to be the chief negotiator of the Wanderers, and starts talking to Ikgalef.`
-			`	"You, 'Wanderers', correct?" Ikgalef begins the conversation.`
-			`	"Yes."`
-			`	"You occupy Desi Seledrak and Spera Anatrusk. You occupy Korath worlds."`
-			`	"Those were dead worlds. We Wanderers are temporary visitors that transform them into habitable worlds," Rek counters.`
-			`	"Desi Seledrak and Spera Anatrusk, Korath planets. Anatruskor Empire lives. You occupy territories illegally," Ikgalef replies, anger starting to seep into his voice.`
-			`	"We arrive on deserted planets who nobody had claims on, so that we may transform it into their best possible form. Moreover, we are visitors. After we are done, we leave."`
-			`	"Willing to leave? When?"`
-			`	"The Keepers shall decide on that."`
-			`	"Quit the ralukut, bird! When are you leaving?"`
-			`	"Calm down, Mr. President," placates Ektasi Rek, "Usually it takes around 20,000 years."`
-			`	"20,000?" Ikgalef snaps, visibly incensed.`
-			`	"We do not claim any territories. We are mere visitors."`
+			`	Ektasi Rek starts speaking in Efreti, but before she could get more than a sentence out, Ikgalef interrupts her by speaking in Human.`
+			`	"Thank you, Madam," Ikgalef says, towering over the Wanderer diplomat, "We prefer speaking in Human over Efreti."`
+			`	Ektasi Rek quickly switch to speaking Human, and assures Ikgalef that the Wanderers mean no harm.`
+			`	Somewhat reluctantly, Ikgalef invites the Wanderers and you to the palace where you first met him. Eventually you find the three of you sitting around a round table, Korath assistants streaming in and out pouring drinks to everyone. Rek seems to be the chief negotiator of the Wanderers, and starts talking to Ikgalef.`
+			`	"Wanderers, correct?" Ikgalef initiates the conversation.`
+			`	"Yes," replies Rek, "We are the Wanderers. We are but travellers, fixing planets in ruins to their pristine conditions."`
+			`	"How do you judge what planet you stay on?" asks Ikgalef.`
+			`	"We do not choose. The Keepers guide us."`
+			`	"The Keepers?"`
+			choice
+				`(Tell Ikgalef about the Pug and their history with the Human)`
+					goto pug
+				`(Say nothing)`
+			`	"The Keepers control our wormhole," Rek replies, "They provide us with guidance, and we follow them."`
+			`	Ikgalef, however, does not seem overly interested in it.`
+				goto anatruskor
+			label pug
+			`	"The Keepers are an alien species known as the Pug," you interject before Rek replies, "They attacked Human space before."`
+			`	"The Keepers mean the Korath no harm, Mr. Ikgalef," Rek says, "We are here simply to improve the ecologies in the region."`
+			`	Ikgalef seems utterly uninterested in this exchange.`
+			label anatruskor
+			`	"Wanderer," Ikgalef says, "This planet this base is on, is the territory of the Anatruskor Empire. This is Korath land."`
+			`	"It was empty when we set our base up," says Rek.`
+			`	"The planet to the south, Spera Anatrusk, is Anatruskor Empire capital," Ikgalef ignores Rek, and continues speaking, "The Korath next to me is Prince Urucohotab, the legal sovereign of the Anatruskor.`
+			`	"We are not aware of such polity existing. Our allies have confirmed that these planets are wholly empty, and our scanner logs say so"`
+			`	"Are your 'allies' called the Kor Efret?" replies Ikgalef, "The Efret are kalabet liars, Wanderer, like the 'Unfettered Hai' you meet a while ago! They forgo honour in favour of cowardice! They fight the Anatruskor and us long ago for we refuse to yield to them, and now they say trick you into desecrating Anatruskor planets! The Efret cannot be trusted!"`
+			`	"The identity of our allies is irrelevant," answers Rek, "We arrive on deserted planets who nobody lives on, so that we transform it into their best possible form. We are visitors, and after we are done, we leave."`
+			`	"You leave? When do you finish?"`
+			`	"We are but visitors intent on restoring planets," Rek reiterates, "When the Keepers say we are done, we leave."`
+			`	"Quit the ralukut, bird!" shouts Ikgalef, "When do you leave?"`
+			`	"It usually takes 20,000 years," Rek says. Ikgalef exhales sharply once he hears this, as he clenches his fists.`
+			`	"Twenty thousand years? After thousands of generations of Korath? You take us for fools!`
 			`	"You might as well say you stay forever, dishonest swindler! You obribeb-"`
 			`	Once again, an angry Ikgalef slips back into his native Sestor tongue. It is becoming increasingly clear that this conversation is going nowhere. This territorial dispute cannot be ignored, but you can still say something.`
 			choice
@@ -217,15 +239,15 @@ mission "Wanderers: Wanderer-Sestor Meeting"
 				`(If the Wanderers are leaving Hai space because the Unfettered claim their old planets, why aren't the Wanderers leaving this space as well when the Sestor claim it?)`
 					goto why
 			label past
-			`Having met the Wanderers merely minutes ago, Ikgalef obviously has little idea what the Wanderers are like, and how they think. Giving Ikgalef a quick run-down of the Wanderers' motivations would surely help.`
+			`	Having met the Wanderers merely minutes ago, Ikgalef obviously has little idea what the Wanderers are like, and how they think. Reminding Ikgalef of the Wanderers' motivations would surely help.`
 			`	"Ikgalef, the Wanderers are not land grabbers, nor are they dishonest," you say.`
-			`	At first, Ikgalef gets even angrier as you seemingly side with the Wanderers over his "true Korath", but then his demeanor changes when you start mentioning the Wanderers' conflict with the Unfettered Hai in the North, and how the Eye brought the Wanderers here.`
+			`	At first, Ikgalef gets even angrier as you seemingly side with the Wanderers over his "true Korath", but then his demeanor changes when you remind him of the Wanderers' conflict with the Unfettered Hai in the North, and how the Eye brought the Wanderers here. The Wanderers show him videos of the conflicts you describe, giving you much-needed credibility.`
 			`	"Hai? The be'oof in the North?"`
 			`	"Yes, Ikgalef," you say, "A group of millitant Hai attacked the Wanderers, and they are now going through a wormhole that leads them here."`
 			`	Ikgalef freezes, an eyebrow raised. His anger seems to have dissipated instantly, and his eyes seem almost bemused.`
 				goto uhai
 			label why
-			`One thing that starts bugging you, is how firm the highly principled and pacifistic Wanderers are treating the issue of Spera Anatrusk. After all, if the Wanderers are acquiescing to the Unfettered Hai's dubious claims to their northern worlds, the Wanderers should naturally recognise the Sestor's claims to the Korath worlds as well. After all, Wanderer psychology is different from human.`
+			`	One thing that starts bugging you, is how firm the highly principled and pacifistic Wanderers are treating the issue of Spera Anatrusk. After all, if the Wanderers are acquiescing to the Unfettered Hai's dubious claims to their northern worlds, the Wanderers should naturally recognise the Sestor's claims to the Korath worlds as well. After all, Wanderer psychology is different from human.`
 			`	"It is undeniable that these worlds were once occupied by the Korath," you say, "Just like how the Hai once occupied the lands in the North."`
 			`	"This is indeed true. Hence, when the Unfettered Hai came to reclaim their planets, we allow them in. The Keepers led us here, and this is where our new job is."`
 			`	"But aren't-" you begin to say, but Ikgalef's louder voice cut you off.`
@@ -245,20 +267,19 @@ mission "Wanderers: Wanderer-Sestor Meeting"
 			`	As Rek starts opening her mouth to argue back, you realise that, once again, the conversation has turned hostile and unproductive...`
 			choice
 				`(Ikgalef thinks that, if Wanderers settled on empty planets and built it up themselves, then the planets are the Wanderers'. By the same logic, the Wanderers also settled on the Anatruskor planets in an empty state, and built them up. By this logic, those planets are also the Wanderers'.)`
-					goto anatruskor
+					goto anatruskor1
 				`(The Wanderers have settled on Hai planets for tens of thousands of years. The last Anatruskor Korath have died less than a century ago, with a functional government-in-exile that is very much active. This is Korath space, that is Wanderer space, and that is how it should be.)`
 					goto settled
 				`(This is an issue the Korath and the Wanderers have to sort out themselves. Say nothing.)`
 					goto apathy
 				`(Continuing to argue is pointless. Ask Ikgalef what he proposes instead.)`
 					goto askik
-			label anatruskor
+			label anatruskor1
 			`Ikgalef is being rather hypocritical here. Simultaneously pushing for the Wanderers' planets being in former Hai space while denying Wanderer claims in Korath space seem contradictory in itself.`
 			`	"Ikgalef, the Wanderers are settling Anatruskor planets that were also abandoned and empty, like the Hai planets before. The Wanderers are free to choose what to do with their planets. They want peace and dislike fighting," you say.`
 			`	"This is totally different!" Ikgalef counters, "The Anatruskor still exist! The last planet-dwellers perished less than a century ago! They have been in Hai space for millennia!"`
-			`	"Time is irrelevant here, Ikgalef," you counter, "There is no difference between the Wanderers' colonisation of Vara K'chrai and Spera Anatrusk."`
-			`	"The Hai abandoned their planets like the cowards they are! We Korath never abandoned them!"`
-			`	As you open your mouth to retort, you feel Tele'ek's wing patting your back. You turn, and Tele'ek starts to speak instead.`
+			`	"Time is irrelevant here, Ikgalef," you reply, "There is no difference between the Wanderers' colonisation of Vara K'chrai and Spera Anatrusk."`
+			`	"The Hai abandon their planets like the cowards they are! We Korath never abandon them!"`
 				goto telespeech
 			label settled
 			`To be honest, the Wanderers not willing to fight the Unfettered Hai while being rather stubborn in Anatruskor worlds is rather hypocritical of them.`
@@ -284,7 +305,7 @@ mission "Wanderers: Wanderer-Sestor Meeting"
 			`	"Ah, finally, finally you ask," says Ikgalef, turning towards Tele'ek, "You are the military commander, right?"`
 			`	"Yes," answers Tele'ek.`
 			`	"Your kind are too weak to fight against the Hai. We Korath fight and beat Hai easily. The Sestor help you destroy the Hai, so you can stay in your original planets."`
-			`	"Ah, eh, n-" Rek sputters, but is quickly cut off by Tele'ek.`
+			`	"That will not be-" Rek begins to speak, but is abruptly cut off by Tele'ek.`
 			`	"We shall [discuss, debate] this proposal amongst ourselves."`
 			`	"You should," Ikgalef replies, "The Sestor look forward to a fruitful cooperation."`
 			`	Rek turns towards Tele'ek, a look of disbelief and disapproval, but Tele'ek maintains his steeled face, and looks back. Rek decides to switch topics instead.`
@@ -292,13 +313,13 @@ mission "Wanderers: Wanderer-Sestor Meeting"
 			`	Ikgalef raises an eyebrow, but says nothing.`
 			`	"Through past efforts, we have successfully pacified them," says Rek, "They are no longer hostile to any factions by default. Please stop attacking them."`
 			`	Ikgalef seems to want to discuss more, but he stops. "Sure," he mutters.`
-			`	With that, the meeting comes to an anticlimatic end. Ikgalef waves the three of you goodbye, as a Korath assistant hands the three of you confectionary. They are mildly sweet, reminding you of a certain type of candy you had on New Sahara.`
+			`	With that, the meeting comes to an end. Ikgalef waves the three of you goodbye, as a Korath assistant hands the three of you confectionary. They are mildly sweet, reminding you of a certain type of candy you had on New Sahara.`
 			`	On the way back to your ship, Rek seems deep in thought.`
 			
 			
 	on complete
 		set "sestor wanderer diplomacy"
-		event "sestor mereti truce"
+		event "sestor wanderer truce"
 		conversation
 			`Rek is unlike her usual bubbly, happy-go-lucky self the entire flight back to Desi Seledrak. You try to engage her in small talk, but she always refuses.`
 			`	Eventually, as the familiar sight of the recovering former Anatruskor planet approaches, Rek finally opens her mouth.`
@@ -315,21 +336,6 @@ mission "Wanderers: Wanderer-Sestor Meeting"
 			`	"We had no idea what would happen! This is totally different!"`
 			`	"Everything is different from previous situations," Tele'ek says, "We shall see how the Council view this issue."`
 			`	With that, the pair falls silent, and no further words are exchanged until they bid you farewell.`
-
-#Still hostile to the Efreti, whom the Sestor consider a blight on all Korathkind.
-event "sestor mereti truce"
-	government "Kor Sestor"
-		"attitude toward"
-			"Kor Mereti" 0
-			"Wanderer" 0
-			"Quarg" 0
-			"Quarg (Kor Efret)" 0
-	government "Kor Mereti"
-		"attitude toward"
-			"Kor Sestor" 0
-	government "Wanderer"
-		"attitude toward"
-			"Kor Sestor" 0
 
 #MOAR TELE'EK CONTENT
 mission "Wanderers: Moonbeam Production"
@@ -1172,8 +1178,6 @@ mission "Wanderers: Korath Exile Reconaissance"
 		has "language: Efreti"
 		has "language: Sestor"
 	on offer
-		unvisit "Parca"
-		unvisit "Lucina"
 		event "korath colonise ember wastes" 2
 		conversation
 			`In the past few months, you have dedicated much time in Korath space, studying the languages of both the Efret and Sestor. The large library on your ships are now filled with Efreti comics and novels Rek gave you as you finished your studies, as well as Sestor textbooks and encyclopaedias Ikgalef pushed into your hands when you asked him for some.`
@@ -1235,6 +1239,8 @@ mission "Wanderers: Korath Exile Reconaissance"
 			`	As you land on Desi Seledrak, Tele'ek immediately rushes to his office after a rushed farewell.`
 
 event "korath colonise ember wastes"
+	unvisit "Parca"
+	unvisit "Lucina"
 	system Parca
 		government "Korath"
 		add fleet "Korath Home" 3000

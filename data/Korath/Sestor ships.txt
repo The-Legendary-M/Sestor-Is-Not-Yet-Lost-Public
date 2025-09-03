@@ -1,22 +1,242 @@
-##Sestor capital ship. Kinda strays into Superheavy category. A very powerful ship that gives the Heliarch, and even the Quarg, a run for its money.
+# Sestor utility ship.
+ship "Far Ek Tek 243"
+	sprite "ship/far ek tek 243"
+	thumbnail "thumbnail/far ek tek 243"
+	attributes
+		category "Utility"
+		"cost" 17320000
+		"shields" 25500
+		"hull" 32000
+		"mass" 1350
+		"automaton" 1
+		"drag" 8.2
+		"self destruct" 0.6
+		"heat dissipation" .55
+		"fuel capacity" 600
+		"cargo space" 216
+		"outfit space" 564
+		"weapon capacity" 231
+		"engine capacity" 102
+		"ramscoop" 2.5
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Piercer Missile Launcher" 2
+		"Piercer Missile" 62
+		"Thermal Repeater Turret" 2
+		"Warder Anti-Missile" 2
+
+		"Control Transceiver"
+		"Hyperdrive"
+		"Large Heat Shunt" 2
+		"Small Heat Shunt"
+		"Systems Core (Large)"
+		"Cargo Expansion"
+
+		"Double Plasma Core"
+		"Generator (Candle Class)"
+		"Steering (Planetary Class)"
+		"Thruster (Lunar Class)"
+		
+	engine -43.5 150.5
+	engine 43.5 150.5
+	gun -26 -152
+	gun 26 -152
+	turret -49.5 -86
+	turret -51 -35
+	turret -51.5 -63
+	turret 49.5 -86
+	turret 51 -35
+	turret 51.5 -63
+	explode "tiny explosion" 70
+	explode "small explosion" 35
+	explode "medium explosion" 40
+	explode "large explosion" 22
+	explode "huge explosion" 8
+	"final explode" "final explosion large"
+	description `The high casualty rate of convoy fleets made of Lilot Korati freighters against Mereti raids have prompted the Sestor to produce this armed freighter as a safer and more secure alternative.`
+
+ship "Met Par Tek 41"
+	sprite "ship/met par tek 41"
+	attributes
+		category "Interceptor"
+		"cost" 3350000
+		"shields" 3320
+		"hull" 4200
+		"mass" 150
+		"automaton" 1
+		"drag" 3.5
+		"self destruct" 0.6
+		"heat dissipation" 1.5
+		"fuel capacity" 200
+		"cargo space" 20
+		"outfit space" 218
+		"weapon capacity" 50
+		"engine capacity" 60
+		"ramscoop" 3
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Thermal Repeater" 2
+		"Warder Anti-Missile"
+		"Generator (Furnace Class)"
+		"Generator (Candle Class)"
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Thruster (Comet Class)"
+		"Steering (Lunar Class)"
+		"Hyperdrive"
+	gun -2 -29.5
+	gun 3.5 -29.5
+	turret 0.5 14.5
+	engine -9.5 34
+	engine 8 37
+	explode "tiny explosion" 30
+	explode "small explosion" 10
+	"final explode" "final explosion small"
+	description `Centuries ago, the emergence of the Scatter Mine means that a small Mereti squadron could defeat a massive Sestor fighter swarm with ease. To remedy this, the Sestor created the Met Par Tek 41 to combat this problem. Equipped with a Warder Anti-Missile, the MPT-41 would jump into the battlefield, clear the mines around it, before accompanying Sestor carriers would deploy their fighters.`
+	description `	However, tts impact on the battlefield would be quickly proven to be limited, as the low shield and hull integrity of the MPT-41 means that the Mereti could destroy the minesweeping ship quickly before the Warder could clear much of the minefields. When its successor, the Met Par Tek 53, entered production, the MPT-41 was quickly taken out of service.`
+	description `	The comparably low mass and high speed of the SL-41 design, however, would later prove to be key in future developments, as their designers would use it as a base to develop the next generation of Sestor parasite spacecraft, the FL-14 and FS-27, both of which still remain heavily in use in the Sestor navy up to this day.`
+		
+
+ship "Met Ik Par 43"
+	sprite "ship/met ik par 43"
+	attributes
+		category "Interceptor"
+		"cost" 3350000
+		"shields" 13400
+		"hull" 18700
+		"mass" 550
+		"automaton" 1
+		"drag" 6.5
+		"self destruct" 0.63
+		"heat dissipation" 1.5
+		"fuel capacity" 200
+		"cargo space" 20
+		"outfit space" 340
+		"weapon capacity" 120
+		"engine capacity" 100
+		"ramscoop" 3
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Thermal Repeater" 6
+		"Plasma Core"
+		"Generator (Furnace Class)"
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Thruster (Lunar Class)"
+		"Steering (Planetary Class)"
+		"Large Heat Shunt" 
+		"Small Heat Shunt"
+		"Hyperdrive"
+	gun -6 -58
+	gun 6 -58
+	gun -14.5 -49
+	gun 14.5 -49
+	gun -21.5 -40.5
+	gun 21.5 -40.5
+	engine -14 51.5
+	engine 16.5 52.5
+	explode "tiny explosion" 30
+	explode "small explosion" 10
+	"final explode" "final explosion small"
+	description `With the Mereti "wolf pack" tactic of using massed Model 16s to outgun and outlast Sestor warships proven to be successful, the Sestor military is pressured to develop a countermeasure. The Met Ik Par 43 is developed as a counter to it.`
+	description `	Sporting six gun ports, all equipped with Thermal Repeaters, the Met Ik Par 43 designed specifically to duel Model 16s and come out victorious. These ships would prove to be popular, widely deployed in most Sestor fleets.`
+
+ship "Nak Par Tek 103"
+	sprite "ship/nak par tek 103"
+	attributes
+		category "Medium Warship"
+		"cost" 3350000
+		"shields" 23300
+		"hull" 52500
+		"mass" 550
+		"automaton" 1
+		"drag" 21.5
+		"self destruct" 0.75
+		"heat dissipation" 0.45
+		"fuel capacity" 600
+		"cargo space" 75
+		"outfit space" 795
+		"weapon capacity" 365
+		"engine capacity" 135
+		"ramscoop" 3
+		weapon
+			"blast radius" 100
+			"shield damage" 5000
+			"hull damage" 2650
+			"hit force" 7200
+	outfits
+		"Piercer Missile Launcher" 4
+		"Piercer Missile" 156
+		"Piercer Missile Rack" 2
+		"Banisher Grav-Turret" 2
+		"Thermal Repeater Turret" 2
+		"Warder Anti-Missile" 2
+		
+		"Double Plasma Core"
+		"Generator (Inferno Class)"
+		"Systems Core (Large)"
+		"Control Transceiver"
+		"Thruster (Planetary Class)"
+		"Steering (Planetary Class)"
+		"Thruster (Asteroid Class)"
+		"Large Heat Shunt" 2
+		"Small Heat Shunt" 2
+		"Hyperdrive"
+	gun -7 -186.5
+	gun 9 -186.5
+	gun -25 -170
+	gun 25 -170
+	turret -47 -117
+	turret 47 -117
+	turret -75 32
+	turret 75 32
+	turret -75 136
+	turret 75 136
+	engine -38 185
+	engine 38 185
+	bay "Fighter" -41 -65.5
+		"launch effect" "korath external"
+	bay "Drone" 41 -65.5
+		"launch effect" "korath external"
+	explode "tiny explosion" 30
+	explode "small explosion" 10
+	"final explode" "final explosion small"
+	description `While the combination of the Korath Detainer, the Banisher Grav-Turret, and the Grab-Strike Turret have been proven to be very effective against lone Mereti ships, Sestor ships often lack long-ranged firepower to finish them off before enemy reinforcements could arrive.`
+	description `	Utilising four Piercer Missile Launchers and two Banisher turrets, the Nak Par Tek 103 is designed to fulfil this niche, assisting allies in holding an adversarial warship in place, while using its four Piercer Missile Launchers to deal massive amounts of damage to it.`
+
+
+
+##Insane superheavy. A very powerful ship that gives the Heliarch, and even the Quarg, a run for its money.
 ship "Tek Ot Rah 681"
 	sprite "ship/tek ot rah 681"
 	thumbnail "thumbnail/tek ot rah 681"
 	attributes
-		category "Heavy Warship"
+		category "Superheavy"
 		"cost" 147550000
 		"shields" 126800
 		"hull" 138000
 		"automaton" 1
-		"crew equivalent" 560
-		"mass" 4500
-		"drag" 40.8
-		"heat dissipation" .35
+		"crew equivalent" 700
+		"mass" 10000
+		"drag" 80
+		"heat dissipation" .2
 		"fuel capacity" 700
-		"cargo space" 120
-		"outfit space" 1872
-		"weapon capacity" 850
-		"engine capacity" 420
+		"cargo space" 240
+		"outfit space" 1850
+		"weapon capacity" 800
+		"engine capacity" 300
 		"self destruct" .95
 		"ramscoop" 5
 		weapon
@@ -25,15 +245,17 @@ ship "Tek Ot Rah 681"
 			"hull damage" 5000
 			"hit force" 10000
 	outfits
-		"Banisher Grav-Turret" 2
 		"Korath Detainer" 4
-		"Thermal Repeater Turret" 8
-		"Warder Anti-Missile" 4
-		"Large Heat Shunt" 8
-		"Small Heat Shunt" 2
-		"Systems Core (Large)" 2
+		"Thermal Repeater Turret" 2
+		"Grab-Strike Turret" 4
+		"Banisher Grav-Turret" 4
+		"Warder Anti-Missile" 2
+		"Large Heat Shunt" 4
+		"Systems Core (Large)" 3
+		"Systems Core (Tiny)"
 		"Thruster (Lunar Class)"
-		"Triple Plasma Core" 2
+		"Spatial Inversion Chamber"
+		"Plasma Core"
 		"Grav-Thruster (Nebula Class)"
 		"Grav-Steering (Nebula Class)"
 		Hyperdrive
@@ -44,22 +266,22 @@ ship "Tek Ot Rah 681"
 		over
 	engine -31.5 365.5 1.2
 	engine 31.5 365.5 1.2
-	turret -50.5 -259.5 "Thermal Repeater Turret"
-	turret 50.5 -259.5 "Thermal Repeater Turret"
-	turret -52 -235.5 "Thermal Repeater Turret"
-	turret 52 -235.5 "Thermal Repeater Turret"
+	turret -50.5 -259.5 "Grab-Strike Turret"
+	turret 50.5 -259.5 "Grab-Strike Turret"
+	turret -52 -235.5 "Grab-Strike Turret"
+	turret 52 -235.5 "Grab-Strike Turret"
 	turret -54.5 -207.5 "Thermal Repeater Turret"
 	turret 54.5 -207.5 "Thermal Repeater Turret"
 	turret -55 -178.5 "Banisher Grav-Turret"
 	turret 55 -178.5 "Banisher Grav-Turret"
 	turret -53 -152.5
 	turret 53 -152.5
-	turret -50.5 -128.5 "Warder Anti-Missile"
-	turret 50.5 -128.5 "Warder Anti-Missile" 
-	turret -123.5 201 "Thermal Repeater Turret"
+	turret -50.5 -128.5
+	turret 50.5 -128.5
+	turret -123.5 201 "Banisher Grav-Turret"
+	turret 123.5 201 "Banisher Grav-Turret"
 	turret -102.5 201 "Warder Anti-Missile"
 	turret 102.5 201 "Warder Anti-Missile"
-	turret 123.5 201 "Thermal Repeater Turret"
 	gun -11.5 -319.5 "Korath Detainer"
 	gun 11.5 -319.5 "Korath Detainer"
 	gun -21.5 -267 "Korath Detainer"
@@ -71,5 +293,4 @@ ship "Tek Ot Rah 681"
 	explode "tiny explosion" 140
 	"final explode" "final explosion large"
 	description `Originally developed by the Sestor Federation to single-handedly destroy entire Efreti-Korsmanathi and Mereti fleets, the Tek Ot Rah 681 was never completed when the Archons intervened. With the restoration of peace and resumption of trade within and without Korath Space, the Sestor have finally completed the development of this massive ship.`
-	description `	The Tek Ot Rah 681 is the pinnacle of Korath ship building. Four gun ports and sixteen turret points are well-complemented by the ship's massive outfit and weapon spaces. Ample engine space allow the Tek Ot Rah to pursue larger fleeing enemies with ease, which are common sights when one such warship is encountered in the battlefield.`
-	description `	Rumours have it that a new type of engines were being developed specifically for this ship, but ultimately they were never completed.`
+	description `	The Tek Ot Rah 681 is the pinnacle of Korath ship building. Four gun ports and sixteen turret points are well-complemented by the ship's massive outfit and weapon spaces. Four installed Korath Detainers allow the Tek Ot Rah to pursue larger fleeing enemies with ease, which are common sights when one such warship is encountered in the battlefield.`

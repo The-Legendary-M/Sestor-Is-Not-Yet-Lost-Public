@@ -92,6 +92,28 @@ outfitter "Anatruskor Basics"
 	"Heavy Shock-Strike Turret"
 
 
+outfitter "Korath Exiles Basics"
+	"Fire-Lance"
+	"Expeller Grav-Ray"
+	"Digger Mining Beam"
+	"Blaze-Pike Turret"
+	"Grab-Strike Turret"
+	"Banisher Grav-Turret"
+	"Digger Mining Turret"
+	"Warder Anti-Missile"
+	"Firelight Missile Bank"
+	"Firelight Missile"
+	"Firelight Storage Rack"
+
+outfitter "Korath Exiles Advanced"
+	"Korath Inferno"
+	"Shunt-Strike Turret"
+	"Firestorm Battery"
+	"Lagrange Hyper-Heaver"
+	"Firestorm Torpedo"
+	"Firestorm Torpedo Rack"
+
+
 #Pug stuff in Vara Pug.
 outfitter "Pug Basics"
 	"Pug Zapper"
@@ -139,6 +161,30 @@ outfitter "Aert Advanced"
 	"Well Battery"
 
 outfitter "Rigra Advanced"
+	"Thunder-Lance"
+	"Storm-Pike Turret"
+	"Grab-Strike Turret"
+	"Shock-Strike"
+	"Shock-Strike Turret"
+	"Heavy Shock-Strike Turret"
+	"Grav-Thruster (Nebula Class)"
+	"Grav-Steering (Nebula Class)"
+	"Driller Beam"
+	"Driller Beam Turret"
+	"Double Plasma Core"
+	"Plasma Core"
+	"Triple Plasma Core"
+	"Systems Core (Large)"
+	"Systems Core (Medium)"
+	"Systems Core (Small)"
+	"Systems Core (Tiny)"
+	"Banisher Grav-Turret"
+	"Thermal Repeater Turret"
+	"Spatial Inversion Chamber"
+	
+	
+
+outfitter "Rigra Advancedd"
 	"Fountain Battery"
 	"Iron Shield Generator"
 	"Piston Reactor"
@@ -170,7 +216,7 @@ outfitter "Rigra Advanced"
 	"Cargo Expansion"
 	"Outfits Expansion"
 	"Bunk Room"
-	
+
 
 outfitter "Rigra Basics"
 	"Iron Shield Generator"
@@ -187,8 +233,7 @@ outfitter "Rigra Basics"
 	"Bazooka Blaster"
 	"Pump Cooling"
 
-
-
+#-----------------------SHIPYARDS------------------------------
 shipyard "Rigra Basics"
 	"Flintlock"
 	"Slingshot"
@@ -196,6 +241,19 @@ shipyard "Rigra Basics"
 
 
 shipyard "Rigra Advanced"
+	"Lilot Korati"
+	"I'tak Korati"
+	"Bat-Pan 126"
+	"Pak-Fek 15"
+	"Far Ek Tek 243"
+	"Tek Ot Rah 681"
+	"Charge-Shallop"
+	"Guardian-Frigate"
+	"Met Par Tek 41"
+	"Met Ik Par 43"
+	"Nak Par Tek 103"
+
+shipyard "Rigra Advancedd"
 	"Coffer"
 	"Flintlock"
 	"Slingshot"
@@ -210,7 +268,6 @@ shipyard "Rigra Pug"
 outfitter "Jump Drive Only"
 	"Jump Drive"
 
-#-----------------------SHIPYARDS------------------------------
 shipyard "Sestor Basics"
 	"Far Lek 14"
 	"Far Osk 27"
@@ -237,8 +294,8 @@ shipyard "Efret Advanced"
 shipyard "Anatruskor Ships"
 	"Lilot Korati"
 	"I'tak Korati"
-	"Pav-Kot 117"
-	"Lek-Mid 15"
+	"Bat-Pan 126"
+	"Pak-Fek 15"
 
 shipyard "Mereti Basics"
 	"Model 8"

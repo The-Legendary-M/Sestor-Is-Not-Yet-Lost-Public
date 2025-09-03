@@ -168,16 +168,14 @@ ship "Met Par Tek 53" "Met Par Tek 53 (Disruptor)"
 	turret
 	turret
 
-
-#Sliceruptor KIV. Added thruster for a bit more speed.
 ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Mereti)"
 	outfits
-		"Husk-Slice" 4
-		"Husk-Slice Turret" 2
+		"Husk-Slice Turret" 4
 		"Shield Disruptor Turret" 2
 		"Warder Anti-Missile" 2
 		"Control Transceiver"
-		"Systems Core (Large)"
+		"Systems Core (Large)" 2
+		"Outfits Expansion"
 		"Large Heat Shunt" 4
 		"Small Heat Shunt" 2
 		"Hyperdrive"
@@ -186,18 +184,20 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Mereti)"
 		"Steering (Stellar Class)"
 		"Thruster (Planetary Class)"
 		"Thruster (Asteroid Class)"
-	gun "Husk-Slice"
-	gun "Husk-Slice"
-	gun "Husk-Slice"
-	gun "Husk-Slice"
+	gun
+	gun
+	gun
+	gun
+	turret "Husk-Slice Turret"
+	turret "Husk-Slice Turret"
 	turret "Husk-Slice Turret"
 	turret "Husk-Slice Turret"
 	turret "Shield Disruptor Turret"
 	turret "Shield Disruptor Turret"
 	turret "Warder Anti-Missile"
 	turret "Warder Anti-Missile"
-	turret
-	turret
+
+
 
 #Cargo version = Cargo expansion only. Logistics version = minimal weaponry
 
@@ -302,6 +302,55 @@ ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Logistics)"
 		"Steering (Planetary Class)"
 		"Steering (Asteroid Class)"
 		Hyperdrive
+
+
+
+
+#Exile Variations
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Blaze)"
+	outfits
+		"Blaze-Pike Turret" 6
+		"Warder Anti-Missile" 2
+		
+		"Triple Plasma Core"
+		"Plasma Core"
+		"Systems Core (Large)" 2
+		"Systems Core (Small)"
+		"Control Transceiver"
+		"Large Heat Shunt" 2
+		"Hyperdrive"
+		
+		"Steering (Asteroid Class)"
+		"Steering (Stellar Class)"
+		"Thruster (Planetary Class)"
+
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Firelight)"
+	outfits
+		"Thermal Repeater Turret" 2
+		"Warder Anti-Missile" 2
+		
+		"Firelight Missile Bank" 4
+		"Firelight Storage Rack" 8
+		"Firelight Missile" 160
+		
+		"Firestorm Battery" 4
+		"Firestorm Torpedo" 52
+		
+		"Triple Plasma Core"
+		"Control Transceiver"
+		"Large Heat Shunt" 2
+		"Systems Core (Large)" 2
+		"Hyperdrive"
+		
+		"Steering (Asteroid Class)"
+		"Steering (Stellar Class)"
+		"Thruster (Planetary Class)"
+
+
+		
+
+
+
 
 #-----------------EFRET-------------------EFRET--------------------EFRET----------------
 

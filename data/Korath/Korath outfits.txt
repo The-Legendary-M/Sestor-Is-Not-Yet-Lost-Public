@@ -265,18 +265,29 @@ outfit "Heavy Shock-Strike Turret"
 		"ion damage" 3
 	description `Mounting two Shock-Strike guns on a single turret mount creates the Heavy Shock-Strike Turret, which can rapidly drain its target's energy reserves. If they haven't generator capacity to spare, the unfortunate targets may soon be stripped bare by a Korath raiding party.`
 
+outfit "Spatial Inversion Chamber"
+	category "Power"
+	cost 61380000
+	thumbnail "outfit/spatial inversion chamber"
+	"mass" 331
+	"outfit space" -331
+	"energy generation" 103
+	"heat generation" 309
+	description "This vast chamber is the key component of a larger system that manufactures Jump Drives and Spatial Inversion Chambers. It contains a rupture in spacetime which emits vast amounts of heat and energy, and radiates extra-universal matter. If the energy and heat are not suitably contained, the drive will explode with a force sufficient to shatter a small moon. Adventurous captains will use this as a dangerous power source, if they have sufficient cooling to keep their ship from exploding."
+
+
 #Engines made for the Tek Ot Rah 681.
 outfit "Grav-Thruster (Nebula Class)"
 	plural "Thrusters (Nebula Class)"
 	category "Engines"
 	"cost" 5430000
 	thumbnail "outfit/hybrid korath thruster"
-	"mass" 184
-	"outfit space" -184
-	"engine capacity" -184
+	"mass" 130
+	"outfit space" -130
+	"engine capacity" -130
 	"thrust" 248.4
-	"thrusting energy" 28.1
-	"thrusting heat" 49.4
+	"thrusting energy" 18.1
+	"thrusting heat" 35.5
 	"flare sprite" "effect/korath flare/huge"
 		"frame rate" 6
 	"flare sound" "plasma huge"
@@ -288,10 +299,10 @@ outfit "Grav-Steering (Nebula Class)"
 	category "Engines"
 	"cost" 4496000
 	thumbnail "outfit/hybrid korath steering"
-	"mass" 122
-	"outfit space" -122
-	"engine capacity" -122
+	"mass" 96
+	"outfit space" -96
+	"engine capacity" -96
 	"turn" 7005
-	"turning energy" 16.4
-	"turning heat" 32
+	"turning energy" 10.5
+	"turning heat" 26.7
 	description "The high mass of the Tek Ot Rah 618 initially made Sestor engineers give up on any prospects for the ship to turn at an acceptable rate. The development of the Grav-thruster, however, brought back the possibility of the capital ship being a respectably mobile war platform. A pair of slightly scaled down Grav-thrusters, this steering system incorporates anti-gravity to accelerate the propelled plasma far beyond what the engine can manage on its own. The engine was first tested on a Met Par Tek 53; the ship spun so fast its Piercer missiles flew out of their racks and hit the hull."

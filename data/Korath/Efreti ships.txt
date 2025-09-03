@@ -10,7 +10,7 @@ ship "Charge-Shallop"
 		"automaton" 1
 		"crew equivalent" 65
 		"mass" 415
-		"drag" 7.5
+		"drag" 9
 		"heat dissipation" .7
 		"fuel capacity" 500
 		"cargo space" 44
@@ -35,8 +35,8 @@ ship "Charge-Shallop"
 		"Double Plasma Core"
 		"Generator (Furnace Class)"
 		"Systems Core (Large)"
-		"Large Heat Shunt"
-		"Small Heat Shunt"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 2
 		"Fuel Processor"
 		
 		"Gaktem GP Hybrid Thruster"
@@ -69,8 +69,8 @@ ship "Guardian-Frigate"
 		"hull" 32500
 		"automaton" 1
 		"crew equivalent" 100
-		"drag" 10
-		"mass" 1066
+		"drag" 18
+		"mass" 2132
 		"heat dissipation" 1
 		"fuel capacity" 600
 		"cargo space" 74
