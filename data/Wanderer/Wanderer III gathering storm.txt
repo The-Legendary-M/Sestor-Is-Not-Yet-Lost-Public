@@ -160,6 +160,7 @@ mission "Wanderers: Sestor Information (After fleet)"
 		has "Second Contact: Kor Sestor: declined"
 		has "event: sestor fleets emerge"
 		not "Wanderers: Sestor Information (Before fleet)"
+		not "Sestor: Wanderer Diplomacy: offered"
 	on offer
 		set "wanderers know sestor"
 		conversation
