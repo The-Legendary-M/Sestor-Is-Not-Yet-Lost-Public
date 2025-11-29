@@ -85,14 +85,14 @@ mission "Sestor: Ikfar Lost Ship"
 	on offer
 		conversation
 			`It has been a long time since the factories in Sestor Ikfar were shut down. With much fewer pollutants in the air, the ever-present smog over the planet has all but dissipated. You leave your ship, setting foot on the dusty concrete pad from which Kor Sestor drones used to take off and land. You can still see a few unrepaired drones in nearby hangars, all heavily damaged in battles years ago.`
-			`	The spaceport is heavily damaged. A gigantic collapsed building is visible to the north,and the asphalt road leading to it is riddled with with scorch marks, bones, and barricades. The Sestor Korath here must have put up a fierce fight against the Alpha invasion.`
+			`	The spaceport is heavily damaged. A gigantic collapsed building is visible to the north, and the asphalt road leading to it is riddled with scorch marks, bones, and barricades. The Sestor Korath here must have put up a fierce fight against the Alpha invasion.`
 			`On the stretch of desert land near the hangars, two skeletons lie tangled against each other, a human one and a giant lizard skeleton you presume to be that of a Korath. You can only imagine the last moments of the Alpha fighter and the Sestor Korath, simultaneously striking killing blows against each other. The Korath's uniform lay torn and tattered, revealing a brightly-coloured metal plate. The plate's design is remarkably similar to a Republic ID card, with a photo of a Korath in the left, and short lines of symbols in the right. An ornate red logo lay near its top.`
 			`	You pick up the plate. It must be a form of identification for this Sestor korath.`
 			`Retrieving a shovel from your ship's cockpit, you untangle the two skeletons, and bury them where they lay. May the two rest in peace.`
 			`	As you wander around the abandoned spaceport, you find a gigantic Kar Ik Vot 349 attached to a robotic tug in a secluded taxiway. Apparently, the tug was deactivated just before the warship was scheduled to launch. The Korath Exiles must have missed this ship as they looted this base.`
 			`You climb up onto the tug, where an oval-shaped red LED button shone brightly in the shadows. Curious, you press the button. The button turns blue, as the tug begins to move. A faint whirr of the tug's motor signified its electric nature, as the tug tows the Kar Ik Vot 349 to a vacant launchpad next to your flagship. The tug stops, disconnects from the warship, and heads back towards the spaceport.`
 			`Mindful of the ship's Kor Sestor origin, you climb up into the warship's interior. The door you blast open during space boarding, as it turns out, can be easily opened using the Sestor ID plate. A brief scan later, the Kar Ik Vot 349's main door opened.`
-			`	You walk into the narrow corridor of the drone battleship. Just like the many times before where you captured a Sestor drone off-world, you replace the ship's IFF identification data with yours. The gigantic Sestor ship is yours.`
+			`	You walk into the narrow corridor of the drone battleship. Just like the many times before when you captured a Sestor drone off-world, you replace the ship's IFF identification data with yours. The gigantic Sestor ship is yours.`
 				accept
 	on accept
 		give ship "Kar Ik Vot 349"
@@ -117,7 +117,7 @@ mission "Second Contact: Kor Sestor"
 		
 	on offer
 		conversation
-			`For a moment, you forget that this was once a Kor Sestor world. A scene straight out of New Austria, snowcapped mountains and boundless forests make up most of the landscape. Flying reptiles and birds can be seen swooping in the sky. Through your ship's inbuilt ground scanner, you can see slight disturbances from beneath the trees. Animals. The juxtaposition of this serene, calm world in a region of space ravaged by centuries of warfare is jarring.`
+			`For a moment, you forget that this was once a Kor Sestor world. A scene straight out of New Austria, snow-capped mountains and boundless forests make up most of the landscape. Flying reptiles and birds can be seen swooping in the sky. Through your ship's inbuilt ground scanner, you can see slight disturbances from beneath the trees. Animals. The juxtaposition of this serene, calm world in a region of space ravaged by centuries of warfare is jarring.`
 			`	The uneven terrain means that there are little places suitable for landing. Any flatlands that might have once existed are riddled with craters, no doubt the result of Mereti bombardments. Finally, you spot a clearing in a secluded valley, slightly larger than a Heavy Warship's size, and land your ship there.`
 			`	As a precaution against native predators, you bring your shotgun with you as you disembark your ship. Before you can relax, you notice insects immediately trying to fly into your ship via the open door. You immediately close the door and activate your ship's environmental control system. The insects should be dealt with shortly. Other than the faint hissing sound from your ship winding down, there is no artificial noises.`
 			`	The slightly yellow, waist-high grass and the faint noises of alien fauna is soothing and therapeutic, reminding you of your homeworld of New Boston. Ah, even alien planets can feel familiar...`
@@ -139,7 +139,7 @@ mission "Second Contact: Kor Sestor"
 			`	"Alpha?" the Korath on your left asks, the first word you recognise. The other Korath visibly tenses.`
 			`	"Human, human," you answer. Uttering a single "Alpha" might make them think you are one, and your reply is best kept simple.`
 			`	"Humani," the right Korath turns towards the left one, "Humani, Alpha po'of."`
-			`	The atmosphere visibly loosens slightly after this exchange, as the Korath takes on a friendlier tone. It appears that these Korath consider the Alpha enemies, and claiming that you are an enemy to the Alpha has lowered their suspicion somewhat. The impromptu interrogation happened a little longer, but not much else meaningful is exchanged between the three of you. Notable, however, is how fast the Korath are at snatching a few hair strands that happened to fall off you. You are creeped out, but are in no position to stop it.`
+			`	The atmosphere visibly loosen slightly after this exchange, as the Korath takes on a friendlier tone. It appears that these Korath consider the Alpha enemies, and claiming that you are an enemy to the Alpha has lowered their suspicion somewhat. The impromptu interrogation lasted a little longer, but not much else meaningful is exchanged between the three of you. Notable, however, is how fast the Korath are at snatching a few hair strands that happened to fall off you. You are creeped out, but are in no position to stop it.`
 			`	The left Korath gestures to the right one, who grunts and beckons you to follow it as it turns and leaves. From the bushes all around your ship, tens of Korath emerge, and go into formation around you.`
 			`	The Korath leads you out of the forest clearing, into the forest itself. `
 			choice
@@ -147,7 +147,7 @@ mission "Second Contact: Kor Sestor"
 			`The forest on Sopi Lefarkata is rather similar to that of New Tibet. Tall trees shrouded in mist, with the occasional bushes here or there. The Korath take great care to avoid small hills with holes in them, which you assume to be the den of some kind of animal. Right in front of you, a large beetle-like insect jumps up, and catches a small bird that was drinking nectar from a large, blue flower.`
 			`	The Korath stop abruptly in front of a particularly large and bulbous tree. For a second, you worry whether the Korath are about to execute you. Fortunately, instead of shooting you, the Korath grabbed the thickest exposed tree root, and lift it up. The tree root turns out to be a disguise for a control panel, and a single press of an oval green button reveals a hidden doorway on the left that leads downwards. The Korath usher you into the doorway. A press of the oval red button in the doorway closes the opening.`
 			`	The doorway beyond is brutalist, the greyish-colour of concrete occasionally defaced by what you assume to be the Korath language. The Korath usher you into a zone outlined in red, before one of them speak into a black rectangle. A gigantic automatic turret pop down from the ceiling, pointing at you, before retracting after the Korath mutter something more.`
-			`	The door open to reveal a large cavern, much bigger than any you have ever seen. Thousands of buildings dot the hollowed-out area where Korath constantly stream in and out of. You can feel the heat emanating from lamps above and light tubes lining the walkways. Gigantic hangars are present, near what appears to be a launch platform facing a dark valley. Curiously, however, you see no ships launching or landing as expected from a settlement this large. Some mechanics are working on Far Lek 14's and Far Osk 29's, the only spacecraft visible here. Large greenhouses and algae tanks are visible, which probably provide the Korath food.`
+			`	The door opens to reveal a large cavern, much bigger than any you have ever seen. Thousands of buildings dot the hollowed-out area where Korath constantly stream in and out of. You can feel the heat emanating from lamps above and light tubes lining the walkways. Gigantic hangars are present, near what appears to be a launch platform facing a dark valley. Curiously, however, you see no ships launching or landing as expected from a settlement this large. Some mechanics are working on Far Lek 14's and Far Osk 29's, the only spacecraft visible here. Large greenhouses and algae tanks are visible, which probably provide the Korath food.`
 			`	The Korath around you march you down to a giant bus-sized pod, which floats along metal roads towards a large building. In the building stands even more Korath with guns. Before long you find yourself facing the what appears to be the Korath's leader. The leader, sitting on a brown, leather chair, turns towards you. The two Korath guards steps back in unison, and march out. After a few, deafening seconds, the Korath leader speaks.`
 			`	"Greetings, humani."`
 			choice
@@ -157,7 +157,7 @@ mission "Second Contact: Kor Sestor"
 				`	"I come in peace!"`
 			`"You are not Alpha," says the Korath leader, "Why are you here?"`
 			`	"I was just exploring this region of space," you reply truthfully, "I though you were dead."`
-			`	The Korath leader flares his nostril, as a loud snort rings your hears.`
+			`	The Korath leader flares his nostrils, as a loud snort rings your ears.`
 			`	"Bah, those green kalabet do not kill all Korath. They do not know here. We do not have visitors. Why do you know us?"`
 			`	"I was here before," you reply, "Your ships always shot at me."`
 			`	"We do not know any ships other than the ke'epek Mereti. Only us and po'of fly here. We shoot everyone."`
@@ -246,7 +246,7 @@ mission "Sestor: Korath Rescue"
 				`(Show them evidence of you fighting the Alpha)`
 					goto alphaevidence
 				`(Tell them that you are a friend)`
-			`	"Human, Korath friend!" you tell the Korath, as you lower your gun. The Korath's eyes widens a bit, and all four loosens their postures somewhat. However, they still seem be be very much en garde.`
+			`	"Human, Korath friend!" you tell the Korath, as you lower your gun. The Korath's eyes widens a bit, and all four loosen their postures somewhat. However, they still seem to be very much en garde.`
 			`	"Alfa, porohfeb. Alfa, Korath raporohfeb. Humani... Ratoh Korath raporohfeb?"`
 			`	"No kill, no kidnap. Human, Korath friend!" You reiterate. To de-escalate, you decide to holster your gun after switching the safety back on. The Korath put away their weapons as well.`
 			label alphaevidence
@@ -303,7 +303,7 @@ mission "Sestor: Reclaim Sestor Ikfar"
 			label lilot
 			scene "ship/courier"
 			`	You have faced Sestor drones in Korath space numerous times before, and the ship he shows you is nothing like them. Instead of sleek beige hulls reinforced by red armour, the ship he shows you has a large, grey, boxy look. All around it, Sestor dockworkers, aided by robotic tugs, load crates of supplies onto it.`
-			`	"Lilot Korati, Korath Courier," Ikgalef introduces, "We see few use of it at war. At peace, we use them again."`
+			`	"Lilot Korati, Korath Courier," Ikgalef introduces, "We see little use of it at war. At peace, we use them again."`
 			`	Ikgalef then turns around, and points at another, much smaller ship docked in the adjacent berth.`
 			scene "ship/shipper"
 			`	"I'tak Korati, Korath Taxi", says Ikgalef, "Similar to Lilot Korati. Traditional Korath design, very reliable. All Korath use them."`
@@ -392,7 +392,7 @@ mission "Sestor: Restore Ikfar Outfitter"
 	on offer
 		conversation
 			`It seems that the Korath workers on Sestor Ikfar has been hard at work, for it did not take them long to set up a substantial base on the sacked planet's ruins.`
-			`	However, by the looks of the construction equipment nearby being idle, and the workers wandering around, it seems that an they have reached an impasse.`
+			`	However, by the looks of the construction equipment nearby being idle, and the workers wandering around, it seems that they have reached an impasse.`
 			`	"Humani Captain <last>," a faint voice calls out, diluted by the howling desert winds, "Sestor Ikfar, capital!" You look in the direction, and Ikgalef waves at you. By the lack of transport ships moving between the planets, he must have stowed away in the I'tak Korati you escorted here a while ago.`
 			`	Ikgalef continues speaking.`
 			`	"Our capital, the largest shipyard of all Korath, Sestor Ikfar is," Ikgalef puffs his chest out, "Kalabet Alpha steal it from us, and we take it back. We build it up again!"`
@@ -424,7 +424,7 @@ mission "Sestor: Restore Ikfar Outfitter"
 	on complete
 		event "sestor ikfar recolonised" 20
 		conversation
-			`You land on Sestor Ikfar's new spaceport smoothly, and the media, probably tipped off by the Korath engineers before, begin to swarm around you and Ikgalef.  As microphones and cameras are thrust into his face, he starts dancing and speaking, occasionally gesturing towards the suitcase and you.`
+			`You land on Sestor Ikfar's new spaceport smoothly, and the media, probably tipped off by the Korath engineers before, begin to swarm around you and Ikgalef. As microphones and cameras are thrust into his face, he starts dancing and speaking, occasionally gesturing towards the suitcase and you.`
 			`	After a while, the reporters start to disperse, and Ikgalef approaches you.`
 			`	"Pi'at Afilek, Captain. Sestor owes you. Blueprints are here, the Outfitter will be available soon. Be around Sestor Ikfar frequently, I move my office here."`
 
@@ -475,7 +475,7 @@ mission "Sestor: Protests: Mereti"
 			`Just as you finish your post-landing checklist, you hear sirens scream all across the Sestor planet. Immediately, pedestrians run towards cover, the lights are switched off, and, soon after, the entire city seems abandoned.`
 			`	A few minutes later, you see the distant shadows of a Kor Mereti patrol overhead. They slow down above the planet, circle over the city a few times, before vanishing into deep space.`
 			`	A little while later, the siren sends out a much more subtle noise, and the Korath re-emerge from their hiding place, and city life resumes as normal.`
-			`	The spectre of the Mereti, it seems, still haunt the Sestor.`
+			`	The spectre of the Mereti, it seems, still haunts the Sestor.`
 				decline
 
 #------------------------ACT TWO: RECLAMATION--------------------------------
