@@ -101,7 +101,7 @@ ship "Met Par Tek 41"
 	explode "small explosion" 10
 	"final explode" "final explosion small"
 	description `Centuries ago, the emergence of the Scatter Mine means that a small Mereti squadron could defeat a massive Sestor fighter swarm with ease. To remedy this, the Sestor created the Met Par Tek 41 to combat this problem. Equipped with a Warder Anti-Missile, the MPT-41 would jump into the battlefield, clear the mines around it, before accompanying Sestor carriers would deploy their fighters.`
-	description `	However, tts impact on the battlefield would be quickly proven to be limited, as the low shield and hull integrity of the MPT-41 means that the Mereti could destroy the minesweeping ship quickly before the Warder could clear much of the minefields. When its successor, the Met Par Tek 53, entered production, the MPT-41 was quickly taken out of service.`
+	description `	However, its impact on the battlefield would be quickly proven to be limited, as the low shield and hull integrity of the MPT-41 means that the Mereti could destroy the minesweeping ship quickly before the Warder could clear much of the minefields. When its successor, the Met Par Tek 53, entered production, the MPT-41 was quickly taken out of service.`
 	description `	The comparably low mass and high speed of the SL-41 design, however, would later prove to be key in future developments, as their designers would use it as a base to develop the next generation of Sestor parasite spacecraft, the FL-14 and FS-27, both of which still remain heavily in use in the Sestor navy up to this day.`
 		
 
