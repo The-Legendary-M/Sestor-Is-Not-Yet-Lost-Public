@@ -78,7 +78,7 @@ outfit "Driller Beam"
 		"shield damage" 1.1
 		"hull damage" 4.6
 		"piercing" 0.3
-	description `Instead of pursuing a completely new design, Kor Efret engineers instead modified the ancient, classic Digger Mining Beam into a formidable weapon on its own. Thanks to an improved resonator, the beam dea;s the same damage to ship hulls as the Digger does to asteroids.`
+	description `Instead of pursuing a completely new design, Kor Efret engineers instead modified the ancient, classic Digger Mining Beam into a formidable weapon on its own. Thanks to an improved resonator, the beam deals the same damage to ship hulls as the Digger does to asteroids.`
 
 outfit "Driller Beam Turret"
 	category "Turrets"
